@@ -1,0 +1,136 @@
+@import '../base';
+
+#section1{
+    background-image: url('../../Assets/background2.png');
+    background-position: center;
+    object-fit: contain;
+}
+
+@keyframes border{
+    0%{
+        width: 25vw;
+        height: 25.3vw;
+        align-items: end;
+    }
+    25%{
+        width: 25.3vw;
+        height: 25vw;
+        align-items: end;
+        justify-content: left;
+    }
+    75%{
+        width: 25vw;
+        height: 25.3vw;
+        align-items: flex-start;
+    }
+    100%{
+        width: 25.3vw;
+        height: 25vw;
+        justify-content: flex-end;
+    }
+}
+
+@keyframes container-border{
+    0%{
+        width: 25vw;
+        height: 25.3vw;
+        align-self: end;
+    }
+    25%{
+        width: 25.3vw;
+        height: 25vw;
+        align-items: end;
+        justify-self: left;
+    }
+    75%{
+        width: 25vw;
+        height: 25.3vw;
+        align-self: flex-start;
+    }
+    100%{
+        width: 25.3vw;
+        height: 25vw;
+        justify-self: flex-end;
+    }
+}
+
+#about{
+    display: flex;
+    justify-content: space-between;
+    height: calc(100vh - 12rem);
+    align-items: center;
+
+    #pic{
+        width: auto;
+        text-align: center;
+        justify-self: center;
+        display: flex;
+        // justify-content: end;
+        width: 40%;
+
+        .border-helper{
+
+            .border{
+                border-radius: 50%;
+                background-image: url('../../Assets/back.png');
+                animation-delay: 0s;
+                width: 25.6vw;
+                height: 25.4vw;
+                display: flex;
+                align-items: center;
+                // animation: border infinite 5s;
+            }
+        }
+
+        img{
+            border-radius: 50%;
+            width: 25vw;
+            height: 25vw;
+            object-fit: cover;
+        }
+    }
+
+    #name{
+        margin-left: $big;
+        color: #eee;
+    }
+
+    p{
+        font-family: 'Nunito', cursive;
+        font-size: $font_medium;
+    }
+}
+
+.typewriter {
+    font-size: $font_super;
+    font-family: 'Inter', sans-serif;
+    font-weight: bolder;
+    width: fit-content !important;
+
+    &:after{
+        content: '/>';
+        color: $highlight;
+    }
+
+    &::before{
+        content: '<';
+        color: $highlight;
+    }
+}
+
+.scrolldown{
+    font-size: $font_medium ;
+    font-family: 'Inter';
+    padding: $small;
+    text-align: center;
+    color: $white;
+}
+
+.highlight{
+    color: $highlight;
+    font-weight: bolder;
+}
+
+.medium{
+    font-size: $font_big;
+}
