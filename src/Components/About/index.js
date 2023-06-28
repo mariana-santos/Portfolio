@@ -1,47 +1,30 @@
-import '../../Styles/app.scss';
+import './style.css'
 
-import ReactTypingEffect from 'react-typing-effect';
-import 'font-awesome/css/font-awesome.min.css';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import profile from '../../Assets/profile.png'
+import pic from '../../assets/main-picture.jpg'
 
-function About() {
-    
-  return (
-    <>
-      <main id='about'>
-          <div id='name'>
-              <p>Oi, tudo bem? Meu nome é</p>
+export default function About() {
+    return (
+        <section className='container' id='about'>
+            <div className='column text'>
+                {/* <p className='show-up'>Oi! Meu nome é </p> */}
 
-              <ReactTypingEffect
-                className='typewriter'
-                text={["Mariana Santos. "]}
-                cursorClassName='cursor'
-                speed={150}
-                eraseSpeed={150}
-                typingDelay={500}
-              />
+                <h1 className='gradient-text show-up'>
+                    <span className='light'>Mariana Santos. </span> <br/>
+                    {/* <span className='smaller light'>e sou</span>  */}
+                    Desenvolvedora Frontend.
+                </h1>
 
-              <p className='medium'>Sou desenvolvedora <span className='highlight'>Front-end</span> jr.</p>
-          </div>
+                <p className='smaller show-up'>Apaixonada por criação e tecnologia. Ampla experiência em desenvolvimento de aplicações web e mobile responsivas e acessíveis</p>
 
-          <div id='pic'>
-            <div className='border-helper'>
-              <div className='border'>
-                <img src={profile}/>
-              </div>
+                <a className='btn btn-secondary show-up' href='#contato'>Saiba mais</a>
             </div>
-            
-          </div>
-      </main>
 
-      <p className='scrolldown'>
-        <FontAwesomeIcon icon="fas computer-mouse" />
-        <i class="fa-solid fa-computer-mouse"></i>
-        deslize para entender melhor a minha jornada :)
-      </p>
-    </>
-  );
+            <div className='column wrapper-pic'>
+                <div className='pic'>
+                    <div className='line-element' />
+                    <img src={pic} alt='Imagem de Mariana Santos programando durante Hackaton' id='main-pic' />
+                </div>
+            </div>
+        </section>
+    )
 }
-
-export default About;

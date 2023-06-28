@@ -1,0 +1,16 @@
+.fixed-left{
+    right: 0;
+}
+
+.fixed-left a{
+    writing-mode: vertical-rl;
+    text-orientation: mixed;
+    color: var(--primary);
+    opacity: .7;
+    transition: .5s;
+}
+
+.fixed-left a:hover{
+    opacity: 1;
+    transform: translateY(-5px);
+}
