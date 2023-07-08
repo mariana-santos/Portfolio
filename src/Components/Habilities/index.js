@@ -23,7 +23,7 @@ export default function Habilities() {
     }, [selected])
 
     return (
-        <section className='container' id="habilities">
+        <section className='container' id="habilities" data-aos="fade-right">
             <h2 className='code'>Habilidades</h2>
 
             <div className={`column wrap-habilities ${seeAll ? 'hab-see-all' : 'hab-see-less'}`}>

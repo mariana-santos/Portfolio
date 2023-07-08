@@ -4,6 +4,7 @@ import Habilities from './Habilities'
 import Hability from './Hability'
 import SocialMedia from './SocialMedia'
 import Email from './Email'
+import Experience from './Experience'
 
 export {
     NavBar,
@@ -11,5 +12,6 @@ export {
     Habilities,
     Hability,
     SocialMedia,
-    Email
+    Email,
+    Experience
 }

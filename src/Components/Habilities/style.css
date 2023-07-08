@@ -38,14 +38,14 @@
 .show-up{
     opacity: 0;
     transform: translateY(30%);
-    animation: fade-up .8s forwards ease;
+    animation: fade-up 2s forwards ease;
 }
 
 .hability-info.show-up{
     animation: fade-up-hability .8s forwards ease;
 }
 
-.hability-info h3{
+h3{
     font-size: 1.5em;
     margin-top: 0;
 }
