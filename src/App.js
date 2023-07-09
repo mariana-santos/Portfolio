@@ -1,19 +1,10 @@
-// import 
-//   { 
-//     About, 
-//     Email, 
-//     Experiences, 
-//     Habilities, 
-//     NavBar, 
-//     SocialMedia 
-//   } from './Components';
-
 import Navbar from './Components/Navbar';
 import SocialMedia from './Components/SocialMedia';
 import Email from './Components/Email';
 import About from './Components/About'
 import Experiences from './Components/Experiences'
 import Habilities from './Components/Habilities'
+import Projects from './Components/Projects';
 
 import { useEffect, React } from 'react';
 
@@ -34,6 +25,7 @@ function App() {
       <About />
       <Experiences />
       <Habilities />
+      <Projects/>
     </>
   );
 }

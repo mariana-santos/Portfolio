@@ -1,0 +1,10 @@
+#filter{
+    width: 100%;
+}
+
+.wrap-projects{
+    display: flex;
+    width: 100%;
+
+    margin-top: 2em;
+}

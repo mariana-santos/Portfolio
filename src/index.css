@@ -161,16 +161,8 @@ a {
     font-size: 1.7em !important;
   }
 
-  .navbar{
-    padding: 1.5em 5em !important;
-  }
-
   #about .column{
     font-size: 1.5em !important;
-  }
-
-  .navbar ul{
-    right: 5em !important;
   }
 }
 
@@ -191,10 +183,6 @@ a {
     font-size: 1.3em !important;
   }
 
-  .navbar ul{
-    right: 2em !important;
-  }
-
   h2.code{
     font-size: 1.3em !important;
     left: initial !important;
@@ -203,9 +191,5 @@ a {
 
   .row{
     flex-direction: column;
-  }
-
-  .row *{
-    display: inline;
   }
 }

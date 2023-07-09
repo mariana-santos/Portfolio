@@ -1,0 +1,34 @@
+.project{
+    width: 25%;
+    background: #fff;
+    padding: 1.7em;
+    box-sizing: border-box;
+    border: solid 1px #dedede;
+}
+
+.wrap-img-card{
+    width: 100%;
+    aspect-ratio: 1 / .6;
+    height: auto;
+}
+
+.wrap-img-card img{
+    width: 100%;
+    height: 100%;
+}
+
+.project h3{
+    margin: .5em 0;
+}
+
+.project p{
+    margin: 0;
+}
+
+.project .tags{
+    margin-bottom: 0;
+}
+
+.project .tag{
+    padding: 5px 10px;
+}

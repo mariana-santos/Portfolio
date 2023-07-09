@@ -1,0 +1,25 @@
+[
+    {
+        "id": 1,
+        "title": "Refinances",
+        "subtitle": "Aplicativo de gerenciamento financeiro",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "React Native"
+            },
+            {
+                "id": 2,
+                "name": "Typescript"
+            },
+            {
+                "id": 11,
+                "name": "Git"
+            },
+            {
+                "id": 7,
+                "name": "SQL Server"
+            }
+        ]
+    }
+]
