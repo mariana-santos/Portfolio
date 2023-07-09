@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, React } from 'react'
 import './style.css'
 
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
@@ -27,17 +27,21 @@ export default function Navbar() {
                         { theme == 'light' ? <BsFillMoonFill /> : <BsFillSunFill /> }
                     </div>
 
-                    <div className='hamburguer' role='button'>
+                    <div 
+                        className={`hamburguer ${menuOpen ? 'close' : 'open'}`} 
+                        role='button'
+                        onClick={() => setMenuOpen(!menuOpen)}
+                    >
                         <span />
                         <span />
                     </div>
 
-                    <ul className={menuOpen ? 'open' : 'closed'}>
-                        <li className='code'><a href="/">sobre mim</a></li>
-                        <li className='code'><a href="/">habilidades</a></li>
-                        <li className='code'><a href="/">experiência</a></li>
-                        <li className='code'><a href="/">projetos</a></li>
-                        <li className='code'><a href="/">contato</a></li>
+                    <ul className={menuOpen ? 'opened' : 'closed'}>
+                        <li className='code autoclose'><a href="/#about">sobre mim</a></li>
+                        <li className='code autoclose'><a href="/#experience">experiência</a></li>
+                        <li className='code autoclose'><a href="/#habilities">habilidades</a></li>
+                        <li className='code autoclose'><a href="/#projects">projetos</a></li>
+                        <li className='code autoclose'><a href="/contato">contato</a></li>
                     </ul>
                 </div>
             </nav>

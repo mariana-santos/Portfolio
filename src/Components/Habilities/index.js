@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useState, React } from 'react'
 import habilities from '../../assets/habilities.json'
 import Hability from '../Hability'
 

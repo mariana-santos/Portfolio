@@ -126,3 +126,15 @@
         padding: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .hability{
+        width: calc(100% / 3 - 1.7em);
+        padding: .5em;
+        font-size: .8em;
+    }
+
+    .wrap-habilities{
+        gap: .5em !important;
+    }
+}

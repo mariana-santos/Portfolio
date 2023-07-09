@@ -1,0 +1,156 @@
+.timeline {
+    line-height: 1.4em;
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+.timeline-item {
+    padding-left: 40px;
+    position: relative;
+    transition: .5s;
+}
+
+.timeline-info {
+    font-size: 1.2em;
+    padding-bottom: 1.5em;
+}
+
+.timeline-marker {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    width: 40px;
+    cursor: pointer;
+    transition: .5s; 
+}
+
+.timeline-marker::before {
+    background: var(--bg-light);
+    border: 2px solid var(--primary);
+    border-radius: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 4px;
+    left: -16px;
+    z-index: -1;
+    width: 100%;
+    aspect-ratio: 1;
+    height: auto;
+    transition: .5s;
+}
+
+.timeline-item.selected .timeline-marker::before{
+    background: var(--primary-gradient);
+    border-color: transparent ;
+}
+
+.timeline-item:not(:last-of-type) .timeline-marker::after {
+    content: "";
+    width: 2px;
+    background: rgba(59, 61, 69, 0.33);
+    display: block;
+    position: absolute;
+    top: 15px;
+    bottom: 0;
+    left: 5px;
+    height: calc(100% - 2px);
+    z-index: -2;
+}
+
+.timeline-content{
+    padding-bottom: 1em;
+}
+
+.timeline-icon{
+    font-size: 25px;
+    position: absolute;
+    top: 13px;
+    left: -6px;
+    color: #444;
+}
+
+.timeline-item.selected .timeline-icon{
+    color: var(--bg-light);
+}
+
+.timeline-item h4{
+    margin: 0;
+    margin-bottom: .3em;
+}
+
+.row{
+    display: flex;
+    justify-content: space-between;
+}
+
+.timeline-content small{
+    display: block;
+    width: 100%;
+    text-align: justify;
+}
+
+.tags{
+    display: flex;
+    gap: 7px;
+    flex-wrap: wrap;
+    margin-top: .5em;
+    margin-bottom: 1.5em;
+}
+
+.tag{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    font-size: small;
+    background: rgba(150, 49, 244, 0.168);
+    padding: 2px 10px;
+    border-radius: 15px;
+}
+
+.tag img{
+    width: 1.2em;
+    height: 1.2em;
+    object-fit: contain;
+}
+
+.timeline-content{
+    opacity: 0;
+    height: 0;
+}
+
+.timeline-item.selected .timeline-content {
+    animation: grow .5s ease-in-out forwards;
+}
+
+@keyframes grow {
+    from{
+        opacity: 0;
+        height: 0; 
+    }
+
+    to{
+        opacity: 1;
+        height: 100%;
+    }
+}
+
+.timeline-item.selected .tags{
+    display: flex;
+}
+
+.timeline-item.selected .timeline-info{
+    padding-bottom: .5em;
+}
+
+#experience .close{
+    margin-top: 1em;
+}
+
+.text-about p{
+    margin-bottom: 0;
+}

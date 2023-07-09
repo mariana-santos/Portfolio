@@ -14,3 +14,9 @@
     opacity: 1;
     transform: translateY(-5px);
 }
+
+@media screen and (max-width: 1200px) {
+    .fixed{
+        width: 50px;
+    }
+  }

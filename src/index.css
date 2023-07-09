@@ -123,54 +123,6 @@ a {
   height: .7em
 }
 
-@keyframes highlight {
-  from { height: .3em; }
-
-  to { }
-}
-
-.code,
-.code * {
-  font-family: 'Source Code Pro', sans-serif;
-  letter-spacing: .2em;
-  color: #292929;
-  text-transform: lowercase;
-}
-
-.code::before {
-  content: '\3c';
-}
-
-.code::after {
-  content: '\3e';
-}
-
-.code::before,
-.code::after {
-  color: var(--primary);
-  font-weight: bold;
-}
-
-h2.code {
-  font-size: 2.3em;
-  margin-bottom: 1.5em;
-  width: 100%;
-  position: relative;
-  left: -2em;
-}
-
-.code.close {
-  text-align: end;
-  opacity: .3;
-  margin-bottom: 1.5em;
-  margin-top: 1.5em;
-  left: 2em;
-}
-
-.code.close::before {
-  content: '\3c/';
-}
-
 .gradient-text{
   background-image: var(--primary-gradient);
   background-size: 100%;
@@ -198,4 +150,62 @@ h2.code {
 
 .light{
   font-weight: lighter;
+}
+
+@media screen and (max-width: 1200px) {
+  .container{
+      padding: 0 5em;
+  }
+
+  h2.code{
+    font-size: 1.7em !important;
+  }
+
+  .navbar{
+    padding: 1.5em 5em !important;
+  }
+
+  #about .column{
+    font-size: 1.5em !important;
+  }
+
+  .navbar ul{
+    right: 5em !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .container{
+      padding: 0 4em;
+  }
+
+  .column, #about .text{
+    width: 100% !important;
+  }
+
+  .navbar{
+    padding: 1.5em 2em !important;
+  }
+
+  #about .column{
+    font-size: 1.3em !important;
+  }
+
+  .navbar ul{
+    right: 2em !important;
+  }
+
+  h2.code{
+    font-size: 1.3em !important;
+    left: initial !important;
+    right: initial !important;
+  }
+
+  .row{
+    flex-direction: column;
+  }
+
+  .row *{
+    display: inline;
+  }
 }

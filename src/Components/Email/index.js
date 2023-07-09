@@ -1,5 +1,7 @@
 import './style.css'
 
+import React from 'react'
+
 export default function Email(){
     return (
         <div className="fixed fixed-left">

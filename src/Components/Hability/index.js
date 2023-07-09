@@ -1,5 +1,7 @@
 import './style.css'
 
+import React from 'react'
+
 export default function Hability({ hability, className, setSelected }) {
     return (
         <div 

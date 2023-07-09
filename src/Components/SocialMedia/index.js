@@ -2,6 +2,8 @@ import { AiOutlineGithub, AiFillLinkedin, AiFillInstagram } from 'react-icons/ai
 
 import './style.css'
 
+import React from 'react'
+
 export default function SocialMedia(){
     return(
         <div className="fixed">

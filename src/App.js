@@ -2,13 +2,13 @@ import
   { 
     About, 
     Email, 
-    Experience, 
+    Experiences, 
     Habilities, 
     NavBar, 
     SocialMedia 
   } from './components';
 
-import { useEffect } from 'react';
+import { useEffect, React } from 'react';
 
 import AOS from 'aos';
 import 'aos/dist/aos.css';
@@ -25,7 +25,7 @@ function App() {
       <SocialMedia />
       <Email />
       <About />
-      <Experience />
+      <Experiences />
       <Habilities />
     </>
   );
