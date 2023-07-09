@@ -6,14 +6,14 @@
 //     Habilities, 
 //     NavBar, 
 //     SocialMedia 
-//   } from './components';
+//   } from './Components';
 
-import Navbar from './components/Navbar';
-import SocialMedia from './components/SocialMedia';
-import Email from './components/Email';
-import About from './components/About'
-import Experiences from './components/Experiences'
-import Habilities from './components/Habilities'
+import Navbar from './Components/Navbar';
+import SocialMedia from './Components/SocialMedia';
+import Email from './Components/Email';
+import About from './Components/About'
+import Experiences from './Components/Experiences'
+import Habilities from './Components/Habilities'
 
 import { useEffect, React } from 'react';
 
@@ -28,12 +28,12 @@ function App() {
   
   return (
     <>
-      {/* <NavBar />
+      <Navbar />
       <SocialMedia />
       <Email />
       <About />
       <Experiences />
-      <Habilities /> */}
+      <Habilities />
     </>
   );
 }
