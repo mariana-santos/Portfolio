@@ -1,12 +1,12 @@
-import 
-  { 
-    About, 
-    Email, 
-    Experiences, 
-    Habilities, 
-    NavBar, 
-    SocialMedia 
-  } from './components';
+// import 
+//   { 
+//     About, 
+//     Email, 
+//     Experiences, 
+//     Habilities, 
+//     NavBar, 
+//     SocialMedia 
+//   } from './components';
 
 import { useEffect, React } from 'react';
 
@@ -21,12 +21,12 @@ function App() {
   
   return (
     <>
-      <NavBar />
+      {/* <NavBar />
       <SocialMedia />
       <Email />
       <About />
       <Experiences />
-      <Habilities />
+      <Habilities /> */}
     </>
   );
 }
