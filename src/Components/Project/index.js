@@ -6,8 +6,6 @@ export default function Project({ project }) {
             <div className='wrap-img-card'>
                 <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} />
             </div>
-            <h3>{project.title}</h3>
-            <p>{project.subtitle}</p>
             <div className='tags'>
                 {project.stacks.slice(0, 2).map(stack => {
                     return (
@@ -21,6 +19,8 @@ export default function Project({ project }) {
                     +{project.stacks.length - 2}
                 </span>
             </div>
+            <h3>{project.title}</h3>
+            <p>{project.subtitle}</p>
         </div>
     )
 }

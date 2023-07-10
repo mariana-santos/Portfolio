@@ -27,7 +27,7 @@
     transition: .5s; 
 }
 
-.timeline-marker::before {
+.timeline-item .timeline-marker::before {
     background: var(--bg-light);
     border: 2px solid var(--primary);
     border-radius: 100%;
@@ -43,7 +43,8 @@
     transition: .5s;
 }
 
-.timeline-item.selected .timeline-marker::before{
+.timeline-item.selected .timeline-marker::before, 
+.timeline-item:hover .timeline-marker::before{
     background: var(--primary-gradient);
     border-color: transparent ;
 }
@@ -73,7 +74,8 @@
     color: #444;
 }
 
-.timeline-item.selected .timeline-icon{
+.timeline-item.selected .timeline-icon, 
+.timeline-item:hover .timeline-icon{
     color: var(--bg-light);
 }
 

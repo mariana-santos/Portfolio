@@ -8,9 +8,10 @@ import React from 'react'
 export default function Experience({ experience, selected, setSelected }) {
     return (
         <>
-            <li
+            <li 
                 class={`timeline-item ${selected.id === experience.id && 'selected'}`}
                 key={experience.id}
+                onClick={() => setSelected(experience)}
             >
                 <div class="timeline-info">
                     <h4> {experience.title}</h4>
@@ -49,7 +50,6 @@ export default function Experience({ experience, selected, setSelected }) {
                     </div>
                 </div>
             </li>
-
         </>
     )
 }

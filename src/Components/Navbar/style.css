@@ -106,6 +106,10 @@ h2.code {
     content: '\3c/';
 }
 
+.code{
+    display: block !important;
+}
+
 @keyframes close-left {
     from {
         width: 100%;
