@@ -162,17 +162,26 @@ h2.code {
 .navbar ul {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    /* gap: 25px; */
     margin: 0;
     box-sizing: border-box;
     position: absolute;
     top: 100%;
     background-color: #fff;
-    padding: 2.5em;
+    padding: .5em 2.5em;
     box-shadow: var(--box-shadow);
     opacity: 0;
     z-index: 2;
     right: 10em;
+}
+
+.navbar ul li{
+    /* text-align: end; */
+    padding: 15px 0;
+}
+
+.navbar ul li:not(:last-of-type){
+    border-bottom: solid 1px #ccc;
 }
 
 .navbar ul.opened{
@@ -189,6 +198,7 @@ h2.code {
         opacity: 0;
         transform: translateY(30%);
         z-index: -3;
+        visibility: hidden;
     }
 }
 
