@@ -71,5 +71,124 @@
                 "name": "Git"
             }
         ]
+    },
+    {
+        "id": 6,
+        "title": "Valorant",
+        "subtitle": "Website com informações do jogo Valorant",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "Next JS"
+            },
+            {
+                "id": 5,
+                "name": "Typescript"
+            },
+            {
+                "id": 2,
+                "name": "Chackra UI"
+            },
+            {
+                "id": 7,
+                "name": "Git"
+            }
+        ]
+    },
+    {
+        "id": 6,
+        "title": "Alura Studies",
+        "subtitle": "Website para gerenciamento de estudos",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "React"
+            },
+            {
+                "id": 5,
+                "name": "Typescript"
+            },
+            {
+                "id": 2,
+                "name": "SCSS"
+            },
+            {
+                "id": 7,
+                "name": "Git"
+            }
+        ]
+    },
+    {
+        "id": 5,
+        "title": "Solar",
+        "subtitle": "Website de aluguel de carros elétricos",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "HTML"
+            },
+            {
+                "id": 5,
+                "name": "CSS"
+            },
+            {
+                "id": 2,
+                "name": "Javascript"
+            },
+            {
+                "id": 11,
+                "name": "Figma"
+            },
+            {
+                "id": 7,
+                "name": "Git"
+            }
+        ]
+    },
+    {
+        "id": 4,
+        "title": "Bagify",
+        "subtitle": "Aplicativo de gerenciamento de bagagens",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "React Native"
+            },
+            {
+                "id": 2,
+                "name": "Javascript"
+            },
+            {
+                "id": 11,
+                "name": "Figma"
+            },
+            {
+                "id": 7,
+                "name": "Git"
+            }
+        ]
+    },
+    {
+        "id": 7,
+        "title": "Nutri Tips",
+        "subtitle": "Blog de nutrição consumindo uma API externa",
+        "stacks": [
+            {
+                "id": 4,
+                "name": "React"
+            },
+            {
+                "id": 5,
+                "name": "Javascript"
+            },
+            {
+                "id": 2,
+                "name": "Consumo de API"
+            },
+            {
+                "id": 7,
+                "name": "Git"
+            }
+        ]
     }
 ]

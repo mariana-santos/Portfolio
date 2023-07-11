@@ -162,7 +162,7 @@ h2.code {
 .navbar ul {
     display: flex;
     flex-direction: column;
-    /* gap: 25px; */
+    visibility: hidden;
     margin: 0;
     box-sizing: border-box;
     position: absolute;
