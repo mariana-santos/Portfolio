@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;800;900&family=Source+Code+Pro&display=swap');
 
 :root {
-  --bg-light: #F3F4F7;
+  --bg-light: #ebedf0;
   --primary: rgb(149, 49, 244);
   --primary-transparency: rgba(150, 49, 244, 0.466);
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
@@ -98,6 +98,8 @@ a {
   color: var(--primary);
   box-shadow: none;
   padding: 0;
+  position: relative;
+  font-weight: bold;
 }
 
 .highlight {
@@ -150,6 +152,18 @@ a {
 
 .light{
   font-weight: lighter;
+}
+
+.btn-line::after{
+  content: '';
+  width: 25px;
+  height: 1.5px;
+  display: block;
+  background: var(--primary);
+  left: calc(100% + 10px);
+  top: 0.7em;
+  opacity: 1;
+  position: absolute;
 }
 
 @media screen and (max-width: 1200px) {

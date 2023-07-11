@@ -82,8 +82,9 @@
 @media screen and (max-width: 768px){
     #about{
         flex-direction: column-reverse;
-        height: auto;
+        justify-content: flex-end;
         padding-top: 100px;
+        /* height: auto; */
     }
 
     .pic{
