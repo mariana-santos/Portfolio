@@ -50,6 +50,7 @@
 
 .project .tags{
     margin: 1em 0;
+    /* justify-content: center; */
 }
 
 .project .tag{

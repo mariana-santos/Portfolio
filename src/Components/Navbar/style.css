@@ -1,7 +1,7 @@
 header {
     position: fixed;
     background: #fff;
-    z-index: 3;
+    z-index: 6;
 }
 
 .navbar {
@@ -13,7 +13,6 @@ header {
     box-shadow: var(--box-shadow);
     width: 100vw;
     box-sizing: border-box;
-    z-index: 2;
     color: #292929;
     position: relative;
 }
@@ -172,9 +171,12 @@ h2.code {
     padding: 2.5em;
     box-shadow: var(--box-shadow);
     opacity: 0;
-    animation: fade-up .5s forwards ease;
     z-index: 2;
     right: 10em;
+}
+
+.navbar ul.opened{
+    animation: fade-up .5s forwards ease;
 }
 
 @keyframes disappear {

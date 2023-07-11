@@ -7,7 +7,7 @@ export default function Project({ project }) {
                 <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} />
             </div>
             <div className='tags'>
-                {project.stacks.slice(0, 4).map(stack => {
+                {project.stacks.slice(0, 3).map(stack => {
                     return (
                         <span className='tag' key={stack.id}>
                             <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
@@ -16,8 +16,8 @@ export default function Project({ project }) {
                     )
                 })}
                 <span className='tag'>
-                    {/* +{project.stacks.length - 4} */}
-                    +1
+                    +{project.stacks.length - 3}
+                    {/* +1 */}
                 </span>
             </div>
             <h3>{project.title}</h3>

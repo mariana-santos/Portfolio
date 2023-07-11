@@ -13,12 +13,16 @@
                 "name": "Typescript"
             },
             {
+                "id": 7,
+                "name": "SQL"
+            },
+            {
                 "id": 11,
                 "name": "Git"
             },
             {
-                "id": 7,
-                "name": "SQL Server"
+                "id": 17,
+                "name": "Node JS"
             }
         ]
     },
@@ -36,12 +40,12 @@
                 "name": "Java"
             },
             {
-                "id": 11,
-                "name": "Git"
-            },
-            {
                 "id": 7,
                 "name": "SQL Server"
+            },
+            {
+                "id": 11,
+                "name": "Git"
             }
         ]
     },
@@ -55,12 +59,12 @@
                 "name": "Next JS"
             },
             {
-                "id": 7,
-                "name": "SQL Server"
-            },
-            {
                 "id": 2,
                 "name": "Java"
+            },
+            {
+                "id": 7,
+                "name": "SQL Server"
             },
             {
                 "id": 11,

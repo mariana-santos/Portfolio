@@ -7,7 +7,7 @@ export default function Navbar() {
 
     const [theme, setTheme] = useState('light')
     const [language, setLanguage] = useState('pt')
-    const [menuOpen, setMenuOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(null)
 
     return (
         <header>
@@ -19,16 +19,16 @@ export default function Navbar() {
                         PT-BR
                     </div>
 
-                    <div 
-                        className='theme-switcher' 
+                    <div
+                        className='theme-switcher'
                         role='button'
                         onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
                     >
-                        { theme == 'light' ? <BsFillMoonFill /> : <BsFillSunFill /> }
+                        {theme == 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
                     </div>
 
-                    <div 
-                        className={`hamburguer ${menuOpen ? 'close' : 'open'}`} 
+                    <div
+                        className={`hamburguer ${menuOpen !== null && (menuOpen ? 'close' : 'open')}`}
                         role='button'
                         onClick={() => setMenuOpen(!menuOpen)}
                     >
@@ -36,7 +36,7 @@ export default function Navbar() {
                         <span />
                     </div>
 
-                    <ul className={menuOpen ? 'opened' : 'closed'}>
+                    <ul className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}>
                         <li className='code autoclose'><a href="/#about">sobre mim</a></li>
                         <li className='code autoclose'><a href="/#experience">experiência</a></li>
                         <li className='code autoclose'><a href="/#habilities">habilidades</a></li>
