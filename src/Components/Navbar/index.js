@@ -20,11 +20,12 @@ export default function Navbar() {
                     </div>
 
                     <div
-                        className='theme-switcher'
+                        className={`theme-switcher ${theme}`}
                         role='button'
                         onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
                     >
-                        {theme == 'light' ? <BsFillMoonFill /> : <BsFillSunFill />}
+                        <BsFillMoonFill className='moon'/> 
+                        <BsFillSunFill className='sun'/>
                     </div>
 
                     <div
@@ -41,7 +42,7 @@ export default function Navbar() {
                         <li className='code autoclose'><a href="/#experience">experiência</a></li>
                         <li className='code autoclose'><a href="/#habilities">habilidades</a></li>
                         <li className='code autoclose'><a href="/#projects">projetos</a></li>
-                        <li className='code autoclose'><a href="/contato">contato</a></li>
+                        <li className='code autoclose'><a href="/contact">contato</a></li>
                     </ul>
                 </div>
             </nav>

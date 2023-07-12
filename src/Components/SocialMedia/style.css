@@ -7,6 +7,7 @@
     justify-content: flex-end;
     gap: 1em;
     width: 100px;
+    z-index: 3;
 }
 
 .fixed svg{

@@ -58,6 +58,7 @@ h3{
     from{
         opacity: 0;
         transform: translateY(30%);
+        visibility: hidden;
     }
     to{
         opacity: 1;

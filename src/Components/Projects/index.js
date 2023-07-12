@@ -6,7 +6,7 @@ import projects from '../../assets/projects.json'
 
 export default function Projects(){
     return(
-        <section className='container' id='peojects' data-aos="fade-left">
+        <section className='container' id='projects' data-aos="fade-left">
             <h2 className='code'>Projetos</h2>
 
             <div id="filter">

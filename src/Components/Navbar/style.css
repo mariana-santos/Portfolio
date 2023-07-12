@@ -162,7 +162,7 @@ h2.code {
 .navbar ul {
     display: flex;
     flex-direction: column;
-    visibility: hidden;
+    /* visibility: hidden; */
     margin: 0;
     box-sizing: border-box;
     position: absolute;
@@ -173,10 +173,15 @@ h2.code {
     opacity: 0;
     z-index: 2;
     right: 10em;
+    animation: visibility .01s forwards ease;
+}
+
+@keyframes visibility {
+    from { visibility: visible;}
+    to { visibility: hidden; }
 }
 
 .navbar ul li{
-    /* text-align: end; */
     padding: 15px 0;
 }
 
@@ -188,6 +193,44 @@ h2.code {
     animation: fade-up .5s forwards ease;
 }
 
+.theme-switcher{
+    /* display: flex;
+    flex-direction: column; */
+    height: 20px;
+    overflow: hidden;
+}
+
+.theme-switcher svg{
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+    display: block;
+    transition: .5s;
+}
+
+.theme-switcher.dark svg{
+    animation: dark .4s forwards ease;
+}
+
+.theme-switcher.light svg{
+    animation: light .4s forwards ease;
+}
+
+.theme-switcher:hover svg{
+    opacity: .8;
+}
+
+@keyframes dark {
+    from { transform: translateY(-20px); }
+    to { transform: translateY(0px); }
+}
+
+@keyframes light {
+    to{
+        transform: translateY(-20px);
+    }
+}
+
 @keyframes disappear {
     from {
         opacity: 1;
@@ -197,7 +240,6 @@ h2.code {
     to {
         opacity: 0;
         transform: translateY(30%);
-        z-index: -3;
         visibility: hidden;
     }
 }

@@ -1,0 +1,43 @@
+#contact .pic{
+    aspect-ratio: unset;
+}
+
+#contact {
+    display: flex;
+    height: 100vh;
+    align-items: center;
+    gap: 2em;
+    justify-content: space-between;
+    min-height: 500px;
+    padding-top: 40px;
+    color: #363535;
+}
+
+form h1{
+    font-size: 2em;
+    margin-bottom: .5em;
+}
+
+form p{
+    font-size: 1.3em;
+    margin-top: 0;
+}
+
+input, textarea{
+    outline: none;
+    border: solid 1px #cbcbcb;
+    display: block;
+    width: 70%;
+    padding: .5em 1em;
+    font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', 'Helvetica Neue', sans-serif;
+    margin-bottom: 1.5em;
+    border-radius: 3px;
+}
+
+textarea{
+    resize: vertical;
+}
+
+#contact .btn{
+    min-width: 170px;
+}
