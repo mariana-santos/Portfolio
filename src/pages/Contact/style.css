@@ -14,13 +14,15 @@
 }
 
 form h1{
-    font-size: 2em;
+    font-size: 2.5em;
     margin-bottom: .5em;
+    line-height: normal;
 }
 
 form p{
     font-size: 1.3em;
     margin-top: 0;
+    line-height: normal;
 }
 
 input, textarea{
@@ -32,12 +34,41 @@ input, textarea{
     font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', 'Helvetica Neue', sans-serif;
     margin-bottom: 1.5em;
     border-radius: 3px;
+    box-sizing: border-box;
 }
 
 textarea{
     resize: vertical;
 }
 
+label{
+    font-size: .8em;
+    margin-bottom: .5em;
+    display: inline-block;
+}
+
 #contact .btn{
     min-width: 170px;
+}
+
+@media screen and (max-width: 768px) {
+    input, textarea{
+        width: 100%;
+    }
+
+    #contact .wrapper-pic{
+        display: none;
+    }
+
+    #contact{
+        padding-top: 0;
+    }
+
+    #contact p{
+        font-size: 1em;
+    }
+
+    #contact h1{
+        font-size: 2em;
+    }
 }

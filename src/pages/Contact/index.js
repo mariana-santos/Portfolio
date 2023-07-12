@@ -2,15 +2,16 @@ import pic from '../../assets/contact-picture.jpg'
 
 import './style.css'
 
+import { IoSend } from 'react-icons/io5'
+
 export default function Contact(){
     return(
         <section className="container" id="contact">
             <div className="column form">
                 <form>
                     <h1 className='gradient-text'>Fale comigo!</h1>
-                    <p>Se tiver alguma pergunta ou algo a me dizer, não exite em dizer oi! <br/>
+                    <p>Se tiver alguma pergunta ou algo a me dizer, não exite em falar comigo!
                         Prometo responder assim que possível 💜</p>
-                    {/* <p> </p> */}
 
                     <label htmlFor='nome'>Nome</label>
                     <input type='text' placeholder='Qual seu nome?' id='nome'/>
@@ -21,7 +22,10 @@ export default function Contact(){
                     <label htmlFor='mensagem'>Sua mensagem</label>
                     <textarea placeholder='O que você tem a dizer?' rows={3} id='mensagem'/>
 
-                    <button className='btn'>Enviar</button>
+                    <button className='btn'>
+                        Enviar
+                        <IoSend />
+                    </button>
 
                 </form>
             </div>
