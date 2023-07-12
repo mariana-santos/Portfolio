@@ -5,7 +5,7 @@
     justify-content: space-between;
     min-height: 500px;
     padding-top: 40px;
-    color: #363535;
+    color: var(--text-color);
 }
 
 #about .column {

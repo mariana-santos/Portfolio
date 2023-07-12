@@ -4,8 +4,8 @@ import './style.css'
 
 import { IoSend } from 'react-icons/io5'
 
-export default function Contact(){
-    return(
+export default function Contact() {
+    return (
         <section className="container" id="contact">
             <div className="column form">
                 <form>
@@ -13,14 +13,20 @@ export default function Contact(){
                     <p>Se tiver alguma pergunta ou algo a me dizer, não exite em falar comigo!
                         Prometo responder assim que possível 💜</p>
 
-                    <label htmlFor='nome'>Nome</label>
-                    <input type='text' placeholder='Qual seu nome?' id='nome'/>
+                    <label htmlFor='nome'>
+                        Nome
+                        <input type='text' placeholder='Qual seu nome?' id='nome' autoFocus />
+                    </label>
 
-                    <label htmlFor='nome'>Email</label>
-                    <input type='text' placeholder='Qual seu principal email?' id='email'/>
+                    <label htmlFor='nome'>
+                        Email
+                        <input type='email' placeholder='Qual seu principal email?' id='email' />
+                    </label>
 
-                    <label htmlFor='mensagem'>Sua mensagem</label>
-                    <textarea placeholder='O que você tem a dizer?' rows={3} id='mensagem'/>
+                    <label htmlFor='mensagem'>
+                        Sua mensagem
+                        <textarea placeholder='O que você tem a dizer?' rows={3} id='mensagem' />
+                    </label>
 
                     <button className='btn'>
                         Enviar

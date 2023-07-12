@@ -1,4 +1,4 @@
-import { useState, React } from 'react'
+import { useState, React, useEffect } from 'react'
 import './style.css'
 
 import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
@@ -8,6 +8,10 @@ export default function Navbar() {
     const [theme, setTheme] = useState('light')
     const [language, setLanguage] = useState('pt')
     const [menuOpen, setMenuOpen] = useState(null)
+
+    useEffect(() => {
+        localStorage.setItem('theme', theme)
+    }, [theme])
 
     return (
         <header>

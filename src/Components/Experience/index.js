@@ -9,11 +9,11 @@ export default function Experience({ experience, selected, setSelected }) {
     return (
         <>
             <li 
-                class={`timeline-item ${selected.id === experience.id && 'selected'}`}
+                className={`timeline-item ${selected.id === experience.id && 'selected'}`}
                 key={experience.id}
                 onClick={() => setSelected(experience)}
             >
-                <div class="timeline-info">
+                <div className="timeline-info">
                     <h4> {experience.title}</h4>
 
                     <div className='row'>
@@ -27,7 +27,7 @@ export default function Experience({ experience, selected, setSelected }) {
                     </div>
                 </div>
                 <div
-                    class="timeline-marker"
+                    className="timeline-marker"
                     onClick={() => setSelected(experience)}
                 >
                     <div className='timeline-icon'>
@@ -36,7 +36,7 @@ export default function Experience({ experience, selected, setSelected }) {
                             (<HiOutlineAcademicCap />)}
                     </div>
                 </div>
-                <div class="timeline-content">
+                <div className="timeline-content">
                     <small>{experience.summary}</small>
                     <div className='tags'>
                         {experience.stacks.map(stack => {

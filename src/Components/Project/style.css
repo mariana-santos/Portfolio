@@ -8,15 +8,15 @@
     border: solid 1px transparent;
     cursor: pointer;
     /* From https://css.glass */
-    background: rgb(255, 255, 255);
+    background: var(--bg-light-strong);
     /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
     /* backdrop-filter: blur(5.4px); */
     /* -webkit-backdrop-filter: blur(5.4px); */
-    border: 1px solid rgba(255, 255, 255, 0.3);
+    border: 1px solid transparent;
 }
 
 .project:hover{
-    border: solid 1px #dedede;
+    border: solid 1px var(--border-color);
     /* box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
@@ -26,7 +26,7 @@
     aspect-ratio: 1 / .7;
     height: auto;
     overflow: hidden;
-    background-color: #F3F4F8;
+    background-color: var(--bg-wrap-img-card);
 }
 
 .wrap-img-card img{

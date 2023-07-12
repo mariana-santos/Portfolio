@@ -14,12 +14,18 @@ import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 
 function App() {
 
+  let theme = 'light';
+
   useEffect(() => {
     AOS.init({ duration: 800 });
+
+    if(localStorage.getItem('theme')) 
+      theme = localStorage.getItem('theme')
+
   }, [])
 
   return (
-    <>
+    <div className={`${theme}-theme`}>
       <BrowserRouter>
         <Navbar />
         <SocialMedia />
@@ -29,8 +35,7 @@ function App() {
           <Route element={<Contact />} path="/contact" />
         </Routes>
       </BrowserRouter>
-
-    </>
+    </div>
   );
 }
 

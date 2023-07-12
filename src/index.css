@@ -2,11 +2,30 @@
 
 :root {
   --bg-light: #ebedf0;
+  --bg-light-strong: #fff;
+  --text-color: #363535;
   --primary: rgb(149, 49, 244);
   --primary-transparency: rgba(150, 49, 244, 0.466);
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
+  --tag-color: rgba(150, 49, 244, 0.168);
+  --border-color: #e1e1e1;
+  --bg-wrap-img-card: #F3F4F8;
+}
+
+:root:has(.dark-theme) {
+  --bg-light: #252525;
+  --bg-light-strong: #1e1e1e;
+  --text-color: #ebedf0d8;
+  --primary: rgb(149, 49, 244);
+  --primary-transparency: rgb(189, 118, 255);
+  --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
+  --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
+  --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
+  --tag-color: rgb(189, 118, 255);
+  --border-color: #181818;
+  --bg-wrap-img-card: #2d2d2d;
 }
 
 html {
@@ -20,6 +39,7 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   background: var(--bg-light);
+  color: var(--text-color);
 }
 
 a {
@@ -104,7 +124,7 @@ a {
 
 .highlight {
   position: relative;
-  color: #292929;
+  color: var(--text-color);
 }
 
 .highlight::after {
@@ -112,8 +132,8 @@ a {
   height: .25em;
   width: 100%;
   display: inline-block;
-  background: var(--primary);
-  opacity: .3;
+  background: var(--primary-transparency);
+  opacity: .5;
   position: absolute;
   bottom: 3px;
   z-index: -1;
@@ -139,6 +159,7 @@ a {
 .line-after{
   width: fit-content;
   margin-bottom: .5em;
+  color: var(--text-color);
 }
 
 .line-after::after{

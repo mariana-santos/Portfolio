@@ -9,11 +9,11 @@ header {
     justify-content: space-between;
     padding: 1.5em 10em;
     align-items: center;
-    background-color: #fff;
+    background-color: var(--bg-light-strong);
     box-shadow: var(--box-shadow);
     width: 100vw;
     box-sizing: border-box;
-    color: #292929;
+    color: var(--text-color);
     position: relative;
 }
 
@@ -33,7 +33,7 @@ header {
     display: inline-block;
     width: 100%;
     height: 2.5px;
-    background: #444;
+    background: var(--text-color);
     border-radius: 3px;
 }
 
@@ -62,7 +62,7 @@ header {
 .code * {
     font-family: 'Source Code Pro', sans-serif;
     letter-spacing: .2em;
-    color: #292929;
+    color: var(--text-color);
     text-transform: lowercase;
 }
 
@@ -167,7 +167,7 @@ h2.code {
     box-sizing: border-box;
     position: absolute;
     top: 100%;
-    background-color: #fff;
+    background-color: var(--bg-light-strong);
     padding: .5em 2.5em;
     box-shadow: var(--box-shadow);
     opacity: 0;
@@ -186,7 +186,7 @@ h2.code {
 }
 
 .navbar ul li:not(:last-of-type){
-    border-bottom: solid 1px #ccc;
+    border-bottom: solid 1px var(--bg-light);
 }
 
 .navbar ul.opened{

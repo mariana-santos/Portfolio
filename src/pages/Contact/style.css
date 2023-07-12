@@ -10,13 +10,14 @@
     justify-content: space-between;
     min-height: 500px;
     padding-top: 40px;
-    color: #363535;
+    color: var(--text-color);
 }
 
 form h1{
     font-size: 2.5em;
     margin-bottom: .5em;
     line-height: normal;
+    margin-top: 0;
 }
 
 form p{
@@ -27,28 +28,41 @@ form p{
 
 input, textarea{
     outline: none;
-    border: solid 1px #cbcbcb;
+    border: solid 1px var(--border-color);
     display: block;
-    width: 70%;
     padding: .5em 1em;
     font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', 'Helvetica Neue', sans-serif;
-    margin-bottom: 1.5em;
+    margin-bottom: 1em;
     border-radius: 3px;
     box-sizing: border-box;
+    width: 100%;
+    margin-top: .5em;
+    background: var(--bg-light-strong);
+}
+
+label:focus-within{
+    color: var(--primary);
 }
 
 textarea{
     resize: vertical;
 }
 
+input:focus, textarea:focus{
+    border: solid 1px var(--primary);
+}
+
 label{
     font-size: .8em;
     margin-bottom: .5em;
     display: inline-block;
+    width: 70%;
 }
 
 #contact .btn{
     min-width: 170px;
+    text-transform: uppercase;
+    gap: 15px;
 }
 
 @media screen and (max-width: 768px) {
@@ -61,7 +75,8 @@ label{
     }
 
     #contact{
-        padding-top: 0;
+        padding-top: 80px;
+        height: calc(100vh - 80px);
     }
 
     #contact p{
