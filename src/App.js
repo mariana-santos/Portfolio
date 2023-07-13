@@ -16,20 +16,22 @@ export const ConfigContext = createContext()
 
 export default function App() {
 
-  let theme = 'light';
   const [language, setLanguage] = useState('en')
+  const [theme, setTheme] = useState('light')
 
   useEffect(() => {
     AOS.init({ duration: 800 });
 
-    if (localStorage.getItem('theme'))
-      theme = localStorage.getItem('theme')
+    // if (localStorage.getItem('theme'))
+    //   theme = localStorage.getItem('theme')
 
   }, [])
 
   const ConfigValues = {
     language,
-    setLanguage
+    setLanguage,
+    theme,
+    setTheme
   }
 
   return (

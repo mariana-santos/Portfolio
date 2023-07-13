@@ -6,12 +6,15 @@ import { BsFillMoonFill, BsFillSunFill } from 'react-icons/bs'
 import { useContext } from 'react';
 
 import { ConfigContext } from '../../App';
-import { pt, en } from '../../assets/strings';
+
+import Select from '@mui/material/Select';
+import MenuItem from '@mui/material/MenuItem';
+
+import useStrings  from '../../assets/useStrings'
 
 export default function Navbar() {
 
     const [theme, setTheme] = useState('light')
-    // const [language, setLanguage] = useState('pt')
     const [menuOpen, setMenuOpen] = useState(null)
 
     const { language, setLanguage } = useContext(ConfigContext);
@@ -20,14 +23,7 @@ export default function Navbar() {
         localStorage.setItem('theme', theme)
     }, [theme])
 
-    const [strings, setStrings] = useState(pt)
-
-    useEffect(() => {
-
-        console.log(language)
-        language == 'en' ? setStrings(en) : setStrings(pt)
-
-    }, [language])
+    const strings = useStrings();
 
     return (
         <header>
@@ -35,8 +31,21 @@ export default function Navbar() {
                 <h1>Logo</h1>
 
                 <div className='menu-wrapper'>
-                    <div className='language-switcher' role='button' onClick={() => setLanguage('en')}>
-                        PT-BR
+                    <div className='language-switcher'>
+                        <Select
+                            labelId="language"
+                            id="language"
+                            value={language}
+                            onChange={(e) => setLanguage(e.target.value)}
+                            autoWidth
+                            label="Lang"
+                            sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+                            disableUnderline
+                            variant="standard"
+                        >
+                            <MenuItem value={'pt'}>PT-BR</MenuItem>
+                            <MenuItem value={'en'}>EN</MenuItem>
+                        </Select>
                     </div>
 
                     <div

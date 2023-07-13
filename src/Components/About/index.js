@@ -4,7 +4,11 @@ import pic from '../../assets/main-picture.jpg'
 
 import { React } from 'react'
 
+import useStrings from '../../assets/useStrings'
+
 export default function About() {
+
+    const strings = useStrings() 
 
     return (
         <section className='container' id='about'>            
@@ -12,11 +16,11 @@ export default function About() {
 
                 <h1 className='gradient-text'>
                     <span className='light'>Mariana Santos. </span> <br />
-                    Desenvolvedora Frontend.
+                    {strings.title}
                 </h1>
 
-                <p className='smaller'>Apaixonada por criação e tecnologia. <br /></p>
-                <p className='smaller'>Ampla experiência em <strong>desenvolvimento de aplicações web e mobile </strong>responsivas e acessíveis.</p>
+                <p className='smaller'>{strings.subtitle[1]} <br /></p>
+                <p className='smaller'>{strings.subtitle[2]}</p>
 
                 {/* <a className='btn btn-secondary' href='#contato'>Saiba mais</a> */}
             </div>

@@ -40,7 +40,7 @@ export default function Experience({ experience, selected, setSelected }) {
                 <div className="timeline-content">
                     <small>{experience.summary}</small>
                     <div className='tags'>
-                        {experience.stacks.map(stack => {
+                        {experience.skills.map(stack => {
                             return (
                                 <span className='tag' key={stack.id}>
                                     <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />

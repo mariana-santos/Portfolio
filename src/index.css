@@ -51,6 +51,7 @@ a {
   display: flex;
   flex-wrap: wrap;
   column-gap: 5em;
+  position: initial;
 }
 
 .column{

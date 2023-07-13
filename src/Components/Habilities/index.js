@@ -1,14 +1,17 @@
 import { useEffect, useState, React } from 'react'
-import habilities from '../../assets/habilities.json'
 import Hability from '../Hability'
 
 import { IoIosArrowDown } from 'react-icons/io'
 
 import './style.css'
 
-export default function Habilities() {
+import useStrings from '../../assets/useStrings'
 
-    const [selected, setSelected] = useState(habilities[0])
+export default function Habilities() {
+    
+    const strings = useStrings()
+
+    const [selected, setSelected] = useState(strings.skills[0])
     const [seeAll, setSeeAll] = useState(false)
     const [animation, setAnimation] = useState(null)
 
@@ -28,12 +31,12 @@ export default function Habilities() {
 
             <div className={`column wrap-habilities ${seeAll ? 'hab-see-all' : 'hab-see-less'}`}>
                 {
-                    habilities.map((hability) => {
+                    strings.skills.map((skill) => {
                         return (
                             <Hability
-                                hability={hability}
-                                key={hability.id}
-                                className={selected.id === hability.id && 'selected'}
+                                hability={skill}
+                                key={skill.id}
+                                className={selected.id === skill.id && 'selected'}
                                 setSelected={setSelected}
                             />
                         )

@@ -41,7 +41,7 @@ export default function Contact() {
 
                 <form ref={form} onSubmit={sendEmail}>
                     <h1 className='gradient-text'>Fale comigo!</h1>
-                    <p>Se tiver alguma pergunta ou algo a me dizer, não exite em falar comigo!
+                    <p>Se tiver alguma pergunta ou algo a me dizer, não hesite em falar comigo!
                         Prometo responder assim que possível 💜</p>
 
                     <label htmlFor='nome'>

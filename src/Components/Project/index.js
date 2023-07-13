@@ -1,13 +1,14 @@
 import './style.css'
 
-import { useState } from 'react';
+export default function Project({ project, setSelected, setIsOpen }) {
 
-import Modal from '../Modal'
-
-export default function Project({ project }) {
+    function changeSelected(){
+        setSelected(project)
+        setIsOpen(true)
+    }
 
     return (
-        <div className={`project`}>
+        <div className={`project`} onClick={changeSelected}>
             <div className='wrap-img-card'>
                 <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} />
             </div>

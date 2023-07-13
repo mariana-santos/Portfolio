@@ -38,9 +38,10 @@ input, textarea{
     width: 100%;
     margin-top: .5em;
     background: var(--bg-light-strong);
+    transition: .5s;
 }
 
-label:focus-within{
+label:focus-within, label:hover{
     color: var(--primary);
 }
 
@@ -48,7 +49,8 @@ textarea{
     resize: vertical;
 }
 
-input:focus, textarea:focus{
+input:focus, textarea:focus, 
+label:hover input, label:hover textarea{
     border: solid 1px var(--primary);
 }
 

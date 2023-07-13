@@ -259,6 +259,16 @@ h2.code {
     cursor: pointer;
 }
 
+#language{
+    border: none;
+    padding: 0;
+    padding-right: 15px;
+}
+
+.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon, .css-1mf6u8l-MuiSvgIcon-root-MuiSelect-icon{
+    right: -.5em !important;
+}
+
 @media screen and (max-width: 1200px) {
     .navbar {
         padding: 1.5em 5em;
