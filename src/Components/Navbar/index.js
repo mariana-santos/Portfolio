@@ -11,13 +11,19 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 import useStrings  from '../../assets/useStrings'
+import { Link } from 'react-router-dom';
 
 export default function Navbar() {
 
-    const [theme, setTheme] = useState('light')
+    // const [theme, setTheme] = useState('light')
     const [menuOpen, setMenuOpen] = useState(null)
 
-    const { language, setLanguage } = useContext(ConfigContext);
+    const { 
+        language, 
+        setLanguage,
+        theme,
+        setTheme
+     } = useContext(ConfigContext);
 
     useEffect(() => {
         localStorage.setItem('theme', theme)
@@ -28,7 +34,7 @@ export default function Navbar() {
     return (
         <header>
             <nav className="navbar">
-                <h1>Logo</h1>
+                <Link to='/'>Início</Link>
 
                 <div className='menu-wrapper'>
                     <div className='language-switcher'>
@@ -68,23 +74,23 @@ export default function Navbar() {
 
                     <ul className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}>
                         <li className='code autoclose'>
-                            <a href="/#about">{strings.navbar.about}</a>
+                            <Link to="/#about">{strings.navbar.about}</Link >
                         </li>
 
                         <li className='code autoclose'>
-                            <a href="/#experience">{strings.navbar.experience}</a>
+                            <Link to="/#experience">{strings.navbar.experience}</Link >
                         </li>
 
                         <li className='code autoclose'>
-                            <a href="/#habilities">{strings.navbar.habilities}</a>
+                            <Link to="/#habilities">{strings.navbar.habilities}</Link >
                         </li>
 
                         <li className='code autoclose'>
-                            <a href="/#projects">{strings.navbar.projects}</a>
+                            <Link to="/#projects">{strings.navbar.projects}</Link >
                         </li>
 
                         <li className='code autoclose'>
-                            <a href="/contact">{strings.navbar.contact}</a>
+                            <Link to="/contact">{strings.navbar.contact}</Link >
                         </li>
                     </ul>
                 </div>
