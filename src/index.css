@@ -187,6 +187,12 @@ a {
   position: absolute;
 }
 
+.Toastify__toast-body{
+  font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', 'Helvetica Neue', sans-serif;
+  font-weight: 500;
+  font-size: .9em;
+}
+
 @media screen and (max-width: 1200px) {
   .container{
       padding: 0 5em;

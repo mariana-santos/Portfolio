@@ -59,6 +59,12 @@ label{
     width: 70%;
 }
 
+.required{
+    color: rgb(255, 13, 13);
+    display: inline-block;
+    margin-left: 5px;
+}
+
 #contact .btn{
     min-width: 170px;
     text-transform: uppercase;

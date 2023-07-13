@@ -1,6 +1,11 @@
 import './style.css'
 
+import { useState } from 'react';
+
+import Modal from '../Modal'
+
 export default function Project({ project }) {
+
     return (
         <div className={`project`}>
             <div className='wrap-img-card'>
@@ -17,7 +22,6 @@ export default function Project({ project }) {
                 })}
                 <span className='tag'>
                     +{project.stacks.length - 3}
-                    {/* +1 */}
                 </span>
             </div>
             <h3>{project.title}</h3>

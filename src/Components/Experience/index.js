@@ -6,6 +6,7 @@ import { MdOutlineWorkOutline } from 'react-icons/md'
 import React from 'react'
 
 export default function Experience({ experience, selected, setSelected }) {
+
     return (
         <>
             <li 
