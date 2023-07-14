@@ -13,7 +13,7 @@ export default function Project({ project, setSelected, setIsOpen }) {
                 <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} />
             </div>
             <div className='tags'>
-                {project.stacks.slice(0, 3).map(stack => {
+                {project.skills.slice(0, 3).map(stack => {
                     return (
                         <span className='tag' key={stack.id}>
                             <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
@@ -22,7 +22,7 @@ export default function Project({ project, setSelected, setIsOpen }) {
                     )
                 })}
                 <span className='tag'>
-                    +{project.stacks.length - 3}
+                    +{project.skills.length - 3}
                 </span>
             </div>
             <h3>{project.title}</h3>

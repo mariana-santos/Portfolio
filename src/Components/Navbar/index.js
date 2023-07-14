@@ -11,11 +11,12 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 import useStrings  from '../../assets/useStrings'
-import { Link } from 'react-router-dom';
+// import { Link } from 'react-router-dom';
+import { HashLink as Link } from 'react-router-hash-link';
+
 
 export default function Navbar() {
 
-    // const [theme, setTheme] = useState('light')
     const [menuOpen, setMenuOpen] = useState(null)
 
     const { 

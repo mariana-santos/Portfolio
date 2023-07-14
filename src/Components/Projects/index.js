@@ -2,9 +2,11 @@ import './style.css'
 
 import Project from '../Project'
 
-import projects from '../../assets/projects.json'
+import useStrings from '../../assets/useStrings'
 
 export default function Projects({ setIsOpen, setSelected }){
+
+    const strings = useStrings()
 
     return(
         <section className='container' id='projects' data-aos="fade-left">
@@ -16,7 +18,7 @@ export default function Projects({ setIsOpen, setSelected }){
             </div>
 
             <div className="wrap-projects">
-                {projects.map((project) => {
+                {strings.projects.map((project) => {
                     return(
                         <Project 
                             setIsOpen={setIsOpen}

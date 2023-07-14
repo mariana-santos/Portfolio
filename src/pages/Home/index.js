@@ -4,25 +4,24 @@ import Habilities from '../../Components/Habilities'
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 
-import projects from '../../assets/projects.json'
+import useStrings from '../../assets/useStrings';
 
 import { useState } from 'react';
 
 function App() {
 
+  const strings = useStrings()
+
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(projects[0])
+  const [selected, setSelected] = useState(strings.projects[0])
 
   return (
     <>
       <Modal
         show={modalIsOpen}
-        contentLabel="Example Modal"
-      >
-        <h2>Hello</h2>
-        <button onClick={() => setIsOpen(false)}>close</button>
-
-      </Modal>
+        setIsOpen={setIsOpen}
+        selected={selected}
+      />
 
       <About />
       <Experiences />

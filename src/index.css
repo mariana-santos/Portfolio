@@ -5,6 +5,7 @@
   --bg-light-strong: #fff;
   --text-color: #363535;
   --primary: rgb(149, 49, 244);
+  --primary-stronger: rgb(117 17 212);
   --primary-transparency: rgba(150, 49, 244, 0.466);
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
@@ -19,6 +20,7 @@
   --bg-light-strong: #1e1e1e;
   --text-color: #ebedf0d8;
   --primary: rgb(149, 49, 244);
+  --primary-stronger: rgb(117 17 212);
   --primary-transparency: rgb(189, 118, 255);
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);

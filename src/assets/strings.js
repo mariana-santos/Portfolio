@@ -1,5 +1,6 @@
 import { skills_en, skills_pt } from "./skills";
 import { experiences_en, experiences_pt } from "./experiences";
+import { projects_en, projects_pt } from "./projects";
 
 export const pt = {
     navbar: {
@@ -17,6 +18,7 @@ export const pt = {
     experience_title: 'experiência e educação',
     experiences: experiences_pt,
     skills: skills_pt,
+    projects: projects_pt
 };
 
 export const en = {
@@ -35,4 +37,5 @@ export const en = {
     experience_title: 'Work Experience and Education',
     experiences: experiences_en,
     skills: skills_en,
+    projects: projects_en
 }
