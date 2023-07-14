@@ -34,21 +34,21 @@ export default function Modal({ show, selected, setIsOpen }) {
 
                         <div>{selected.description}</div>
 
-                        
+
                         <p className='involved'>
                             <strong>Outros envolvidos no projeto: </strong>
                             {selected.team?.map((member, index) => {
-                                return(
+                                return (
                                     <span key={member.id}>
-                                        { member.link ? 
-                                            <a href='https://www.linkedin.com/in/anacdprado/' target='_blank'>
-                                                {member.name}     
-                                            </a> 
-                                            : 
+                                        {member.link ?
+                                            <a href={member.link} target='_blank'>
+                                                {member.name}
+                                            </a>
+                                            :
                                             <>{member.name}</>
                                         }
-                                        { index === selected.team.lenght ? <> e </>  
-                                        : index !== selected.team.lenght ? <>, </> : <></>}
+                                        {index === selected.team.lenght ? <> e </>
+                                            : index !== selected.team.lenght ? <>, </> : <></>}
                                     </span>
                                 )
                             })}
@@ -56,7 +56,11 @@ export default function Modal({ show, selected, setIsOpen }) {
                     </div>
 
                     <div className='column wrap-iframe'>
-                        <iframe src={`https://www.youtube.com/embed/${selected.video_id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        { selected.video_id ?
+                            <iframe src={`https://www.youtube.com/embed/${selected.video_id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            :
+                            selected.video_iframe
+                        }
 
                         <div className='modal_footer'>
                             <a href={selected.github} target='_blank' className='btn'>

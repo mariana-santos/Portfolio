@@ -8,6 +8,7 @@
     color: var(--primary);
     opacity: .7;
     transition: .5s;
+    font-weight: bold;
 }
 
 .fixed-left a:hover{

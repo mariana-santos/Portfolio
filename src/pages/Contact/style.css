@@ -39,6 +39,7 @@ input, textarea{
     margin-top: .5em;
     background: var(--bg-light-strong);
     transition: .5s;
+    color: var(--text-color);
 }
 
 label:focus-within, label:hover{

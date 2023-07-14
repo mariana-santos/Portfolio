@@ -61,7 +61,7 @@
 .card-footer{
     transition: .3s;
     overflow: hidden;
-    height: 2.3em;
+    height: 2.6em;
     line-height: 1.3em;
 }
 
@@ -72,11 +72,15 @@
 .card-footer span{
     display: inline-block;
     transition: .3s;
-    height: 2.3em;
+    height: 2.6em;
 }
 
 .project:hover .subtitle, .project:hover .saiba-mais{
     transform: translateY(-2.3em);
+}
+
+.project:hover .subtitle{
+    color: var(--bg-light-strong);
 }
 
 @media screen and (max-width: 768px) {

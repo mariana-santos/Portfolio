@@ -264,6 +264,7 @@ h2.code {
     border: none;
     padding: 0;
     padding-right: 15px;
+    color: var(--text-color);
 }
 
 .css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon, .css-1mf6u8l-MuiSvgIcon-root-MuiSelect-icon{
