@@ -2,6 +2,7 @@
 
 :root {
   --bg-light: #ebedf0;
+  --header-transparent: rgba(255, 255, 255, 0.2);
   --bg-light-strong: #fff;
   --text-color: #363535;
   --primary: rgb(149, 49, 244);
@@ -16,16 +17,17 @@
 }
 
 :root:has(.dark-theme) {
-  --bg-light: #252525;
-  --bg-light-strong: #1e1e1e;
+  --bg-light: #261f2f;
+  --header-transparent: rgba(0, 0, 0, 0.53);
+  --bg-light-strong: #16121b;
   --text-color: #ebedf0d8;
   --primary: rgb(149, 49, 244);
-  --primary-stronger: rgb(117 17 212);
-  --primary-transparency: rgb(189, 118, 255);
+  --primary-stronger: rgb(191, 123, 255);
+  --primary-transparency: rgb(168, 75, 255);
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
-  --tag-color: rgb(189, 118, 255);
+  --tag-color: rgba(121, 45, 193, 0.493);
   --border-color: #181818;
   --bg-wrap-img-card: #2d2d2d;
 }
