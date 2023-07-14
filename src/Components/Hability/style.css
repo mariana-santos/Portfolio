@@ -137,4 +137,8 @@
     .wrap-habilities{
         gap: .5em !important;
     }
+
+    .wrap-habilities.hab-see-less .hability:nth-child(n+7){
+        animation: hide .7s forwards ease;
+    }
 }

@@ -37,12 +37,11 @@
 
 .show-up{
     opacity: 0;
-    transform: translateY(30%);
-    animation: fade-up 2s forwards ease;
+    animation: grow .5s ease-in-out forwards;
 }
 
 .hability-info.show-up{
-    animation: fade-up-hability .8s forwards ease;
+    animation: grow .5s ease-in-out forwards;
 }
 
 h3{

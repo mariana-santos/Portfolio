@@ -169,7 +169,7 @@ export const projects_pt = [
         subtitle: 'Website com informações do jogo Valorant',
         github: 'https://github.com/AlehSouza/Valorant-Web',
         deploy: 'https://valorant-web.vercel.app/',
-        video_id: 'SJV4n5QrA_Y',
+        video_id: 'v7-2ZHXoqwM',
         skills: [
             {
                 id: 4,
@@ -207,6 +207,9 @@ export const projects_pt = [
         id: 5,
         title: 'Alura Studies',
         subtitle: 'Website para gerenciamento de estudos',
+        github: 'https://github.com/mariana-santos/alura-studies',
+        deploy: 'https://alura-studies-mariana-santos.vercel.app/',
+        video_id: '9NvLtuW9PwA',
         skills: [
             {
                 id: 4,
@@ -224,12 +227,22 @@ export const projects_pt = [
                 id: 7,
                 name: 'Git'
             }
-        ]
+        ],
+        description:
+            <>
+                <p>O projeto foi criado junto ao curso <strong>"React: escrevendo com Typescript"</strong> da <a href="https://www.alura.com.br/" target="_blank">Alura</a>, uma plataforma de cursos de tecnologia. </p>
+
+                <p>Com ele aprendi mais sobre a linguagem Typescript, CSS modules, Hooks no React, e boas práticas como boas práticas como <strong>DRY (Don't repeat yourself) e SRP (Single Responsibility Principle).</strong></p>
+
+            </>,
     },
     {
         id: 6,
         title: 'Solar',
         subtitle: 'Website de aluguel de carros elétricos',
+        deploy: 'https://solar-seven.vercel.app/',
+        github: 'https://github.com/mariana-santos/gs1',
+        video_id: 'nihtg3UWumg',
         skills: [
             {
                 id: 4,
@@ -251,12 +264,39 @@ export const projects_pt = [
                 id: 7,
                 name: 'Git'
             }
+        ],
+        description: <>
+            <p>A <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a> nos desafiou a usar a tecnologia para melhorar a mobilidade urbana no Brasil. </p>
+
+            <p>Pensando nisso, criamos o Solar, uma solução para baseada no desenvolvimento de um website de <strong>aluguel de carros elétricos movidos a energia solar</strong>, visando a popularização do carro elétrico, sustentabilidade, otimização do trânsito, preservação da fauna e flora e otimização da quantidade de carros parados.  </p>
+        </>,
+        team: [
+            {
+                id: 1,
+                name: 'Alícia Guiradelo',
+            },
+            {
+                id: 2,
+                name: 'Ana Carolina Prado',
+                link: 'https://www.linkedin.com/in/anacdprado/'
+            },
+            {
+                id: 3,
+                name: 'Arthur Foschiani',
+                link: 'https://www.linkedin.com/in/arthurfoschiani'
+            },
+            {
+                id: 4,
+                name: 'Larah Correa',
+            },
         ]
     },
     {
         id: 7,
         title: 'Bagify',
         subtitle: 'Aplicativo de gerenciamento de bagagens',
+        github: 'https://github.com/mariana-santos/hackaton-copastur',
+        video_id: 'nihtg3UWumg',
         skills: [
             {
                 id: 4,
@@ -274,12 +314,42 @@ export const projects_pt = [
                 id: 7,
                 name: 'Git'
             }
+        ],
+        description: <>
+            <p>Durante o <strong>Hackaton</strong> prmovido pela <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> e a <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, nós fomos desafiados a encontrar uma forma de humanizar a experiência dos viajantes de companhias aéreas.</p>
+
+            <p>Desse problema surgiu o <strong>Bagify</strong>: um app de gerenciamento para o usuário ter controle de suas bagagens enquanto viaja, e assim viajar sem preocupações com a segurança de seus pertences.</p>
+        </>,
+        team: [
+            {
+                id: 1,
+                name: 'David Almeida',
+                link: 'https://www.linkedin.com/in/almeida154'
+            },
+            {
+                id: 2,
+                name: 'Juliana Gonzales',
+                link: 'https://www.linkedin.com/in/julianagonzalesbispo'
+            },
+            {
+                id: 3,
+                name: 'Max Fernandes',
+                link: 'https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a'
+            },
+            {
+                id: 4,
+                name: 'Rafael Dibe',
+                link: 'https://www.linkedin.com/in/rafael-dibe-5aba5847'
+            },
         ]
     },
     {
         id: 8,
         title: 'Nutri Tips',
         subtitle: 'Blog de nutrição consumindo uma API externa',
+        deploy: 'https://nutri-tips.vercel.app/',
+        github: 'https://github.com/mariana-santos/Nutri-Tips',
+        video_id: 'yguCXU8AqJM',
         skills: [
             {
                 id: 4,
@@ -297,6 +367,52 @@ export const projects_pt = [
                 id: 7,
                 name: 'Git'
             }
+        ],
+        description: <>
+            <p>Durante o início dos meus estudos com <strong>React</strong>, construí esse projeto simples de um blog sobre nutrição com filtros. </p>
+
+            <p>Os dados são consumidos da API disponibilizada gratuitamente pelo <a href="https://sujeitoprogramador.com/rn-api/?api=posts" target="_blank">Sujeito Programador</a>.</p>
+        </>,
+    },
+    {
+        id: 9,
+        title: 'Chapter One',
+        subtitle: 'Livraria fictícia',
+        github: 'https://github.com/mariana-santos/chapter-one',
+        video_id: 'A0qBYKdb0WI',
+        skills: [
+            {
+                id: 4,
+                name: 'React'
+            },
+            {
+                id: 5,
+                name: 'Javascript'
+            },
+            {
+                id: 2,
+                name: 'Python'
+            },
+            {
+                id: 3,
+                name: 'SQL'
+            },
+            {
+                id: 7,
+                name: 'Git'
+            }
+        ],
+        description: <>
+            <p>O projeto foi proposto juntando elementos das matérias <strong>Domain Driven Design</strong>, <strong>Computational Thinking Using Python</strong>, <strong>Responsive Web Development</strong> e <strong>Building Relational Database</strong>, durante a graduação na <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>.</p>
+
+            <p>Com Python as informações são buscadas no banco de dados SQL (oracle) e são mostrados na aplicação com React. </p>
+        </>,
+        team: [
+            {
+                id: 1,
+                name: 'Kaue Caponero',
+                link: 'https://www.linkedin.com/in/kauecaponero/'
+            }
         ]
     }
 ];
@@ -310,7 +426,7 @@ export const projects_en = [
         video_id: 'Y6R30Et3Hwk',
         skills: projects_pt[0].skills,
         description: <>
-            <p><strong>Refinances</strong> was born out of a need observed by the group: financial organization. The project was developed as our <strong>Final Course Project</strong> at <a href='https://www.fiap.com.br/' target='_blank'>ETEC de Guaianazes</a>.</p>
+            <p><strong>Refinances</strong> was born out of a need observed by the group: financial organization. The project was developed as our <strong>Final Course Project</strong> at <a href='https://www.etecdeguaianazes.com.br/' target='_blank'>ETEC de Guaianazes</a>.</p>
             <p>The app features full financial management: income, expenses, accounts, financial goals, and a dashboard to track expenses by category!</p>
         </>,
         team: projects_pt[0].team
@@ -350,7 +466,7 @@ export const projects_en = [
         subtitle: 'Website with information about the game Valorant',
         github: 'https://github.com/AlehSouza/Valorant-Web',
         deploy: 'https://valorant-web.vercel.app/',
-        video_id: 'SJV4n5QrA_Y',
+        video_id: 'v7-2ZHXoqwM',
         skills: projects_pt[3].skills,
         description:
             <>
@@ -363,96 +479,69 @@ export const projects_en = [
         id: 5,
         title: 'Alura Studies',
         subtitle: 'Website for study management',
-        skills: [
-            {
-                id: 4,
-                name: 'React'
-            },
-            {
-                id: 5,
-                name: 'Typescript'
-            },
-            {
-                id: 2,
-                name: 'SCSS'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ]
+        github: 'https://github.com/mariana-santos/alura-studies',
+        deploy: 'https://alura-studies-mariana-santos.vercel.app/',
+        video_id: '9NvLtuW9PwA',
+        skills: projects_pt[4].skills,
+        description:
+            <>
+                <p>The project was created along with the course <strong>"React: Writing with Typescript"</strong> from <a href="https://www.alura.com.br/" target="_blank">Alura</a>, a technology course platform.</p>
+
+                <p>Through this course, I learned more about the Typescript language, CSS modules, React Hooks, and best practices such as <strong>DRY (Don't repeat yourself) and SRP (Single Responsibility Principle).</strong></p>
+            </>
+
     },
     {
         id: 6,
         title: 'Solar',
         subtitle: 'Electric car rental website',
-        skills: [
-            {
-                id: 4,
-                name: 'HTML'
-            },
-            {
-                id: 5,
-                name: 'CSS'
-            },
-            {
-                id: 2,
-                name: 'Javascript'
-            },
-            {
-                id: 11,
-                name: 'Figma'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ]
+        deploy: 'https://solar-seven.vercel.app/',
+        github: 'https://github.com/mariana-santos/gs1',
+        video_id: 'nihtg3UWumg',
+        skills: projects_pt[5].skills,
+        description:
+            <>
+                <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP</a> challenged us to use technology to improve urban mobility in Brazil. </p>
+
+                <p>With that in mind, we created Solar, a website for <strong>renting solar-powered electric cars</strong>, aiming to popularize electric vehicles, promote sustainability, optimize traffic flow, preserve wildlife, and reduce the number of parked cars.</p>
+            </>,
+        team: projects_pt[5].team,
     },
     {
         id: 7,
         title: 'Bagify',
         subtitle: 'Luggage management app',
-        skills: [
-            {
-                id: 4,
-                name: 'React Native'
-            },
-            {
-                id: 2,
-                name: 'Javascript'
-            },
-            {
-                id: 11,
-                name: 'Figma'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ]
+        skills: projects_pt[6].skills,
+        description: <>
+            <p>During the <strong>Hackathon</strong> promoted by <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> and <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, we were challenged to find a way to humanize the experience of airline travelers.</p>
+            <p>From this problem, <strong>Bagify</strong> was born: a baggage management app that allows users to have control over their belongings while traveling, ensuring a worry-free journey and the security of their belongings.</p>
+        </>,
+        team: projects_pt[6].team,
     },
     {
         id: 8,
         title: 'Nutri Tips',
         subtitle: 'Nutrition blog consuming an external API',
-        skills: [
-            {
-                id: 4,
-                name: 'React'
-            },
-            {
-                id: 5,
-                name: 'Javascript'
-            },
-            {
-                id: 2,
-                name: 'API Consumption'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ]
+        deploy: 'https://nutri-tips.vercel.app/',
+        github: 'https://github.com/mariana-santos/Nutri-Tips',
+        video_id: 'yguCXU8AqJM',
+        skills: projects_pt[7].skills,
+        description: <>
+            <p>During the early stages of my studies with React, I built this simple project of a nutrition blog with filters.</p>
+            <p>The data is consumed from the API provided for free by <a href="https://sujeitoprogramador.com/rn-api/?api=posts" target="_blank">Sujeito Programador</a>.</p>
+        </>,
+    },
+    {
+        id: 9,
+        title: 'Chapter One',
+        subtitle: 'Fictional Book Store',
+        github: 'https://github.com/mariana-santos/chapter-one',
+        video_id: 'A0qBYKdb0WI',
+        skills: projects_pt[8].skills,
+        description: <>
+            <p>The project was proposed by combining elements from the subjects <strong>Domain Driven Design</strong>, <strong>Computational Thinking Using Python</strong>, <strong>Responsive Web Development</strong>, and <strong>Building Relational Database</strong> during my graduation at <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>.</p>
+            <p>Using Python, the information is retrieved from the SQL database (Oracle) and displayed in the application using React.</p>
+        </>,
+        team: projects_pt[8].team
     }
 ];

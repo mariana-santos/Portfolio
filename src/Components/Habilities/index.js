@@ -52,8 +52,7 @@ export default function Habilities() {
 
             <div className={`hability-info ${animation ? animation : ''}`}>
                 <h3 className='line-after'>{selected.name}</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. </p>
-                <p>Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi. </p>
+                {selected.summary}
 
                 <button className='btn'>Ver projetos com {selected.name} </button>
                 {/* <p dangerouslySetInnerHTML={{ __html: selected.summary }} /> */}

@@ -34,31 +34,32 @@ export default function Modal({ show, selected, setIsOpen }) {
 
                         <div>{selected.description}</div>
 
-
-                        <p className='involved'>
-                            <strong>Outros envolvidos no projeto: </strong>
-                            {selected.team?.map((member, index) => {
-                                return (
-                                    <span key={member.id}>
-                                        {member.link ?
-                                            <a href={member.link} target='_blank'>
-                                                {member.name}
-                                            </a>
-                                            :
-                                            <>{member.name}</>
-                                        }
-                                        {console.log(index)}
-                                        {index === selected.team.length - 2 ? (
-                                            <> e </>
-                                        ) : index !== selected.team.length - 1 ? (
-                                            <>, </>
-                                        ) : (
-                                            <></>
-                                        )}
-                                    </span>
-                                )
-                            })}
-                        </p>
+                        {selected.team &&
+                            <p className='involved'>
+                                <strong>Outros envolvidos no projeto: </strong>
+                                {selected.team?.map((member, index) => {
+                                    return (
+                                        <span key={member.id}>
+                                            {member.link ?
+                                                <a href={member.link} target='_blank'>
+                                                    {member.name}
+                                                </a>
+                                                :
+                                                <>{member.name}</>
+                                            }
+                                            {console.log(index)}
+                                            {index === selected.team.length - 2 ? (
+                                                <> e </>
+                                            ) : index !== selected.team.length - 1 ? (
+                                                <>, </>
+                                            ) : (
+                                                <></>
+                                            )}
+                                        </span>
+                                    )
+                                })}
+                            </p>
+                        }
                     </div>
 
                     <div className='column wrap-iframe'>
