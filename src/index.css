@@ -2,7 +2,7 @@
 
 :root {
   --bg-light: #ebedf0;
-  --header-transparent: rgba(255, 255, 255, 0.2);
+  --header-transparent: rgba(255, 255, 255, 0.605);
   --bg-light-strong: #fff;
   --text-color: #363535;
   --primary: rgb(149, 49, 244);
@@ -18,7 +18,7 @@
 
 :root:has(.dark-theme) {
   --bg-light: #0e0a13;
-  --header-transparent: rgba(0, 0, 0, 0.53);
+  --header-transparent: rgba(0, 0, 0, 0.799);
   --bg-light-strong: #16121b;
   --text-color: #ebedf0d8;
   --primary: rgb(149, 49, 244);

@@ -49,6 +49,11 @@ export default function Navbar() {
                             sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
                             disableUnderline
                             variant="standard"
+                            inputProps={{
+                                classes: {
+                                    icon: 'icon-select',
+                                },
+                            }}
                         >
                             <MenuItem value={'pt'}>PT-BR</MenuItem>
                             <MenuItem value={'en'}>EN</MenuItem>

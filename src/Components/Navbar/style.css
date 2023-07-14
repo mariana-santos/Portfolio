@@ -267,7 +267,7 @@ h2.code {
     color: var(--text-color);
 }
 
-.css-pqjvzy-MuiSvgIcon-root-MuiSelect-icon, .css-1mf6u8l-MuiSvgIcon-root-MuiSelect-icon{
+.icon-select{
     right: -.5em !important;
 }
 

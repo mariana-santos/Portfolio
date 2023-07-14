@@ -75,6 +75,10 @@
     height: 2.6em;
 }
 
+.project .subtitle{
+    display: block;
+}
+
 .project:hover .subtitle, .project:hover .saiba-mais{
     transform: translateY(-2.3em);
 }

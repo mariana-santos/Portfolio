@@ -47,8 +47,14 @@ export default function Modal({ show, selected, setIsOpen }) {
                                             :
                                             <>{member.name}</>
                                         }
-                                        {index === selected.team.lenght ? <> e </>
-                                            : index !== selected.team.lenght ? <>, </> : <></>}
+                                        {console.log(index)}
+                                        {index === selected.team.length - 2 ? (
+                                            <> e </>
+                                        ) : index !== selected.team.length - 1 ? (
+                                            <>, </>
+                                        ) : (
+                                            <></>
+                                        )}
                                     </span>
                                 )
                             })}
@@ -56,7 +62,7 @@ export default function Modal({ show, selected, setIsOpen }) {
                     </div>
 
                     <div className='column wrap-iframe'>
-                        { selected.video_id ?
+                        {selected.video_id ?
                             <iframe src={`https://www.youtube.com/embed/${selected.video_id}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             :
                             selected.video_iframe
