@@ -65,7 +65,7 @@
     width: 50%;
 }
 
-iframe{
+iframe, .img-project{
     width: 100%;
     aspect-ratio: 1 / .6;
     height: auto;
