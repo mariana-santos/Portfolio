@@ -55,7 +55,7 @@ export default function Navbar() {
     return (
         <header>
             <nav className="navbar">
-                <Link to='/#about'>
+                <Link to='/#about' className='logo'>
                     <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
                 </Link>
 
@@ -77,7 +77,7 @@ export default function Navbar() {
                                 },
                             }}
                         >
-                            <MenuItem value={'pt'}>PT-BR</MenuItem>
+                            <MenuItem value={'pt'}>PT</MenuItem>
                             <MenuItem value={'en'}>EN</MenuItem>
                         </Select>
                     </div>

@@ -21,18 +21,20 @@ export const pt = {
     journey_title: 'Minha jornada até agora',
     journey:
         <>
-            <p>Sempre fui muito ligada em tecnologia e inovação, e tudo começou quando fiz um curso de informática básica aos 10 anos, onde aprendi os básicos de <strong>Software, Hardware e os programas do Pacote Office</strong>.</p>
-            <p>No entanto, minha verdadeira imersão no mundo da programação ocorreu quando fiz o curso técnico de <strong>Desenvolvimento de Sistemas na ETEC de Guainazes</strong>. Foi lá que me apaixonei pelo desenvolvimento frontend e percebi que seguiria essa profissão.</p>
+            <p>Sempre fui muito ligada em tecnologia e inovação. Tudo começou quando fiz um curso de informática básica aos 10 anos, onde aprendi os básicos de <strong>Software, Hardware e os programas do Pacote Office</strong>.</p>
+            <p>No entanto, minha verdadeira imersão no mundo da programação aconteceu quando fiz o curso técnico de <strong>Desenvolvimento de Sistemas na ETEC de Guainazes</strong>. Foi lá que me apaixonei pelo desenvolvimento frontend e percebi que seguiria essa profissão.</p>
             <p>Atualmente, estou cursando <strong>Análise e Desenvolvimento de Sistemas na FIAP</strong>, considerada a melhor faculdade de tecnologia do país.</p>
             <p>Além disso, já atuo como <strong>Desenvolvedora Web Jr. na Agência Choveu há mais de um ano</strong>, onde continuo aprendendo e aprimorando minhas habilidades no mundo do desenvolvimento frontend.</p>
         </>,
     skills_title: 'Habilidades',
     skills: skills_pt,
     projects_title: 'Projetos',
+    know_more: 'Saiba mais',
     projects: projects_pt,
     and: 'e',
     more_info: 'Mais informações',
     test: 'Testar',
+    other_involved: 'Outras pessoas envolvidas no projeto:',
     contact_title: 'Fale comigo!',
     contact_subtitle: 'Se tiver alguma pergunta ou algo a me dizer, não hesite em falar comigo! Prometo responder assim que possível 💜',
     contact_success: 'Mensagem enviada com sucesso! Em breve te retorno 💜',
@@ -72,10 +74,12 @@ export const en = {
     skills_title: 'Skills',
     skills: skills_en,
     projects_title: 'Projects',
+    know_more: 'Know more',
     projects: projects_en,
     and: 'and',
     more_info: 'More info',
     test: 'Test',
+    other_involved: 'Other people involved in this project:',
     contact_title: 'Contact me',
     contact_subtitle: 'If you have any questions or something to say, feel free to reach out! I promise to get back at you as soon as possible 💜',
     contact_success: `Message sent succesfully! I'll get back at you soon 💜`,

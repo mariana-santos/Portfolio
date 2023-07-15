@@ -39,7 +39,7 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
                         {selected?.team &&
                             <p className='involved'>
-                                <strong>Outros envolvidos no projeto: </strong>
+                                <strong>{strings.other_involved}</strong>
                                 {selected?.team?.map((member, index) => {
                                     return (
                                         <span key={member.id}>

@@ -65,10 +65,6 @@
     line-height: 1.3em;
 }
 
-/* .project .subtitle{ 
-    height: 2.3em;
-} */
-
 .card-footer span{
     display: inline-block;
     transition: .3s;
@@ -94,5 +90,22 @@
 
     .project .tags .tag:nth-child(3){
         display: none;
+    }
+
+    .project .subtitle{
+        font-size: .9em;
+    }
+
+    .card-footer{
+        transition: .3s;
+        overflow: hidden;
+        height: 2.5em;
+        line-height: 1.3em;
+    }
+    
+    .card-footer span{
+        display: inline-block;
+        transition: .3s;
+        height: 2.5em;
     }
 }

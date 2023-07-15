@@ -8,7 +8,7 @@ export const experiences_pt = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-    "Na Agência Choveu, crio e mantenho websites usando Wordpress e trabalho com tecnologias como HTML, CSS, SCSS e PHP. Estou sempre aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos projetos",
+    "Na Agência Choveu, crio e mantenho websites usando Wordpress e outras tecnologias como HTML, CSS, SCSS e PHP. Estou sempre aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos projetos",
     skills: [
       {
         id: 18,
@@ -41,7 +41,7 @@ export const experiences_pt = [
     location: "FIAP",
     link: "https://www.fiap.com.br/",
     summary:
-      "Durante minha graduação na FIAP, estou aprimorando minhas habilidades em desenvolvimento web, mobile, banco de dados, inteligência artificial e chatbot. Além disso, tenho projetos práticos em parceria com empresas incríveis, como a B3.",
+      "Durante minha graduação na FIAP, sigo aprimorando minhas habilidades em desenvolvimento web, mobile, banco de dados, inteligência artificial e chatbot. Além disso, tenho a chance de criar projetos práticos em parceria com empresas incríveis, como a B3.",
     skills: [
       {
         id: 9,
@@ -82,7 +82,7 @@ export const experiences_pt = [
     location: "ETEC de Guaianazes",
     link: "https://www.etecguaianazes.com.br/",
     summary:
-      "Na ETEC foi onde eu descobri a programação como profissão. Durante os 3 anos que estive lá, construí uma base sólida com lógica de programação e desenvolvimento. Também tive experiências incríveis como as maratonas de programação e visitas técnicas oferecidas.",
+      "A ETEC foi onde eu descobri a programação como profissão. Durante os 3 anos que estive lá, construí uma base sólida em lógica de programação e desenvolvimento. Também tive experiências incríveis como as maratonas de programação e visitas técnicas.",
     skills: [
       {
         id: 1,
@@ -122,7 +122,7 @@ export const experiences_en = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "At Agência Choveu, I create and maintain websites using Wordpress and work with technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
+      "At Agência Choveu, I create and maintain websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
     skills: experiences_pt[0].skills
   },
   {
@@ -134,7 +134,7 @@ export const experiences_en = [
     location: "FIAP",
     link: "https://www.fiap.com.br/",
     summary:
-      "During my graduation at FIAP, I am enhancing my skills in web development, mobile development, database management, artificial intelligence, and chatbot development. Additionally, I am involved in practical projects in partnership with incredible companies, such as B3.",
+      "During my graduation at FIAP, I am enhancing my skills in web development, mobile development, database management, artificial intelligence, and chatbot development. Additionally, I get to be involved in practical projects in partnership with incredible companies, such as B3.",
     skills: experiences_pt[1].skills
   },
   {
@@ -146,32 +146,7 @@ export const experiences_en = [
     location: "ETEC de Guaianazes",
     link: "https://www.etecguaianazes.com.br/",
     summary:
-      "At ETEC, I discovered programming as a profession. During the 3 years I spent there, I built a solid foundation in programming logic and development. I also had incredible experiences such as programming marathons and technical visits offered.",
-    skills: [
-      {
-        id: 1,
-        name: "Javascript",
-      },
-      {
-        id: 2,
-        name: "Typescript",
-      },
-      {
-        id: 4,
-        name: "React Native",
-      },
-      {
-        id: 11,
-        name: "Git",
-      },
-      {
-        id: 7,
-        name: "SQL Server",
-      },
-      {
-        id: 19,
-        name: "PHP",
-      },
-    ],
+      "ETEC is where I discovered programming as a career. During the 3 years I spent there, I built a solid foundation in programming logic and development. I also had incredible experiences such as programming marathons and technical visits.",
+    skills: experiences_pt[2].skills,
   },
 ];

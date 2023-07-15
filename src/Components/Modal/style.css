@@ -21,6 +21,7 @@
     z-index: 8;
     max-height: 80%;
     overflow-y: auto;
+    overflow-x: hidden;
 }
 
 #fade,
@@ -106,8 +107,8 @@ iframe{
 
 @media screen and (max-width: 768px){
     #modal{
-        padding: 2em;
-        width: 75% !important;
+        padding: 1.5em;
+        width: 80% !important;
     }
 
     .modal_header h1{
@@ -121,5 +122,10 @@ iframe{
 
     .modal_footer{
         flex-direction: column;
+        gap: .7em;
+    }
+
+    iframe{
+        aspect-ratio: 1 / .7;
     }
 }

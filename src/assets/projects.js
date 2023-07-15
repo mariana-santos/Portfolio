@@ -442,7 +442,7 @@ export const projects_en = [
         video_id: '3nP4r-L_qqk',
         skills: projects_pt[1].skills,
         description: <>
-            <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP University</a> in partnership with <a href='https://www.b3.com.br/pt_br/' target='_blank'>B3</a> challenged us to use technology para demystify <strong>IPO investments</strong> in Brazil. </p>
+            <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP University</a> in partnership with <a href='https://www.b3.com.br/pt_br/' target='_blank'>B3</a> challenged us to use technology to demystify <strong>IPO investments</strong> in Brazil. </p>
 
             <p>With that in mind, <strong>Investium</strong> was created! A website for novice investor who don't have easy acces to IPOs relevant informations.</p>
         </>,

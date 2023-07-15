@@ -16,6 +16,7 @@ header {
     box-sizing: border-box;
     color: var(--text-color);
     position: relative;
+    align-items: center;
 }
 
 .navbar h1 {
@@ -109,6 +110,10 @@ h2.code {
 
 .code {
     display: block !important;
+}
+
+.logo{
+    margin: auto 0;
 }
 
 @keyframes close-left {
@@ -318,12 +323,15 @@ h2.code {
     }
 
     .menu-wrapper{
-        gap: 1em;
+        gap: 1.5em;
         align-items: center;
     }
 
-    .hamburguer{
+    .hamburguer, .logo{
         transform: scale(.8);
     }
 
+    .navbar {
+        padding: 1em;
+    }
 }

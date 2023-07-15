@@ -129,6 +129,7 @@
 .timeline-content{
     opacity: 0;
     height: 0;
+    visibility: hidden;
 }
 
 .timeline-item.selected .timeline-content {
@@ -139,11 +140,13 @@
     from{
         opacity: 0;
         height: 0; 
+        visibility: hidden;
     }
 
     to{
         opacity: 1;
         height: 100%;
+        visibility: visible;
     }
 }
 
@@ -175,5 +178,18 @@
 
     #experience{
         margin-top: 0;
+    }
+
+    .timeline-item:not(.selected):hover .timeline-marker::before{
+        background: var(--bg-light);
+        border-color: var(--primary);
+    }
+
+    .timeline-item:hover .timeline-icon{
+        color: var(--text-color);
+    }
+
+    .timeline-item.selected .timeline-icon{
+        color: var(--bg-light)
     }
 }

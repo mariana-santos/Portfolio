@@ -108,3 +108,28 @@ h3{
         margin-top: 0;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .skill-info{
+        display: none;
+    }
+
+    .timeline-marker{
+        left: -1em;
+        width: 30px;
+    }
+
+    .timeline-item .timeline-marker::before{
+        left: -11px;
+    }
+
+    .timeline-icon{
+        font-size: 20px;
+        top: 10px;
+        left: -4px;
+    }
+
+    .timeline-item{
+        padding-left: 15px;
+    }
+}
