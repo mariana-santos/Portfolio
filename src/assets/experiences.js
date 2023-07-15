@@ -8,12 +8,11 @@ export const experiences_pt = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
+    "Na Agência Choveu, crio e mantenho websites usando Wordpress e trabalho com tecnologias como HTML, CSS, SCSS e PHP. Estou sempre aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos projetos",
     skills: [
       {
         id: 18,
         name: "Wordpress",
-        percentage: 70,
       },
       {
         id: 17,
@@ -26,7 +25,6 @@ export const experiences_pt = [
       {
         id: 6,
         name: "SCSS",
-        percentage: 70,
       },
       {
         id: 13,
@@ -43,7 +41,7 @@ export const experiences_pt = [
     location: "FIAP",
     link: "https://www.fiap.com.br/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
+      "Durante minha graduação na FIAP, estou aprimorando minhas habilidades em desenvolvimento web, mobile, banco de dados, inteligência artificial e chatbot. Além disso, tenho projetos práticos em parceria com empresas incríveis, como a B3.",
     skills: [
       {
         id: 9,
@@ -84,7 +82,7 @@ export const experiences_pt = [
     location: "ETEC de Guaianazes",
     link: "https://www.etecguaianazes.com.br/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
+      "Na ETEC foi onde eu descobri a programação como profissão. Durante os 3 anos que estive lá, construí uma base sólida com lógica de programação e desenvolvimento. Também tive experiências incríveis como as maratonas de programação e visitas técnicas oferecidas.",
     skills: [
       {
         id: 1,
@@ -124,31 +122,8 @@ export const experiences_en = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
-    skills: [
-      {
-        id: 18,
-        name: "Wordpress",
-        percentage: 70,
-      },
-      {
-        id: 17,
-        name: "JQuery",
-      },
-      {
-        id: 16,
-        name: "Bootstrap",
-      },
-      {
-        id: 6,
-        name: "SCSS",
-        percentage: 70,
-      },
-      {
-        id: 13,
-        name: "Figma",
-      },
-    ],
+      "At Agência Choveu, I create and maintain websites using Wordpress and work with technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet project needs.",
+    skills: experiences_pt[0].skills
   },
   {
     id: 2,
@@ -159,37 +134,8 @@ export const experiences_en = [
     location: "FIAP",
     link: "https://www.fiap.com.br/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
-    skills: [
-      {
-        id: 9,
-        name: "Java",
-      },
-      {
-        id: 10,
-        name: "Python",
-      },
-      {
-        id: 4,
-        name: "React Native",
-      },
-      {
-        id: 13,
-        name: "Figma",
-      },
-      {
-        id: 14,
-        name: "Material UI",
-      },
-      {
-        id: 7,
-        name: "SQL Server",
-      },
-      {
-        id: 5,
-        name: "Next Js",
-      },
-    ],
+      "During my graduation at FIAP, I am enhancing my skills in web development, mobile development, database management, artificial intelligence, and chatbot development. Additionally, I am involved in practical projects in partnership with incredible companies, such as B3.",
+    skills: experiences_pt[1].skills
   },
   {
     id: 3,
@@ -200,7 +146,7 @@ export const experiences_en = [
     location: "ETEC de Guaianazes",
     link: "https://www.etecguaianazes.com.br/",
     summary:
-      "Nullam vestibulum nulla sed tortor pellentesque, in scelerisque dui lacinia. In id lorem ipsum. Mauris id tincidunt justo. Vestibulum ut facilisis nisi.",
+      "At ETEC, I discovered programming as a profession. During the 3 years I spent there, I built a solid foundation in programming logic and development. I also had incredible experiences such as programming marathons and technical visits offered.",
     skills: [
       {
         id: 1,

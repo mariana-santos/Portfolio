@@ -1,0 +1,42 @@
+.loader{
+    display: none;
+    width: 100vw;
+    height: 100vh;
+    background: #26262672;
+    box-sizing: border-box;
+    z-index: 10;
+    position: fixed;
+    top: 0;
+    right: 0;
+}
+
+.loader.show {
+    display: block;
+}
+
+.center {
+    position: relative;
+    top: calc(50% - 70px);
+    z-index: 8;
+}
+
+.ring {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    box-shadow: 0 4px 0 var(--primary);
+    background: transparent;
+    animation: animate 1s linear infinite;
+    margin: auto;
+}
+
+@keyframes animate
+{
+    0%{
+        transform: rotate(0deg);
+    }
+
+    100%{
+        transform: rotate(360deg);
+    }
+}

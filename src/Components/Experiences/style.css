@@ -1,3 +1,7 @@
+#experience{
+    margin-top: -125px;
+}
+
 .timeline {
     line-height: 1.4em;
     list-style: none;
@@ -168,5 +172,9 @@
     .timeline-info small{
         text-align: end;
         margin-top: .5em;
+    }
+
+    #experience{
+        margin-top: 0;
     }
 }

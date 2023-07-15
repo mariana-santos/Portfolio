@@ -1,0 +1,17 @@
+footer{
+    background-color: var(--bg-wrap-img-card);
+    position: relative;
+    /* z-index: 5; */
+    text-align: center;
+    padding: 1.5em;
+}
+
+footer p{
+    margin: 0;
+    margin-bottom: .5em;
+}
+
+footer a{
+    color: var(--primary);
+    font-weight: bold;
+}

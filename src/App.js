@@ -11,20 +11,20 @@ import AOS from 'aos';
 import 'aos/dist/aos.css';
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
+import Footer from './Components/Footer';
 
 export const ConfigContext = createContext()
 
 export default function App() {
 
-  const [language, setLanguage] = useState('en')
-  const [theme, setTheme] = useState('light')
+  const initialLanguage =  localStorage.getItem('language') ? localStorage.getItem('language') : 'pt'
+  const initialTheme =  localStorage.getItem('theme') ? localStorage.getItem('theme') : 'light'
+
+  const [language, setLanguage] = useState(initialLanguage)
+  const [theme, setTheme] = useState(initialTheme)
 
   useEffect(() => {
     AOS.init({ duration: 800 });
-
-    // if (localStorage.getItem('theme'))
-    //   theme = localStorage.getItem('theme')
-
   }, [])
 
   const ConfigValues = {
@@ -45,6 +45,7 @@ export default function App() {
             <Route element={<Home />} path="/" />
             <Route element={<Contact />} path="/contact" />
           </Routes>
+          <Footer />
         </BrowserRouter>
       </div>
     </ConfigContext.Provider>

@@ -1,5 +1,5 @@
 import { useEffect, useState, React } from 'react'
-import Hability from '../Hability'
+import Skill from '../Skill'
 
 import { IoIosArrowDown } from 'react-icons/io'
 
@@ -7,7 +7,7 @@ import './style.css'
 
 import useStrings from '../../assets/useStrings'
 
-export default function Habilities() {
+export default function Skills() {
     
     const strings = useStrings()
 
@@ -26,15 +26,15 @@ export default function Habilities() {
     }, [selected])
 
     return (
-        <section className='container' id="habilities" data-aos="fade-right">
-            <h2 className='code'>Habilidades</h2>
+        <section className='container' id="skills" data-aos="fade-up">
+            <h2 className='code'>{strings.skills_title}</h2>
 
-            <div className={`column wrap-habilities ${seeAll ? 'hab-see-all' : 'hab-see-less'}`}>
+            <div className={`column wrap-skills ${seeAll ? 'hab-see-all' : 'hab-see-less'}`}>
                 {
                     strings.skills.map((skill) => {
                         return (
-                            <Hability
-                                hability={skill}
+                            <Skill
+                                skill={skill}
                                 key={skill.id}
                                 className={selected.id === skill.id && 'selected'}
                                 setSelected={setSelected}
@@ -50,15 +50,14 @@ export default function Habilities() {
                 </button>
             </div>
 
-            <div className={`hability-info ${animation ? animation : ''}`}>
+            <div className={`skill-info ${animation ? animation : ''}`}>
                 <h3 className='line-after'>{selected.name}</h3>
                 {selected.summary}
 
                 <button className='btn'>Ver projetos com {selected.name} </button>
-                {/* <p dangerouslySetInnerHTML={{ __html: selected.summary }} /> */}
             </div>
 
-            <h2 className='code close'>Habilidades</h2>
+            <h2 className='code close'>{strings.skills_title}</h2>
         </section>
     )
 }

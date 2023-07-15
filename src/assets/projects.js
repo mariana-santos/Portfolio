@@ -4,7 +4,8 @@ export const projects_pt = [
         title: 'Refinances',
         subtitle: 'Aplicativo de gerenciamento financeiro',
         github: 'https://github.com/mariana-santos/refinances',
-        video_id: 'Y6R30Et3Hwk',
+        video_id: 'i9xEfPATjSk',
+        param: '?start=681',
         skills: [
             {
                 id: 4,
@@ -23,7 +24,7 @@ export const projects_pt = [
                 name: 'Git'
             },
             {
-                id: 11,
+                id: 12,
                 name: 'Figma'
             },
             {
@@ -423,7 +424,8 @@ export const projects_en = [
         title: 'Refinances',
         subtitle: 'Financial management app built with React Native',
         github: 'https://github.com/mariana-santos/refinances',
-        video_id: 'Y6R30Et3Hwk',
+        video_id: 'i9xEfPATjSk',
+        param: '?start=681',
         skills: projects_pt[0].skills,
         description: <>
             <p><strong>Refinances</strong> was born out of a need observed by the group: financial organization. The project was developed as our <strong>Final Course Project</strong> at <a href='https://www.etecdeguaianazes.com.br/' target='_blank'>ETEC de Guaianazes</a>.</p>

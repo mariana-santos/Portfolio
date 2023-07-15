@@ -14,6 +14,8 @@ import useStrings  from '../../assets/useStrings'
 // import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
+import logo from '../../assets/logo.svg'
+
 
 export default function Navbar() {
 
@@ -30,12 +32,32 @@ export default function Navbar() {
         localStorage.setItem('theme', theme)
     }, [theme])
 
+    useEffect(() => {
+        localStorage.setItem('language', language)
+    }, [language])
+
     const strings = useStrings();
+
+    useEffect(() => {
+        function handleClickOutside(event) {
+            if (menuOpen && !event.target.closest('.menu-wrapper')) {
+                setMenuOpen(false);
+            }
+        }
+
+        document.addEventListener('click', handleClickOutside);
+
+        return () => {
+            document.removeEventListener('click', handleClickOutside);
+        };
+    }, [menuOpen]);
 
     return (
         <header>
             <nav className="navbar">
-                <Link to='/'>Início</Link>
+                <Link to='/#about'>
+                    <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
+                </Link>
 
                 <div className='menu-wrapper'>
                     <div className='language-switcher'>
@@ -78,7 +100,10 @@ export default function Navbar() {
                         <span />
                     </div>
 
-                    <ul className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}>
+                    <ul 
+                        className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}
+                        onClick={() => menuOpen && setMenuOpen(false)}
+                    >
                         <li className='code autoclose'>
                             <Link to="/#about">{strings.navbar.about}</Link >
                         </li>
@@ -88,7 +113,7 @@ export default function Navbar() {
                         </li>
 
                         <li className='code autoclose'>
-                            <Link to="/#habilities">{strings.navbar.habilities}</Link >
+                            <Link to="/#skills">{strings.navbar.skills}</Link >
                         </li>
 
                         <li className='code autoclose'>

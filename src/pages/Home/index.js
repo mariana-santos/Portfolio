@@ -1,6 +1,6 @@
 import About from '../../Components/About'
 import Experiences from '../../Components/Experiences'
-import Habilities from '../../Components/Habilities'
+import Habilities from '../../Components/Skills'
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 

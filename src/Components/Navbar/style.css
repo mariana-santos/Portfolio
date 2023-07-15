@@ -41,6 +41,7 @@ header {
 .hamburguer span:nth-child(2) {
     width: 85%;
     margin-left: auto;
+    height: 2px;
 }
 
 .hamburguer.close span:nth-child(1) {

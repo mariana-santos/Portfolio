@@ -8,7 +8,7 @@ export default function Experiences() {
   const [selected, setSelected] = useState(strings.experiences[0])
 
   return (
-    <section className='container' id='experience' data-aos='fade-left'>
+    <section className='container' id='experience' data-aos='fade-up'>
       <h2 className='code'>{strings.experience_title}</h2>
 
       <div className='column'>
@@ -25,17 +25,8 @@ export default function Experiences() {
       </div>
 
       <div className='column text-about'>
-        <h3 className='line-after'>Sobre a minha jornada</h3>
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent
-          elementum tellus sit amet velit hendrerit mattis. Aenean ornare ut
-          lectus in scelerisque. Praesent id aliquet tellus, ut dictum felis.
-        </p>
-        <p>
-          Mauris consequat interdum posuere. Nullam rhoncus molestie est, eu
-          pulvinar tortor pretium eget. Proin in semper velit, nec tempor sapien.
-          Donec facilisis ex id nibh dignissim pulvinar.
-        </p>
+        <h3 className='line-after'>{strings.journey_title}</h3>
+        {strings.journey}
       </div>
 
       <h2 className='code close'>{strings.experience_title}</h2>

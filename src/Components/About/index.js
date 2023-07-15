@@ -12,20 +12,19 @@ export default function About() {
 
     return (
         <section className='container' id='about'>            
-            <div className='column text' data-aos="fade-right">
+            <div className='column text' data-aos="fade-up">
 
                 <h1 className='gradient-text'>
                     <span className='light'>Mariana Santos. </span> <br />
                     {strings.title}
                 </h1>
 
-                <p className='smaller'>{strings.subtitle[1]} <br /></p>
-                <p className='smaller'>{strings.subtitle[2]}</p>
+                <p className='smaller'>{strings.subtitle} </p>
 
                 {/* <a className='btn btn-secondary' href='#contato'>Saiba mais</a> */}
             </div>
 
-            <div className='column wrapper-pic' data-aos="fade-left">
+            <div className='column wrapper-pic' data-aos="fade-down">
                 <div className='pic'>
                     <div className='line-element' />
                     <img src={pic} alt='Imagem de Mariana Santos programando durante Hackaton' id='main-pic' />

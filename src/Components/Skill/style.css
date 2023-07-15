@@ -1,4 +1,4 @@
-.hability{
+.skill{
     width: calc(100% / 7 - 2.5em);
     text-align: center;
     border: solid 2px var(--border-color);
@@ -12,21 +12,21 @@
     filter: grayscale(70%) opacity(.75);
 }
 
-.hability.selected, .hability:hover{
+.skill.selected, .skill:hover{
     filter: none;
     border: solid 2px var(--primary);
     box-shadow: var(--shadow-secondary);
 }
 
-.hability:not(.selected):hover{
+.skill:not(.selected):hover{
     border: solid 2px var(--primary-transparency);
 }
 
-.wrap-habilities.hab-see-less .hability:nth-child(n+15){
+.wrap-skills.hab-see-less .skill:nth-child(n+15){
     animation: hide .7s forwards ease;
 }
 
-.hability p{
+.skill p{
     margin-bottom: 0;
     font-size: .7em;
 }
@@ -81,7 +81,7 @@
     opacity: 0;
 }
 
-.hability.selected .value-percentage, .hability:hover .value-percentage{
+.skill.selected .value-percentage, .skill:hover .value-percentage{
     animation: showUp .7s forwards ease;
 }
 
@@ -128,17 +128,17 @@
 }
 
 @media screen and (max-width: 768px) {
-    .hability{
+    .skill{
         width: calc(100% / 3 - 1.7em);
         padding: .5em;
         font-size: .8em;
     }
 
-    .wrap-habilities{
+    .wrap-skills{
         gap: .5em !important;
     }
 
-    .wrap-habilities.hab-see-less .hability:nth-child(n+7){
+    .wrap-skills.hab-see-less .skill:nth-child(n+7){
         animation: hide .7s forwards ease;
     }
 }

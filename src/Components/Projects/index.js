@@ -9,9 +9,9 @@ export default function Projects({ setIsOpen, setSelected }){
     const strings = useStrings()
 
     return(
-        <section className='container' id='projects' data-aos="fade-left">
+        <section className='container' id='projects'>
             
-            <h2 className='code'>Projetos</h2>
+            <h2 className='code'>{strings.projects_title}</h2>
 
             <div id="filter">
                 Filtrar por:
@@ -29,7 +29,7 @@ export default function Projects({ setIsOpen, setSelected }){
                 })}
             </div>
 
-            <h2 className='code close'>Projetos</h2>
+            <h2 className='code close'>{strings.projects_title}</h2>
 
         </section>
     )

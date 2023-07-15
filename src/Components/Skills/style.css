@@ -1,22 +1,23 @@
-#habilities{
+#skills{
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: 5em;
+    /* margin-bottom: 5em; */
+    margin-top: -125px;
     column-gap: 3em;
 }
 
-#habilities h2{
+#skills h2{
     width: 100%;
 }
 
-.wrap-habilities{
+.wrap-skills{
     display: flex;
     gap: .8em;
     width: 65%;
     flex-wrap: wrap;
 }
 
-.hability-info{
+.skill-info{
     width: calc(35% - 3em);
 }
 
@@ -40,7 +41,7 @@
     animation: grow .5s ease-in-out forwards;
 }
 
-.hability-info.show-up{
+.skill-info.show-up{
     animation: grow .5s ease-in-out forwards;
 }
 
@@ -49,7 +50,7 @@ h3{
     margin-top: 0;
 }
 
-.hability-info .btn{
+.skill-info .btn{
     margin-top: 2em;
 }
 
@@ -66,7 +67,7 @@ h3{
     }
 }
 
-@keyframes fade-up-hability {
+@keyframes fade-up-skill {
     from{
         opacity: 0;
         transform: translateY(10%);
@@ -99,7 +100,11 @@ h3{
 }
 
 @media screen and (max-width: 1200px) {
-    #habilities .column, .hability-info{
+    #skills .column, .skill-info{
         width: 100%;
+    }
+
+    #skills{
+        margin-top: 0;
     }
 }
