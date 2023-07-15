@@ -316,4 +316,14 @@ h2.code {
         right: -1em;
         left: initial;
     }
+
+    .menu-wrapper{
+        gap: 1em;
+        align-items: center;
+    }
+
+    .hamburguer{
+        transform: scale(.8);
+    }
+
 }

@@ -2,10 +2,13 @@ import './style.css';
 
 import { AiOutlineClose, AiOutlineGithub, AiFillPlayCircle } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
+import useStrings from '../../assets/useStrings';
 
 export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
     const showClass = show ? 'show' : 'hide'
+
+    const strings = useStrings()
 
     return (
         <>
@@ -49,7 +52,7 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                                             }
                                             {console.log(index)}
                                             {index === selected?.team.length - 2 ? (
-                                                <> e </>
+                                                <> {strings.and} </>
                                             ) : index !== selected?.team.length - 1 ? (
                                                 <>, </>
                                             ) : (
@@ -71,13 +74,13 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
                         <div className='modal_footer'>
                             <a href={selected?.github} target='_blank' className='btn'>
-                                Mais informações
+                                {strings.more_info}
                                 <AiOutlineGithub />
                             </a>
 
                             {selected?.deploy &&
                                 <a href={selected?.deploy} target='_blank' className='btn'>
-                                    Testar
+                                    {strings.test}
                                     <BsFillPlayFill />
                                 </a>
                             }

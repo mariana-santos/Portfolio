@@ -54,7 +54,7 @@ export default function Skills() {
                 <h3 className='line-after'>{selected.name}</h3>
                 {selected.summary}
 
-                <button className='btn'>Ver projetos com {selected.name} </button>
+                {/* <button className='btn'>Ver projetos com {selected.name} </button> */}
             </div>
 
             <h2 className='code close'>{strings.skills_title}</h2>
