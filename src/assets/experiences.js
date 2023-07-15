@@ -122,7 +122,7 @@ export const experiences_en = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "At Agência Choveu, I create and maintain websites using Wordpress and work with technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet project needs.",
+      "At Agência Choveu, I create and maintain websites using Wordpress and work with technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
     skills: experiences_pt[0].skills
   },
   {

@@ -89,6 +89,10 @@
 
 @media screen and (max-width: 768px) {
     .project{
-        width: 100%;
+        width: 110%;
+    }
+
+    .project .tags .tag:nth-child(3){
+        display: none;
     }
 }

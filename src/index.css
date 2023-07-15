@@ -128,6 +128,10 @@ a {
   font-weight: bold;
 }
 
+.btn-secondary::after, .btn-secondary::before{
+  display: none;
+}
+
 .highlight {
   position: relative;
   color: var(--text-color);
@@ -204,10 +208,6 @@ a {
       padding: 0 5em;
   }
 
-  h2.code{
-    font-size: 1.7em !important;
-  }
-
   #about .column{
     font-size: 1.5em !important;
   }
@@ -215,7 +215,7 @@ a {
 
 @media screen and (max-width: 768px) {
   .container{
-      padding: 0 4em;
+      padding: 0 3.5em;
   }
 
   .column, #about .text{
@@ -228,12 +228,6 @@ a {
 
   #about .column{
     font-size: 1.3em !important;
-  }
-
-  h2.code{
-    font-size: 1.3em !important;
-    left: initial !important;
-    right: initial !important;
   }
 
   .row{

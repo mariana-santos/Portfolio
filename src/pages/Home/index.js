@@ -21,6 +21,7 @@ function App() {
         show={modalIsOpen}
         setIsOpen={setIsOpen}
         selected={selected}
+        setSelected={setSelected}
       />
 
       <About />

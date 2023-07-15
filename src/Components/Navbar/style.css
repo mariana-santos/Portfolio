@@ -107,7 +107,7 @@ h2.code {
     content: '\3c/';
 }
 
-.code{
+.code {
     display: block !important;
 }
 
@@ -179,28 +179,33 @@ h2.code {
 }
 
 @keyframes visibility {
-    from { visibility: visible;}
-    to { visibility: hidden; }
+    from {
+        visibility: visible;
+    }
+
+    to {
+        visibility: hidden;
+    }
 }
 
-.navbar ul li{
+.navbar ul li {
     padding: 15px 0;
 }
 
-.navbar ul li:not(:last-of-type){
+.navbar ul li:not(:last-of-type) {
     border-bottom: solid 1px var(--bg-light);
 }
 
-.navbar ul.opened{
+.navbar ul.opened {
     animation: fade-up .5s forwards ease;
 }
 
-.theme-switcher{
+.theme-switcher {
     height: 20px;
     overflow: hidden;
 }
 
-.theme-switcher svg{
+.theme-switcher svg {
     width: 20px;
     height: 20px;
     object-fit: contain;
@@ -208,29 +213,34 @@ h2.code {
     transition: .5s;
 }
 
-.theme-switcher.dark svg{
+.theme-switcher.dark svg {
     animation: dark .4s forwards ease;
 }
 
-.theme-switcher.light svg{
+.theme-switcher.light svg {
     animation: light .4s forwards ease;
 }
 
-.theme-switcher:hover svg{
+.theme-switcher:hover svg {
     opacity: .8;
 }
 
-.sun{
+.sun {
     color: rgb(244 198 49);
 }
 
 @keyframes dark {
-    from { transform: translateY(-20px); }
-    to { transform: translateY(0px); }
+    from {
+        transform: translateY(-20px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
 }
 
 @keyframes light {
-    to{
+    to {
         transform: translateY(-20px);
     }
 }
@@ -261,18 +271,18 @@ h2.code {
     cursor: pointer;
 }
 
-#language{
+#language {
     border: none;
     padding: 0;
     padding-right: 15px;
     color: var(--text-color);
 }
 
-.icon-select{
+.icon-select {
     right: -.5em !important;
 }
 
-.language-switcher *{
+.language-switcher * {
     color: var(--text-color);
 }
 
@@ -284,12 +294,26 @@ h2.code {
     .navbar ul {
         right: 5em;
     }
+
+    h2.code {
+        font-size: 1.7em;
+    }
 }
 
 @media screen and (max-width: 768px) {
     .navbar ul {
         width: 100vw;
         left: 0;
-        gap: 15px;
+        /* gap: 15px; */
+    }
+
+    h2.code {
+        font-size: 1.4em;
+        left: -1em;
+    }
+
+    .code.close{
+        right: -1em;
+        left: initial;
     }
 }

@@ -3,7 +3,7 @@ import './style.css';
 import { AiOutlineClose, AiOutlineGithub, AiFillPlayCircle } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 
-export default function Modal({ show, selected, setIsOpen }) {
+export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
     const showClass = show ? 'show' : 'hide'
 
@@ -12,17 +12,17 @@ export default function Modal({ show, selected, setIsOpen }) {
             <div id="fade" className={showClass}></div>
             <div id="modal" className={showClass}>
                 <div className="modal_header">
-                    <h3 className='line-after'>{selected.title}</h3>
-                    <AiOutlineClose onClick={() => setIsOpen(false)} className="btn_close" />
+                    <h3 className='line-after'>{selected?.title}</h3>
+                    <AiOutlineClose onClick={() => {setIsOpen(false); setSelected(null)}} className="btn_close" />
                 </div>
 
                 <div className="modal_content">
                     <div className='column project-info'>
 
-                        <p className='subtitle'>{selected.subtitle}</p>
+                        <p className='subtitle'>{selected?.subtitle}</p>
 
                         <div className='tags'>
-                            {selected.skills.map(stack => {
+                            {selected?.skills.map(stack => {
                                 return (
                                     <span className='tag' key={stack.id}>
                                         <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
@@ -32,12 +32,12 @@ export default function Modal({ show, selected, setIsOpen }) {
                             })}
                         </div>
 
-                        <div>{selected.description}</div>
+                        <div>{selected?.description}</div>
 
-                        {selected.team &&
+                        {selected?.team &&
                             <p className='involved'>
                                 <strong>Outros envolvidos no projeto: </strong>
-                                {selected.team?.map((member, index) => {
+                                {selected?.team?.map((member, index) => {
                                     return (
                                         <span key={member.id}>
                                             {member.link ?
@@ -48,9 +48,9 @@ export default function Modal({ show, selected, setIsOpen }) {
                                                 <>{member.name}</>
                                             }
                                             {console.log(index)}
-                                            {index === selected.team.length - 2 ? (
+                                            {index === selected?.team.length - 2 ? (
                                                 <> e </>
-                                            ) : index !== selected.team.length - 1 ? (
+                                            ) : index !== selected?.team.length - 1 ? (
                                                 <>, </>
                                             ) : (
                                                 <></>
@@ -63,20 +63,20 @@ export default function Modal({ show, selected, setIsOpen }) {
                     </div>
 
                     <div className='column wrap-iframe'>
-                        {selected.video_id ?
-                            <iframe src={`https://www.youtube.com/embed/${selected.video_id}${selected.param ? selected.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                        {selected?.video_id ?
+                            <iframe src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
                             :
-                            selected.video_iframe
+                            selected?.video_iframe
                         }
 
                         <div className='modal_footer'>
-                            <a href={selected.github} target='_blank' className='btn'>
+                            <a href={selected?.github} target='_blank' className='btn'>
                                 Mais informações
                                 <AiOutlineGithub />
                             </a>
 
-                            {selected.deploy &&
-                                <a href={selected.deploy} target='_blank' className='btn'>
+                            {selected?.deploy &&
+                                <a href={selected?.deploy} target='_blank' className='btn'>
                                     Testar
                                     <BsFillPlayFill />
                                 </a>

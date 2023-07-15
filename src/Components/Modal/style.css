@@ -114,4 +114,8 @@ iframe{
         font-size: 1.8rem;
         line-height: normal;
     }
+
+    .modal_content{
+        flex-direction: column-reverse;
+    }
 }
