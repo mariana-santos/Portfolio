@@ -118,4 +118,8 @@ iframe{
     .modal_content{
         flex-direction: column-reverse;
     }
+
+    .modal_footer{
+        flex-direction: column;
+    }
 }

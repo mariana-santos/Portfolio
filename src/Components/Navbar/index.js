@@ -121,7 +121,7 @@ export default function Navbar() {
                         </li>
 
                         <li className='code autoclose'>
-                            <Link to="/contact">{strings.navbar.contact}</Link >
+                            <Link to="/contact/#contact">{strings.navbar.contact}</Link >
                         </li>
                     </ul>
                 </div>
