@@ -52,7 +52,7 @@ a {
 
 .container {
   padding: 0 10em;
-  padding-top: 200px;
+  /* padding-top: 200px; */
   display: flex;
   flex-wrap: wrap;
   column-gap: 5em;

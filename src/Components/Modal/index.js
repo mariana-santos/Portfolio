@@ -68,8 +68,8 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                     <div className='column wrap-iframe'>
                         {selected?.video_id ?
                             <iframe src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
-                            :
-                            <img className='img-project' src={require(`../../assets/projects/${selected.title.toLowerCase()}.jpg`)} />
+                            : selected?.title &&
+                            <img className='img-project' src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} />
                         }
 
                         <div className='modal_footer'>
