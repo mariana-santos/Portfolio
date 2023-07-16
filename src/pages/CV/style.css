@@ -1,0 +1,29 @@
+#page{
+    width: 2480px;
+    height: 3508px;
+    background-color: var(--bg-light-strong);
+    max-width: 100%;
+    margin-top: 150px;
+    padding: 5.5em 4em;
+    display: flex;
+    gap: 2em;
+}
+
+.column-small{
+    width: 30%;
+}
+
+.main-information{
+    width: 70%;
+}
+
+#page p{
+    margin-top: 0;
+}
+
+.with-icon{
+    display: flex;
+    gap: .5em;
+    align-items: center;
+    color: var(--text-color);
+}

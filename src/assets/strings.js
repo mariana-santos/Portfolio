@@ -44,7 +44,8 @@ export const pt = {
     email_placeholder: 'Qual seu principal email?',
     message_label: 'Sua mensagem',
     message_placeholder: 'O que você tem a dizer?',
-    send: 'Enviar'
+    send: 'Enviar',
+    location: 'Zona Leste de São Paulo - SP'
 };
 
 export const en = {
@@ -89,5 +90,6 @@ export const en = {
     email_placeholder: 'What is your main email?',
     message_label: 'Your message',
     message_placeholder: 'What do you have to say?',
-    send: 'Send'
+    send: 'Send',
+    location: 'São Paulo, SP - Brazil'
 }

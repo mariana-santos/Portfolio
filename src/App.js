@@ -12,6 +12,7 @@ import 'aos/dist/aos.css';
 
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 import Footer from './Components/Footer';
+import CV from './pages/CV';
 
 export const ConfigContext = createContext()
 
@@ -44,6 +45,7 @@ export default function App() {
           <Routes>
             <Route element={<Home />} path="/" />
             <Route element={<Contact />} path="/contact" />
+            <Route element={<CV />} path="/resume" />
           </Routes>
           <Footer />
         </BrowserRouter>
