@@ -34,6 +34,7 @@ export const experiences_pt = [
     details: [
       'Desenvolvimento de aplicações frontend para diversos clientes, com destaque para aplicações em Wordpress.',
       'Melhoria da acessibilidade, SEO e experiência geral das aplicações.',
+      'Criação de Landing Pages para eventos, webinars, produtos e outros.',
       'Criação de campanhas de e-mail marketing utilizando plataformas como OCE e RD Station.'
     ]
   },
@@ -77,6 +78,11 @@ export const experiences_pt = [
         name: "Next Js",
       },
     ],
+    details: [
+      'Desenvolvimento de aplicações práticas full-stack a partir de desafios propostos por diversas empresas parceiras da FIAP.',
+      'Entrega de projetos reais utilizando a metodologia SCRUM, garantindo uma gestão eficiente e conclusão dentro do prazo.',
+      'Engajada ativamente em eventos de tecnologia, palestras e hackatons.',
+    ]
   },
   {
     id: 3,
@@ -114,6 +120,11 @@ export const experiences_pt = [
         name: "PHP",
       },
     ],
+    details: [
+      'Desenvolvimento de aplicações full-stack web e mobile proposta pelos professores.',
+      'Participação em diversas aulas de robótica com Arduino e a linguagem C.',
+      'Engajada ativamente em eventos de tecnologia, palestras e maratonas de programação.',
+    ]
   },
 ];
 
@@ -127,11 +138,12 @@ export const experiences_en = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "At Agência Choveu, I create and maintain websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
+      "At Choveu, I create and maintain websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
     skills: experiences_pt[0].skills,
     details: [
       'Built frontend applications for multiple clients. Most especially Wordpress applications.',
       'Improved accessibility, SEO and overall experience of products.',
+      'Built Landing Pages for events, webinars, products and others.',
       'Built e-mail marketing with several platforms, such as OCE and RD Station'
     ]
   },
@@ -145,7 +157,12 @@ export const experiences_en = [
     link: "https://www.fiap.com.br/",
     summary:
       "During my graduation at FIAP, I am enhancing my skills in web development, mobile development, database management, artificial intelligence, and chatbot development. Additionally, I get to be involved in practical projects in partnership with incredible companies, such as B3.",
-    skills: experiences_pt[1].skills
+    skills: experiences_pt[1].skills,
+    details: [
+      'Developed practical full-stack applications through engaging challenges presented by various partner companies associated with FIAP.',
+      'Successfully delivered real-world projects utilizing the SCRUM methodology, ensuring efficient project management and timely completion.',
+      'Actively engaged in attending and contributing to technology events, including attending lectures, participating in hackathons and others.',
+    ]
   },
   {
     id: 3,
@@ -158,5 +175,10 @@ export const experiences_en = [
     summary:
       "ETEC is where I discovered programming as a career. During the 3 years I spent there, I built a solid foundation in programming logic and development. I also had incredible experiences such as programming marathons and technical visits.",
     skills: experiences_pt[2].skills,
+    details: [
+      'Developed full-stack web and mobile applications proposed by the teachers.',
+      'Participated in robotics classes with Arduino and C programming language.',
+      'Actively engaged in technology events, lectures, and programming marathons.',
+    ]
   },
 ];

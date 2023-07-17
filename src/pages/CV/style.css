@@ -1,10 +1,14 @@
+#resume{
+    justify-content: center;
+}
+
 #page{
-    width: 2480px;
-    height: 3508px;
+    width: 210mm;
+    min-height: 297mm;
     background-color: var(--bg-light-strong);
     max-width: 100%;
-    margin-top: 150px;
-    padding: 5.5em 4em;
+    margin: 150px 0;
+    padding: 4em;
     display: flex;
     gap: 2em;
 }
@@ -44,8 +48,8 @@
     background: var(--primary-gradient);
 }
 
-.border-bottom{
-    padding-bottom: 1em;
+.border-bottom, .education .timeline-item{
+    padding-bottom: 1em !important;
     border-bottom: 1px solid var(--border-color);
 }
 
@@ -71,12 +75,14 @@
 #page .timeline-item{
     padding: 0;
     list-style: none;
+    cursor: initial;
 }
 
 #page .timeline-content {
     opacity: 1;
     height: auto;
     visibility: visible;
+    padding-bottom: 0;
 }
 
 #page small{
@@ -89,4 +95,32 @@
 
 #page ul{
     padding: 0 1em;
+}
+
+#page li:not(.timeline-item):not(:last-of-type){
+    padding-bottom: .5em;
+}
+
+.timeline-item:nth-of-type(2){
+    padding-top: 1.5em !important;
+}
+
+.education .timeline-content small{
+    display: none;
+}
+
+.education .timeline-item .timeline-info{
+    padding-bottom: 0;
+}
+
+#page .btn{
+    width: fit-content;
+}
+
+#page .btn:nth-of-type(2){
+    margin-top: 1em;
+}
+
+#page .timeline-content li{
+    font-size: small;
 }

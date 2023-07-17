@@ -1,6 +1,8 @@
 import useStrings from '../../assets/useStrings'
 import './style.css'
 
+import { AiOutlineGithub } from 'react-icons/ai'
+import { BsFillPlayFill } from 'react-icons/bs'
 import { FaLocationDot, FaGithub } from 'react-icons/fa6'
 import { IoLogoWhatsapp, IoMdMail } from 'react-icons/io'
 import { RiComputerFill } from 'react-icons/ri'
@@ -11,13 +13,15 @@ export default function CV() {
     const strings = useStrings()
 
     const experiences = strings.experiences.filter((experience) => experience.type === 'work')
+    const educations = strings.experiences.filter((experience) => experience.type === 'academic')
+    const featured_project = strings.projects.find((project) => project.title === 'Investium')
 
     return (
         <section id="resume" className="container">
             <div id="page">
                 <div className='column column-small'>
                     <h3>
-                        <a className='btn-secondary btn-line' href='https://marianasantos.tech/contact' target='_blank'>Contato</a>
+                        <a className='btn-secondary btn-line' href='https://marianasantos.tech/contact' target='_blank'>{strings.resume.contact_title}</a>
                     </h3>
 
                     <WithIcon
@@ -58,6 +62,37 @@ export default function CV() {
                             )
                         })}
                     </section>
+
+                    <section className='education'>
+                        <h3>
+                            <a className='btn-secondary btn-line' href='https://marianasantos.tech/#experience' target='_blank'>{strings.resume.education_title}</a>
+                        </h3>
+
+                        {educations.map((education) => {
+                            return(
+                                <Experience experience={education} details />
+                            )
+                        })}
+                    </section>
+
+                    {/* <section className='featured-project'>
+                        <h3>
+                            <a className='btn-secondary btn-line' href='https://marianasantos.tech/#projects' target='_blank'>{strings.resume.featured_project}</a>
+                        </h3>
+
+                        <h4> {featured_project.title} </h4>
+                        {featured_project.summary_description}
+
+                        <a href={featured_project.github} className='btn btn-secondary' target='_blank'>
+                            <AiOutlineGithub />
+                            {strings.more_info}
+                        </a>
+                        <a href={featured_project.deploy} className='btn btn-secondary' target='_blank'>
+                            {strings.test}
+                            <BsFillPlayFill />
+                        </a>
+                    </section> */}
+
                 </div>
             </div>
         </section>

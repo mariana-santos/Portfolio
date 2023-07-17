@@ -47,8 +47,11 @@ export const pt = {
     message_placeholder: 'O que você tem a dizer?',
     send: 'Enviar',
     resume: {
+        contact_title: 'Contato',
         location: 'Zona Leste de São Paulo - SP',
-        experience_title: 'Experiências'
+        experience_title: 'Experiências',
+        education_title: 'Formação',
+        featured_project: 'Projeto Destacado'
     }
     
 };
@@ -98,7 +101,10 @@ export const en = {
     message_placeholder: 'What do you have to say?',
     send: 'Send',
     resume: {
+        contact_title: 'Contact',
         location: 'São Paulo, SP - Brazil',
-        experience_title: 'Experiences'
+        experience_title: 'Experiences',
+        education_title: 'Education',
+        featured_project: 'Featured Project'
     }
 }

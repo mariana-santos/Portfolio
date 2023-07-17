@@ -125,7 +125,7 @@ export default function Navbar() {
                         </li>
 
                         <li className='code autoclose'>
-                            <Link to="/contact/resume">{strings.navbar.resume}</Link >
+                            <Link to="/resume">{strings.navbar.resume}</Link >
                         </li>
                     </ul>
                 </div>
