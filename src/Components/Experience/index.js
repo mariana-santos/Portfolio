@@ -5,14 +5,14 @@ import { MdOutlineWorkOutline } from 'react-icons/md'
 
 import React from 'react'
 
-export default function Experience({ experience, selected, setSelected }) {
+export default function Experience({ experience, selected, setSelected, details }) {
 
     return (
         <>
             <li 
-                className={`timeline-item ${selected.id === experience.id && 'selected'}`}
+                className={`timeline-item ${selected?.id === experience.id && 'selected'}`}
                 key={experience.id}
-                onClick={() => setSelected(experience)}
+                onClick={() => setSelected && setSelected(experience)}
             >
                 <div className="timeline-info">
                     <h4> {experience.title}</h4>
@@ -49,6 +49,14 @@ export default function Experience({ experience, selected, setSelected }) {
                             )
                         })}
                     </div>
+
+                    { details && 
+                        <ul>
+                            {experience.details.map((detail) => {
+                                return <li>{detail}</li>
+                            })}
+                        </ul> 
+                    }
                 </div>
             </li>
         </>

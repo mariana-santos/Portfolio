@@ -123,6 +123,10 @@ export default function Navbar() {
                         <li className='code autoclose'>
                             <Link to="/contact/#contact">{strings.navbar.contact}</Link >
                         </li>
+
+                        <li className='code autoclose'>
+                            <Link to="/contact/resume">{strings.navbar.resume}</Link >
+                        </li>
                     </ul>
                 </div>
             </nav>

@@ -9,6 +9,7 @@ export const pt = {
         skills: 'Habilidades',
         projects: 'Projetos',
         contact: 'Contato',
+        resume: 'Currículo'
     },
     title: 'Desenvolvedora Frontend',
     subtitle:
@@ -45,7 +46,11 @@ export const pt = {
     message_label: 'Sua mensagem',
     message_placeholder: 'O que você tem a dizer?',
     send: 'Enviar',
-    location: 'Zona Leste de São Paulo - SP'
+    resume: {
+        location: 'Zona Leste de São Paulo - SP',
+        experience_title: 'Experiências'
+    }
+    
 };
 
 export const en = {
@@ -55,6 +60,7 @@ export const en = {
         skills: 'Skills',
         projects: 'Projects',
         contact: 'Contact',
+        resume: 'Resumé'
     },
     title: "Frontend Developer",
     subtitle:
@@ -91,5 +97,8 @@ export const en = {
     message_label: 'Your message',
     message_placeholder: 'What do you have to say?',
     send: 'Send',
-    location: 'São Paulo, SP - Brazil'
+    resume: {
+        location: 'São Paulo, SP - Brazil',
+        experience_title: 'Experiences'
+    }
 }

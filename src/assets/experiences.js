@@ -8,7 +8,7 @@ export const experiences_pt = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-    "Na Agência Choveu, crio e mantenho websites usando Wordpress e outras tecnologias como HTML, CSS, SCSS e PHP. Estou sempre aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos projetos",
+      "Na Agência Choveu, crio e mantenho websites usando Wordpress e outras tecnologias como HTML, CSS, SCSS e PHP. Estou sempre aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos projetos",
     skills: [
       {
         id: 18,
@@ -31,6 +31,11 @@ export const experiences_pt = [
         name: "Figma",
       },
     ],
+    details: [
+      'Desenvolvimento de aplicações frontend para diversos clientes, com destaque para aplicações em Wordpress.',
+      'Melhoria da acessibilidade, SEO e experiência geral das aplicações.',
+      'Criação de campanhas de e-mail marketing utilizando plataformas como OCE e RD Station.'
+    ]
   },
   {
     id: 2,
@@ -123,7 +128,12 @@ export const experiences_en = [
     link: "https://choveu.com/",
     summary:
       "At Agência Choveu, I create and maintain websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
-    skills: experiences_pt[0].skills
+    skills: experiences_pt[0].skills,
+    details: [
+      'Built frontend applications for multiple clients. Most especially Wordpress applications.',
+      'Improved accessibility, SEO and overall experience of products.',
+      'Built e-mail marketing with several platforms, such as OCE and RD Station'
+    ]
   },
   {
     id: 2,
