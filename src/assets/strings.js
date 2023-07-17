@@ -51,9 +51,20 @@ export const pt = {
         location: 'Zona Leste de São Paulo - SP',
         experience_title: 'Experiências',
         education_title: 'Formação',
-        featured_project: 'Projeto Destacado'
+        featured_project: 'Projeto Destacado',
+        programming_languages: 'Linguagens de Programação',
+        libs_frameworks: 'Libraries & Frameworks',
+        tools_platf_others: 'Ferramentas, Plataformas & outras tecnologias',
+        soft_skills: [
+            'Determinação',
+            'Proatividade',
+            'Colaboração em grupo',
+            'Aprendizado ativo',
+            'Resolução de problemas',
+            'Gestão do tempo'
+        ]
     }
-    
+
 };
 
 export const en = {
@@ -105,6 +116,17 @@ export const en = {
         location: 'São Paulo, SP - Brazil',
         experience_title: 'Experiences',
         education_title: 'Education',
-        featured_project: 'Featured Project'
+        featured_project: 'Featured Project',
+        programming_languages: 'Programming Languages',
+        libs_frameworks: 'Libraries & Frameworks',
+        tools_platf_others: 'Tools, Platforms & Others',
+        soft_skills: [
+            'Determination',
+            'Proactivity',
+            'Collaboration',
+            'Active Learning',
+            'Problem Solving',
+            'Time Management'
+        ]
     }
 }
