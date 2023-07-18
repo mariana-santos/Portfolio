@@ -9,6 +9,7 @@ import { RiComputerFill } from 'react-icons/ri'
 import Experience from '../../Components/Experience'
 
 import curriculo from '../../assets/curriculo-mariana.pdf'
+import resume from '../../assets/resume-mariana.pdf'
 
 export default function CV() {
 
@@ -24,7 +25,11 @@ export default function CV() {
     return (
         <section id="resume" className="container">
             <div className='row row-btn'>
-                <a href={curriculo} download className='btn'> Download </a>
+                <a href={curriculo} download className='btn'> {strings.resume.download_portuguese} </a>
+
+                <span>{strings.resume.or}</span>
+
+                <a href={resume} download className='btn'> {strings.resume.download_english} </a>
             </div>
             <main id="page">
                 <div className='column column-small'>
@@ -37,9 +42,14 @@ export default function CV() {
                             icon={<RiComputerFill />} link='https://marianasantos.tech/' label={'marianasantos.tech'}
                         />
 
-                        <WithIcon
-                            icon={<IoMdMail />} link='mailto:marianasfernandessousa@gmail.com' label={'marianasfernandessousa@gmail.com'}
-                        />
+                        <p>
+                            <a className='with-icon' href='mailto:marianasfernandessousa@gmail.com' target='_blank'>
+                                <IoMdMail />
+                                marianasfernandessousa@<br />
+                                gmail.com
+                            </a>
+
+                        </p>
 
                         <WithIcon
                             icon={<AiFillLinkedin />} link='https://www.linkedin.com/in/mariana-santosf/' label={'/in/mariana-santosf/'}

@@ -130,6 +130,8 @@ export default function Navbar() {
                     </ul>
                 </div>
             </nav>
+
+            {menuOpen && <div className='fade-menu show' />}
         </header>
     )
 }

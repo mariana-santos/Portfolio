@@ -17,9 +17,14 @@
 #resume .row-btn{
     width: calc(210mm + (210mm * 0.5));
     max-width: 100%;
-    margin-top: 150px;
+    margin-top: 200px;
     margin-bottom: 2em;
     justify-content: flex-end;
+}
+
+#resume .row-btn span{
+    margin: auto 1.5em;
+    height: fit-content;
 }
 
 .column-small{
@@ -144,4 +149,28 @@
 
 .hard-skills{
     padding-bottom: 2em !important;
+}
+
+@media screen and (max-width: 768px){
+    #page{
+        flex-direction: column-reverse;
+        padding: 2em;
+    }
+
+    #page h1{
+        font-size: 2.5em;
+        line-height: normal;
+    }
+
+    #page h3{
+        font-size: 1.2em;
+    }
+
+    #resume .row-btn span{
+        margin: 1em auto;
+    }
+
+    #resume .row-btn{
+        margin-top: 10em;
+    }
 }

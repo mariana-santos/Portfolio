@@ -19,6 +19,7 @@ export const skills_pt = [
     id: 2,
     name: "Typescript",
     percentage: 70,
+    type: 'language',
     summary: (
       <>
         <p>

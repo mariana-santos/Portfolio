@@ -69,7 +69,10 @@ export const pt = {
                 name: 'Inglês',
                 level: 'Avançado'
             }
-        ]
+        ],
+        download_portuguese: 'Download (português)',
+        or: 'ou',
+        download_english: 'Download (inglês)'
     }
 
 };
@@ -141,6 +144,9 @@ export const en = {
                 name: 'English',
                 level: 'Advanced'
             }
-        ]
+        ],
+        download_portuguese: 'Download (portuguese)',
+        or: 'or',
+        download_english: 'Download (english)'
     }
 }
