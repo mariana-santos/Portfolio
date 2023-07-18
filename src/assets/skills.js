@@ -3,6 +3,7 @@ export const skills_pt = [
     id: 1,
     name: "Javascript",
     percentage: 80,
+    type: 'language',
     summary: (
       <>
         <p>
@@ -18,6 +19,7 @@ export const skills_pt = [
     id: 2,
     name: "Typescript",
     percentage: 70,
+    type: 'language',
     summary: (
       <>
         <p>
@@ -34,6 +36,7 @@ export const skills_pt = [
     id: 3,
     name: "React",
     percentage: 80,
+    type: 'library',
     summary: (
       <>
         <p>
@@ -50,6 +53,7 @@ export const skills_pt = [
     id: 4,
     name: "React Native",
     percentage: 70,
+    type: 'library',
     summary: (
       <>
         <p>
@@ -67,6 +71,7 @@ export const skills_pt = [
     id: 11,
     name: "Git",
     percentage: 80,
+    type: 'tool',
     summary: (
       <>
         <p>
@@ -83,6 +88,7 @@ export const skills_pt = [
     id: 7,
     name: "SQL Server",
     percentage: 85,
+    type: 'other',
     summary: (
       <>
         <p>
@@ -100,6 +106,7 @@ export const skills_pt = [
     id: 5,
     name: "Next Js",
     percentage: 70,
+    type: 'library',
     summary: (
       <>
         <p>
@@ -116,6 +123,7 @@ export const skills_pt = [
   {
     id: 6,
     name: "SCSS",
+    type: 'other',
     percentage: 75,
     summary: (
       <>
@@ -132,6 +140,7 @@ export const skills_pt = [
     id: 18,
     name: "Wordpress",
     percentage: 85,
+    type: 'platform',
     summary: (
       <>
         <p>
@@ -149,6 +158,7 @@ export const skills_pt = [
     id: 9,
     name: "Java",
     percentage: 70,
+    type: 'language',
     summary: (
       <>
         <p>
@@ -164,6 +174,7 @@ export const skills_pt = [
     id: 10,
     name: "Python",
     percentage: 80,
+    type: 'language',
     summary: (
       <>
         <p>
@@ -180,6 +191,7 @@ export const skills_pt = [
     id: 13,
     name: "Figma",
     percentage: 70,
+    type: 'platform',
     summary: (
       <>
         <p>
@@ -195,6 +207,7 @@ export const skills_pt = [
   {
     id: 14,
     name: "Material UI",
+    type: 'library',
     percentage: 70,
     summary: (
       <>
@@ -213,6 +226,7 @@ export const skills_pt = [
     id: 16,
     name: "Bootstrap",
     percentage: 90,
+    type: 'library',
     summary: (
       <>
         <p>
@@ -226,17 +240,16 @@ export const skills_pt = [
   },
   {
     id: 8,
-    name: "Firebase",
+    name: "Scrum",
     percentage: 60,
+    type: 'tool',
     summary: (
       <>
+
         <p>
-          Firebase é uma plataforma de desenvolvimento de aplicativos da Google que
-          oferece diversos serviços, como autenticação de usuários, armazenamento
-          de dados em tempo real, hospedagem de aplicativos, entre outros.
-        </p><p>É amplamente
-          utilizado para o <strong>desenvolvimento rápido de aplicativos web e mobile.</strong>
-        </p>
+          Scrum é uma metodologia ágil amplamente utilizada no desenvolvimento de software. Ele se baseia em um processo iterativo e incremental, dividindo o trabalho em ciclos. Essa abordagem promove a colaboração, transparência e adaptação contínua, permitindo que as equipes entreguem valor de forma mais eficiente.</p>
+
+        <p>A metodologia <strong>valoriza a comunicação efetiva, a entrega contínua de incrementos funcionais e a melhoria contínua do processo de desenvolvimento.</strong></p>
       </>
     ),
   },
@@ -244,6 +257,7 @@ export const skills_pt = [
     id: 17,
     name: "JQuery",
     percentage: 90,
+    type: 'library',
     summary: (
       <>
         <p>
@@ -259,6 +273,7 @@ export const skills_pt = [
   {
     id: 19,
     name: "PHP",
+    type: 'language',
     percentage: 70,
     summary: (
       <>
@@ -276,6 +291,7 @@ export const skills_en = [
   {
     id: 1,
     name: "Javascript",
+    type: 'language',
     percentage: 80,
     summary: (
       <>
@@ -293,6 +309,7 @@ export const skills_en = [
   {
     id: 2,
     name: "Typescript",
+    type: 'language',
     percentage: 70,
     summary: (
       <>
@@ -310,6 +327,7 @@ export const skills_en = [
   {
     id: 3,
     name: "React",
+    type: 'library',
     percentage: 80,
     summary: (
       <>
@@ -326,6 +344,7 @@ export const skills_en = [
   {
     id: 4,
     name: "React Native",
+    type: 'library',
     percentage: 70,
     summary: (
       <>
@@ -345,6 +364,7 @@ export const skills_en = [
     id: 11,
     name: "Git",
     percentage: 80,
+    type: 'tool',
     summary: (
       <>
         <p>
@@ -361,6 +381,7 @@ export const skills_en = [
   {
     id: 7,
     name: "SQL Server",
+    type: 'other',
     percentage: 85,
     summary: (
       <>
@@ -379,6 +400,7 @@ export const skills_en = [
   {
     id: 5,
     name: "Next Js",
+    type: 'library',
     percentage: 70,
     summary: (
       <>
@@ -396,6 +418,7 @@ export const skills_en = [
   {
     id: 6,
     name: "SCSS",
+    type: 'other',
     percentage: 75,
     summary: (
       <>
@@ -412,6 +435,7 @@ export const skills_en = [
   {
     id: 18,
     name: "Wordpress",
+    type: 'platform',
     percentage: 85,
     summary: (
       <>
@@ -430,6 +454,7 @@ export const skills_en = [
     id: 9,
     name: "Java",
     percentage: 70,
+    type: 'language',
     summary: (
       <>
         <p>
@@ -445,6 +470,7 @@ export const skills_en = [
   {
     id: 10,
     name: "Python",
+    type: 'language',
     percentage: 80,
     summary: (
       <>
@@ -462,6 +488,7 @@ export const skills_en = [
   {
     id: 13,
     name: "Figma",
+    type: 'platform',
     percentage: 70,
     summary: (
       <>
@@ -477,6 +504,7 @@ export const skills_en = [
   {
     id: 14,
     name: "Material UI",
+    type: 'library',
     percentage: 70,
     summary: (
       <>
@@ -494,6 +522,7 @@ export const skills_en = [
   {
     id: 16,
     name: "Bootstrap",
+    type: 'library',
     percentage: 90,
     summary: (
       <>
@@ -510,24 +539,21 @@ export const skills_en = [
   },
   {
     id: 8,
-    name: "Firebase",
+    name: "Scrum",
     percentage: 60,
+    type: 'tool',
     summary: (
       <>
         <p>
-          Firebase is a Google app development platform that offers various
-          services such as user authentication, real-time data storage, app
-          hosting, and more.
-        </p>
-        <p>
-          It is widely used for <strong>rapid development of web and mobile applications.</strong>
-        </p>
+          Scrum is an agile methodology widely used in software development. It is based on an iterative and incremental process, dividing the work into cycles called Sprints. This approach promotes collaboration, transparency, and continuous adaptation, allowing teams to deliver value more efficiently.</p>
+        <p> The methodology emphasizes <strong>effective communication, continuous delivery of functional increments, and continuous improvement of the development process.</strong></p>
       </>
     ),
   },
   {
     id: 17,
     name: "JQuery",
+    type: 'library',
     percentage: 90,
     summary: (
       <>
@@ -545,6 +571,7 @@ export const skills_en = [
     id: 19,
     name: "PHP",
     percentage: 70,
+    type: 'language',
     summary: (
       <>
         <p>

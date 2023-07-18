@@ -1,6 +1,6 @@
 import './style.css';
 
-import { AiOutlineClose, AiOutlineGithub, AiFillPlayCircle } from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineGithub } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 import useStrings from '../../assets/useStrings';
 

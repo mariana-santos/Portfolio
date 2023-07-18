@@ -9,6 +9,7 @@ export const pt = {
         skills: 'Habilidades',
         projects: 'Projetos',
         contact: 'Contato',
+        resume: 'Currículo'
     },
     title: 'Desenvolvedora Frontend',
     subtitle:
@@ -44,7 +45,36 @@ export const pt = {
     email_placeholder: 'Qual seu principal email?',
     message_label: 'Sua mensagem',
     message_placeholder: 'O que você tem a dizer?',
-    send: 'Enviar'
+    send: 'Enviar',
+    resume: {
+        contact_title: 'Contato',
+        location: 'Zona Leste de São Paulo - SP',
+        experience_title: 'Experiências',
+        education_title: 'Formação',
+        featured_project: 'Projeto Destacado',
+        programming_languages: 'Linguagens de Programação',
+        libs_frameworks: 'Libraries & Frameworks',
+        tools_platf_others: 'Ferramentas, Plataformas & outras tecnologias',
+        soft_skills: [
+            'Determinação',
+            'Proatividade',
+            'Colaboração em grupo',
+            'Aprendizado ativo',
+            'Resolução de problemas',
+            'Gestão do tempo'
+        ],
+        languages_title: 'Idiomas',
+        languages: [
+            {
+                name: 'Inglês',
+                level: 'Avançado'
+            }
+        ],
+        download_portuguese: 'Download (português)',
+        or: 'ou',
+        download_english: 'Download (inglês)'
+    }
+
 };
 
 export const en = {
@@ -54,6 +84,7 @@ export const en = {
         skills: 'Skills',
         projects: 'Projects',
         contact: 'Contact',
+        resume: 'Resumé'
     },
     title: "Frontend Developer",
     subtitle:
@@ -89,5 +120,33 @@ export const en = {
     email_placeholder: 'What is your main email?',
     message_label: 'Your message',
     message_placeholder: 'What do you have to say?',
-    send: 'Send'
+    send: 'Send',
+    resume: {
+        contact_title: 'Contact',
+        location: 'São Paulo, SP - Brazil',
+        experience_title: 'Experiences',
+        education_title: 'Education',
+        featured_project: 'Featured Project',
+        programming_languages: 'Programming Languages',
+        libs_frameworks: 'Libraries & Frameworks',
+        tools_platf_others: 'Tools, Platforms & Others',
+        soft_skills: [
+            'Determination',
+            'Proactivity',
+            'Collaboration',
+            'Active Learning',
+            'Problem Solving',
+            'Time Management'
+        ],
+        languages_title: 'Languages',
+        languages: [
+            {
+                name: 'English',
+                level: 'Advanced'
+            }
+        ],
+        download_portuguese: 'Download (portuguese)',
+        or: 'or',
+        download_english: 'Download (english)'
+    }
 }
