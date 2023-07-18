@@ -1,14 +1,14 @@
 import useStrings from '../../assets/useStrings'
 import './style.css'
 
-import { AiOutlineGithub } from 'react-icons/ai'
+import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 import { FaLocationDot, FaGithub } from 'react-icons/fa6'
 import { IoLogoWhatsapp, IoMdMail } from 'react-icons/io'
 import { RiComputerFill } from 'react-icons/ri'
 import Experience from '../../Components/Experience'
 
-import { PDFExport } from '@progress/kendo-react-pdf';
+import curriculo from '../../assets/curriculo-mariana.pdf'
 
 export default function CV() {
 
@@ -23,13 +23,9 @@ export default function CV() {
 
     return (
         <section id="resume" className="container">
-            <PDFExport paperSize={'Letter'}
-                fileName="resume.pdf"
-                title="Mariana - Currículo"
-            // ref={(r) => this.resume = r}
-            >
-                <div>content</div>
-            </PDFExport>
+            <div className='row row-btn'>
+                <a href={curriculo} download className='btn'> Download </a>
+            </div>
             <main id="page">
                 <div className='column column-small'>
                     <section className='contact border-bottom'>
@@ -40,8 +36,13 @@ export default function CV() {
                         <WithIcon
                             icon={<RiComputerFill />} link='https://marianasantos.tech/' label={'marianasantos.tech'}
                         />
+
                         <WithIcon
                             icon={<IoMdMail />} link='mailto:marianasfernandessousa@gmail.com' label={'marianasfernandessousa@gmail.com'}
+                        />
+
+                        <WithIcon
+                            icon={<AiFillLinkedin />} link='https://www.linkedin.com/in/mariana-santosf/' label={'/in/mariana-santosf/'}
                         />
 
                         <WithIcon
@@ -75,6 +76,19 @@ export default function CV() {
                             {strings.resume.soft_skills.map((item) => {
                                 return (
                                     <li>{item}</li>
+                                )
+                            })}
+                        </ul>
+                    </section>
+                    <section className='languages border-bottom'>
+                        <h3 className='btn-secondary btn-line'>
+                            {strings.resume.languages_title}
+                        </h3>
+
+                        <ul>
+                            {strings.resume.languages.map((item) => {
+                                return (
+                                    <li>{item.name} — {item.level}</li>
                                 )
                             })}
                         </ul>

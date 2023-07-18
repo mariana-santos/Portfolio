@@ -62,6 +62,13 @@ export const pt = {
             'Aprendizado ativo',
             'Resolução de problemas',
             'Gestão do tempo'
+        ],
+        languages_title: 'Idiomas',
+        languages: [
+            {
+                name: 'Inglês',
+                level: 'Avançado'
+            }
         ]
     }
 
@@ -127,6 +134,13 @@ export const en = {
             'Active Learning',
             'Problem Solving',
             'Time Management'
+        ],
+        languages_title: 'Languages',
+        languages: [
+            {
+                name: 'English',
+                level: 'Advanced'
+            }
         ]
     }
 }
