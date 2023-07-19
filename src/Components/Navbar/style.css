@@ -8,7 +8,7 @@ header {
     justify-content: space-between;
     padding: 1.5em 10em;
     align-items: center;
-    background-color: var(--header-transparent);
+    /* background-color: var(--header-transparent); */
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: var(--box-shadow);
@@ -289,6 +289,10 @@ h2.code {
 
 .language-switcher * {
     color: var(--text-color);
+}
+
+.fade-menu{
+    z-index: -1 !important;
 }
 
 @media screen and (max-width: 1200px) {
