@@ -54,7 +54,7 @@ export default function Navbar() {
 
     return (
         <header>
-            <nav className="navbar">
+            <nav className="navbar" style={{backgroundColor: menuOpen ? 'var(--bg-light-strong)' : 'var(--header-transparent)'}}>
                 <Link to='/#about' className='logo'>
                     <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
                 </Link>
@@ -131,7 +131,7 @@ export default function Navbar() {
                 </div>
             </nav>
 
-            {menuOpen && <div className='fade-menu show' />}
+            {menuOpen && <div className='fade fade-menu show' />}
         </header>
     )
 }

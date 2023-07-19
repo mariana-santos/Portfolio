@@ -92,8 +92,16 @@
         display: none;
     }
 
-    .project .subtitle{
+    .project .saiba-mais{
         font-size: .9em;
+    }
+
+    .project .saiba-mais, .project .subtitle{
+        transform: translateY(-2.3em);
+    }
+
+    .project .subtitle{
+        opacity: 0;
     }
 
     .card-footer{
