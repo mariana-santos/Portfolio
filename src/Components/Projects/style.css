@@ -4,6 +4,10 @@
     
 #filter{
     width: 100%;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
 }
 
 .wrap-projects{
@@ -13,6 +17,31 @@
     gap: 1em;
     flex-wrap: wrap;
     justify-content: space-between;
+}
+
+.select__control, .select__menu{
+    background-color: var(--bg-light-strong) !important;
+    color: var(--text-color) !important;
+    min-width: 300px;
+}
+
+.select__option:hover{
+    background-color: var(--primary-transparency) !important;
+    background: var(--primary-transparency) !important;
+}
+
+.select__option--is--focused{
+    background-color: var(--primary) !important;
+    background: var(--primary) !important;
+}
+
+.select__single-value, .select__input, .select__input::placeholder{
+    color: var(--text-color) !important;
+}
+
+.select__control--is-focused{
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 1px var(--primary) !important;
 }
 
 @media screen and (max-width: 1200px) {

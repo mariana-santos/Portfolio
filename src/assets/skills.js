@@ -98,7 +98,7 @@ export const skills_pt = [
   },
   {
     id: 5,
-    name: "Next Js",
+    name: "Next JS",
     percentage: 70,
     summary: (
       <>
@@ -378,7 +378,7 @@ export const skills_en = [
   },
   {
     id: 5,
-    name: "Next Js",
+    name: "Next JS",
     percentage: 70,
     summary: (
       <>
