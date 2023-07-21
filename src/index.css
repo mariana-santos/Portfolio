@@ -12,6 +12,7 @@
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
   --tag-color: rgba(150, 49, 244, 0.168);
+  --primary25: rgba(150, 49, 244, 0.168) !important;
   --border-color: #e1e1e1;
   --bg-wrap-img-card: #F3F4F8;
 }
@@ -28,6 +29,7 @@
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
   --tag-color: rgba(82, 32, 128, 0.493);
+  --primary25: rgba(82, 32, 128, 0.493) !important;
   --border-color: #261f2f;
   --bg-wrap-img-card: #16121b;
 }

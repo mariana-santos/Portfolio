@@ -61,8 +61,6 @@ export default function Projects({ setIsOpen, setSelected }) {
                         className="basic-multi-select"
                         classNamePrefix="select"
                         components={animatedComponents}
-                        allowSelectAll
-                        closeMenuOnSelect={false}
                         isSearchable={false}
                     />
                 </div>

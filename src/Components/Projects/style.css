@@ -1,5 +1,5 @@
 #projects{
-    /* margin-top: -270px; */
+    --primary25: 
 }
     
 #filter{
@@ -35,6 +35,11 @@
     background: var(--primary) !important;
 }
 
+.select__option--is--selected, .select__option--is--active{
+    background-color: var(--tag-color) !important;
+    background: var(--tag-color) !important;    
+}
+
 .select__single-value, .select__input, .select__input::placeholder{
     color: var(--text-color) !important;
 }
@@ -43,6 +48,21 @@
     border-color: var(--primary) !important;
     box-shadow: 0 0 0 1px var(--primary) !important;
 }
+
+.select__multi-value{
+    background-color: var(--tag-color) !important ;
+    border-radius: 15px !important;
+    /* padding: 0 5px; */
+}
+
+.select__multi-value__label {
+    color: var(--text-color) !important;
+}
+
+.select__multi-value__remove{
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+} 
 
 @media screen and (max-width: 1200px) {
     #projects{
