@@ -1,5 +1,5 @@
 #projects{
-    --primary25: 
+    margin-bottom: 4em;
 }
     
 #filter{
@@ -19,10 +19,27 @@
     justify-content: space-between;
 }
 
+.select__control{
+    border-color: var(--border-color) !important;
+}
+
+.select__control:hover{
+    border-color: var(--primary) !important;
+}
+
 .select__control, .select__menu{
     background-color: var(--bg-light-strong) !important;
     color: var(--text-color) !important;
     min-width: 300px;
+}
+
+.select-skills{
+    min-width: 500px;
+    max-width: 100%;
+}
+
+.select__option{
+    transition: .3s;
 }
 
 .select__option:hover{
@@ -30,18 +47,21 @@
     background: var(--primary-transparency) !important;
 }
 
-.select__option--is--focused{
-    background-color: var(--primary) !important;
-    background: var(--primary) !important;
+.select__option--is-focused{
+    background-color: var(--tag-color) !important;
+    background: var(--tag-color) !important;
+    color: var(--text-color) !important;
 }
 
-.select__option--is--selected, .select__option--is--active{
+.select__option--is-selected, .select__option--is-active{
     background-color: var(--tag-color) !important;
-    background: var(--tag-color) !important;    
+    background: var(--tag-color) !important;   
+    color: var(--text-color) !important; 
 }
 
 .select__single-value, .select__input, .select__input::placeholder{
     color: var(--text-color) !important;
+    font-size: 1em !important;
 }
 
 .select__control--is-focused{
@@ -52,7 +72,7 @@
 .select__multi-value{
     background-color: var(--tag-color) !important ;
     border-radius: 15px !important;
-    /* padding: 0 5px; */
+    padding-left: 5px;
 }
 
 .select__multi-value__label {
@@ -60,12 +80,46 @@
 }
 
 .select__multi-value__remove{
+    transition: .3s;
     border-top-right-radius: 15px !important;
     border-bottom-right-radius: 15px !important;
 } 
 
+.select__value-container div {
+    width: auto !important;
+}
+
+.select__indicators{
+    cursor: pointer;
+}
+
+.no-results{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.no-results img{
+    width: 100%;
+}
+
+.no-results .btn{
+    margin: auto;
+}
+
 @media screen and (max-width: 1200px) {
     #projects{
         margin-top: 0;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .select__control, .select__menu, .select-skills, .basic-multi-select, .wrap-filter{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .no-results img{
+        width: 70%;
     }
 }
