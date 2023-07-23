@@ -6,6 +6,7 @@ export const projects_pt = [
         github: 'https://github.com/mariana-santos/refinances',
         video_id: 'i9xEfPATjSk',
         param: '?start=681',
+        relevant: true,
         skills: [
             {
                 id: 4,
@@ -76,6 +77,7 @@ export const projects_pt = [
         deploy: 'https://repo-challenge-j1bp.vercel.app/',
         github: 'https://github.com/mariana-santos/repo_challenge',
         video_id: '3nP4r-L_qqk',
+        relevant: true,
         skills: [
             {
                 id: 4,
@@ -129,6 +131,7 @@ export const projects_pt = [
         subtitle: 'Website criado para gerenciar uma fictícia horta solidária contra a fome',
         github: 'https://github.com/mariana-santos/GS2',
         video_id: 'SJV4n5QrA_Y',
+        relevant: true,
         skills: [
             {
                 id: 4,
@@ -145,7 +148,11 @@ export const projects_pt = [
             {
                 id: 11,
                 name: 'Git'
-            }
+            },
+            {
+                id: 5,
+                name: 'Javascript'
+            },
         ],
         description:
             <>
@@ -429,6 +436,7 @@ export const projects_en = [
         github: 'https://github.com/mariana-santos/refinances',
         video_id: 'i9xEfPATjSk',
         param: '?start=681',
+        relevant: true,
         skills: projects_pt[0].skills,
         description: <>
             <p><strong>Refinances</strong> was born out of a need observed by the group: financial organization. The project was developed as our <strong>Final Course Project</strong> at <a href='https://www.etecdeguaianazes.com.br/' target='_blank'>ETEC de Guaianazes</a>.</p>
@@ -444,6 +452,7 @@ export const projects_en = [
         github: 'https://github.com/mariana-santos/repo_challenge',
         video_id: '3nP4r-L_qqk',
         skills: projects_pt[1].skills,
+        relevant: true,
         description: <>
             <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP University</a> in partnership with <a href='https://www.b3.com.br/pt_br/' target='_blank'>B3</a> challenged us to use technology to demystify <strong>IPO investments</strong> in Brazil. </p>
 
@@ -460,6 +469,7 @@ export const projects_en = [
         github: 'https://github.com/mariana-santos/GS2',
         video_id: 'SJV4n5QrA_Y',
         skills: projects_pt[2].skills,
+        relevant: true,
         description:
             <>
                 <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP</a> challenged us to find a way to use technology and innovation to address the issue of <strong>hunger</strong>. With that in mind, we developed <strong>Raízes Solidárias</strong> as a community urban garden project.</p>
