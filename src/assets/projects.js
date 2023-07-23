@@ -99,8 +99,11 @@ export const projects_pt = [
         description: <>
             <p>A <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a> em parceria com a <a href='https://www.b3.com.br/pt_br/' target='_blank'>B3</a> nos desafiou a usar a tecnologia para desmistificar o investimento em <strong>IPO</strong> no Brasil. </p>
 
-            <p>Pensando nisso, a <strong>Investium</strong> foi criada! Uma solução para investidores iniciantes que não possuem acesso fácil às informações das IPOs.</p>
+            <p>Pensando nisso, a <strong>Investium</strong> foi criada! Uma solução para investidores iniciantes que não possuem acesso fácil às informações das IPOs, com funcionalidades como comparação de IPOs e gráficos detalhados sobre as informações financeiras das empresas.</p>
         </>,
+        summary_description:
+            <p>A <strong>Investium</strong> foi criada desmistificar o investimento em <strong>IPO</strong> no Brasil, com funcionalidades como comparação de IPOs e gráficos detalhados sobre as informações financeiras das empresas. O projeto foi desenvolvido com <strong>React</strong> e <strong>Javascript</strong>.</p>
+        ,
         team: [
             {
                 id: 1,
@@ -453,8 +456,10 @@ export const projects_en = [
         description: <>
             <p><a href='https://www.fiap.com.br/' target='_blank'>FIAP University</a> in partnership with <a href='https://www.b3.com.br/pt_br/' target='_blank'>B3</a> challenged us to use technology to demystify <strong>IPO investments</strong> in Brazil. </p>
 
-            <p>With that in mind, <strong>Investium</strong> was created! A website for novice investor who don't have easy acces to IPOs relevant informations.</p>
+            <p>With that in mind, <strong>Investium</strong> was created! A website for novice investor who don't have easy acces to IPOs relevant informations, containing features such as IPO comparison and detailed graphics about the companies financial information.</p>
         </>,
+        summary_description: 
+            <p><strong>Investium</strong> was created to demystify <strong>IPO investments</strong> in Brazil, containing features such as IPO comparison and detailed graphics about the companies financial information. The project was developed with <strong>React</strong> and <strong>Javascript</strong>.</p>,
         team: projects_pt[1].team
     },
     {

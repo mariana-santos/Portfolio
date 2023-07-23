@@ -187,6 +187,11 @@ a {
   font-weight: lighter;
 }
 
+.btn-line{
+  position: relative;
+  width: fit-content;
+}
+
 .btn-line::after{
   content: '';
   width: 25px;

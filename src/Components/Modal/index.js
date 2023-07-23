@@ -1,10 +1,28 @@
 import './style.css';
 
-import { AiOutlineClose, AiOutlineGithub, AiFillPlayCircle } from 'react-icons/ai'
+import { AiOutlineClose, AiOutlineGithub } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 import useStrings from '../../assets/useStrings';
 
+import { useEffect, useRef } from 'react';
+
 export default function Modal({ show, selected, setIsOpen, setSelected }) {
+
+    const modalRef = useRef(null);
+    useEffect(() => {
+        function handleClickOutside(event) {
+          if (modalRef.current && !modalRef.current.contains(event.target)) {
+            setIsOpen(false);
+            setSelected(null);
+          }
+        }
+    
+        document.addEventListener('mousedown', handleClickOutside);
+    
+        return () => {
+          document.removeEventListener('mousedown', handleClickOutside);
+        };
+      }, [setIsOpen, setSelected]);
 
     const showClass = show ? 'show' : 'hide'
 
@@ -12,8 +30,8 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
     return (
         <>
-            <div id="fade" className={showClass}></div>
-            <div id="modal" className={showClass}>
+            <div id="fade" className={`${showClass} fade`}></div>
+            <div id="modal" ref={modalRef} className={showClass}>
                 <div className="modal_header">
                     <h3 className='line-after'>{selected?.title}</h3>
                     <AiOutlineClose onClick={() => {setIsOpen(false); setSelected(null)}} className="btn_close" />

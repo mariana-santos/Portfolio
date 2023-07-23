@@ -19,7 +19,7 @@ export default function About() {
                     {strings.title}
                 </h1>
 
-                <p className='smaller'>{strings.subtitle} </p>
+                <p className='smaller'>{strings.subtitle}</p>
 
                 {/* <a className='btn btn-secondary' href='#contato'>Saiba mais</a> */}
             </div>
