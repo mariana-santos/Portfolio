@@ -40,6 +40,7 @@ export default function Contact() {
                 toast.error(strings.contact_error)
             });
     };
+    
 
     return (
         <section className="container" id="contact">
