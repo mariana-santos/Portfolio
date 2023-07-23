@@ -10,7 +10,7 @@ import { ConfigContext } from '../../App';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-import useStrings  from '../../assets/useStrings'
+import useStrings from '../../assets/useStrings'
 // import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 
@@ -21,12 +21,12 @@ export default function Navbar() {
 
     const [menuOpen, setMenuOpen] = useState(null)
 
-    const { 
-        language, 
+    const {
+        language,
         setLanguage,
         theme,
         setTheme
-     } = useContext(ConfigContext);
+    } = useContext(ConfigContext);
 
     useEffect(() => {
         localStorage.setItem('theme', theme)
@@ -54,7 +54,7 @@ export default function Navbar() {
 
     return (
         <header>
-            <nav className="navbar" style={{backgroundColor: menuOpen ? 'var(--bg-light-strong)' : 'var(--header-transparent)'}}>
+            <nav className="navbar" style={{ backgroundColor: menuOpen ? 'var(--bg-light-strong)' : 'var(--header-transparent)' }}>
                 <Link to='/#about' className='logo'>
                     <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
                 </Link>
@@ -100,33 +100,34 @@ export default function Navbar() {
                         <span />
                     </div>
 
-                    <ul 
+                    <ul
                         className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}
                         onClick={() => menuOpen && setMenuOpen(false)}
                     >
-                        <li className='code autoclose'>
-                            <Link to="/#about">{strings.navbar.about}</Link >
-                        </li>
 
-                        <li className='code autoclose'>
-                            <Link to="/#experience">{strings.navbar.experience}</Link >
-                        </li>
+                        <Link to="/#about">
+                            <li className='code autoclose'>{strings.navbar.about}</li>
+                        </Link >
 
-                        <li className='code autoclose'>
-                            <Link to="/#skills">{strings.navbar.skills}</Link >
-                        </li>
+                        <Link to="/#experience">
+                            <li className='code autoclose'>{strings.navbar.experience}</li>
+                        </Link >
 
-                        <li className='code autoclose'>
-                            <Link to="/#projects">{strings.navbar.projects}</Link >
-                        </li>
+                        <Link to="/#skills">
+                            <li className='code autoclose'>{strings.navbar.skills}</li>
+                        </Link >
 
-                        <li className='code autoclose'>
-                            <Link to="/contact/#contact">{strings.navbar.contact}</Link >
-                        </li>
+                        <Link to="/#projects">
+                            <li className='code autoclose'>{strings.navbar.projects}</li>
+                        </Link >
 
-                        <li className='code autoclose'>
-                            <Link to="/resume">{strings.navbar.resume}</Link >
-                        </li>
+                        <Link to="/contact/#contact">
+                            <li className='code autoclose'>{strings.navbar.contact}</li>
+                        </Link >
+
+                        <Link to="/resume">
+                            <li className='code autoclose'>{strings.navbar.resume}</li>
+                        </Link >
                     </ul>
                 </div>
             </nav>

@@ -10,7 +10,7 @@ import { useEffect, React, createContext, useState } from 'react';
 import AOS from 'aos';
 import 'aos/dist/aos.css';
 
-import { Route, Routes, BrowserRouter } from "react-router-dom";
+import { Route, Routes, BrowserRouter, useLocation } from "react-router-dom";
 import Footer from './Components/Footer';
 import CV from './pages/CV';
 
@@ -34,7 +34,6 @@ export default function App() {
     theme,
     setTheme
   }
-
   return (
     <ConfigContext.Provider value={ConfigValues}>
       <div className={`${theme}-theme`}>

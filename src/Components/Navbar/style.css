@@ -197,7 +197,7 @@ h2.code {
     padding: 15px 0;
 }
 
-.navbar ul li:not(:last-of-type) {
+.navbar ul a:not(:last-of-type) {
     border-bottom: solid 1px var(--bg-light);
 }
 
