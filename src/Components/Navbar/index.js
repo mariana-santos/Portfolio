@@ -101,7 +101,7 @@ export default function Navbar() {
                     </div>
 
                     <ul
-                        className={menuOpen !== null && (menuOpen ? 'opened' : 'closed')}
+                        className={menuOpen !== null ? (menuOpen ? 'opened' : 'closed') : undefined}
                         onClick={() => menuOpen && setMenuOpen(false)}
                     >
 

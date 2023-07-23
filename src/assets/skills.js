@@ -85,24 +85,6 @@ export const skills_pt = [
     ),
   },
   {
-    id: 7,
-    name: "SQL Server",
-    percentage: 85,
-    type: 'other',
-    summary: (
-      <>
-        <p>
-          SQL Server é um sistema de gerenciamento de banco de dados relacional
-          desenvolvido pela Microsoft. </p>
-
-        <p>Ele fornece uma solução <strong>robusta e escalável</strong>
-          para armazenar e recuperar dados, tornando-o uma habilidade essencial
-          para trabalhar com aplicativos orientados a dados.
-        </p>
-      </>
-    ),
-  },
-  {
     id: 5,
     name: "Next JS",
     percentage: 70,
@@ -116,6 +98,39 @@ export const skills_pt = [
         <p>Ele fornece aos desenvolvedores um conjunto poderoso
           de ferramentas para construir <strong>aplicativos web eficientes e com bom
             desempenho.</strong>
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 8,
+    name: "Scrum",
+    percentage: 60,
+    type: 'tool',
+    summary: (
+      <>
+
+        <p>
+          Scrum é uma metodologia ágil amplamente utilizada no desenvolvimento de software. Ele se baseia em um processo iterativo e incremental, dividindo o trabalho em ciclos. Essa abordagem promove a colaboração, transparência e adaptação contínua, permitindo que as equipes entreguem valor de forma mais eficiente.</p>
+
+        <p>A metodologia <strong>valoriza a comunicação efetiva, a entrega contínua de incrementos funcionais e a melhoria contínua do processo de desenvolvimento.</strong></p>
+      </>
+    ),
+  },
+  {
+    id: 7,
+    name: "SQL Server",
+    percentage: 85,
+    type: 'other',
+    summary: (
+      <>
+        <p>
+          SQL Server é um sistema de gerenciamento de banco de dados relacional
+          desenvolvido pela Microsoft. </p>
+
+        <p>Ele fornece uma solução <strong>robusta e escalável</strong>
+          para armazenar e recuperar dados, tornando-o uma habilidade essencial
+          para trabalhar com aplicativos orientados a dados.
         </p>
       </>
     ),
@@ -235,21 +250,6 @@ export const skills_pt = [
             de estilos, componentes e utilitários CSS pré-definidos que <strong>facilitam o
               desenvolvimento rápido e eficiente</strong>.
         </p>
-      </>
-    ),
-  },
-  {
-    id: 8,
-    name: "Scrum",
-    percentage: 60,
-    type: 'tool',
-    summary: (
-      <>
-
-        <p>
-          Scrum é uma metodologia ágil amplamente utilizada no desenvolvimento de software. Ele se baseia em um processo iterativo e incremental, dividindo o trabalho em ciclos. Essa abordagem promove a colaboração, transparência e adaptação contínua, permitindo que as equipes entreguem valor de forma mais eficiente.</p>
-
-        <p>A metodologia <strong>valoriza a comunicação efetiva, a entrega contínua de incrementos funcionais e a melhoria contínua do processo de desenvolvimento.</strong></p>
       </>
     ),
   },
@@ -379,6 +379,37 @@ export const skills_en = [
     ),
   },
   {
+    id: 5,
+    type: 'library',
+    name: "Next JS",
+    percentage: 70,
+    summary: (
+      <>
+        <p>
+          Next.js is a popular framework built on top of React that enables
+          server-side rendering, static site generation, and other advanced
+          features.
+        </p>
+        <p>
+          It provides developers with a powerful set of tools for building <strong>efficient and high-performance web applications</strong>.
+        </p>
+      </>
+    ),
+  },
+  {
+    id: 8,
+    name: "Scrum",
+    percentage: 60,
+    type: 'tool',
+    summary: (
+      <>
+        <p>
+          Scrum is an agile methodology widely used in software development. It is based on an iterative and incremental process, dividing the work into cycles called Sprints. This approach promotes collaboration, transparency, and continuous adaptation, allowing teams to deliver value more efficiently.</p>
+        <p> The methodology emphasizes <strong>effective communication, continuous delivery of functional increments, and continuous improvement of the development process.</strong></p>
+      </>
+    ),
+  },
+  {
     id: 7,
     name: "SQL Server",
     type: 'other',
@@ -393,24 +424,6 @@ export const skills_en = [
           It provides a <strong>robust and scalable solution</strong> for storing and retrieving
           data, making it an essential skill for working with data-driven
           applications.
-        </p>
-      </>
-    ),
-  },
-  {
-    id: 5,
-    type: 'library',
-    name: "Next JS",
-    percentage: 70,
-    summary: (
-      <>
-        <p>
-          Next.js is a popular framework built on top of React that enables
-          server-side rendering, static site generation, and other advanced
-          features.
-        </p>
-        <p>
-          It provides developers with a powerful set of tools for building <strong>efficient and high-performance web applications</strong>.
         </p>
       </>
     ),
@@ -534,19 +547,6 @@ export const skills_en = [
           It provides a comprehensive collection of predefined CSS styles,
           components, and utilities that <strong>facilitate rapid and efficient development.</strong>
         </p>
-      </>
-    ),
-  },
-  {
-    id: 8,
-    name: "Scrum",
-    percentage: 60,
-    type: 'tool',
-    summary: (
-      <>
-        <p>
-          Scrum is an agile methodology widely used in software development. It is based on an iterative and incremental process, dividing the work into cycles called Sprints. This approach promotes collaboration, transparency, and continuous adaptation, allowing teams to deliver value more efficiently.</p>
-        <p> The methodology emphasizes <strong>effective communication, continuous delivery of functional increments, and continuous improvement of the development process.</strong></p>
       </>
     ),
   },

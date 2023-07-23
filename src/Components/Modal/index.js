@@ -68,7 +68,6 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                                                 :
                                                 <>{member.name}</>
                                             }
-                                            {console.log(index)}
                                             {index === selected?.team.length - 2 ? (
                                                 <> {strings.and} </>
                                             ) : index !== selected?.team.length - 1 ? (
@@ -85,7 +84,7 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
                     <div className='column wrap-iframe'>
                         {selected?.video_id ?
-                            <iframe src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                             : selected?.title &&
                             <img className='img-project' src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} />
                         }

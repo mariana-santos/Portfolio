@@ -84,8 +84,16 @@ export const projects_pt = [
                 name: 'React'
             },
             {
+                id: 1,
+                name: 'Javascript'
+            },
+            {
                 id: 2,
                 name: 'Java'
+            },
+            {
+                id: 3,
+                name: 'Figma'
             },
             {
                 id: 7,
@@ -152,6 +160,11 @@ export const projects_pt = [
             {
                 id: 5,
                 name: 'Javascript'
+            },
+            
+            {
+                id: 5,
+                name: 'Python'
             },
         ],
         description:
