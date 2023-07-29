@@ -316,93 +316,11 @@ export const projects_pt = [
         ]
     },
     {
-        id: 7,
-        title: 'Bagify',
-        subtitle: 'Aplicativo de gerenciamento de bagagens',
-        github: 'https://github.com/mariana-santos/hackaton-copastur',
-        video_id: 'nihtg3UWumg',
-        skills: [
-            {
-                id: 4,
-                name: 'React Native'
-            },
-            {
-                id: 2,
-                name: 'Javascript'
-            },
-            {
-                id: 11,
-                name: 'Figma'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ],
-        description: <>
-            <p>Durante o <strong>Hackaton</strong> prmovido pela <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> e a <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, nós fomos desafiados a encontrar uma forma de humanizar a experiência dos viajantes de companhias aéreas.</p>
-
-            <p>Desse problema surgiu o <strong>Bagify</strong>: um app de gerenciamento para o usuário ter controle de suas bagagens enquanto viaja, e assim viajar sem preocupações com a segurança de seus pertences.</p>
-        </>,
-        team: [
-            {
-                id: 1,
-                name: 'David Almeida',
-                link: 'https://www.linkedin.com/in/almeida154'
-            },
-            {
-                id: 2,
-                name: 'Juliana Gonzales',
-                link: 'https://www.linkedin.com/in/julianagonzalesbispo'
-            },
-            {
-                id: 3,
-                name: 'Max Fernandes',
-                link: 'https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a'
-            },
-            {
-                id: 4,
-                name: 'Rafael Dibe',
-                link: 'https://www.linkedin.com/in/rafael-dibe-5aba5847'
-            },
-        ]
-    },
-    {
-        id: 8,
-        title: 'Nutri Tips',
-        subtitle: 'Blog de nutrição consumindo uma API externa',
-        deploy: 'https://nutri-tips.vercel.app/',
-        github: 'https://github.com/mariana-santos/Nutri-Tips',
-        video_id: 'yguCXU8AqJM',
-        skills: [
-            {
-                id: 4,
-                name: 'React'
-            },
-            {
-                id: 5,
-                name: 'Javascript'
-            },
-            {
-                id: 2,
-                name: 'Consumo de API'
-            },
-            {
-                id: 7,
-                name: 'Git'
-            }
-        ],
-        description: <>
-            <p>Durante o início dos meus estudos com <strong>React</strong>, construí esse projeto simples de um blog sobre nutrição com filtros. </p>
-
-            <p>Os dados são consumidos da API disponibilizada gratuitamente pelo <a href="https://sujeitoprogramador.com/rn-api/?api=posts" target="_blank">Sujeito Programador</a>.</p>
-        </>,
-    },
-    {
         id: 9,
         title: 'Chapter One',
         subtitle: 'Livraria fictícia',
         github: 'https://github.com/mariana-santos/chapter-one',
+        deploy: 'https://chapter-one.vercel.app/',
         video_id: 'A0qBYKdb0WI',
         skills: [
             {
@@ -438,7 +356,90 @@ export const projects_pt = [
                 link: 'https://www.linkedin.com/in/kauecaponero/'
             }
         ]
-    }
+    },
+    {
+        id: 8,
+        title: 'Nutri Tips',
+        subtitle: 'Blog de nutrição consumindo uma API externa',
+        deploy: 'https://nutri-tips.vercel.app/',
+        github: 'https://github.com/mariana-santos/Nutri-Tips',
+        video_id: 'yguCXU8AqJM',
+        skills: [
+            {
+                id: 4,
+                name: 'React'
+            },
+            {
+                id: 5,
+                name: 'Javascript'
+            },
+            {
+                id: 2,
+                name: 'Consumo de API'
+            },
+            {
+                id: 7,
+                name: 'Git'
+            }
+        ],
+        description: <>
+            <p>Durante o início dos meus estudos com <strong>React</strong>, construí esse projeto simples de um blog sobre nutrição com filtros. </p>
+
+            <p>Os dados são consumidos da API disponibilizada gratuitamente pelo <a href="https://sujeitoprogramador.com/rn-api/?api=posts" target="_blank">Sujeito Programador</a>.</p>
+        </>,
+    },
+    {
+        id: 7,
+        title: 'Bagify',
+        subtitle: 'Aplicativo de gerenciamento de bagagens',
+        github: 'https://github.com/mariana-santos/hackaton-copastur',
+        video_id: 'nihtg3UWumg',
+        skills: [
+            {
+                id: 4,
+                name: 'React Native'
+            },
+            {
+                id: 2,
+                name: 'Javascript'
+            },
+            {
+                id: 11,
+                name: 'Figma'
+            },
+            {
+                id: 7,
+                name: 'Git'
+            }
+        ],
+        description: <>
+            <p>Durante o <strong>Hackaton</strong> promovido pela <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> e a <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, nós fomos desafiados a encontrar uma forma de humanizar a experiência dos viajantes de companhias aéreas.</p>
+
+            <p>Desse problema surgiu o <strong>Bagify</strong>: um app de gerenciamento para o usuário ter controle de suas bagagens enquanto viaja, e assim viajar sem preocupações com a segurança de seus pertences.</p>
+        </>,
+        team: [
+            {
+                id: 1,
+                name: 'David Almeida',
+                link: 'https://www.linkedin.com/in/almeida154'
+            },
+            {
+                id: 2,
+                name: 'Juliana Gonzales',
+                link: 'https://www.linkedin.com/in/julianagonzalesbispo'
+            },
+            {
+                id: 3,
+                name: 'Max Fernandes',
+                link: 'https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a'
+            },
+            {
+                id: 4,
+                name: 'Rafael Dibe',
+                link: 'https://www.linkedin.com/in/rafael-dibe-5aba5847'
+            },
+        ]
+    },
 ];
 
 export const projects_en = [
@@ -538,15 +539,18 @@ export const projects_en = [
         team: projects_pt[5].team,
     },
     {
-        id: 7,
-        title: 'Bagify',
-        subtitle: 'Luggage management app',
-        skills: projects_pt[6].skills,
+        id: 9,
+        title: 'Chapter One',
+        subtitle: 'Fictional Book Store',
+        github: 'https://github.com/mariana-santos/chapter-one',
+        deploy: 'https://chapter-one.vercel.app/',
+        video_id: 'A0qBYKdb0WI',
+        skills: projects_pt[8].skills,
         description: <>
-            <p>During the <strong>Hackathon</strong> promoted by <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> and <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, we were challenged to find a way to humanize the experience of airline travelers.</p>
-            <p>From this problem, <strong>Bagify</strong> was born: a baggage management app that allows users to have control over their belongings while traveling, ensuring a worry-free journey and the security of their belongings.</p>
+            <p>The project was proposed by combining elements from the subjects <strong>Domain Driven Design</strong>, <strong>Computational Thinking Using Python</strong>, <strong>Responsive Web Development</strong>, and <strong>Building Relational Database</strong> during my graduation at <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>.</p>
+            <p>Using Python, the information is retrieved from the SQL database (Oracle) and displayed in the application using React.</p>
         </>,
-        team: projects_pt[6].team,
+        team: projects_pt[8].team
     },
     {
         id: 8,
@@ -562,16 +566,14 @@ export const projects_en = [
         </>,
     },
     {
-        id: 9,
-        title: 'Chapter One',
-        subtitle: 'Fictional Book Store',
-        github: 'https://github.com/mariana-santos/chapter-one',
-        video_id: 'A0qBYKdb0WI',
-        skills: projects_pt[8].skills,
+        id: 7,
+        title: 'Bagify',
+        subtitle: 'Luggage management app',
+        skills: projects_pt[6].skills,
         description: <>
-            <p>The project was proposed by combining elements from the subjects <strong>Domain Driven Design</strong>, <strong>Computational Thinking Using Python</strong>, <strong>Responsive Web Development</strong>, and <strong>Building Relational Database</strong> during my graduation at <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>.</p>
-            <p>Using Python, the information is retrieved from the SQL database (Oracle) and displayed in the application using React.</p>
+            <p>During the <strong>Hackathon</strong> promoted by <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> and <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, we were challenged to find a way to humanize the experience of airline travelers.</p>
+            <p>From this problem, <strong>Bagify</strong> was born: a baggage management app that allows users to have control over their belongings while traveling, ensuring a worry-free journey and the security of their belongings.</p>
         </>,
-        team: projects_pt[8].team
-    }
+        team: projects_pt[6].team,
+    },
 ];
