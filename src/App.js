@@ -34,9 +34,10 @@ export default function App() {
     theme,
     setTheme
   }
+  
   return (
     <ConfigContext.Provider value={ConfigValues}>
-      <div className={`${theme}-theme`}>
+      <div className={`container-all ${theme}-theme`}>
         <BrowserRouter>
           <Navbar />
           <SocialMedia />

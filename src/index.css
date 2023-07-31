@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;400;500;600;800;900&family=Source+Code+Pro&display=swap');
 
-:root {
+:root, .light-theme {
   --bg-light: #ebedf0;
   --header-transparent: rgba(255, 255, 255, 0.605);
   --bg-light-strong: #fff;
@@ -17,7 +17,7 @@
   --bg-wrap-img-card: #F3F4F8;
 }
 
-:root:has(.dark-theme) {
+.dark-theme {
   --bg-light: #0e0a13;
   --header-transparent: #0c0810be;
   --bg-light-strong: #16121b;
@@ -44,6 +44,9 @@ body {
   font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+}
+
+.container-all{
   background: var(--bg-light);
   color: var(--text-color);
 }

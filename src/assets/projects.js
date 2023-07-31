@@ -550,7 +550,7 @@ export const projects_en = [
             <p>The project was proposed by combining elements from the subjects <strong>Domain Driven Design</strong>, <strong>Computational Thinking Using Python</strong>, <strong>Responsive Web Development</strong>, and <strong>Building Relational Database</strong> during my graduation at <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>.</p>
             <p>Using Python, the information is retrieved from the SQL database (Oracle) and displayed in the application using React.</p>
         </>,
-        team: projects_pt[8].team
+        team: projects_pt[6].team
     },
     {
         id: 8,
@@ -574,6 +574,6 @@ export const projects_en = [
             <p>During the <strong>Hackathon</strong> promoted by <a href="https://www.copastur.com.br/" target="_blank">Copastur</a> and <a href='https://www.fiap.com.br/' target='_blank'>FIAP</a>, we were challenged to find a way to humanize the experience of airline travelers.</p>
             <p>From this problem, <strong>Bagify</strong> was born: a baggage management app that allows users to have control over their belongings while traveling, ensuring a worry-free journey and the security of their belongings.</p>
         </>,
-        team: projects_pt[6].team,
+        team: projects_pt[8].team,
     },
 ];

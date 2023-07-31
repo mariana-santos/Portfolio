@@ -28,6 +28,11 @@ export default function Projects({ setIsOpen, setSelected }) {
     }, [filterSelected, filterBySelected]);
 
     function filterProjects() {
+        if (filterSelected.length === 0) {
+            setFilteredProjects(strings.projects);
+            return;
+        }
+
         let filtered = strings.projects.filter((project) => {
             const projectSkills = project.skills.map((skill) => skill.name);
             return filterSelected.some((selected) =>
