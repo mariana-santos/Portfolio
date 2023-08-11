@@ -43,7 +43,7 @@ export default function Experience({ experience, selected, setSelected, details 
                         {experience.skills.map(stack => {
                             return (
                                 <span className='tag' key={stack.id}>
-                                    <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
+                                    <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />
                                     {stack.name}
                                 </span>
                             )

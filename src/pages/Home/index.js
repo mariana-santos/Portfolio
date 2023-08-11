@@ -1,6 +1,6 @@
 import About from '../../Components/About'
 import Experiences from '../../Components/Experiences'
-import Habilities from '../../Components/Skills'
+import Skills from '../../Components/Skills'
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 
@@ -26,7 +26,7 @@ function App() {
 
       <About />
       <Experiences />
-      <Habilities />
+      <Skills />
       <Projects
         setIsOpen={setIsOpen}
         setSelected={setSelected}

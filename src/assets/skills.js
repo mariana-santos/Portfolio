@@ -1,17 +1,22 @@
+import { BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoGit, BiLogoJquery } from 'react-icons/bi'
+
+import { SiNextdotjs, SiPhp, SiMui, SiBootstrap } from 'react-icons/si'
+
+import { BsFillDatabaseFill, BsWordpress } from 'react-icons/bs'
+
+import { DiSass } from 'react-icons/di'
+
 export const skills_pt = [
   {
     id: 1,
     name: "Javascript",
     percentage: 80,
     type: 'language',
+    icon: <BiLogoJavascript color='F4CB0B'/>,
     summary: (
       <>
         <p>
-          Javascript é atualmente a linguagem de programação mais utilizada no
-          mundo. </p>
-        <p>Com ele consigo desenvolver <strong>aplicações Web e Mobile de alto padrão</strong> utilizando
-          frameworks como React e Next JS.
-        </p>
+          Javascript é utilizado no desenvolvimento web e mobile com ferramentas como React e Next JS</p>
       </>
     ),
   },
@@ -20,6 +25,7 @@ export const skills_pt = [
     name: "Typescript",
     percentage: 70,
     type: 'language',
+    icon: <BiLogoTypescript color='007BCD' />,
     summary: (
       <>
         <p>
@@ -37,6 +43,7 @@ export const skills_pt = [
     name: "React",
     percentage: 80,
     type: 'library',
+    icon: <BiLogoReact color='#61DBFB' />,
     summary: (
       <>
         <p>
@@ -54,6 +61,7 @@ export const skills_pt = [
     name: "React Native",
     percentage: 70,
     type: 'library',
+    icon: <BiLogoReact color='#61DBFB' />,
     summary: (
       <>
         <p>
@@ -72,6 +80,7 @@ export const skills_pt = [
     name: "Git",
     percentage: 80,
     type: 'tool',
+    icon: <BiLogoGit color='#F05033' />,
     summary: (
       <>
         <p>
@@ -89,6 +98,7 @@ export const skills_pt = [
     name: "Next JS",
     percentage: 70,
     type: 'library',
+    icon: <SiNextdotjs color='#000' />,
     summary: (
       <>
         <p>
@@ -107,6 +117,7 @@ export const skills_pt = [
     name: "Scrum",
     percentage: 60,
     type: 'tool',
+    icon: <img src={require(`./skills-logos/scrum.webp`)} alt="Logotipo da metodologia Scrum" />,
     summary: (
       <>
 
@@ -122,6 +133,7 @@ export const skills_pt = [
     name: "SQL Server",
     percentage: 85,
     type: 'other',
+    icon: <BsFillDatabaseFill color='#0088D3' />,
     summary: (
       <>
         <p>
@@ -140,6 +152,7 @@ export const skills_pt = [
     name: "SCSS",
     type: 'other',
     percentage: 75,
+    icon: <DiSass color='#e9639b' />,
     summary: (
       <>
         <p>
@@ -156,6 +169,7 @@ export const skills_pt = [
     name: "Wordpress",
     percentage: 85,
     type: 'platform',
+    icon: <BsWordpress color='444140'/>,
     summary: (
       <>
         <p>
@@ -174,6 +188,7 @@ export const skills_pt = [
     name: "Java",
     percentage: 70,
     type: 'language',
+    icon: <img src={require(`./skills-logos/java.webp`)} alt="Logotipo da linguagem de programação Java" />,
     summary: (
       <>
         <p>
@@ -190,6 +205,7 @@ export const skills_pt = [
     name: "Python",
     percentage: 80,
     type: 'language',
+    icon: <img src={require(`./skills-logos/python.webp`)} alt="Logotipo da linguagem de programação Python" />,
     summary: (
       <>
         <p>
@@ -207,6 +223,7 @@ export const skills_pt = [
     name: "Figma",
     percentage: 70,
     type: 'platform',
+    icon: <img src={require(`./skills-logos/figma.webp`)} alt="Logotipo da ferramenta de prototipação Figma" />,
     summary: (
       <>
         <p>
@@ -224,6 +241,7 @@ export const skills_pt = [
     name: "Material UI",
     type: 'library',
     percentage: 70,
+    icon: <SiMui color='007FFF'/>,
     summary: (
       <>
         <p>
@@ -242,6 +260,7 @@ export const skills_pt = [
     name: "Bootstrap",
     percentage: 90,
     type: 'library',
+    icon: <SiBootstrap color='#7809F7' />,
     summary: (
       <>
         <p>
@@ -258,6 +277,7 @@ export const skills_pt = [
     name: "JQuery",
     percentage: 90,
     type: 'library',
+    icon: <BiLogoJquery color='#0068B0' />,
     summary: (
       <>
         <p>
@@ -275,6 +295,7 @@ export const skills_pt = [
     name: "PHP",
     type: 'language',
     percentage: 70,
+    icon: <SiPhp color='#787CB4'/>,
     summary: (
       <>
         <p>

@@ -1,16 +1,20 @@
 .skill{
-    width: calc(100% / 7 - 2.5em);
+    width: calc(100% / 3 - 2.5em);
     text-align: center;
-    border: solid 2px var(--border-color);
-    padding:  1em .8em;
+    border: solid 2px transparent;
+    padding:  .5em;
     border-radius: 3px;
     cursor: pointer;
     transition: .4s;
-    background: var(--bg-light-strong);
     opacity: 0;
     animation: show .7s forwards ease;
-    filter: grayscale(70%) opacity(.75);
+    filter: grayscale(30%) opacity(.9);
+    /* position: relative; */
 }
+
+/* .skill:not(.skill.selected):not(:hover){
+    z-index: 1;
+} */
 
 .skill.selected, .skill:hover{
     filter: none;
@@ -39,69 +43,46 @@
     margin: auto;
 }
 
-.wrap-img-hab img{
+.wrap-img-hab img, .wrap-img-hab svg{
     width: 100%;
+    font-size: 3.5em;
     margin: auto;
     max-height: 100%;
     object-fit: contain;
 }
 
-.wrap-percentage{
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: var(--primary-transparency);
-    margin-top: .8em;
-    position: relative;
-    /* overflow-x: hidden; */
-    overflow-y: visible;
-}
 
-.percentage{ 
+.tooltip{
     position: absolute;
-    display: inline-block;
-    height: 5px;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-    background: var(--primary);
-    /* animation: percentage 2s ease; */
-}
-
-.value-percentage{
-    content: attr(percentage); 
-    position: absolute;
-    top: 8px;
-    right: -25px;
-    font-size: .8em;
+    left: 10px;
+    width: 160%;
+    font-size: 1em;
     background: var(--primary-transparency);
     padding: 0 5px;
     color: var(--bg-light);
     border-radius: 3px;
     opacity: 0;
+    text-align: start;
+    font-weight: bold;
+    z-index: 2;
 }
 
-.skill.selected .value-percentage, .skill:hover .value-percentage{
-    animation: showUp .7s forwards ease;
+.tooltip p{
+    margin: .5em;
 }
 
-@keyframes percentage {
-    from{
-        transform: translateX(-100%);
-    }
-
-    to{
-        transform: translateX(0%);
-    }
+.skill.selected .tooltip, .skill:hover .tooltip{
+    animation: showUp .5s forwards ease;
 }
 
 @keyframes showUp {
     from{
         opacity: 0;
-        transform: translateY(100%);
+        transform: translateY(50%);
     }
     to{
         opacity: 1;
+        z-index: 3;
     }
 }
 

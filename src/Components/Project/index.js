@@ -20,7 +20,7 @@ export default function Project({ project, setSelected, setIsOpen }) {
                 {project.skills.slice(0, 3).map(stack => {
                     return (
                         <span className='tag' key={stack.id}>
-                            <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
+                            <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} />
                             {stack.name}
                         </span>
                     )

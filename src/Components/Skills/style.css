@@ -8,13 +8,27 @@
 
 #skills h2{
     width: 100%;
+    margin-bottom: 1em;
 }
 
 .wrap-skills{
     display: flex;
     gap: .8em;
-    width: 65%;
+    width: 30%;
     flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+}
+
+.wrap-skills h3{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    min-height: 2.8em;
+    flex-direction: column;
+    gap: .3em;
 }
 
 .skill-info{
