@@ -14,7 +14,7 @@ export default function Project({ project, setSelected, setIsOpen }) {
     return (
         <div className={`project`} onClick={changeSelected}>
             <div className='wrap-img-card'>
-                <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} alt="" />
+                <img src={require(`../../assets/projects/${project.title.toLowerCase()}.webp`)} alt="" />
             </div>
             <div className='tags'>
                 {project.skills.slice(0, 3).map(stack => {
