@@ -43,10 +43,6 @@
     margin: .5em;
 }
 
-.skill.selected .tooltip, .skill:hover .tooltip{
-    /* animation: showUp .5s forwards ease; */
-}
-
 .stack {
     text-align: center;
     padding: 30px;
