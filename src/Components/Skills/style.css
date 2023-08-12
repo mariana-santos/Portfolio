@@ -17,7 +17,6 @@
     width: 30%;
     flex-wrap: wrap;
     justify-content: center;
-    position: relative;
 }
 
 .wrap-skills h3{
@@ -30,26 +29,6 @@
     flex-direction: column;
     gap: .3em;
 }
-
-.skill-info{
-    width: calc(35% - 3em);
-}
-
-.see-all{
-    opacity: 1;
-    margin-left: auto;
-    margin-top: auto;
-    /* min-width: 130px; */
-}
-
-.hab-see-all .btn svg{
-    animation: turn-up .5s both;
-}
-
-.hab-see-less .btn svg{
-    animation: turn-down .5s both;
-}
-
 .show-up{
     opacity: 0;
     animation: grow .5s ease-in-out forwards;

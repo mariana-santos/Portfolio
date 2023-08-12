@@ -14,13 +14,14 @@ export default function Project({ project, setSelected, setIsOpen }) {
     return (
         <div className={`project`} onClick={changeSelected}>
             <div className='wrap-img-card'>
-                <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} />
+                <img src={require(`../../assets/projects/${project.title.toLowerCase()}.jpg`)} alt="" />
             </div>
             <div className='tags'>
                 {project.skills.slice(0, 3).map(stack => {
                     return (
                         <span className='tag' key={stack.id}>
-                            <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} />
+                            {stack.icon ? stack.icon : 
+                                <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' /> }
                             {stack.name}
                         </span>
                     )
