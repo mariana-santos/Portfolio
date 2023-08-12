@@ -1,32 +1,8 @@
-.skill{
-    width: calc(100% / 7 - 2.5em);
-    text-align: center;
-    border: solid 2px var(--border-color);
-    padding:  1em .8em;
-    border-radius: 3px;
-    cursor: pointer;
-    transition: .4s;
-    background: var(--bg-light-strong);
-    opacity: 0;
-    animation: show .7s forwards ease;
-    filter: grayscale(70%) opacity(.75);
-}
-
-.skill.selected, .skill:hover{
-    filter: none;
-    border: solid 2px var(--primary);
-    box-shadow: var(--shadow-secondary);
-}
-
-.skill:not(.selected):hover{
+.stack:not(.selected):hover{
     border: solid 2px var(--primary-transparency);
 }
 
-.wrap-skills.hab-see-less .skill:nth-child(n+15){
-    animation: hide .7s forwards ease;
-}
-
-.skill p{
+.stack p{
     margin-bottom: 0;
     font-size: .7em;
 }
@@ -39,69 +15,85 @@
     margin: auto;
 }
 
-.wrap-img-hab img{
+.wrap-img-hab img, .wrap-img-hab svg{
     width: 100%;
+    font-size: 3.5em;
     margin: auto;
     max-height: 100%;
     object-fit: contain;
 }
 
-.wrap-percentage{
-    width: 100%;
-    height: 5px;
-    border-radius: 5px;
-    background: var(--primary-transparency);
-    margin-top: .8em;
-    position: relative;
-    /* overflow-x: hidden; */
-    overflow-y: visible;
-}
-
-.percentage{ 
-    position: absolute;
-    display: inline-block;
-    height: 5px;
-    left: 0;
-    top: 0;
-    border-radius: 5px;
-    background: var(--primary);
-    /* animation: percentage 2s ease; */
-}
-
-.value-percentage{
-    content: attr(percentage); 
-    position: absolute;
-    top: 8px;
-    right: -25px;
-    font-size: .8em;
+.tooltip{
+    /* position: absolute; */
+    left: 10px;
+    width: 160%;
+    visibility: hidden;
+    font-size: 1em;
     background: var(--primary-transparency);
     padding: 0 5px;
     color: var(--bg-light);
     border-radius: 3px;
-    opacity: 0;
+    /* opacity: 0; */
+    text-align: start;
+    font-weight: bold;
+    /* z-index: 2; */
 }
 
-.skill.selected .value-percentage, .skill:hover .value-percentage{
+.tooltip p{
+    margin: .5em;
+}
+
+.skill.selected .tooltip, .skill:hover .tooltip{
+    /* animation: showUp .5s forwards ease; */
+}
+
+.stack {
+    text-align: center;
+    padding: 30px;
+    position: relative;
+    width: calc(100% / 3 - 2.5em);
+    text-align: center;
+    border: solid 2px transparent;
+    padding:  .5em;
+    border-radius: 3px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.stack:hover, .stack.selected{
+    filter: none;
+    border: solid 2px var(--primary);
+    box-shadow: var(--shadow-secondary);
+}
+
+.tooltip{
+    visibility: hidden;
+    background-color: var(--secondary);
+    padding: 5px;
+    color: #fff;
+    text-align: center;
+    border-radius: 4px;
+    position: absolute;
+    top: 90%;
+    left: 10px;
+    z-index: 1;
+    line-height: normal;
+    width: 160%;
+    font-weight: bold;
+}
+
+.stack:hover span, .stack:hover .tooltip, .stack.selected .tooltip {
     animation: showUp .7s forwards ease;
-}
-
-@keyframes percentage {
-    from{
-        transform: translateX(-100%);
-    }
-
-    to{
-        transform: translateX(0%);
-    }
 }
 
 @keyframes showUp {
     from{
-        opacity: 0;
-        transform: translateY(100%);
+        visibility: hidden;
+        transform: translateY(20%);
     }
     to{
-        opacity: 1;
+        visibility: visible;
+        transform: translate(0);
     }
 }
 
@@ -129,7 +121,7 @@
 }
 
 @media screen and (max-width: 768px) {
-    .skill{
+    .stack{
         width: calc(100% / 3 - .5em);
         /* padding: .5em; */
         font-size: .8em;
@@ -137,10 +129,18 @@
     }
 
     .wrap-skills{
-        gap: .5em !important;
+        gap: .1em !important;
+    }
+
+    .wrap-skills:not(:last-of-type){
+        margin-bottom: 2em;
     }
 
     .wrap-skills.hab-see-less .skill:nth-child(n+7){
         animation: hide .7s forwards ease;
+    }
+
+    .wrap-skills h3{
+        font-size: 1.3em;
     }
 }

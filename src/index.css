@@ -8,6 +8,7 @@
   --primary: rgb(149, 49, 244);
   --primary-stronger: rgb(117 17 212);
   --primary-transparency: rgba(150, 49, 244, 0.466);
+  --secondary: #C395F2;
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
@@ -25,6 +26,7 @@
   --primary: rgb(149, 49, 244);
   --primary-stronger: rgb(191, 123, 255);
   --primary-transparency: rgb(168, 75, 255);
+  --secondary: #C395F2;
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);

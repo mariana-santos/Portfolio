@@ -46,7 +46,9 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                             {selected?.skills.map(stack => {
                                 return (
                                     <span className='tag' key={stack.id}>
-                                        <img src={require(`../../assets/habilities-logos/${stack.name.toLowerCase()}.png`)} />
+                                        {stack.icon ? stack.icon : 
+                                            <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt="" />
+                                        }
                                         {stack.name}
                                     </span>
                                 )
