@@ -19,7 +19,7 @@ export const projects_pt = [
         subtitle: 'Aplicativo de gerenciamento financeiro',
         github: 'https://github.com/mariana-santos/refinances',
         video_id: 'i9xEfPATjSk',
-        param: '?start=681',
+        param: '?start=681&autoplay=1',
         relevant: true,
         skills: [
             {

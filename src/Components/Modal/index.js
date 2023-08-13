@@ -4,7 +4,7 @@ import { AiOutlineClose, AiOutlineGithub } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
 import useStrings from '../../assets/useStrings';
 
-import { useEffect, useRef } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
@@ -64,7 +64,7 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                                     return (
                                         <span key={member.id}>
                                             {member.link ?
-                                                <a href={member.link} target='_blank'>
+                                                <a href={member.link} target='_blank' rel="noreferrer">
                                                     {member.name}
                                                 </a>
                                                 :
@@ -86,28 +86,58 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
                     <div className='column wrap-iframe'>
                         {selected?.video_id ?
-                            <iframe src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : ''}`} title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
+
+                            <Iframe selected={selected} />
+
                             : selected?.title &&
-                            <img className='img-project' src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} />
+
+                            <img className='img-project' src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} alt={`Imagem do projeto ${selected.title}`}/>
                         }
 
                         <div className='modal_footer'>
-                            <a href={selected?.github} target='_blank' className='btn'>
+                            <a href={selected?.github} target='_blank' className='btn' rel="noreferrer">
                                 {strings.more_info}
                                 <AiOutlineGithub />
                             </a>
 
                             {selected?.deploy &&
-                                <a href={selected?.deploy} target='_blank' className='btn'>
+                                <a href={selected?.deploy} target='_blank' className='btn' rel="noreferrer">
                                     {strings.test}
                                     <BsFillPlayFill />
                                 </a>
                             }
-
                         </div>
                     </div>
                 </div>
             </div>
+        </>
+    )
+}
+
+function Iframe({ selected }){
+    const [clicked, setClicked] = useState(false)
+    return(
+        <>
+            { clicked 
+                ? 
+                <iframe 
+                    src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : '?autoplay=1'}`} 
+                    title="YouTube video player" autoplay allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
+
+                </iframe>
+                
+                : 
+                <div className='wrap-img-iframe' onClick={() => setClicked(true)}>
+                    <img 
+                        className='img-project' 
+                        src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} 
+                        alt={`Imagem do projeto ${selected.title}`} />
+                    
+                    <div className='wrap-play-icon'>
+                        <BsFillPlayFill className='play-icon' />
+                    </div>
+                </div>
+            }
         </>
     )
 }
