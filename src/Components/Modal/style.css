@@ -105,6 +105,37 @@ iframe, .img-project{
     font-size: 1.1em;
 }
 
+.wrap-img-iframe{
+    position: relative;
+    cursor: pointer;
+    border-radius: 5px;
+    width: 100%;
+    aspect-ratio: 1 / .6;
+    height: auto;
+}
+
+.wrap-img-iframe img{
+    object-fit: cover;
+    border-radius: 5px;
+    height: 100%;
+}
+
+.wrap-play-icon{
+    position: absolute;
+    width: 2.5em;
+    height: 2.5em;
+    top: calc(50% - 1.5em);
+    left: calc(50% - 1.5em );
+    background-color: var(--primary);
+    border-radius: 50%;
+    padding: .5em;
+}
+
+.play-icon{
+    color: #fff;
+    font-size: 2.5em;
+}
+
 @media screen and (max-width: 768px){
     #modal{
         padding: 1.5em;
