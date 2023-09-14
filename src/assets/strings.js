@@ -14,8 +14,8 @@ export const pt = {
     title: 'Desenvolvedora Frontend',
     subtitle:
         <>
-            <span>Apaixonada por criação e tecnologia.</span> <br />
-            <span>Ampla experiência em desenvolvimento de <strong>aplicações web e mobile responsivas e acessíveis.</strong></span>
+            <p>Apaixonada por criação e tecnologia.</p>
+            <p>Ampla experiência em desenvolvimento de <strong>aplicações web e mobile responsivas e acessíveis.</strong></p>
         </>,
     experience_title: 'experiência e educação',
     experiences: experiences_pt,
@@ -96,8 +96,8 @@ export const en = {
     title: "Frontend Developer",
     subtitle:
         <>
-            <span>Passionate about creation and technology.</span> <br />
-            <span>Wide experience developing <strong>acessible and responsive web and mobile applications.</strong></span>
+            <p>Passionate about creation and technology.</p> 
+            <p>Wide experience developing <strong>acessible and responsive web and mobile applications.</strong></p>
         </>,
     experience_title: 'Work Experience and Education',
     experiences: experiences_en,
@@ -105,7 +105,7 @@ export const en = {
     journey:
         <>
             <p>I have always been very passionate about technology and innovation, and it all began when I took a basic computer course at the age of 10. There, I learned the fundamentals of <strong>Software, Hardware, and the programs in the Office Suite</strong>.</p>
-            <p>However, my true immersion into the world of programming occurred when I pursued the technical course in <strong>Systems Development at ETEC de Guainazes</strong>. There I fell in love with frontend development and realized that this would be my chosen profession.</p>
+            <p>However, my true immersion into the world of programming occurred when I pursued the technical course in <strong>Systems Development at ETEC de Guaianazes</strong>. There I fell in love with frontend development and realized that this would be my chosen profession.</p>
             <p>Currently, I am pursuing a degree in <strong>Analysis and Systems Development at FIAP</strong>, considered the top technology college in Brazil.</p>
             <p>In addition, I have been working as a <strong>Jr. Web Developer at Agência Choveu for over a year</strong>, where I continue to learn and enhance my skills in the world of frontend development.</p>
         </>,

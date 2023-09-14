@@ -1,8 +1,8 @@
 import { BiLogoJavascript, BiLogoTypescript, BiLogoReact, BiLogoGit, BiLogoTailwindCss, BiLogoJquery } from 'react-icons/bi'
 
-import { SiNextdotjs, SiPhp, SiMui, SiBootstrap } from 'react-icons/si'
+import { SiNextdotjs } from 'react-icons/si'
 
-import { BsFillDatabaseFill, BsWordpress } from 'react-icons/bs'
+import { BsFillDatabaseFill } from 'react-icons/bs'
 
 import { DiSass } from 'react-icons/di'
 
@@ -95,7 +95,7 @@ export const projects_pt = [
         id: 2,
         title: 'Investium',
         subtitle: 'Website criado para facilitar e incentivar o investimento em IPO',
-        deploy: 'https://repo-challenge-j1bp.vercel.app/',
+        deploy: 'https://investium-fiap.vercel.app/',
         github: 'https://github.com/mariana-santos/repo_challenge',
         video_id: '3nP4r-L_qqk',
         relevant: true,
@@ -522,7 +522,7 @@ export const projects_en = [
         id: 2,
         title: 'Investium',
         subtitle: 'Website created to facilitate and encourage investment in IPO',
-        deploy: 'https://repo-challenge-j1bp.vercel.app/',
+        deploy: 'https://investium-fiap.vercel.app/',
         github: 'https://github.com/mariana-santos/repo_challenge',
         video_id: '3nP4r-L_qqk',
         skills: projects_pt[1].skills,

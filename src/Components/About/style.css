@@ -10,7 +10,7 @@
 
 #about .column {
     width: 50%;
-    font-size: 2em;
+    font-size: 2.3em;
 }
 
 #about .wrapper-pic {
@@ -62,7 +62,7 @@
 }
 
 .smaller {
-    font-size: .7em;
+    font-size: .6em;
 }
 
 #about .btn {
@@ -70,6 +70,10 @@
     font-size: .7em;
     font-weight: bolder;
     width: fit-content;
+}
+
+#about .light{
+    font-size: .7em;
 }
 
 @media screen and (min-width: 1200px) {
