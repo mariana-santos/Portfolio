@@ -11,9 +11,14 @@ export default function Skills() {
 
     const [selected, setSelected] = useState(strings.skills[0])
 
-    const languages = strings.skills.filter((language) => language.type === 'language')
-    const libs_frameworks = strings.skills.filter((language) => language.type === 'library' || language.type === 'framework')
-    const platforms_tools_others = strings.skills.filter((language) => language.type === 'platform' || language.type === 'tool' || language.type === 'other')
+    const skills = strings.skills.filter(skill => !skill.hide);
+
+    const languages = skills.filter((language) => language.type === 'language');
+    const libs_frameworks = skills.filter((language) => 
+        language.type === 'library' || language.type === 'framework'
+    );
+    const platforms_tools_others = skills.filter((language) => 
+        language.type === 'platform' || language.type === 'tool' || language.type === 'other');
 
     return (
         <section className='container' id="skills" data-aos="fade-up">
