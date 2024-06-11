@@ -11,128 +11,127 @@ import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
 import useStrings from '../../data/useStrings'
-// import { Link } from 'react-router-dom';
-import { HashLink as Link } from 'react-router-hash-link';
+import { HashLink } from 'react-router-hash-link';
 
 import logo from '../../assets/logo.svg'
 
 
 export default function Navbar() {
 
-    const [menuOpen, setMenuOpen] = useState(null)
+  const [menuOpen, setMenuOpen] = useState(null)
 
-    const {
-        language,
-        setLanguage,
-        theme,
-        setTheme
-    } = useContext(ConfigContext);
+  const {
+    language,
+    setLanguage,
+    theme,
+    setTheme
+  } = useContext(ConfigContext);
 
-    useEffect(() => {
-        localStorage.setItem('theme', theme)
-    }, [theme])
+  useEffect(() => {
+    localStorage.setItem('theme', theme)
+  }, [theme])
 
-    useEffect(() => {
-        localStorage.setItem('language', language)
-    }, [language])
+  useEffect(() => {
+    localStorage.setItem('language', language)
+  }, [language])
 
-    const strings = useStrings();
+  const strings = useStrings();
 
-    useEffect(() => {
-        function handleClickOutside(event) {
-            if (menuOpen && !event.target.closest('.menu-wrapper')) {
-                setMenuOpen(false);
-            }
-        }
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (menuOpen && !event.target.closest('.menu-wrapper'))
+        setMenuOpen(false);
+    }
 
-        document.addEventListener('click', handleClickOutside);
+    document.addEventListener('click', handleClickOutside);
 
-        return () => {
-            document.removeEventListener('click', handleClickOutside);
-        };
-    }, [menuOpen]);
+    return () => {
+        document.removeEventListener('click', handleClickOutside);
+    };
+  }, [menuOpen]);
 
-    return (
-        <header>
-            <nav className="navbar" style={{ backgroundColor: menuOpen ? 'var(--bg-light-strong)' : 'var(--header-transparent)' }}>
-                <Link to='/#about' className='logo'>
-                    <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
-                </Link>
+  return (
+    <header>
+      <nav 
+        className="navbar" 
+        style={{ backgroundColor: menuOpen ? 'var(--bg-light-strong)' : 'var(--header-transparent)' }}>
+        <HashLink to='/#about' className='logo'>
+            <img src={logo} alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML" />
+        </HashLink>
 
-                <div className='menu-wrapper'>
-                    <div className='language-switcher'>
-                        <Select
-                            labelId="language"
-                            id="language"
-                            value={language}
-                            onChange={(e) => setLanguage(e.target.value)}
-                            autoWidth
-                            label="Lang"
-                            sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
-                            disableUnderline
-                            variant="standard"
-                            inputProps={{
-                                classes: {
-                                    icon: 'icon-select',
-                                },
-                            }}
-                        >
-                            <MenuItem value={'pt'}>PT</MenuItem>
-                            <MenuItem value={'en'}>EN</MenuItem>
-                        </Select>
-                    </div>
+        <div className='menu-wrapper'>
+          <div className='language-switcher'>
+            <Select
+              labelId="language"
+              id="language"
+              value={language}
+              onChange={(e) => setLanguage(e.target.value)}
+              autoWidth
+              label="Lang"
+              sx={{ boxShadow: 'none', '.MuiOutlinedInput-notchedOutline': { border: 0 } }}
+              disableUnderline
+              variant="standard"
+              inputProps={{
+                classes: {
+                    icon: 'icon-select',
+                },
+              }}
+            >
+              <MenuItem value={'pt'}>PT</MenuItem>
+              <MenuItem value={'en'}>EN</MenuItem>
+            </Select>
+          </div>
 
-                    <div
-                        className={`theme-switcher ${theme}`}
-                        role='button'
-                        onClick={() => setTheme(theme == 'light' ? 'dark' : 'light')}
-                    >
-                        <BsFillMoonFill className='moon' />
-                        <BsFillSunFill className='sun' />
-                    </div>
+          <div
+            className={`theme-switcher ${theme}`}
+            role='button'
+            onClick={() => setTheme(theme === 'light' ? 'dark' : 'light')}
+          >
+            <BsFillMoonFill className='moon' />
+            <BsFillSunFill className='sun' />
+          </div>
 
-                    <div
-                        className={`hamburguer ${menuOpen !== null && (menuOpen ? 'close' : 'open')}`}
-                        role='button'
-                        onClick={() => setMenuOpen(!menuOpen)}
-                    >
-                        <span />
-                        <span />
-                    </div>
+          <div
+            className={`hamburguer ${menuOpen !== null && (menuOpen ? 'close' : 'open')}`}
+            role='button'
+            onClick={() => setMenuOpen(!menuOpen)}
+          >
+            <span />
+            <span />
+          </div>
 
-                    <ul
-                        className={menuOpen !== null ? (menuOpen ? 'opened' : 'closed') : undefined}
-                        onClick={() => menuOpen && setMenuOpen(false)}
-                    >
+          <ul
+            className={menuOpen !== null ? (menuOpen ? 'opened' : 'closed') : undefined}
+            onClick={() => menuOpen && setMenuOpen(false)}
+          >   
+            <li className='code autoclose'>
+              <HashLink to="/#about">{strings.navbar.about}</HashLink >
+            </li>
 
-                        <Link to="/#about">
-                            <li className='code autoclose'>{strings.navbar.about}</li>
-                        </Link >
+            <li className='code autoclose'>
+              <HashLink to="/#experience">{strings.navbar.experience}</HashLink >
+            </li>
 
-                        <Link to="/#experience">
-                            <li className='code autoclose'>{strings.navbar.experience}</li>
-                        </Link >
+            <li className='code autoclose'>
+              <HashLink to="/#skills">{strings.navbar.skills}</HashLink >
+            </li>
 
-                        <Link to="/#skills">
-                            <li className='code autoclose'>{strings.navbar.skills}</li>
-                        </Link >
+            <li className='code autoclose'>
+              <HashLink to="/#projects">{strings.navbar.projects}</HashLink >
+            </li>
 
-                        <Link to="/#projects">
-                            <li className='code autoclose'>{strings.navbar.projects}</li>
-                        </Link >
+            <li className='code autoclose'>
+              <HashLink to="/contact">{strings.navbar.contact}</HashLink >
+            </li>
 
-                        <Link to="/contact/#contact">
-                            <li className='code autoclose'>{strings.navbar.contact}</li>
-                        </Link >
+            <li className='code autoclose'>
+              <HashLink to="/resume">{strings.navbar.resume}</HashLink >
+            </li>
+          </ul>
+        </div>
+      </nav>
 
-                        <Link to="/resume">
-                            <li className='code autoclose'>{strings.navbar.resume}</li>
-                        </Link >
-                    </ul>
-                </div>
-            </nav>
-
-            {menuOpen && <div className='fade fade-menu show' />}
-        </header>
-    )
+      {menuOpen && <div className='fade fade-menu show' />}
+    </header>
+  )
 }

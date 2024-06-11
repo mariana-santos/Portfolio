@@ -8,7 +8,6 @@ header {
     justify-content: space-between;
     padding: 1.5em 10em;
     align-items: center;
-    /* background-color: var(--header-transparent); */
     backdrop-filter: blur(7px);
     -webkit-backdrop-filter: blur(5px);
     box-shadow: var(--box-shadow);
@@ -64,17 +63,19 @@ header {
 .code,
 .code * {
     font-family: 'Source Code Pro', sans-serif;
-    letter-spacing: .2em;
+    letter-spacing: .07em;
     color: var(--text-color);
     text-transform: lowercase;
 }
 
 .code::before {
     content: '\3c';
+    letter-spacing: .2em;
 }
 
 .code::after {
     content: '\3e';
+    letter-spacing: .2em;
 }
 
 .autoclose::after {
@@ -85,6 +86,14 @@ header {
 .code::after {
     color: var(--primary);
     font-weight: bold;
+}
+
+.navbar .code:not(:last-of-type) {
+    border-bottom: solid 1px var(--border-color);
+}
+
+.navbar .code:hover {
+    background-color: var(--primary25);
 }
 
 h2.code {
@@ -169,14 +178,13 @@ h2.code {
 .navbar ul {
     display: flex;
     flex-direction: column;
-    /* visibility: hidden; */
     margin: 0;
     box-sizing: border-box;
     position: absolute;
     top: 100%;
     background-color: var(--bg-light-strong);
-    padding: .5em 2.5em;
     box-shadow: var(--box-shadow);
+    padding: 0;
     opacity: 0;
     z-index: 2;
     right: 10em;
@@ -194,7 +202,8 @@ h2.code {
 }
 
 .navbar ul li {
-    padding: 15px 0;
+    padding: 1em 2.5em;
+    transition: .3s;
 }
 
 .navbar ul a:not(:last-of-type) {
