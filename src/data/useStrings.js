@@ -4,7 +4,7 @@ import { pt, en } from './strings';
 import { ConfigContext } from '../App';
 
 export default function useStrings() {
-  const { language, setLanguage } = useContext(ConfigContext);
+  const { language } = useContext(ConfigContext);
   const [strings, setStrings] = useState(pt);
 
   useEffect(() => {

@@ -4,7 +4,7 @@ import Skills from '../../Components/Skills'
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
 
-import useStrings from '../../assets/useStrings';
+import useStrings from '../../data/useStrings';
 
 import { useState } from 'react';
 

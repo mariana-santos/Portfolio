@@ -6,7 +6,7 @@ import { IoSend } from 'react-icons/io5'
 
 import React, { useRef } from 'react';
 
-import useStrings from '../../assets/useStrings';
+import useStrings from '../../data/useStrings';
 
 import emailjs from '@emailjs/browser';
 import { toast, ToastContainer } from 'react-toastify';
@@ -29,9 +29,13 @@ export default function Contact() {
 
         setLoading(true)
 
-        emailjs.sendForm(process.env.REACT_APP_EMAILJS_SERVICE, process.env.REACT_APP_EMAILJS_TEMPLATE, form.current, process.env.REACT_APP_EMAILJS_PUBLICKEY)
+        emailjs.sendForm(
+            process.env.REACT_APP_EMAILJS_SERVICE, 
+            process.env.REACT_APP_EMAILJS_TEMPLATE, 
+            form.current, process.env.REACT_APP_EMAILJS_PUBLICKEY
+        )
             .then((result) => {
-                if(result.text == 'OK')
+                if(result.text === "OK")
                     setLoading(false)
                     toast.success(strings.contact_success)
                     form.current.reset();
@@ -45,7 +49,6 @@ export default function Contact() {
     return (
         <section className="container" id="contact">
             <div className="column form">
-
                 <ToastContainer
                     position="bottom-left"
                     autoClose={3000}

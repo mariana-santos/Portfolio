@@ -17,7 +17,7 @@ export const pt = {
             <p>Apaixonada por criação e tecnologia.</p>
             <p>Ampla experiência em desenvolvimento de <strong>aplicações web e mobile responsivas e acessíveis.</strong></p>
         </>,
-    experience_title: 'experiência e educação',
+    experience_title: 'experiência',
     experiences: experiences_pt,
     journey_title: 'Minha jornada até agora',
     journey:
@@ -99,7 +99,7 @@ export const en = {
             <p>Passionate about creation and technology.</p> 
             <p>Wide experience developing <strong>acessible and responsive web and mobile applications.</strong></p>
         </>,
-    experience_title: 'Work Experience and Education',
+    experience_title: 'Experience',
     experiences: experiences_en,
     journey_title: 'My Journey so far',
     journey:

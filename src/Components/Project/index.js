@@ -1,6 +1,6 @@
 import './style.css'
 
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 
 export default function Project({ project, setSelected, setIsOpen }) {
 

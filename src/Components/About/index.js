@@ -4,7 +4,7 @@ import pic from '../../assets/main-picture.jpg'
 
 import { React } from 'react'
 
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 
 export default function About() {
 

@@ -2,9 +2,9 @@ import './style.css';
 
 import { AiOutlineClose, AiOutlineGithub } from 'react-icons/ai'
 import { BsFillPlayFill } from 'react-icons/bs'
-import useStrings from '../../assets/useStrings';
+import useStrings from '../../data/useStrings';
 
-import { useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef, useState } from 'react';
 
 export default function Modal({ show, selected, setIsOpen, setSelected }) {
 
@@ -29,7 +29,7 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
     const strings = useStrings()
 
     return (
-        <>
+        <Fragment>
             <div id="fade" className={`${showClass} fade`}></div>
             <div id="modal" ref={modalRef} className={showClass}>
                 <div className="modal_header">
@@ -110,22 +110,22 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                     </div>
                 </div>
             </div>
-        </>
+        </Fragment>
     )
 }
 
 function Iframe({ selected }){
     const [clicked, setClicked] = useState(false)
+
     return(
-        <>
+        <Fragment>
             { clicked 
                 ? 
                 <iframe 
-                    src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.param ? selected?.param : '?autoplay=1'}`} 
+                    src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.params ? selected?.params : '?autoplay=1'}`} 
                     title="YouTube video player" autoplay allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
 
                 </iframe>
-                
                 : 
                 <div className='wrap-img-iframe' onClick={() => setClicked(true)}>
                     <img 
@@ -138,6 +138,6 @@ function Iframe({ selected }){
                     </div>
                 </div>
             }
-        </>
+        </Fragment>
     )
 }

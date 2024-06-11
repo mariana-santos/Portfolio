@@ -10,7 +10,7 @@ import { ConfigContext } from '../../App';
 import Select from '@mui/material/Select';
 import MenuItem from '@mui/material/MenuItem';
 
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 // import { Link } from 'react-router-dom';
 import { HashLink as Link } from 'react-router-hash-link';
 

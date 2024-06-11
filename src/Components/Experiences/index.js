@@ -1,7 +1,7 @@
 import './style.css'
 import React, { useState } from 'react'
 import Experience from '../Experience'
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 
 export default function Experiences() {
   const strings = useStrings()

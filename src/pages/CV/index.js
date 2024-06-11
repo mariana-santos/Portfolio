@@ -1,4 +1,4 @@
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 import './style.css'
 
 import { AiOutlineGithub, AiFillLinkedin } from 'react-icons/ai'

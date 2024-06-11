@@ -3,7 +3,7 @@ import Skill from '../Skill'
 
 import './style.css'
 
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 
 export default function Skills() {
     

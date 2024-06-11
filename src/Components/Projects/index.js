@@ -1,6 +1,6 @@
 import './style.css'
 import Project from '../Project'
-import useStrings from '../../assets/useStrings'
+import useStrings from '../../data/useStrings'
 import makeAnimated from 'react-select/animated';
 import ReactSelect from 'react-select'
 import { useState, useEffect } from 'react';
