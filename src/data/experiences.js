@@ -3,7 +3,31 @@ import { getSkillByName } from '../utils/getSkillByName';
 export const experiences_pt = [
   {
     id: 1,
-    title: "Desenvolvedora Web Jr.",
+    title: "Desenvolvedora Front-end",
+    location: "FTD Educação",
+    period: "10/2023 — presente",
+    duration: "9 meses",
+    type: "work",
+    link: "https://ftd.com.br/",
+    summary:
+      "Na FTD, participei da criação e manutenção de websites usando Wordpress e tecnologias como HTML, CSS, SCSS e PHP. Passei esse tempo aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos clientes",
+    skills: [
+      getSkillByName("Wordpress", "pt"),
+      getSkillByName("JQuery", "pt"),
+      getSkillByName("Bootstrap", "pt"),
+      getSkillByName("SCSS", "pt"),
+      getSkillByName("Figma", "pt"),
+    ],
+    details: [
+      'Desenvolvimento de aplicações frontend para diversos clientes, com destaque para aplicações em Wordpress.',
+      'Melhoria da acessibilidade, SEO e experiência geral das aplicações.',
+      'Criação de Landing Pages para eventos, webinars, produtos e outros.',
+      'Criação de campanhas de e-mail marketing utilizando plataformas como OCE e RD Station.'
+    ]
+  },
+  {
+    id: 2,
+    title: "Desenvolvedora Front-end",
     location: "Agência Choveu",
     period: "03/2022 — 03/2024",
     duration: "2 anos",
@@ -26,7 +50,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 2,
+    id: 3,
     title: "Graduação em Análise e Desenvolvimento de Sistemas",
     type: "academic",
     period: "08/2022 — 08/2024",
@@ -51,7 +75,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 3,
+    id: 4,
     title: "Técnico em Desenvolvimento de Sistemas",
     type: "academic",
     period: "02/2019 — 11/2021",

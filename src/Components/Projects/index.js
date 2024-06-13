@@ -25,7 +25,7 @@ export default function Projects({ setIsOpen, setSelected }) {
 
     useEffect(() => {
         filterProjects();
-    }, [filterSelected, filterBySelected]);
+    }, [filterSelected, filterBySelected, ]);
 
     function filterProjects() {
         if (filterSelected.length === 0) {

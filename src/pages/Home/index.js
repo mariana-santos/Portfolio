@@ -1,8 +1,11 @@
 import About from '../../Components/About'
+import Hero from '../../Components/Hero'
 import Experiences from '../../Components/Experiences'
 import Skills from '../../Components/Skills'
 import Modal from '../../Components/Modal';
 import Projects from '../../Components/Projects';
+
+import { Fragment } from "react";
 
 import useStrings from '../../data/useStrings';
 
@@ -16,7 +19,7 @@ function App() {
   const [selected, setSelected] = useState(strings.projects[0])
 
   return (
-    <>
+    <Fragment>
       <Modal
         show={modalIsOpen}
         setIsOpen={setIsOpen}
@@ -24,6 +27,7 @@ function App() {
         setSelected={setSelected}
       />
 
+      <Hero />
       <About />
       <Experiences />
       <Skills />
@@ -31,7 +35,7 @@ function App() {
         setIsOpen={setIsOpen}
         setSelected={setSelected}
       />
-    </>
+    </Fragment>
   );
 }
 

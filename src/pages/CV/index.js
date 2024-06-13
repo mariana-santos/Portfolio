@@ -11,6 +11,8 @@ import Experience from '../../Components/Experience'
 import curriculo from '../../assets/curriculo-mariana.pdf'
 import resume from '../../assets/resume-mariana.pdf'
 
+import { Fragment } from "react"
+
 export default function CV() {
 
     const strings = useStrings()
@@ -35,7 +37,13 @@ export default function CV() {
                 <div className='column column-small'>
                     <section className='contact border-bottom'>
                         <h3>
-                            <a className='btn-secondary btn-line' href='https://marianasantos.tech/contact' target='_blank'>{strings.resume.contact_title}</a>
+                            <a 
+                                className='btn-secondary btn-line' 
+                                href='https://marianasantos.tech/contact' 
+                                target='_blank'
+                            >
+                                {strings.resume.contact_title}
+                            </a>
                         </h3>
 
                         <WithIcon
@@ -168,37 +176,36 @@ function WithIcon({ icon, link, label }) {
                     {label}
                 </a>
                 :
-                <>
+                <Fragment>
                     {icon}
                     {label}
-                </>
+                </Fragment>
             }
         </p>
     )
 }
 
 function DisplayList({ list, title }) {
-
     const strings = useStrings()
 
     return (
-        <>
+        <Fragment>
             <h4>{title}</h4>
             {list.map((item, index) => {
                 return (
                     <span key={item.id}>
-                        <>{item.name}</>
+                        <Fragment>{item.name}</Fragment>
 
                         {index === list.length - 2 ? (
-                            <> {strings.and} </>
+                            <Fragment> {strings.and} </Fragment>
                         ) : index !== list.length - 1 ? (
-                            <>, </>
+                            <Fragment>, </Fragment>
                         ) : (
-                            <></>
+                            <Fragment></Fragment>
                         )}
                     </span>
                 )
             })}
-        </>
+        </Fragment>
     )
 }

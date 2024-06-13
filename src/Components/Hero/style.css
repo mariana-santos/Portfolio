@@ -1,0 +1,100 @@
+#hero {
+    height: 100vh;
+    align-items: center;
+    gap: 2em;
+    justify-content: space-between;
+    min-height: 500px;
+    padding-top: 40px;
+    color: var(--text-color);
+}
+
+#hero .column {
+    width: 50%;
+    font-size: 2.3em;
+}
+
+#hero .wrapper-pic {
+    width: 25%;
+}
+
+.pic {
+    width: 100%;
+    aspect-ratio: 1 / 1.2;
+    position: relative;
+    transition: .3s;
+}
+
+#hero .text {
+    width: 65%;
+}
+
+#main-pic {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    object-position: top;
+    border-radius: 5px;
+}
+
+.pic:hover{
+    transform: translate(5px, 5px);
+}
+
+.pic:hover .line-element{
+    transform: translate(-7px, -7px);
+}
+
+.line-element {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    z-index: -1;
+    box-sizing: border-box;
+    top: 10px;
+    left: 18px;
+    background: var(--primary-transparency);
+    border-radius: 3px;
+    transition: .3s;
+}
+
+.text * {
+    margin: .5em 0;
+}
+
+.smaller {
+    font-size: .6em;
+}
+
+#hero .btn {
+    margin-top: 1.5em;
+    font-size: .7em;
+    font-weight: bolder;
+    width: fit-content;
+}
+
+#hero .light{
+    font-size: .7em;
+}
+
+@media screen and (min-width: 1200px) {
+    #hero .smaller {
+        width: 75%;
+    }
+}
+
+@media screen and (max-width: 768px){
+    #hero{
+        flex-direction: column-reverse;
+        justify-content: center;
+        padding-top: 50px;
+    }
+
+    #hero h1{
+        font-size: 1.4em;
+    }
+
+    .pic{
+        width: 70%;
+        margin: auto;
+    }
+}

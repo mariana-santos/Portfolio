@@ -68,14 +68,14 @@ export default function Modal({ show, selected, setIsOpen, setSelected }) {
                                                     {member.name}
                                                 </a>
                                                 :
-                                                <>{member.name}</>
+                                                <Fragment>{member.name}</Fragment>
                                             }
                                             {index === selected?.team.length - 2 ? (
-                                                <> {strings.and} </>
+                                                <Fragment> {strings.and} </Fragment>
                                             ) : index !== selected?.team.length - 1 ? (
-                                                <>, </>
+                                                <Fragment>, </Fragment>
                                             ) : (
-                                                <></>
+                                                <Fragment></Fragment>
                                             )}
                                         </span>
                                     )

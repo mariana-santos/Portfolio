@@ -32,10 +32,11 @@ export default function Contact() {
         emailjs.sendForm(
             process.env.REACT_APP_EMAILJS_SERVICE, 
             process.env.REACT_APP_EMAILJS_TEMPLATE, 
-            form.current, process.env.REACT_APP_EMAILJS_PUBLICKEY
+            form.current, 
+            process.env.REACT_APP_EMAILJS_PUBLICKEY
         )
             .then((result) => {
-                if(result.text === "OK")
+                if (result.text === "OK")
                     setLoading(false)
                     toast.success(strings.contact_success)
                     form.current.reset();

@@ -3,12 +3,12 @@ import './style.css'
 import { HiOutlineAcademicCap } from 'react-icons/hi'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 
-import React from 'react'
+import React, { Fragment } from 'react'
 
 export default function Experience({ experience, selected, setSelected, details }) {
 
     return (
-        <>
+        <Fragment>
             <li 
                 className={`timeline-item ${selected?.id === experience.id && 'selected'}`}
                 key={experience.id}
@@ -61,6 +61,6 @@ export default function Experience({ experience, selected, setSelected, details 
                     }
                 </div>
             </li>
-        </>
+        </Fragment>
     )
 }

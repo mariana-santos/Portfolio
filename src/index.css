@@ -38,7 +38,6 @@
 
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;
 }
 
 body {
@@ -46,6 +45,7 @@ body {
   font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
 }
 
 .container-all{
@@ -217,24 +217,24 @@ a {
 
 @media screen and (max-width: 1200px) {
   .container{
-      padding: 0 5em;
+    padding: 0 5em;
   }
 
-  #about .column{
+  #hero .column{
     font-size: 1.5em !important;
   }
 }
 
 @media screen and (max-width: 768px) {
   .container{
-      padding: 0 3.5em;
+    padding: 0 3.5em;
   }
 
-  .column, #about .text{
+  .column, #hero .text{
     width: 100% !important;
   }
 
-  #about .column{
+  #hero .column{
     font-size: 1.3em !important;
   }
 
