@@ -6,23 +6,21 @@ export const experiences_pt = [
     title: "Desenvolvedora Front-end",
     location: "FTD Educação",
     period: "10/2023 — presente",
-    duration: "9 meses",
     type: "work",
     link: "https://ftd.com.br/",
     summary:
-      "Na FTD, participei da criação e manutenção de websites usando Wordpress e tecnologias como HTML, CSS, SCSS e PHP. Passei esse tempo aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos clientes",
+      "Na editora FTD participo e acompanho o desenvolvimento de objetos educacionais digitais para diversos editoriais e selos da editora, do ensino infantil ao ensino médio com o uso de tecnologias como React e Typescript.",
     skills: [
-      getSkillByName("Wordpress", "pt"),
-      getSkillByName("JQuery", "pt"),
-      getSkillByName("Bootstrap", "pt"),
+      getSkillByName("React", "pt"),
+      getSkillByName("Typescript", "pt"),
       getSkillByName("SCSS", "pt"),
+      getSkillByName("Styled Components", "pt"),
       getSkillByName("Figma", "pt"),
     ],
     details: [
-      'Desenvolvimento de aplicações frontend para diversos clientes, com destaque para aplicações em Wordpress.',
-      'Melhoria da acessibilidade, SEO e experiência geral das aplicações.',
-      'Criação de Landing Pages para eventos, webinars, produtos e outros.',
-      'Criação de campanhas de e-mail marketing utilizando plataformas como OCE e RD Station.'
+      'Desenvolvimento de aplicações Frontend em React para clientes internos da editora.',
+      'Acompanhamento de projetos com outros desenvolvedores, avaliando e melhorando código alheio.',
+      'Criação de projetos educacionais, como artigos interativos e plataformas gamificadas.',
     ]
   },
   {
@@ -34,7 +32,7 @@ export const experiences_pt = [
     type: "work",
     link: "https://choveu.com/",
     summary:
-      "Na Agência Choveu, participei da criação e manutenção de websites usando Wordpress e tecnologias como HTML, CSS, SCSS e PHP. Passei esse tempo aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos clientes",
+      "Na Agência Choveu participei da criação e manutenção de websites usando Wordpress e tecnologias como HTML, CSS, SCSS e PHP. Passei esse tempo aprimorando minhas habilidades em desenvolvimento web e buscando soluções inovadoras para atender às necessidades dos clientes",
     skills: [
       getSkillByName("Wordpress", "pt"),
       getSkillByName("JQuery", "pt"),
@@ -102,10 +100,22 @@ export const experiences_pt = [
 export const experiences_en = [
   {
     ...experiences_pt[0],
-    title: "Junior Web Developer",
-    duration: "1 year",
+    title: "Mid-level Frontend Developer",
+    duration: "present",
     summary:
-      "At Choveu, I create and maintain websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I am constantly improving my skills in web development and seeking innovative solutions to meet the projects needs.",
+      "At FTD publisher I participate and follow the development of digital educational objects to several editorials, from kindergarten all the way to highschool. Using technologies such as React and Typescript.",
+    details: [
+      "Built frontend applications for the publisher's internal clients.",
+      "Followed projects with other developers, evaluating and improving other's code.",
+      'Created educational projects, such as digital interactive articles and gamified platforms.',
+    ]
+  },
+  {
+    ...experiences_pt[1],
+    title: "Junior Frontend Developer",
+    duration: "2 years",
+    summary:
+      "At Choveu I created and maintained websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I constantly improved my skills in web development and seeked innovative solutions to meet the projects needs.",
     details: [
       'Built frontend applications for multiple clients. Most especially Wordpress applications.',
       'Improved accessibility, SEO and overall experience of products.',
@@ -114,7 +124,7 @@ export const experiences_en = [
     ]
   },
   {
-    ...experiences_pt[1],
+    ...experiences_pt[2],
     title: "Bachelor's Degree in Analysis and Systems Development",
     duration: "2 years",
     summary:
@@ -126,7 +136,7 @@ export const experiences_en = [
     ]
   },
   {
-    ...experiences_pt[2],
+    ...experiences_pt[3],
     title: "Systems Development Technician",
     duration: "3 years",
     summary:

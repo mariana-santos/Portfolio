@@ -22,8 +22,8 @@ export default function Experience({ experience, selected, setSelected, details 
                             {experience.location}
                         </a>
                         <small>
-                            {experience.period}:
-                            <strong> {experience.duration}</strong>
+                            {experience.period}
+                            <strong style={{ marginLeft: ".5em" }}> {experience.duration}</strong>
                         </small>
                     </div>
                 </div>

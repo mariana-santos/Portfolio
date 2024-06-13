@@ -19,7 +19,7 @@ export const pt = {
       <p>Apaixonada por criação e tecnologia.</p>
       <p>Ampla experiência em desenvolvimento de <strong>aplicações web e mobile responsivas e acessíveis.</strong></p>
     </Fragment>,
-  experience_title: 'experiência',
+  experience_title: 'Experiência',
   experiences: experiences_pt,
   journey_title: 'Sobre mim',
   journey:
@@ -102,13 +102,13 @@ export const en = {
     </Fragment>,
   experience_title: 'Experience',
   experiences: experiences_en,
-  journey_title: 'My Journey so far',
+  journey_title: 'About me',
   journey:
     <Fragment>
-      <p>I have always been very passionate about technology and innovation, and it all began when I took a basic computer course at the age of 10. There, I learned the fundamentals of <strong>Software, Hardware, and the programs in the Office Suite</strong>.</p>
-      <p>However, my true immersion into the world of programming occurred when I pursued the technical course in <strong>Systems Development at ETEC de Guaianazes</strong>. There I fell in love with frontend development and realized that this would be my chosen profession.</p>
-      <p>Currently, I am pursuing a degree in <strong>Analysis and Systems Development at FIAP</strong>, considered the top technology college in Brazil.</p>
-      <p>In addition, I have been working as a <strong>Jr. Web Developer at Agência Choveu for over a year</strong>, where I continue to learn and enhance my skills in the world of frontend development.</p>
+      <p>Technology has been in my life in several ways since I was a kid. It all began when I took a basic computer course at the age of 10. There I learned the fundamentals of <strong>Software, Hardware, and the programs in the Office Suite</strong>.</p>
+      <p>However, the magic occurred when I pursued the technical course in <strong>Systems Development at ETEC de Guaianazes</strong>. There, surrounded by talented teachers and students, I fell in love with Frontend Development and realized that I had found my profession.</p>
+      <p>Then I decided to study at <strong>FIAP</strong>, considered the top technology college in Brazil. With a lot of effort I got a full scholarship to pursue a degree in <strong>Analysis and Systems Development.</strong></p>
+      <p>In addition, I have been working professionaly as a <strong>Frontend Developer</strong> since I was 18. (Literally. I signed  the contract the exact day I turned 18.) Ever since then I have been enhancing my skills in prestigious companies, such as Agência Choveu (Marketing) and FTD Educação.</p>
     </Fragment>,
   skills_title: 'Skills',
   skills: skills_en,

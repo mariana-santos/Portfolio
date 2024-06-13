@@ -4,10 +4,10 @@ import {
   BiLogoReact, 
   BiLogoGit, 
   BiLogoTailwindCss,
-  BiLogoJquery
+  BiLogoJquery,
 } from 'react-icons/bi'
 
-import { SiNextdotjs, SiMui, SiBootstrap } from 'react-icons/si'
+import { SiNextdotjs, SiMui, SiBootstrap, SiStyledcomponents } from 'react-icons/si'
 import { BsFillDatabaseFill, BsWordpress } from 'react-icons/bs'
 import { DiSass } from 'react-icons/di'
 
@@ -249,6 +249,13 @@ export const skills_pt = [
     name: "Node JS",
     type: "other",
     icon: <BiLogoJavascript color='F4CB0B' />,
+    hide: true
+  },
+  {
+    id: 21,
+    name: "Styled Components",
+    type: "other",
+    icon: <SiStyledcomponents color='FFCF48' />,
     hide: true
   },
 ];
