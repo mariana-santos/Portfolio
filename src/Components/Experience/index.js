@@ -3,64 +3,66 @@ import './style.css'
 import { HiOutlineAcademicCap } from 'react-icons/hi'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 
-import React, { Fragment } from 'react'
+import React from 'react'
 
-export default function Experience({ experience, selected, setSelected, details }) {
+export default function Experience({ experience, details }) {
 
     return (
-        <Fragment>
-            <li 
-                className={`timeline-item ${selected?.id === experience.id && 'selected'}`}
-                key={experience.id}
-                onClick={() => setSelected && setSelected(experience)}
-            >
-                <div className="timeline-info">
-                    <h4> {experience.title}</h4>
+        <li 
+            className="timeline-item"
+            key={experience.id}
+        >
+            <div className="timeline-info">
+                <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
+                    {experience.location}
+                </a>
 
-                    <div className='row'>
-                        <a href={experience.link} target='_blank' className='highlight'>
-                            {experience.location}
-                        </a>
-                        <small>
-                            {experience.period}
-                            <strong style={{ marginLeft: ".5em" }}> {experience.duration}</strong>
-                        </small>
-                    </div>
-                </div>
-                <div
-                    className="timeline-marker"
-                    onClick={() => setSelected(experience)}
-                >
-                    <div className='timeline-icon'>
-                        {experience.type == 'work' ?
-                            (<MdOutlineWorkOutline />) :
-                            (<HiOutlineAcademicCap />)}
-                    </div>
-                </div>
-                <div className="timeline-content">
-                    <small>{experience.summary}</small>
-                    <div className='tags'>
-                        {experience.skills.map(stack => {
-                            return (
-                                <span className='tag' key={stack.id}>
-                                    { stack.icon ? stack.icon : 
-                                        (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
-                                        {stack.name}
+                <small>
+                    {experience.period}
+                </small>
+            
+                <h4> 
+                    {experience.abbreviatedTitle ?? experience.title}
 
-                                </span>
-                            )
-                        })}
-                    </div>
-
-                    { details && 
-                        <ul>
-                            {experience.details.map((detail) => {
-                                return <li>{detail}</li>
-                            })}
-                        </ul> 
+                    {experience.abbreviatedTitle && 
+                        <span className='tooltip'>
+                            {experience.title}
+                        </span>
                     }
+                </h4>
+
+                <span>{experience.level}</span> 
+            </div>
+            <div className="timeline-marker">
+                <div className='timeline-icon'>
+                    {experience.type === 'work' ?
+                        (<MdOutlineWorkOutline />) :
+                        (<HiOutlineAcademicCap />)}
                 </div>
-            </li>
-        </Fragment>
+            </div>
+            {/* <div className="timeline-content">
+                <small>{experience.summary}</small>
+                <div className='tags'>
+                    {experience.skills.map(stack => {
+                        return (
+                            <span className='tag' key={stack.id}>
+                                { stack.icon ? stack.icon : 
+                                    (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
+                                    {stack.name}
+
+                            </span>
+                        )
+                    })}
+                </div>
+
+                { details && 
+                    <ul>
+                        {experience.details.map((detail) => {
+                            return <li>{detail}</li>
+                        })}
+                    </ul> 
+                }
+            </div> */}
+        </li>
     )
 }

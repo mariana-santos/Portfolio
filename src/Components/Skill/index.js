@@ -5,7 +5,7 @@ import React from 'react'
 export default function Skill({ skill, className, setSelected }) {
     return (
         <div 
-            className={`stack  ${className ? className : ''}`}
+            className={`stack  ${className ?? ''}`}
             onClick={() => setSelected(skill)}
         >
             <div className='wrap-img-hab'>

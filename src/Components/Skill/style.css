@@ -24,7 +24,6 @@
 }
 
 .tooltip{
-    /* position: absolute; */
     left: 10px;
     width: 160%;
     visibility: hidden;
@@ -33,10 +32,8 @@
     padding: 0 5px;
     color: var(--bg-light);
     border-radius: 3px;
-    /* opacity: 0; */
     text-align: start;
     font-weight: bold;
-    /* z-index: 2; */
 }
 
 .tooltip p{
@@ -75,6 +72,7 @@
     z-index: 1;
     line-height: normal;
     width: 160%;
+    max-width: 180px;
     font-weight: bold;
 }
 
@@ -119,7 +117,6 @@
 @media screen and (max-width: 768px) {
     .stack{
         width: calc(100% / 3 - .5em);
-        /* padding: .5em; */
         font-size: .8em;
         box-sizing: border-box;
     }
@@ -138,5 +135,9 @@
 
     .wrap-skills h3{
         font-size: 1.3em;
+    }
+
+    .tooltip{
+        max-width: 120px;
     }
 }

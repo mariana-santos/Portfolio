@@ -1,0 +1,171 @@
+
+.timeline-item {
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+  flex: 1;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.timeline-item:not(:last-of-type) {
+  padding-right: 40px;
+}
+
+.timeline-item::before {
+  content: "";
+  position: absolute;
+  bottom: 25px;
+  width: 100%;
+  height: 2px;
+  background: rgba(59, 61, 69, 0.33);
+  z-index: -1;
+}
+
+.timeline-item:last-of-type::before {
+  display: none;
+}
+
+.timeline-info {
+  font-size: 1.2em;
+  padding-bottom: 1rem;
+}
+
+.timeline-marker {
+  background: var(--secondary);
+  color: var(--bg-light);
+  width: 30px;
+  aspect-ratio: 1;
+  border-radius: 50px;
+  padding: .75rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: .5s;
+}
+
+.timeline-item:hover .timeline-marker{
+  background: var(--primary);
+}
+
+.timeline-content {
+  padding-bottom: 1em;
+}
+
+.timeline-icon {
+  color: var(--bg-light);
+  font-size: 1.7rem;
+}
+
+.timeline-item h4 {
+  margin: 0;
+  margin-bottom: .3rem;
+  position: relative;
+}
+
+.timeline-item .tooltip {
+  font-weight: bold;
+  font-size: small;
+  width: fit-content;
+}
+
+.timeline-item h4:hover .tooltip {
+  animation: showUp .7s forwards ease;
+}
+
+.timeline-item span{
+  font-weight: 400;
+  font-size: .9em;
+  display: inline-block;
+}
+
+.timeline-item small {
+  display: block;
+  text-align: end;
+  font-size: .8rem;
+  margin: .3rem 0 1rem 0;
+}
+
+.timeline-item .row {
+  margin-bottom: 1.5rem;
+}
+
+.timeline-content small{
+  display: block;
+  width: 100%;
+}
+
+.tags{
+  display: flex;
+  gap: 7px;
+  flex-wrap: wrap;
+  margin-top: .5em;
+  margin-bottom: 1.5em;
+}
+
+.tag {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  font-size: .7em;
+  background: var(--tag-color);
+  padding: 2px 10px;
+  border-radius: 15px;
+  color: var(--text-color);
+}
+
+.tag img{
+  width: 1.2em;
+  height: 1.2em;
+  object-fit: contain;
+}
+
+.timeline-content{
+  opacity: 0;
+  height: 0;
+  visibility: hidden;
+}
+
+#experience .close{
+  margin-top: .5em;
+}
+
+.text-about p{
+  margin-bottom: 0;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline-item::before {
+    left: 15px;
+    width: 2px;
+    height: 100%;
+    bottom: 0
+  }
+
+  .timeline-item {
+    flex-direction: column-reverse;
+  }
+
+  .timeline-info {
+    padding: 0 0 1.5rem 50px;
+    top: -30px;
+    position: relative;
+  }
+
+  .timeline-info:first-of-type {
+    padding-top: 0;
+  }
+
+  .timeline-marker {
+    width: 20px;
+    height: 20px;
+    padding: .5rem;
+  }
+
+  .timeline-icon {
+    font-size: 1.4rem;
+  }
+}

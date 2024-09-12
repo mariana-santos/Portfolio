@@ -4,6 +4,7 @@ export const experiences_pt = [
   {
     id: 1,
     title: "Desenvolvedora Front-end",
+    level: "Pleno",
     location: "FTD Educação",
     period: "10/2023 — presente",
     type: "work",
@@ -26,6 +27,7 @@ export const experiences_pt = [
   {
     id: 2,
     title: "Desenvolvedora Front-end",
+    level: "Júnior",
     location: "Agência Choveu",
     period: "03/2022 — 03/2024",
     duration: "2 anos",
@@ -49,7 +51,9 @@ export const experiences_pt = [
   },
   {
     id: 3,
-    title: "Graduação em Análise e Desenvolvimento de Sistemas",
+    abbreviatedTitle: "ADS",
+    title: "Análise e Desenvolvimento de Sistemas",
+    level: "Graduação",
     type: "academic",
     period: "08/2022 — 08/2024",
     duration: "2 anos",
@@ -74,7 +78,8 @@ export const experiences_pt = [
   },
   {
     id: 4,
-    title: "Técnico em Desenvolvimento de Sistemas",
+    title: "Desenvolvimento de Sistemas",
+    level: "Técnico",
     type: "academic",
     period: "02/2019 — 11/2021",
     duration: "3 anos",
@@ -100,10 +105,11 @@ export const experiences_pt = [
 export const experiences_en = [
   {
     ...experiences_pt[0],
-    title: "Mid-level Frontend Developer",
+    title: "Frontend Developer",
+    level: "Mid-level",
     duration: "present",
     summary:
-      "At FTD publisher I participate and follow the development of digital educational objects to several editorials, from kindergarten all the way to highschool. Using technologies such as React and Typescript.",
+      "At FTD I participate and follow the development of digital educational objects to several editorials, from kindergarten all the way to highschool. Using technologies such as React and Typescript.",
     details: [
       "Built frontend applications for the publisher's internal clients.",
       "Followed projects with other developers, evaluating and improving other's code.",
@@ -112,7 +118,8 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[1],
-    title: "Junior Frontend Developer",
+    title: "Frontend Developer",
+    level: "Junior",
     duration: "2 years",
     summary:
       "At Choveu I created and maintained websites using Wordpress and technologies such as HTML, CSS, SCSS, and PHP. I constantly improved my skills in web development and seeked innovative solutions to meet the projects needs.",
@@ -125,7 +132,8 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[2],
-    title: "Bachelor's Degree in Analysis and Systems Development",
+    title: "Systems Analysis and Development",
+    level: "Bachelor's Degree",
     duration: "2 years",
     summary:
       "During my graduation at FIAP, I was able to enhance my skills in web development, mobile development, database management and artificial intelligence. Additionally, I get to be involved in practical projects in partnership with incredible companies, such as B3 and Level Group.",
@@ -137,7 +145,8 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[3],
-    title: "Systems Development Technician",
+    title: "Systems Development",
+    level: "Technician",
     duration: "3 years",
     summary:
       "ETEC is where I discovered programming as a career. During the 3 years I spent there, I built a solid foundation in programming logic and development. I also had incredible experiences such as programming marathons and technical visits.",

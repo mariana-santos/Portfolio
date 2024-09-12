@@ -106,23 +106,4 @@ h3{
     .skill-info{
         display: none;
     }
-
-    .timeline-marker{
-        left: -1em;
-        width: 30px;
-    }
-
-    .timeline-item .timeline-marker::before{
-        left: -11px;
-    }
-
-    .timeline-icon{
-        font-size: 20px;
-        top: 10px;
-        left: -4px;
-    }
-
-    .timeline-item{
-        padding-left: 15px;
-    }
 }
