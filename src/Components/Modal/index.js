@@ -1,143 +1,61 @@
-import './style.css';
+import "./style.css";
 
-import { AiOutlineClose, AiOutlineGithub } from 'react-icons/ai'
-import { BsFillPlayFill } from 'react-icons/bs'
-import useStrings from '../../data/useStrings';
+import { AiOutlineClose } from "react-icons/ai";
 
-import { Fragment, useEffect, useRef, useState } from 'react';
+import { Fragment, useEffect, useRef } from "react";
+import { useModal } from "../../contexts/modal";
 
-export default function Modal({ show, selected, setIsOpen, setSelected }) {
+export default function Modal() {
+  const modalRef = useRef(null);
 
-    const modalRef = useRef(null);
-    useEffect(() => {
-        function handleClickOutside(event) {
-          if (modalRef.current && !modalRef.current.contains(event.target)) {
-            setIsOpen(false);
-            setSelected(null);
-          }
-        }
-    
-        document.addEventListener('mousedown', handleClickOutside);
-    
-        return () => {
-          document.removeEventListener('mousedown', handleClickOutside);
-        };
-      }, [setIsOpen, setSelected]);
+  const { 
+    modalData, 
+    toggleModal, 
+    setModalData, 
+    isModalOpen, 
+    modalTitle 
+  } = useModal();
 
-    const showClass = show ? 'show' : 'hide'
+  useEffect(() => {
+    function handleClickOutside(event) {
+      if (modalRef.current && !modalRef.current.contains(event.target)) {
+        if (!isModalOpen) return;
+        toggleModal();
+        setModalData(null);
+      }
+    }
 
-    const strings = useStrings()
+    document.addEventListener("mousedown", handleClickOutside);
 
-    return (
-        <Fragment>
-            <div id="fade" className={`${showClass} fade`}></div>
-            <div id="modal" ref={modalRef} className={showClass}>
-                <div className="modal_header">
-                    <h3 className='line-after'>{selected?.title}</h3>
-                    <AiOutlineClose onClick={() => {setIsOpen(false); setSelected(null)}} className="btn_close" />
-                </div>
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [isModalOpen, setModalData, toggleModal]);
 
-                <div className="modal_content">
-                    <div className='column project-info'>
+  const showClass = isModalOpen ? "show" : "hide";
+  
+  
+  console.log(modalData)
 
-                        <p className='subtitle'>{selected?.subtitle}</p>
+  return (
+    <Fragment>
+      <div id="fade" className={`${showClass} fade`}></div>
+      <div id="modal" ref={modalRef} className={showClass}>
+        <div className="modal_header">
+          <h3 className="line-after">{modalTitle}</h3>
+          <AiOutlineClose
+            onClick={() => {
+              toggleModal();
+              setModalData(null);
+            }}
+            className="btn_close"
+          />
+        </div>
 
-                        <div className='tags'>
-                            {selected?.skills.map(stack => {
-                                return (
-                                    <span className='tag' key={stack.id}>
-                                        {stack.icon ? stack.icon : 
-                                            <img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt="" />
-                                        }
-                                        {stack.name}
-                                    </span>
-                                )
-                            })}
-                        </div>
-
-                        <div>{selected?.description}</div>
-
-                        {selected?.team &&
-                            <p className='involved'>
-                                <strong>{strings.other_involved}</strong>
-                                {selected?.team?.map((member, index) => {
-                                    return (
-                                        <span key={member.id}>
-                                            {member.link ?
-                                                <a href={member.link} target='_blank' rel="noreferrer">
-                                                    {member.name}
-                                                </a>
-                                                :
-                                                <Fragment>{member.name}</Fragment>
-                                            }
-                                            {index === selected?.team.length - 2 ? (
-                                                <Fragment> {strings.and} </Fragment>
-                                            ) : index !== selected?.team.length - 1 ? (
-                                                <Fragment>, </Fragment>
-                                            ) : (
-                                                <Fragment></Fragment>
-                                            )}
-                                        </span>
-                                    )
-                                })}
-                            </p>
-                        }
-                    </div>
-
-                    <div className='column wrap-iframe'>
-                        {selected?.video_id ?
-
-                            <Iframe selected={selected} />
-
-                            : selected?.title &&
-
-                            <img className='img-project' src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} alt={`Imagem do projeto ${selected.title}`}/>
-                        }
-
-                        <div className='modal_footer'>
-                            <a href={selected?.github} target='_blank' className='btn' rel="noreferrer">
-                                {strings.more_info}
-                                <AiOutlineGithub />
-                            </a>
-
-                            {selected?.deploy &&
-                                <a href={selected?.deploy} target='_blank' className='btn' rel="noreferrer">
-                                    {strings.test}
-                                    <BsFillPlayFill />
-                                </a>
-                            }
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </Fragment>
-    )
-}
-
-function Iframe({ selected }){
-    const [clicked, setClicked] = useState(false)
-
-    return(
-        <Fragment>
-            { clicked 
-                ? 
-                <iframe 
-                    src={`https://www.youtube.com/embed/${selected?.video_id}${selected?.params ? selected?.params : '?autoplay=1'}`} 
-                    title="YouTube video player" autoplay allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen>
-
-                </iframe>
-                : 
-                <div className='wrap-img-iframe' onClick={() => setClicked(true)}>
-                    <img 
-                        className='img-project' 
-                        src={require(`../../assets/projects/${selected?.title.toLowerCase()}.jpg`)} 
-                        alt={`Imagem do projeto ${selected.title}`} />
-                    
-                    <div className='wrap-play-icon'>
-                        <BsFillPlayFill className='play-icon' />
-                    </div>
-                </div>
-            }
-        </Fragment>
-    )
+        <div className="modal_content">
+          {modalData}
+        </div>
+      </div>
+    </Fragment>
+  );
 }

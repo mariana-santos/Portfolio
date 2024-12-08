@@ -1,4 +1,4 @@
-.project{
+.card{
     width: calc(100% / 3 - .7em);
     background: #fff;
     padding: 1.3em;
@@ -7,17 +7,12 @@
     transition: .5s;
     border: solid 1px transparent;
     cursor: pointer;
-    /* From https://css.glass */
     background: var(--bg-light-strong);
-    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
-    /* backdrop-filter: blur(5.4px); */
-    /* -webkit-backdrop-filter: blur(5.4px); */
     border: 1px solid transparent;
 }
 
-.project:hover{
+.card:hover{
     border: solid 1px var(--border-color);
-    /* box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.1); */
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -37,24 +32,23 @@
     object-position: top;
 }
 
-.project:hover .wrap-img-card img{
+.card:hover .wrap-img-card img{
     transform: scale(1.1);
 }
 
-.project h3{
+.card h3{
     margin: .5em 0;
 }
 
-.project p{
+.card p{
     margin: 0;
 }
 
-.project .tags{
+.card .tags{
     margin: 1em 0;
-    /* justify-content: center; */
 }
 
-.project .tag{
+.card .tag{
     padding: 5px 10px;
 }
 
@@ -71,36 +65,36 @@
     height: 2.6em;
 }
 
-.project .subtitle{
+.card .subtitle{
     display: block;
 }
 
-.project:hover .subtitle, .project:hover .saiba-mais{
+.card:hover .subtitle, .card:hover .saiba-mais{
     transform: translateY(-2.3em);
 }
 
-.project:hover .subtitle{
+.card:hover .subtitle{
     color: var(--bg-light-strong);
 }
 
 @media screen and (max-width: 768px) {
-    .project{
+    .card{
         width: 110%;
     }
 
-    .project .tags .tag:nth-child(3){
+    .card .tags .tag:nth-child(3){
         display: none;
     }
 
-    .project .saiba-mais{
+    .card .saiba-mais{
         font-size: .9em;
     }
 
-    .project .saiba-mais, .project .subtitle{
+    .card .saiba-mais, .card .subtitle{
         transform: translateY(-2.3em);
     }
 
-    .project .subtitle{
+    .card .subtitle{
         opacity: 0;
     }
 

@@ -2,11 +2,10 @@ import './style.css'
 
 import React from 'react'
 
-export default function Skill({ skill, className, setSelected }) {
+export default function Skill({ skill }) {
     return (
         <div 
-            className={`stack  ${className ?? ''}`}
-            onClick={() => setSelected(skill)}
+            className={"stack"}
         >
             <div className='wrap-img-hab'>
                 {skill.icon ? skill.icon : 
