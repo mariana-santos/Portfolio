@@ -25,25 +25,27 @@ export default function Skills() {
     <section className="container" id="skills" data-aos="fade-up">
       <h2 className="code">{strings.skills_title}</h2>
 
-      <div className={`column wrap-skills`}>
-        <h3 className="line-after">{strings.resume.programming_languages}</h3>
-        {languages.map((skill) => {
-          return <Skill skill={skill} key={skill.id} />;
-        })}
-      </div>
+      <div className="skills-container">
+        <div className={`column wrap-skills`}>
+          <h3 className="line-after">{strings.resume.programming_languages}</h3>
+          {languages.map((skill) => {
+            return <Skill skill={skill} key={skill.id} />;
+          })}
+        </div>
 
-      <div className={`column wrap-skills`}>
-        <h3 className="line-after">{strings.resume.libs_frameworks}</h3>
-        {libs_frameworks.map((skill) => {
-          return <Skill skill={skill} key={skill.id} />;
-        })}
-      </div>
+        <div className={`column wrap-skills`}>
+          <h3 className="line-after">{strings.resume.libs_frameworks}</h3>
+          {libs_frameworks.map((skill) => {
+            return <Skill skill={skill} key={skill.id} />;
+          })}
+        </div>
 
-      <div className={`column wrap-skills`}>
-        <h3 className="line-after">{strings.resume.tools_platf_others}</h3>
-        {platforms_tools_others.map((skill) => {
-          return <Skill skill={skill} key={skill.id} />;
-        })}
+        <div className={`column wrap-skills`}>
+          <h3 className="line-after">{strings.resume.tools_platf_others}</h3>
+          {platforms_tools_others.map((skill) => {
+            return <Skill skill={skill} key={skill.id} />;
+          })}
+        </div>
       </div>
 
       <h2 className="code close">{strings.skills_title}</h2>

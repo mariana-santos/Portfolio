@@ -25,8 +25,8 @@ export default function Card({ project }) {
     <div className="card" onClick={handleClickCard}>
       <div className="wrap-img-card">
         <img
-          src={require(`../../assets/projects/${project.title.toLowerCase()}.webp`)}
-          alt=""
+          src={project.image}
+          alt={`Thumbnail do vídeo demonstrando o projeto ${project.title}`}
         />
       </div>
       <div className="tags">

@@ -1,10 +1,20 @@
 import { getSkillByName } from '../utils/getSkillByName'
 import { Fragment } from 'react'
 
+import refinances from '../assets/projects/refinances.webp'
+import investium from '../assets/projects/investium.webp'
+import raizes from '../assets/projects/raízes solidárias.webp'
+import valorant from '../assets/projects/valorant web.webp'
+import aluraStudies from '../assets/projects/alura studies.webp'
+import solar from '../assets/projects/solar.webp'
+import bagify from '../assets/projects/bagify.webp'
+import nutriTips from '../assets/projects/nutri tips.webp'
+
 export const projects_pt = [
     {
         id: 1,
         title: 'Refinances',
+        image: refinances,
         subtitle: 'Aplicativo de gerenciamento financeiro',
         github: 'https://github.com/mariana-santos/refinances',
         figma: 'https://www.figma.com/file/l6NjNdvmTZ3H7ttO5mG8Pz/Evoke-team-library?node-id=0%3A1',
@@ -61,6 +71,7 @@ export const projects_pt = [
     {
         id: 2,
         title: 'Investium',
+        image: investium,
         subtitle: 'Website criado para facilitar e incentivar o investimento em IPO',
         deploy: 'https://investium-fiap.vercel.app/',
         github: 'https://github.com/mariana-santos/repo_challenge',
@@ -94,6 +105,7 @@ export const projects_pt = [
     {
         id: 3,
         title: 'Raízes Solidárias',
+        image: raizes,
         subtitle: 'Website criado para gerenciar uma fictícia horta solidária contra a fome',
         github: 'https://github.com/mariana-santos/GS2',
         video_id: 'SJV4n5QrA_Y',
@@ -129,6 +141,7 @@ export const projects_pt = [
     {
         id: 4,
         title: 'Valorant Web',
+        image: valorant,
         subtitle: 'Website com informações do jogo Valorant',
         github: 'https://github.com/AlehSouza/Valorant-Web',
         deploy: 'https://valorant-web.vercel.app/',
@@ -157,6 +170,7 @@ export const projects_pt = [
     {
         id: 5,
         title: 'Alura Studies',
+        image: aluraStudies,
         subtitle: 'Website para gerenciamento de estudos',
         github: 'https://github.com/mariana-santos/alura-studies',
         deploy: 'https://alura-studies-mariana-santos.vercel.app/',
@@ -177,6 +191,7 @@ export const projects_pt = [
     {
         id: 6,
         title: 'Solar',
+        image: solar,
         subtitle: 'Website de aluguel de carros elétricos',
         deploy: 'https://solar-seven.vercel.app/',
         github: 'https://github.com/mariana-santos/gs1',
@@ -201,6 +216,7 @@ export const projects_pt = [
     {
         id: 8,
         title: 'Nutri Tips',
+        image: nutriTips,
         subtitle: 'Blog de nutrição consumindo uma API externa',
         deploy: 'https://nutri-tips.vercel.app/',
         github: 'https://github.com/mariana-santos/Nutri-Tips',
@@ -220,6 +236,7 @@ export const projects_pt = [
     {
         id: 7,
         title: 'Bagify',
+        image: bagify,
         subtitle: 'Aplicativo de gerenciamento de bagagens',
         github: 'https://github.com/mariana-santos/hackaton-copastur',
         figma: 'https://www.figma.com/design/tyvf7T8X9Q4iEKbUC6Xqmy/Wireframe?node-id=23-2028&p=f&t=rzA5lfewKbvYaOYR-0',

@@ -1,6 +1,6 @@
 
 
-import { useEffect, React } from 'react';
+import { useEffect } from 'react';
 
 import { ConfigProvider } from './contexts/config';
 import { ModalProvider } from './contexts/modal';

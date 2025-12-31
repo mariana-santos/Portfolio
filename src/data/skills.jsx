@@ -11,6 +11,8 @@ import { SiNextdotjs, SiMui, SiBootstrap, SiStyledcomponents } from 'react-icons
 import { BsFillDatabaseFill, BsWordpress } from 'react-icons/bs'
 import { DiSass } from 'react-icons/di'
 
+import { v4 as uuid } from 'uuid';
+
 import figmaLogo from "../assets/skills-logos/figma.webp";
 import javaLogo from "../assets/skills-logos/java.webp";
 import pythonLogo from "../assets/skills-logos/python.webp";
@@ -21,7 +23,7 @@ import { Fragment } from 'react';
 
 export const skills_pt = [
   {
-    id: 1,
+    id: uuid(),
     name: "Javascript",
     type: 'language',
     icon: <BiLogoJavascript color='F4CB0B'/>,
@@ -33,7 +35,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 2,
+    id: uuid(),
     name: "Typescript",
     type: 'language',
     icon: <BiLogoTypescript color='007BCD' />,
@@ -45,7 +47,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 3,
+    id: uuid(),
     name: "React",
     type: 'library',
     icon: <BiLogoReact color='#61DBFB' />,
@@ -58,7 +60,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 4,
+    id: uuid(),
     name: "React Native",
     type: 'library',
     icon: <BiLogoReact color='#61DBFB' />,
@@ -72,7 +74,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 11,
+    id: uuid(),
     name: "Git",
     type: 'tool',
     icon: <BiLogoGit color='#F05033' />,
@@ -85,7 +87,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 5,
+    id: uuid(),
     name: "Next JS",
     type: 'library',
     icon: <SiNextdotjs color='#000' />,
@@ -98,7 +100,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 8,
+    id: uuid(),
     name: "Scrum",
     type: 'tool',
     icon: <img src={scrumLogo} alt="Logotipo da metodologia Scrum" />,
@@ -111,7 +113,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 7,
+    id: uuid(),
     name: "SQL Server",
     type: 'other',
     icon: <BsFillDatabaseFill color='#0088D3' />,
@@ -123,7 +125,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 6,
+    id: uuid(),
     name: "SCSS",
     type: 'other',
     icon: <DiSass color='#e9639b' />,
@@ -137,7 +139,7 @@ export const skills_pt = [
     hide: true
   },
   {
-    id: 18,
+    id: uuid(),
     name: "Wordpress",
     type: 'platform',
     icon: <BsWordpress color='444140'/>,
@@ -151,7 +153,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 9,
+    id: uuid(),
     name: "Java",
     type: 'language',
     icon: <img src={javaLogo} alt="Logotipo da linguagem de programação Java" />,
@@ -165,7 +167,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 10,
+    id: uuid(),
     name: "Python",
     type: 'language',
     icon: <img src={pythonLogo} alt="Logotipo da linguagem de programação Python" />,
@@ -179,7 +181,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 13,
+    id: uuid(),
     name: "Figma",
     type: 'platform',
     icon: <img src={figmaLogo} alt="Logotipo da ferramenta de prototipação Figma" />,
@@ -192,7 +194,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 14,
+    id: uuid(),
     name: "Material UI",
     type: 'library',
     icon: <SiMui color='007FFF'/>,
@@ -206,7 +208,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 16,
+    id: uuid(),
     name: "Bootstrap",
     type: 'library',
     icon: <SiBootstrap color='#7809F7' />,
@@ -220,7 +222,7 @@ export const skills_pt = [
     ),
   },
   {
-    id: 17,
+    id: uuid(),
     name: "Tailwind",
     type: 'library',
     icon: <BiLogoTailwindCss color='#38BDF8' />,
@@ -233,35 +235,35 @@ export const skills_pt = [
     ),
   },
   {
-    id: 18,
+    id: uuid(),
     name: "JQuery",
     type: "library",
     icon: <BiLogoJquery color='#202124'/>,
     hide: true
   },
   {
-    id: 19,
+    id: uuid(),
     name: "Chakra UI",
     type: "library",
     icon: <img src={chackraUILogo} alt="Logotipo da biblioteca Chackra UI" />,
     hide: true
   },
   {
-    id: 20,
+    id: uuid(),
     name: "Node JS",
     type: "other",
     icon: <BiLogoJavascript color='F4CB0B' />,
     hide: true
   },
   {
-    id: 21,
+    id: uuid(),
     name: "Styled Components",
     type: "other",
     icon: <SiStyledcomponents color='FFCF48' />,
     hide: true
   },
   {
-    id: 22,
+    id: uuid(),
     name: "Webflow",
     type: 'platform',
     icon: <img src={webflowLogo} alt="Logotipo da plataforma Webflow" />,
@@ -278,6 +280,7 @@ export const skills_pt = [
 export const skills_en = [
   { 
     ...skills_pt[0],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -289,6 +292,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[1],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -299,6 +303,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[2],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -309,6 +314,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[3],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -320,6 +326,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[4],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -330,6 +337,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[5],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -342,6 +350,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[6],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -351,6 +360,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[7],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -362,6 +372,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[8],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -372,6 +383,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[9],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -382,6 +394,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[10],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -392,6 +405,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[11],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -403,6 +417,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[12],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -413,6 +428,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[13],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -423,6 +439,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[14],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -434,6 +451,7 @@ export const skills_en = [
   },
   {
     ...skills_pt[15],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>
@@ -442,12 +460,13 @@ export const skills_en = [
       </Fragment>
     ),
   },
-  { ...skills_pt[16] },
-  { ...skills_pt[17] },
-  { ...skills_pt[18] },
-  { ...skills_pt[19] },
+  { ...skills_pt[16], id: uuid(), },
+  { ...skills_pt[17], id: uuid(), },
+  { ...skills_pt[18], id: uuid(), },
+  { ...skills_pt[19], id: uuid(), },
   {
     ...skills_pt[20],
+    id: uuid(),
     summary: (
       <Fragment>
         <p>

@@ -1,8 +1,9 @@
 import { getSkillByName } from '../utils/getSkillByName';
+import { v4 as uuid } from 'uuid';
 
 export const experiences_pt = [
   {
-    id: 5,
+    id: uuid(),
     title: "Desenvolvedora Front-end",
     level: "Pleno",
     location: "Outliant",
@@ -27,7 +28,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 1,
+    id: uuid(),
     title: "Desenvolvedora Front-end",
     level: "Pleno",
     location: "FTD Educação",
@@ -53,7 +54,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 2,
+    id: uuid(),
     title: "Desenvolvedora Front-end",
     level: "Júnior",
     location: "Agência Choveu",
@@ -78,7 +79,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 3,
+    id: uuid(),
     abbreviatedTitle: "ADS",
     title: "Análise e Desenvolvimento de Sistemas",
     level: "Graduação",
@@ -105,7 +106,7 @@ export const experiences_pt = [
     ]
   },
   {
-    id: 4,
+    id: uuid(),
     title: "Desenvolvimento de Sistemas",
     level: "Técnico",
     type: "academic",
@@ -133,6 +134,7 @@ export const experiences_pt = [
 export const experiences_en = [
   {
     ...experiences_pt[0],
+    id: uuid(),
     title: "Frontend Software Engineer",
     level: "Mid-level",
     period: "12/2024 — present",
@@ -148,6 +150,7 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[1],
+    id: uuid(),
     title: "Frontend Developer",
     level: "Mid-level",
     duration: "2 years",
@@ -163,6 +166,7 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[2],
+    id: uuid(),
     title: "Frontend Developer",
     level: "Junior",
     duration: "2 years",
@@ -177,6 +181,7 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[3],
+    id: uuid(),
     title: "Systems Analysis and Development",
     level: "Bachelor's Degree",
     duration: "2 years",
@@ -190,6 +195,7 @@ export const experiences_en = [
   },
   {
     ...experiences_pt[4],
+    id: uuid(),
     title: "Systems Development",
     level: "Technician",
     duration: "3 years",

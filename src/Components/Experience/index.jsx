@@ -3,14 +3,11 @@ import './style.css'
 import { HiOutlineAcademicCap } from 'react-icons/hi'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 
-import React from 'react'
-
 export default function Experience({ experience, selected, setSelected, details }) {
 
     return (
         <li 
-            className={`timeline-item ${selected?.id === experience.id && 'selected'}`}
-            key={experience.id}
+            className={`timeline-item ${selected?.id === experience.id ? 'selected' : ''}`}
             onClick={() => setSelected(experience)}
         >
             <div className="timeline-info">
@@ -41,9 +38,9 @@ export default function Experience({ experience, selected, setSelected, details 
             <div className="timeline-content">
                 <small>{experience.summary}</small>
                 <div className='tags'>
-                    {experience.skills.map(stack => {
+                    {experience.skills.map((stack, index) => {
                         return (
-                            <div className='tag' key={stack.id}>
+                            <div className='tag' key={stack.id + index}>
                                 { stack.icon ? stack.icon : 
                                     (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
                                     {stack.name}
@@ -55,8 +52,8 @@ export default function Experience({ experience, selected, setSelected, details 
 
                 { details && 
                     <ul>
-                        {experience.details.map((detail) => {
-                            return <li>{detail}</li>
+                        {experience.details.map((detail, index) => {
+                            return <li key={index}>{detail}</li>
                         })}
                     </ul> 
                 }

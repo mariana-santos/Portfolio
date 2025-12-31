@@ -111,6 +111,10 @@
     #projects{
         margin-top: 0;
     }
+
+    .wrap-projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 768px) {
@@ -121,5 +125,8 @@
 
     .no-results img{
         width: 70%;
+    }
+    .wrap-projects{
+        grid-template-columns: repeat(1, 1fr);
     }
 }

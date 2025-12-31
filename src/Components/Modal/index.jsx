@@ -34,9 +34,6 @@ export default function Modal() {
 
   const showClass = isModalOpen ? "show" : "hide";
   
-  
-  console.log(modalData)
-
   return (
     <Fragment>
       <div id="fade" className={`${showClass} fade`}></div>

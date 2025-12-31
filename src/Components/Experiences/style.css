@@ -10,7 +10,7 @@
     flex-direction: column;
 }
 
-.column-timeline {
+.column.column-timeline {
     width: 60%;
 }
 

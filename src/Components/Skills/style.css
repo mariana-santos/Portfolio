@@ -11,10 +11,15 @@
     margin-bottom: 1em;
 }
 
-.wrap-skills{
+.skills-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+.column.wrap-skills{
     display: flex;
     gap: .8em;
-    width: 30%;
+    width: 100%;
     flex-wrap: wrap;
     justify-content: center;
 }
@@ -100,10 +105,18 @@ h3{
     #skills{
         margin-top: 0;
     }
+
+    .skills-container {
+        grid-template-columns: repeat(2, 1fr);
+    }
 }
 
 @media screen and (max-width: 768px) {
     .skill-info{
         display: none;
+    }
+
+    .skills-container {
+        grid-template-columns: repeat(1, 1fr);
     }
 }
