@@ -2,11 +2,34 @@ import { getSkillByName } from '../utils/getSkillByName';
 
 export const experiences_pt = [
   {
+    id: 5,
+    title: "Desenvolvedora Front-end",
+    level: "Pleno",
+    location: "Outliant",
+    period: "12/2024 — presente",
+    type: "work",
+    link: "https://www.outliant.com/",
+    summary:
+      "Na editora FTD participo e acompanho o desenvolvimento de objetos educacionais digitais para diversos editoriais e selos da editora, do ensino infantil ao ensino médio com o uso de tecnologias como React e Typescript.",
+    skills: [
+      getSkillByName("React", "pt"),
+      getSkillByName("Typescript", "pt"),
+      getSkillByName("SCSS", "pt"),
+      getSkillByName("Styled Components", "pt"),
+      getSkillByName("Figma", "pt"),
+    ],
+    details: [
+      'Desenvolvimento de aplicações Frontend em React para clientes internos da editora.',
+      'Acompanhamento de projetos com outros desenvolvedores, avaliando e melhorando código alheio.',
+      'Criação de projetos educacionais, como artigos interativos e plataformas gamificadas.',
+    ]
+  },
+  {
     id: 1,
     title: "Desenvolvedora Front-end",
     level: "Pleno",
     location: "FTD Educação",
-    period: "10/2023 — presente",
+    period: "10/2023 — 06/2025",
     type: "work",
     link: "https://ftd.com.br/",
     summary:

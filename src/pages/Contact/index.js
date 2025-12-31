@@ -12,7 +12,7 @@ import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 
-import Loader from "../../Components/Loader";
+import Loader from "../../components/Loader";
 
 import { useState } from "react";
 

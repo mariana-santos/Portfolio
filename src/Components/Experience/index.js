@@ -1,68 +1,62 @@
+import React, { useEffect, useState } from 'react';
 import './style.css'
 
 import { HiOutlineAcademicCap } from 'react-icons/hi'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 
-import React from 'react'
+export default function Experience({ experience, active }) {
 
-export default function Experience({ experience, details }) {
+  const [paused, setPaused] = useState(false);
 
-    return (
-        <li 
-            className="timeline-item"
-            key={experience.id}
-        >
-            <div className="timeline-info">
-                <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
-                    {experience.location}
-                </a>
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setPaused(true);
+  //   }, 5000);
 
-                <small>
-                    {experience.period}
-                </small>
-            
-                <h4> 
-                    {experience.abbreviatedTitle ?? experience.title}
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
-                    {experience.abbreviatedTitle && 
-                        <span className='tooltip'>
-                            {experience.title}
-                        </span>
-                    }
-                </h4>
+  const icons = {
+    work: <MdOutlineWorkOutline />,
+    academic: <HiOutlineAcademicCap />
+  }
 
-                <span>{experience.level}</span> 
-            </div>
-            <div className="timeline-marker">
-                <div className='timeline-icon'>
-                    {experience.type === 'work' ?
-                        (<MdOutlineWorkOutline />) :
-                        (<HiOutlineAcademicCap />)}
-                </div>
-            </div>
-            {/* <div className="timeline-content">
-                <small>{experience.summary}</small>
-                <div className='tags'>
-                    {experience.skills.map(stack => {
-                        return (
-                            <span className='tag' key={stack.id}>
-                                { stack.icon ? stack.icon : 
-                                    (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
-                                    {stack.name}
 
-                            </span>
-                        )
-                    })}
-                </div>
+  return (
+    <li 
+        className="timeline-item"
+        key={experience.id}
+    >
+      <div className="timeline-info">
+        {/* <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
+          {experience.location}
+        </a> */}
 
-                { details && 
-                    <ul>
-                        {experience.details.map((detail) => {
-                            return <li>{detail}</li>
-                        })}
-                    </ul> 
-                }
-            </div> */}
-        </li>
-    )
+        {/* <small>
+          {experience.period}
+        </small> */}
+    
+        <h4> 
+          {experience.location}
+        </h4>
+
+        <span>{experience.level}</span> 
+      </div>
+      
+      <div className="timeline-marker">
+        <div className='timeline-icon'>
+          {icons[experience.type]}
+        </div>
+
+        {active && (
+          <div className={`countdown ${paused ? 'pause' : ''}`}>
+            <svg viewBox="-50 -50 100 100" strokeWidth="7">
+              <circle r="45" />
+              <circle r="45" pathLength="1" />
+            </svg>
+          </div>
+        )}   
+      </div>
+    </li>
+  )
 }

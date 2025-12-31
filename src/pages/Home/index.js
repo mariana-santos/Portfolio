@@ -1,9 +1,9 @@
-import About from "../../Components/About";
-import Hero from "../../Components/Hero";
-import Experiences from "../../Components/Experiences";
-import Skills from "../../Components/Skills";
-import Modal from "../../Components/Modal";
-import Projects from "../../Components/Projects";
+import About from "../../components/About";
+import Hero from "../../components/Hero";
+import Experiences from "../../components/Experiences";
+import Skills from "../../components/Skills";
+import Modal from "../../components/Modal";
+import Projects from "../../components/Projects";
 
 import { Fragment } from "react";
 
