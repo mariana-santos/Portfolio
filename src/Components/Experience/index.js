@@ -5,52 +5,50 @@ import { MdOutlineWorkOutline } from 'react-icons/md'
 
 import React from 'react'
 
-export default function Experience({ experience, details }) {
+export default function Experience({ experience, selected, setSelected, details }) {
 
     return (
         <li 
-            className="timeline-item"
+            className={`timeline-item ${selected?.id === experience.id && 'selected'}`}
             key={experience.id}
+            onClick={() => setSelected(experience)}
         >
             <div className="timeline-info">
-                <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
-                    {experience.location}
-                </a>
+                <h3> {experience.title}</h3>
 
-                <small>
-                    {experience.period}
-                </small>
-            
-                <h4> 
-                    {experience.abbreviatedTitle ?? experience.title}
-
-                    {experience.abbreviatedTitle && 
-                        <span className='tooltip'>
-                            {experience.title}
-                        </span>
-                    }
-                </h4>
-
-                <span>{experience.level}</span> 
+                <div className='row'>
+                    <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
+                        {experience.location}
+                    </a>
+                    <small>
+                        {experience.period}:
+                        <strong> {experience.duration}</strong>
+                    </small>
+                </div>
             </div>
-            <div className="timeline-marker">
+            <div 
+                className="timeline-marker" 
+                onClick={() => setSelected(experience)}
+                role='button'
+                aria-label='Selecionar experiência'
+            >
                 <div className='timeline-icon'>
                     {experience.type === 'work' ?
                         (<MdOutlineWorkOutline />) :
                         (<HiOutlineAcademicCap />)}
                 </div>
             </div>
-            {/* <div className="timeline-content">
+            <div className="timeline-content">
                 <small>{experience.summary}</small>
                 <div className='tags'>
                     {experience.skills.map(stack => {
                         return (
-                            <span className='tag' key={stack.id}>
+                            <div className='tag' key={stack.id}>
                                 { stack.icon ? stack.icon : 
                                     (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
                                     {stack.name}
 
-                            </span>
+                            </div>
                         )
                     })}
                 </div>
@@ -62,7 +60,7 @@ export default function Experience({ experience, details }) {
                         })}
                     </ul> 
                 }
-            </div> */}
+            </div>
         </li>
     )
 }

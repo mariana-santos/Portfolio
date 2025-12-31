@@ -7,8 +7,34 @@
     color: var(--text-color);
     margin: 5rem 0;
     display: flex;
+    flex-direction: column;
 }
 
+.column-timeline {
+    width: 60%;
+}
+
+#experience .pic {
+    max-width: 80%;
+}
+
+#experience .wrapper-pic {
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-end;
+    width: calc(40% - 5em);
+}
+
+.pic img {
+    max-width: 100%;
+    aspect-ratio: unset;
+    position: relative;
+    border-radius: 5px;
+}
+
+#experience {
+    align-items: center;
+}
 
 @media screen and (max-width: 1000px) {
     .timeline {

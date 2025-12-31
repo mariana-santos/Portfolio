@@ -1,20 +1,19 @@
 import { Route, Routes, BrowserRouter } from "react-router-dom";
 
-import Footer from '../Components/Footer';
-import Navbar from '../Components/Navbar';
-import SocialMedia from '../Components/SocialMedia';
-import Email from '../Components/Email';
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import SocialMedia from "../components/SocialMedia";
+import Email from "../components/Email";
 
-import Home from '../pages/Home'
-import Contact from '../pages/Contact'
-import CV from '../pages/CV';
+import Home from "../pages/Home";
+import Contact from "../pages/Contact";
+import CV from "../pages/CV";
 import { useConfig } from "../contexts/config";
 
-export default function AppLayout (){
-
+export default function AppLayout() {
   const { theme } = useConfig();
 
-  return(
+  return (
     <div className={`container-all ${theme}-theme`}>
       <BrowserRouter>
         <Navbar />
@@ -28,5 +27,5 @@ export default function AppLayout (){
         <Footer />
       </BrowserRouter>
     </div>
-  )
+  );
 }
