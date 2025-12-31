@@ -101,8 +101,8 @@
   display: flex;
   gap: 7px;
   flex-wrap: wrap;
-  margin-top: .5em;
-  margin-bottom: 1.5em;
+  margin-top: .5rem;
+  margin-bottom: 1.5rem;
   font-size: .8rem;
 }
 
@@ -142,6 +142,7 @@
 .timeline-item.selected .timeline-content {
     -webkit-animation: grow .5s ease-in-out forwards;
     animation: grow .5s ease-in-out forwards;
+    margin-bottom: 1rem;
 }
 
 @keyframes grow {

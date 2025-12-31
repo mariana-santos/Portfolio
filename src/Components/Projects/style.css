@@ -11,9 +11,9 @@
 }
 
 .wrap-projects{
-    display: flex;
+    display: grid;
     width: 100%;
-    /* margin-top: 2em; */
+    grid-template-columns: repeat(3, 1fr);
     gap: 1em;
     flex-wrap: wrap;
     justify-content: space-between;

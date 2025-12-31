@@ -2,15 +2,41 @@ import { getSkillByName } from '../utils/getSkillByName';
 
 export const experiences_pt = [
   {
+    id: 5,
+    title: "Desenvolvedora Front-end",
+    level: "Pleno",
+    location: "Outliant",
+    period: "12/2024 — presente",
+    duration: "1 ano",
+    type: "work",
+    link: "https://www.outliant.com/",
+    summary:
+      "Desenvolvo aplicações robustas e escaláveis usando ferramentas como o Webflow, React e o Typescript para diversos clientes globais da empresa.",
+    skills: [
+      getSkillByName("React", "pt"),
+      getSkillByName("Typescript", "pt"),
+      getSkillByName("Webflow", "pt"),
+      getSkillByName("Styled Components", "pt"),
+      getSkillByName("Figma", "pt"),
+    ],
+    details: [
+      'Participei da entrega de projetos para grandes empresas estadunidenses e globais',
+      'Priorizei a performance e a otimização do SEO para aumentar a visibilidade e melhorar a experiência do usuário',
+      'Documentei o processo técnico dos projetos para referência futura',
+      'Colaborei com um time global, incluindo DevOps, QA e PMs, sempre priorizando a comunicação',
+    ]
+  },
+  {
     id: 1,
     title: "Desenvolvedora Front-end",
     level: "Pleno",
     location: "FTD Educação",
-    period: "10/2023 — presente",
+    period: "10/2023 — 06/2025",
+    duration: "2 anos",
     type: "work",
     link: "https://ftd.com.br/",
     summary:
-      "Na editora FTD participo e acompanho o desenvolvimento de objetos educacionais digitais para diversos editoriais e selos da editora, do ensino infantil ao ensino médio com o uso de tecnologias como React e Typescript.",
+      "Na editora FTD participei do desenvolvimento de objetos educacionais digitais para diversos editoriais e selos da editora, do ensino infantil ao ensino médio.",
     skills: [
       getSkillByName("React", "pt"),
       getSkillByName("Typescript", "pt"),
@@ -19,9 +45,11 @@ export const experiences_pt = [
       getSkillByName("Figma", "pt"),
     ],
     details: [
-      'Desenvolvimento de aplicações Frontend em React para clientes internos da editora.',
-      'Acompanhamento de projetos com outros desenvolvedores, avaliando e melhorando código alheio.',
-      'Criação de projetos educacionais, como artigos interativos e plataformas gamificadas.',
+      'Gerenciei times de desenvolvedores externos dedicados a entregar os objetos digitais da editora',
+      'Participei do desenvolvimento de diversas plataformas de clientes internos da editora: desde artigos educacionais até jogos e infográficos interativos',
+      'Participei do desenvolvimento de uma variedade de componentes escaláveis e usados em diversos produtos da empresa',
+      'Participei da automação do processo de desenvolvimento da empresa, tornando o trabalho ágil e rápido',
+      'Assisti clientes internos da editora ao longo de todo o processo de desenvolvimento, colaborando para criar soluções digitais personalizadas e otimizadas, desde a concepção até a entrega final',
     ]
   },
   {
@@ -105,19 +133,36 @@ export const experiences_pt = [
 export const experiences_en = [
   {
     ...experiences_pt[0],
-    title: "Frontend Developer",
+    title: "Frontend Software Engineer",
     level: "Mid-level",
-    duration: "present",
+    period: "12/2024 — present",
+    duration: "1 year",
     summary:
-      "At FTD I participate and follow the development of digital educational objects to several editorials, from kindergarten all the way to highschool. Using technologies such as React and Typescript.",
+      "Developed robust and scalable applications using tools such as Webflow, React and Typescript for several global clients.",
     details: [
-      "Built frontend applications for the publisher's internal clients.",
-      "Followed projects with other developers, evaluating and improving other's code.",
-      'Created educational projects, such as digital interactive articles and gamified platforms.',
+      "Delivered projects for major US and global clients.",
+      "Prioritized performance and SEO optimization to boost visibility and improve user experience.",
+      'Documented the technical process of the projects for future reference.',
+      'Collaborated with a global team, including DevOps, QA and Project Management, always prioritizing communication.'
     ]
   },
   {
     ...experiences_pt[1],
+    title: "Frontend Developer",
+    level: "Mid-level",
+    duration: "2 years",
+    summary:
+      "At FTD I participated in the development of digital educational objects for several editorials and imprints of the publisher, from kindergarten to high school.",
+    details: [
+      "Managed development teams dedicated to deliver the editor’s digital objects",
+      "Participated in the development of several internal client’s platforms: from educational articles to games and interactive infographics",
+      'Participated in the development of several scalable components used in several products of the company',
+      'Participated in the automation of the team’s development process, making our work more valuable and agile',
+      'Assisted internal clients through the development process, collaborating to create personalized and optimized digital solutions, from the concept to the final delivery',
+    ]
+  },
+  {
+    ...experiences_pt[2],
     title: "Frontend Developer",
     level: "Junior",
     duration: "2 years",
@@ -131,7 +176,7 @@ export const experiences_en = [
     ]
   },
   {
-    ...experiences_pt[2],
+    ...experiences_pt[3],
     title: "Systems Analysis and Development",
     level: "Bachelor's Degree",
     duration: "2 years",
@@ -144,7 +189,7 @@ export const experiences_en = [
     ]
   },
   {
-    ...experiences_pt[3],
+    ...experiences_pt[4],
     title: "Systems Development",
     level: "Technician",
     duration: "3 years",

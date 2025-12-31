@@ -13,6 +13,10 @@ iframe, .img-project{
   text-decoration: underline;
 }
 
+.figma-icon{
+  width: 1em;
+}
+
 .modal_content a:hover{
   opacity: 1;
 }

@@ -16,6 +16,7 @@ import javaLogo from "../assets/skills-logos/java.webp";
 import pythonLogo from "../assets/skills-logos/python.webp";
 import scrumLogo from "../assets/skills-logos/scrum.webp";
 import chackraUILogo from "../assets/skills-logos/chackra-ui.webp";
+import webflowLogo from "../assets/skills-logos/webflow.png";
 import { Fragment } from 'react';
 
 export const skills_pt = [
@@ -133,6 +134,7 @@ export const skills_pt = [
         </p>
       </Fragment>
     ),
+    hide: true
   },
   {
     id: 18,
@@ -257,6 +259,19 @@ export const skills_pt = [
     type: "other",
     icon: <SiStyledcomponents color='FFCF48' />,
     hide: true
+  },
+  {
+    id: 22,
+    name: "Webflow",
+    type: 'platform',
+    icon: <img src={webflowLogo} alt="Logotipo da plataforma Webflow" />,
+    summary: (
+      <Fragment>
+        <p>
+          Webflow é uma plataforma de desenvolvimento visual que integra design, CMS e hospedagem
+        </p>
+      </Fragment>
+    ),
   },
 ];
 
@@ -430,4 +445,15 @@ export const skills_en = [
   { ...skills_pt[16] },
   { ...skills_pt[17] },
   { ...skills_pt[18] },
+  { ...skills_pt[19] },
+  {
+    ...skills_pt[20],
+    summary: (
+      <Fragment>
+        <p>
+          Webflow is a visual development platform that integrates design, CMS, and hosting for building and managing websites.
+        </p>
+      </Fragment>
+    ),
+  },
 ];

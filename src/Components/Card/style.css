@@ -1,5 +1,4 @@
 .card{
-    width: calc(100% / 3 - .7em);
     background: #fff;
     padding: 1.3em;
     box-sizing: border-box;

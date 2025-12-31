@@ -2,6 +2,8 @@ import "./style.css";
 
 import { AiOutlineGithub } from "react-icons/ai";
 import { BsFillPlayFill } from "react-icons/bs";
+import figmaLogo from "../../assets/skills-logos/figma.webp";
+
 import useStrings from "../../hooks/useStrings";
 
 import { Fragment, useState } from "react";
@@ -81,9 +83,21 @@ export default function ProjectDetails({  project }) {
             className="btn"
             rel="noreferrer"
           >
-            {strings.more_info}
+            Github
             <AiOutlineGithub />
           </a>
+
+          {project?.figma && (
+            <a
+              href={project?.figma}
+              target="_blank"
+              className="btn"
+              rel="noreferrer"
+            >
+              Figma
+              <img src={figmaLogo} alt='Figma logo' className='figma-icon' />
+            </a>
+          )}
 
           {project?.deploy && (
             <a

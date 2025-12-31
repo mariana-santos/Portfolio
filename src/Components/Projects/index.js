@@ -26,7 +26,7 @@ export default function Projects({ setIsOpen, setSelected }) {
     stacks[0],
     stacks[1],
   ]);
-  const [filterBySelected, setFilterBySelected] = useState(filterBy[0]);
+  const [filterBySelected, setFilterBySelected] = useState(filterBy[1]);
 
   useEffect(() => {
     filterProjects();
@@ -106,7 +106,7 @@ export default function Projects({ setIsOpen, setSelected }) {
       <h2 className="code">{strings.projects_title}</h2>
 
       <div id="filter">
-        <div className="wrap-filter">
+        {/* <div className="wrap-filter">
           <label>{strings.filter_by}</label>
 
           <ReactSelect
@@ -118,10 +118,10 @@ export default function Projects({ setIsOpen, setSelected }) {
             components={animatedComponents}
             isSearchable={true}
           />
-        </div>
+        </div> */}
 
         <div className="wrap-filter">
-          <label>{strings.techs}</label>
+          <label>{strings.filter_by}</label>
 
           <ReactSelect
             options={getOptions()}

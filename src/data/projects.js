@@ -7,6 +7,7 @@ export const projects_pt = [
         title: 'Refinances',
         subtitle: 'Aplicativo de gerenciamento financeiro',
         github: 'https://github.com/mariana-santos/refinances',
+        figma: 'https://www.figma.com/file/l6NjNdvmTZ3H7ttO5mG8Pz/Evoke-team-library?node-id=0%3A1',
         video_id: 'i9xEfPATjSk',
         params: '?start=681&autoplay=1',
         relevant: true,
@@ -63,6 +64,7 @@ export const projects_pt = [
         subtitle: 'Website criado para facilitar e incentivar o investimento em IPO',
         deploy: 'https://investium-fiap.vercel.app/',
         github: 'https://github.com/mariana-santos/repo_challenge',
+        figma: 'https://www.figma.com/design/UugKtNr32F4NW7UR14p5Ml/DEVZILLA?node-id=1-2&p=f&t=ReL7Qn4DE6Yp4J1D-0',
         video_id: '3nP4r-L_qqk',
         relevant: true,
         skills: [
@@ -220,6 +222,7 @@ export const projects_pt = [
         title: 'Bagify',
         subtitle: 'Aplicativo de gerenciamento de bagagens',
         github: 'https://github.com/mariana-santos/hackaton-copastur',
+        figma: 'https://www.figma.com/design/tyvf7T8X9Q4iEKbUC6Xqmy/Wireframe?node-id=23-2028&p=f&t=rzA5lfewKbvYaOYR-0',
         video_id: 'nihtg3UWumg',
         skills: [
             getSkillByName("React Native"),
