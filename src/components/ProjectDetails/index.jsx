@@ -70,22 +70,24 @@ export default function ProjectDetails({  project }) {
           project?.title && (
             <img
               className="img-project"
-              src={require(`../../assets/projects/${project?.title.toLowerCase()}.jpg`)}
+              src={project?.image}
               alt={`Imagem do projeto ${project.title}`}
             />
           )
         )}
 
         <div className="modal_footer">
-          <a
-            href={project?.github}
-            target="_blank"
-            className="btn"
-            rel="noreferrer"
-          >
-            Github
-            <AiOutlineGithub />
-          </a>
+          {project?.github && (
+            <a
+              href={project?.github}
+              target="_blank"
+              className="btn"
+              rel="noreferrer"
+            >
+              Github
+              <AiOutlineGithub />
+            </a>
+          )}
 
           {project?.figma && (
             <a
@@ -135,8 +137,8 @@ function Iframe({ project }) {
         <div className="wrap-img-iframe" onClick={() => setClicked(true)}>
           <img
             className="img-project"
-            src={require(`../../assets/projects/${project?.title.toLowerCase()}.jpg`)}
-            alt={`Imagem do projeto ${project.title}`}
+            src={project?.image}
+            alt={`Imagem do projeto ${project?.title}`}
           />
 
           <div className="wrap-play-icon">

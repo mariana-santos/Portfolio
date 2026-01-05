@@ -1,7 +1,10 @@
 import { getSkillByName } from '../utils/getSkillByName'
 import { Fragment } from 'react'
 
+import { v4 as uuid } from 'uuid';
+
 import refinances from '../assets/projects/refinances.webp'
+import dzero from '../assets/projects/DZERO.webp'
 import investium from '../assets/projects/investium.webp'
 import raizes from '../assets/projects/raízes solidárias.webp'
 import valorant from '../assets/projects/valorant web.webp'
@@ -65,6 +68,35 @@ export const projects_pt = [
                 id: 6,
                 name: 'Wallace Moura',
                 link: 'https://www.linkedin.com/in/wallace-moura-2b15811a3'
+            },
+        ]
+    },
+    {
+        id: uuid(),
+        title: 'DZERO',
+        image: dzero,
+        subtitle: 'Biblioteca de componentes internos',
+        // figma: 'https://www.figma.com/file/l6NjNdvmTZ3H7ttO5mG8Pz/Evoke-team-library?node-id=0%3A1',
+        video_id: 'oI7Foi4lwig',
+        deploy: 'https://app.souionicahml.com/public-viewer/bb848de0-57bc-11f0-898f-91106d9a2d68',
+        relevant: true,
+        skills: [
+            getSkillByName("React"),
+            getSkillByName("Typescript"),
+            getSkillByName("Styled Components"),
+            getSkillByName("Figma"),
+            getSkillByName("Radix UI"),
+          ],
+        description: 
+            <Fragment>
+                <p>Um grande problema em diversos times de desenvolvimento é a falta de padronização no código e no design em diferentes projetos. O DZERO é uma <strong>biblioteca de componentes</strong> internos desenvolvida para padronizar a interface do usuário em projetos da empresa.</p>
+
+                <p>Nele foi estruturamos um template para cada projeto futuro da empresa, criando padrões de dados e também opções de interfaces <strong>robustas e customizáveis.</strong> Utilizamos a metodologia <a href='https://atomicdesign.bradfrost.com/chapter-2/' target='_blank'>Atomic Design</a> como base de estrutura da biblioteca.</p>
+            </Fragment>,
+        team: [
+            {
+                id: 1,
+                name: 'Time digital FTD Educação',
             },
         ]
     },
@@ -292,6 +324,32 @@ export const projects_en = [
     },
     {
         ...projects_pt[1],
+        subtitle: 'Internal component library',
+        description: 
+        <Fragment>
+            <p>
+                A major challenge across many development teams is the lack of code and design
+                standardization across different projects. DZERO is an internal
+                <strong> component library</strong> built to standardize the user interface
+                across the company’s projects.
+            </p>
+
+            <p>
+                Within it, we structured a template for each future company project,
+                establishing data patterns as well as
+                <strong> robust and customizable interface options.</strong> The library is
+                based on the <a href='https://atomicdesign.bradfrost.com/chapter-2/' target='_blank'>Atomic Design</a> methodology as its core structural foundation.
+            </p>
+        </Fragment>,
+        team: [
+            {
+                id: 1,
+                name: "FTD's digital team",
+            },
+        ]
+    },
+    {
+        ...projects_pt[2],
         subtitle: 'Website created to facilitate and encourage investment in IPO',
         description: <Fragment>
             <p><a href='https://www.fiap.com.br/' target='_blank' rel="noreferrer">FIAP University</a> in partnership with <a href='https://www.b3.com.br/pt_br/' target='_blank' rel="noreferrer">B3</a> challenged us to use technology to demystify <strong>IPO investments</strong> in Brazil. </p>
@@ -310,7 +368,7 @@ export const projects_en = [
         ]
     },
     {
-        ...projects_pt[2],
+        ...projects_pt[3],
         subtitle: 'Website created to manage a fictional solidarity garden against hunger',
         description:
             <Fragment>
@@ -323,7 +381,7 @@ export const projects_en = [
             </Fragment>,
     },
     {
-        ...projects_pt[3],
+        ...projects_pt[4],
         subtitle: 'Website with information about the game Valorant',
         description:
             <Fragment>
@@ -334,7 +392,7 @@ export const projects_en = [
             </Fragment>,
     },
     {
-        ...projects_pt[4],
+        ...projects_pt[5],
         subtitle: 'Website for study management',
         description:
             <Fragment>
@@ -349,7 +407,7 @@ export const projects_en = [
 
     },
     {
-        ...projects_pt[5],
+        ...projects_pt[6],
         subtitle: 'Electric car rental website',
         description:
             <Fragment>
@@ -368,7 +426,7 @@ export const projects_en = [
         ]
     },
     {
-        ...projects_pt[6],
+        ...projects_pt[7],
         subtitle: 'Nutrition blog consuming an external API',
         description: 
             <Fragment>
@@ -378,7 +436,7 @@ export const projects_en = [
             </Fragment>,
     },
     {
-        ...projects_pt[7],
+        ...projects_pt[8],
         subtitle: 'Luggage management app',
         description: <Fragment>
             <p>

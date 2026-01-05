@@ -120,7 +120,7 @@ export default function Projects({ setIsOpen, setSelected }) {
           />
         </div> */}
 
-        <div className="wrap-filter">
+        {/* <div className="wrap-filter">
           <label>{strings.filter_by}</label>
 
           <ReactSelect
@@ -135,37 +135,17 @@ export default function Projects({ setIsOpen, setSelected }) {
             placeholder={strings.techs}
             noOptionsMessage={() => strings.no_options}
           />
-        </div>
+        </div> */}
       </div>
 
       <div className="wrap-projects">
-        {filteredProjects.length >= 1 ? (
-          filteredProjects.map((project) => (
-            <Project
-              setIsOpen={setIsOpen}
-              project={project}
-              setSelected={setSelected}
-              key={project.id}
-            />
-          ))
-        ) : (
-          <div className="no-results">
-            <img
-              src={noresults}
-              alt="Ilustração de uma mulher buscando por algo com uma lupa"
-            />
-            <p>{strings.no_results}</p>
-            <button
-              className="btn btn-primary"
-              onClick={() => {
-                setFilterSelected(stacks);
-                setFilterBySelected(filterBy[1]);
-              }}
-            >
-              Ver todos os projetos
-            </button>
-          </div>
-        )}
+        {strings.projects.map((project) => (
+          <Project
+            setIsOpen={setIsOpen}
+            project={project}
+            setSelected={setSelected}
+            key={project.id}
+          />))}
       </div>
 
       <h2 className="code close">{strings.projects_title}</h2>

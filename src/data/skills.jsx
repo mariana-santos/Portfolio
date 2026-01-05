@@ -7,7 +7,7 @@ import {
   BiLogoJquery,
 } from 'react-icons/bi'
 
-import { SiNextdotjs, SiMui, SiBootstrap, SiStyledcomponents } from 'react-icons/si'
+import { SiNextdotjs, SiMui, SiBootstrap, SiStyledcomponents, SiRadixui } from 'react-icons/si'
 import { BsFillDatabaseFill, BsWordpress } from 'react-icons/bs'
 import { DiSass } from 'react-icons/di'
 
@@ -202,6 +202,20 @@ export const skills_pt = [
       <Fragment>
         <p>
           Material UI é uma biblioteca de componentes de interface do usuário para
+          React
+        </p>
+      </Fragment>
+    ),
+  },
+  {
+    id: uuid(),
+    name: "Radix UI",
+    type: 'library',
+    icon: <SiRadixui color='007FFF'/>,
+    summary: (
+      <Fragment>
+        <p>
+          Radix UI é uma biblioteca de componentes de interface do usuário para
           React
         </p>
       </Fragment>
@@ -443,8 +457,7 @@ export const skills_en = [
     summary: (
       <Fragment>
         <p>
-          Bootstrap is a framework for responsive web
-          development.
+          Radix UI is a user interface component library for React.
         </p>
       </Fragment>
     ),
@@ -455,17 +468,29 @@ export const skills_en = [
     summary: (
       <Fragment>
         <p>
+          Bootstrap is a framework for responsive web
+          development.
+        </p>
+      </Fragment>
+    ),
+  },
+  {
+    ...skills_pt[16],
+    id: uuid(),
+    summary: (
+      <Fragment>
+        <p>
          Tailwind is a utility-first CSS framework to improve development
         </p>
       </Fragment>
     ),
   },
-  { ...skills_pt[16], id: uuid(), },
   { ...skills_pt[17], id: uuid(), },
   { ...skills_pt[18], id: uuid(), },
   { ...skills_pt[19], id: uuid(), },
+  { ...skills_pt[20], id: uuid(), },
   {
-    ...skills_pt[20],
+    ...skills_pt[21],
     id: uuid(),
     summary: (
       <Fragment>
