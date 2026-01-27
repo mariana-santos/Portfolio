@@ -1,0 +1,132 @@
+#projects{
+    margin-bottom: 4em;
+}
+    
+#filter{
+    width: 100%;
+    display: flex;
+    gap: 1em;
+    flex-wrap: wrap;
+    margin-bottom: 1.5em;
+}
+
+.wrap-projects{
+    display: grid;
+    width: 100%;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1em;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.select__control{
+    border-color: var(--border-color) !important;
+}
+
+.select__control:hover{
+    border-color: var(--primary) !important;
+}
+
+.select__control, .select__menu{
+    background-color: var(--bg-light-strong) !important;
+    color: var(--text-color) !important;
+    min-width: 300px;
+}
+
+.select-skills{
+    min-width: 500px;
+    max-width: 100%;
+}
+
+.select__option{
+    transition: .3s;
+}
+
+.select__option:hover{
+    background-color: var(--primary-transparency) !important;
+    background: var(--primary-transparency) !important;
+}
+
+.select__option--is-focused{
+    background-color: var(--tag-color) !important;
+    background: var(--tag-color) !important;
+    color: var(--text-color) !important;
+}
+
+.select__option--is-selected, .select__option--is-active{
+    background-color: var(--tag-color) !important;
+    background: var(--tag-color) !important;   
+    color: var(--text-color) !important; 
+}
+
+.select__single-value, .select__input, .select__input::placeholder{
+    color: var(--text-color) !important;
+    font-size: 1em !important;
+}
+
+.select__control--is-focused{
+    border-color: var(--primary) !important;
+    box-shadow: 0 0 0 1px var(--primary) !important;
+}
+
+.select__multi-value{
+    background-color: var(--tag-color) !important ;
+    border-radius: 15px !important;
+    padding-left: 5px;
+}
+
+.select__multi-value__label {
+    color: var(--text-color) !important;
+}
+
+.select__multi-value__remove{
+    transition: .3s;
+    border-top-right-radius: 15px !important;
+    border-bottom-right-radius: 15px !important;
+} 
+
+.select__value-container div {
+    width: auto !important;
+}
+
+.select__indicators{
+    cursor: pointer;
+}
+
+.no-results{
+    width: 300px;
+    margin: auto;
+    text-align: center;
+}
+
+.no-results img{
+    width: 100%;
+}
+
+.no-results .btn{
+    margin: auto;
+}
+
+@media screen and (max-width: 1200px) {
+    #projects{
+        margin-top: 0;
+    }
+
+    .wrap-projects{
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .select__control, .select__menu, .select-skills, .basic-multi-select, .wrap-filter{
+        min-width: 100%;
+        max-width: 100%;
+    }
+
+    .no-results img{
+        width: 70%;
+    }
+    .wrap-projects{
+        grid-template-columns: repeat(1, 1fr);
+    }
+}
