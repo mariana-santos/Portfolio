@@ -1,63 +1,62 @@
+import React, { useEffect, useState } from 'react';
 import './style.css'
 
 import { HiOutlineAcademicCap } from 'react-icons/hi'
 import { MdOutlineWorkOutline } from 'react-icons/md'
 
-export default function Experience({ experience, selected, setSelected, details }) {
+export default function Experience({ experience, active }) {
 
-    return (
-        <li 
-            className={`timeline-item ${selected?.id === experience.id ? 'selected' : ''}`}
-            onClick={() => setSelected(experience)}
-        >
-            <div className="timeline-info">
-                <h3> {experience.title}</h3>
+  const [paused, setPaused] = useState(false);
 
-                <div className='row'>
-                    <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
-                        {experience.location}
-                    </a>
-                    <small>
-                        {experience.period}:
-                        <strong> {experience.duration}</strong>
-                    </small>
-                </div>
-            </div>
-            <div 
-                className="timeline-marker" 
-                onClick={() => setSelected(experience)}
-                role='button'
-                aria-label='Selecionar experiência'
-            >
-                <div className='timeline-icon'>
-                    {experience.type === 'work' ?
-                        (<MdOutlineWorkOutline />) :
-                        (<HiOutlineAcademicCap />)}
-                </div>
-            </div>
-            <div className="timeline-content">
-                <small>{experience.summary}</small>
-                <div className='tags'>
-                    {experience.skills.map((stack, index) => {
-                        return (
-                            <div className='tag' key={stack.id + index}>
-                                { stack.icon ? stack.icon : 
-                                    (<img src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)} alt='' />) }
-                                    {stack.name}
+  // useEffect(() => {
+  //   const timeout = setTimeout(() => {
+  //     setPaused(true);
+  //   }, 5000);
 
-                            </div>
-                        )
-                    })}
-                </div>
+  //   return () => clearTimeout(timeout);
+  // }, []);
 
-                { details && 
-                    <ul>
-                        {experience.details.map((detail, index) => {
-                            return <li key={index}>{detail}</li>
-                        })}
-                    </ul> 
-                }
-            </div>
-        </li>
-    )
+  const icons = {
+    work: <MdOutlineWorkOutline />,
+    academic: <HiOutlineAcademicCap />
+  }
+
+
+  return (
+    <li 
+        className="timeline-item"
+        key={experience.id}
+    >
+      <div className="timeline-info">
+        {/* <a href={experience.link} target='_blank' className='highlight' rel="noreferrer">
+          {experience.location}
+        </a> */}
+
+        {/* <small>
+          {experience.period}
+        </small> */}
+    
+        <h4> 
+          {experience.location}
+        </h4>
+
+        <span>{experience.level}</span> 
+      </div>
+      
+      <div className="timeline-marker">
+        <div className='timeline-icon'>
+          {icons[experience.type]}
+        </div>
+
+        {active && (
+          <div className={`countdown ${paused ? 'pause' : ''}`}>
+            <svg viewBox="-50 -50 100 100" strokeWidth="7">
+              <circle r="45" />
+              <circle r="45" pathLength="1" />
+            </svg>
+          </div>
+        )}
+      </div>
+    </li>
+  )
 }
