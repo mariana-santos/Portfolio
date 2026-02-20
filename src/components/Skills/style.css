@@ -1,8 +1,6 @@
 #skills{
     display: flex;
     flex-wrap: wrap;
-    /* margin-bottom: 5em; */
-    /* margin-top: -125px; */
     column-gap: 3em;
 }
 
@@ -17,11 +15,12 @@
 }
 
 .column.wrap-skills{
-    display: flex;
+    display: grid;
     gap: .8em;
     width: 100%;
-    flex-wrap: wrap;
-    justify-content: center;
+    grid-template-columns: repeat(4, 1fr);
+    place-items: center;
+    justify-items: center;
 }
 
 .wrap-skills h3{
@@ -33,6 +32,7 @@
     min-height: 2.8em;
     flex-direction: column;
     gap: .3em;
+    grid-column: 1 / -1;
 }
 .show-up{
     opacity: 0;

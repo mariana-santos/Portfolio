@@ -3,12 +3,14 @@
 :root, .light-theme {
   --bg-light: #ebedf0;
   --header-transparent: rgba(255, 255, 255, 0.605);
-  --bg-light-strong: #fff;
+  --bg-light-strong: #f9fafd;
   --text-color: #363535;
+  --text-secondary: #616161;
   --primary: rgb(149, 49, 244);
   --primary-stronger: rgb(117 17 212);
   --primary-transparency: rgba(150, 49, 244, 0.466);
   --secondary: #C395F2;
+  --tertiary: #d0bee4;
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);
@@ -23,10 +25,12 @@
   --header-transparent: #0c0810be;
   --bg-light-strong: #16121b;
   --text-color: #ebedf0d8;
+  --text-secondary: #36353585;
   --primary: rgb(149, 49, 244);
   --primary-stronger: rgb(191, 123, 255);
   --primary-transparency: rgb(168, 75, 255);
   --secondary: #C395F2;
+  --tertiary: #d0bee4;
   --box-shadow: 2px 2px 5px 1px rgba(0, 0, 0, 0.1);
   --shadow-secondary: 0px 0px 5px 1px rgba(202, 146, 255, 0.163);
   --primary-gradient: linear-gradient(90deg, hsla(276, 51%, 47%, 1) 0%, hsla(245, 79%, 57%, 1) 100%);

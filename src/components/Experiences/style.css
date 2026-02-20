@@ -1,0 +1,24 @@
+.timeline {
+  line-height: 1.4em;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+}
+
+.column.timeline {
+    width: fit-content;
+}
+
+#experience {
+  align-items: center;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline {
+    flex-direction: column;
+    margin: 2rem 0;
+  }
+}

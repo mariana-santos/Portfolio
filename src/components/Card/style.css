@@ -1,5 +1,4 @@
 .card{
-    background: #fff;
     padding: 1.3em;
     box-sizing: border-box;
     border-radius: 5px;
@@ -8,6 +7,10 @@
     cursor: pointer;
     background: var(--bg-light-strong);
     border: 1px solid transparent;
+}
+
+.card.card.size-small{
+    padding: 1.2em;
 }
 
 .card:hover{
@@ -43,6 +46,14 @@
     margin: 0;
 }
 
+.card.size-small h3 {
+    font-size: 1.125rem;
+}
+
+.card.size-small p {
+    font-size: .875rem;
+}
+
 .card .tags{
     margin: 1em 0;
 }
@@ -54,22 +65,22 @@
 .card-footer{
     transition: .3s;
     overflow: hidden;
-    height: 2.6em;
+    height: 1.5em;
     line-height: 1.3em;
 }
 
 .card-footer span{
     display: inline-block;
     transition: .3s;
-    height: 2.6em;
+    height: 1.5em;
 }
 
 .card .subtitle{
     display: block;
 }
 
-.card:hover .subtitle, .card:hover .saiba-mais{
-    transform: translateY(-2.3em);
+.card:hover .subtitle, .card:hover .see-details{
+    transform: translateY(-1.5em);
 }
 
 .card:hover .subtitle{
@@ -85,11 +96,11 @@
         display: none;
     }
 
-    .card .saiba-mais{
+    .card .see-details{
         font-size: .9em;
     }
 
-    .card .saiba-mais, .card .subtitle{
+    .card .see-details, .card .subtitle{
         transform: translateY(-2.3em);
     }
 

@@ -1,5 +1,5 @@
 import "./style.css";
-import Project from "../Card";
+import Card from "../Card";
 import useStrings from "../../hooks/useStrings";
 import makeAnimated from "react-select/animated";
 import ReactSelect from "react-select";
@@ -140,7 +140,7 @@ export default function Projects({ setIsOpen, setSelected }) {
 
       <div className="wrap-projects">
         {strings.projects.map((project) => (
-          <Project
+          <Card
             setIsOpen={setIsOpen}
             project={project}
             setSelected={setSelected}

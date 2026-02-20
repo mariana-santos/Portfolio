@@ -1,0 +1,206 @@
+.timeline {
+  position: relative;
+  counter-reset: timeline;
+}
+
+.default-line {
+  content: '';
+  position: absolute;
+  width: 3px;
+  background: var(--border-color);
+  height: 100%;
+}
+
+.draw-line {
+  width: 3px;
+  height: 0;
+  position: absolute;
+  background: var(--tertiary);
+}
+
+.timeline-item {
+  counter-increment: timeline;
+  position: relative;
+  transition: .5s;
+  cursor: pointer;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  width: fit-content;
+  padding-left: 70px;
+}
+
+.timeline-item::before {
+  content: counter(timeline, decimal-leading-zero);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 0;
+  transform: translateX(calc(-50% + 2px));
+  top: 0;
+  font-size: 3rem;
+  font-weight: 800;
+  border-radius: 50%;
+  background: var(--bg-light);
+  color: var(--text-secondary);
+  padding: 1rem;
+  transition: all .4s ease-in-out;
+}
+
+.timeline-item.in-view::before {
+  color: var(--primary);
+}
+
+.timeline-content {
+  padding-bottom: 1em;
+}
+
+.timeline-item span{
+  font-weight: 400;
+  font-size: .9em;
+  display: inline-block;
+}
+
+.timeline-content small{
+  display: block;
+  width: 100%;
+}
+
+#experience .close{
+  margin-top: .5em;
+}
+
+
+.experience-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--border-color);
+}
+
+.experience-profile img {
+  width: 60px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.experience-title {
+  margin-bottom: .3rem;
+  font-size: 1.4rem;
+}
+
+.experience-name {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+.column.timeline-content {
+  width: 1000px;
+  max-width: 100%;
+}
+
+.experience-headline {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.experience-headline svg {
+  margin-right: .5rem;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.headline-detail {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: .85rem;
+  color: var(--text-secondary);
+}
+
+.headline-detail.date {
+  margin-bottom: .5rem;
+}
+
+.headline-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experiences-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: auto;
+  gap: 100px;
+}
+
+.experiences-skills {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  gap: 1rem;
+}
+
+.timeline-item:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+
+.experiences-skills img {
+  width: 35px;
+}
+
+.experiences-subtitle {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.experiences-subtitle svg {
+  color: var(--secondary);
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.experience-details li {
+  display: inline-flex;
+  gap: .4rem;
+}
+
+.experience-details li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.experience-details svg {
+  color: var(--secondary);
+  min-width: 1.5rem;
+  font-size: 1.3rem;
+  margin-top: .1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .timeline-item::before {
+    left: 15px;
+    width: 2px;
+    height: 100%;
+    bottom: 0
+  }
+
+  .timeline-item {
+    flex-direction: column-reverse;
+  }
+}

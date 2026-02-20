@@ -4,7 +4,7 @@
 
 .stack p{
     margin-bottom: 0;
-    font-size: .7em;
+    font-size: .9rem;
 }
 
 .wrap-img-hab{
@@ -44,7 +44,6 @@
     text-align: center;
     padding: 30px;
     position: relative;
-    width: calc(100% / 3 - 2.5em);
     text-align: center;
     border: solid 2px transparent;
     padding:  .5em;
@@ -73,6 +72,10 @@
     width: 160%;
     max-width: 180px;
     font-weight: bold;
+}
+
+.tooltip p {
+    font-size: .7rem;
 }
 
 .stack:hover span, .stack:hover .tooltip {
