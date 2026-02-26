@@ -87,11 +87,11 @@
     color: var(--bg-light-strong);
 }
 
-@media screen and (max-width: 768px) {
-    .card{
-        width: 110%;
-    }
+.tag img {
+    width: 20px;
+}
 
+@media screen and (max-width: 768px) {
     .card .tags .tag:nth-child(3){
         display: none;
     }

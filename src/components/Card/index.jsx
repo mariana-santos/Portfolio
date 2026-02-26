@@ -39,7 +39,7 @@ export default function Card({ project, size }) {
                 ) : (
                   <img
                     src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)}
-                    alt=""
+                    alt={`Logo de ${stack.name}`}
                   />
                 )}
                 {stack.name}

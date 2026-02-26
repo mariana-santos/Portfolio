@@ -1,77 +1,10 @@
-.timeline {
-  position: relative;
-  counter-reset: timeline;
-}
-
-.default-line {
-  content: '';
-  position: absolute;
-  width: 3px;
-  background: var(--border-color);
-  height: 100%;
-}
-
-.draw-line {
-  width: 3px;
-  height: 0;
-  position: absolute;
-  background: var(--tertiary);
-}
-
-.timeline-item {
-  counter-increment: timeline;
-  position: relative;
-  transition: .5s;
-  cursor: pointer;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  width: fit-content;
-  padding-left: 70px;
-}
-
-.timeline-item::before {
-  content: counter(timeline, decimal-leading-zero);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  position: absolute;
-  left: 0;
-  transform: translateX(calc(-50% + 2px));
-  top: 0;
-  font-size: 3rem;
-  font-weight: 800;
-  border-radius: 50%;
-  background: var(--bg-light);
-  color: var(--text-secondary);
-  padding: 1rem;
-  transition: all .4s ease-in-out;
-}
-
-.timeline-item.in-view::before {
-  color: var(--primary);
-}
-
 .timeline-content {
   padding-bottom: 1em;
-}
-
-.timeline-item span{
-  font-weight: 400;
-  font-size: .9em;
-  display: inline-block;
-}
-
-.timeline-content small{
-  display: block;
-  width: 100%;
 }
 
 #experience .close{
   margin-top: .5em;
 }
-
 
 .experience-profile {
   display: flex;
@@ -106,8 +39,8 @@
 
 .experience-headline {
   display: flex;
-  justify-content: space-between;
   width: 100%;
+  gap: 1rem;
 }
 
 .experience-headline svg {
@@ -116,15 +49,20 @@
   color: var(--secondary);
 }
 
-.headline-detail {
-  display: flex;
+.profile-detail {
+  display: inline-flex;
   align-items: center;
   justify-content: flex-end;
   font-size: .85rem;
+  gap: .5em;
   color: var(--text-secondary);
 }
 
-.headline-detail.date {
+.profile-detail svg {
+  color: var(--secondary);
+}
+
+.profile-detail.date {
   margin-bottom: .5rem;
 }
 
@@ -139,7 +77,7 @@
   align-items: center;
   justify-content: center;
   margin: auto;
-  gap: 100px;
+  max-width: 100%;
 }
 
 .experiences-skills {
@@ -193,14 +131,52 @@
 }
 
 @media screen and (max-width: 1000px) {
-  .timeline-item::before {
-    left: 15px;
-    width: 2px;
-    height: 100%;
-    bottom: 0
+  .experience-profile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    border-bottom: none;
+    padding-bottom: 0;
   }
 
-  .timeline-item {
-    flex-direction: column-reverse;
+  .experience-profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .experience-title {
+    font-size: 1.05rem;
+  }
+
+  .detail-extra {
+    display: none;
+  }
+
+  .experience-name {
+    font-size: .95rem;
+  }
+
+  .timeline-item span.profile-detail {
+    font-size: .7rem;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .profile-details {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    gap: 1rem;
+  }
+
+  .experience-headline {
+    border-bottom: solid 1px var(--border-color);
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  .experience-details, .experience-summary {
+    font-size: .85rem;
   }
 }

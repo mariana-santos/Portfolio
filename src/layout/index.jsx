@@ -14,16 +14,18 @@ export default function AppLayout() {
   const { theme } = useConfig();
 
   return (
-    <div className={`container-all ${theme}-theme`}>
+    <div className={`container-all ${theme}-theme`} id="smooth-wrapper">
       <BrowserRouter>
         <Navbar />
         <SocialMedia />
         <Email />
-        <Routes>
-          <Route element={<Home />} path="/" />
-          <Route element={<Contact />} path="/contact" />
-          <Route element={<CV />} path="/resume" />
-        </Routes>
+        <div id="smooth-content">
+          <Routes>
+            <Route element={<Home />} path="/" />
+            <Route element={<Contact />} path="/contact" />
+            <Route element={<CV />} path="/resume" />
+          </Routes>
+        </div>
         <Footer />
       </BrowserRouter>
     </div>
