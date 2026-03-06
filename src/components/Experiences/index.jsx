@@ -1,16 +1,18 @@
 import "./style.css";
 import useStrings from "../../hooks/useStrings";
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
 
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceDetails from "../ExperienceDetails";
+import Menu from "../Menu";
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Experiences() {
   const { experience_title, experiences } = useStrings();
+  const [selectedOption, setSelectedOption] = useState("professional")
 
   const timelineRef = useRef(null);
   const drawLineRef = useRef(null);
@@ -48,11 +50,33 @@ export default function Experiences() {
     return () => ctx.revert();
   }, []);
 
+  const filteredExperiences = experiences.filter(
+    experience => experience.type === selectedOption
+  )
+
+  const MENU_OPTIONS = [
+    {
+      label: "Profissional",
+      value: "work"
+    },
+    {
+      label: "Acadêmica",
+      value: "academic"
+    }
+  ]
+
+  const handleOptionChange = (option) => {
+    setSelectedOption(option)
+  }
+
   return (
     <section className="container" id="experience" data-aos="fade-up">
       <h2 className="code">{experience_title}</h2>
 
       <div className="experiences-wrapper">
+
+        <Menu options={MENU_OPTIONS} handleOptionChange={handleOptionChange} />
+
         <ul 
           className="timeline" 
           ref={timelineRef}
@@ -60,7 +84,7 @@ export default function Experiences() {
           <span className="default-line"></span>
           <span className="draw-line" ref={drawLineRef}></span>
     
-          {experiences.map((experience, index) => (
+          {filteredExperiences.map((experience, index) => (
             <ExperienceDetails
               experience={experience}
               key={experience.id}

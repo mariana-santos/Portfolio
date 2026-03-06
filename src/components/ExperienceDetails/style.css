@@ -74,10 +74,12 @@
 
 .experiences-wrapper {
   display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
   margin: auto;
   max-width: 100%;
+  gap: 3rem;
 }
 
 .experiences-skills {

@@ -1,0 +1,40 @@
+.menu-holder {
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 10px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5px);
+  -webkit-backdrop-filter: blur(5px);
+  display: flex;
+}
+
+.menu-item {
+  background: transparent;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', sans-serif;
+  font-size: 1rem;
+  font-weight: 500;
+  margin: 0;
+  padding: .8rem 1rem;
+  transition: .3s;
+  color: var(--primary);
+}
+
+.menu-item:has(.menu-radio:checked) {
+  color: #fff;
+}
+
+.menu-radio {
+  display: none;
+}
+
+.active-menu-indicator {
+  position: absolute;
+  background: var(--primary);
+  width: 50%;
+  height: 100%;
+  z-index: -1;
+  border-radius: 10px;
+  transition: .3s;
+}
