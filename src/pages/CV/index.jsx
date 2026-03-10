@@ -6,7 +6,7 @@ import { BsFillPlayFill } from "react-icons/bs";
 import { FaLocationDot, FaGithub } from "react-icons/fa6";
 import { IoLogoWhatsapp, IoMdMail } from "react-icons/io";
 import { RiComputerFill } from "react-icons/ri";
-import Experience from "../../components/Experience";
+// import Experience from "../../components/Experience";
 
 import curriculo from "../../assets/curriculo-mariana.pdf";
 import resume from "../../assets/resume-mariana.pdf";
@@ -184,9 +184,9 @@ export default function CV() {
               </a>
             </h3>
 
-            {experiences.map((experience) => {
+            {/* {experiences.map((experience) => {
               return <Experience experience={experience} details />;
-            })}
+            })} */}
           </section>
 
           <section className="education">

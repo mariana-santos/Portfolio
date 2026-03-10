@@ -106,7 +106,6 @@ export const skills_pt = [
     icon: <img src={scrumLogo} alt="Logotipo da metodologia Scrum" />,
     summary: (
       <Fragment>
-
         <p>
           Scrum é uma metodologia ágil que valoriza a comunicação, a entrega contínua e a melhoria do processo de desenvolvimento.</p>
       </Fragment>

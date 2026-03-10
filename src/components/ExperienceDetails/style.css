@@ -1,0 +1,197 @@
+.timeline-content {
+  padding-bottom: 1em;
+}
+
+#experience .close{
+  margin-top: .5em;
+}
+
+.experience-profile {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  margin-bottom: 1.5rem;
+  padding-bottom: 1rem;
+  border-bottom: solid 1px var(--border-color);
+}
+
+.experience-profile img {
+  width: 60px;
+  border-radius: 50%;
+  aspect-ratio: 1;
+}
+
+.experience-title {
+  margin-bottom: .3rem;
+  font-size: 1.4rem;
+}
+
+.experience-subtitle {
+  display: flex;
+  gap: .5rem;
+}
+
+.experience-level::before {
+  content: "•";
+  color: var(--secondary);
+  margin-right: .5rem;
+}
+
+.experience-name, .experience-level {
+  font-size: 1.05rem;
+  font-weight: 300;
+  color: var(--text-secondary);
+}
+
+.column.timeline-content {
+  width: 1000px;
+  max-width: 100%;
+}
+
+.experience-headline {
+  display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.experience-headline svg {
+  margin-right: .5rem;
+  font-size: 1rem;
+  color: var(--secondary);
+}
+
+.profile-detail {
+  display: inline-flex;
+  align-items: center;
+  justify-content: flex-end;
+  font-size: .85rem;
+  gap: .5em;
+  color: var(--text-secondary);
+}
+
+.profile-detail svg {
+  color: var(--secondary);
+}
+
+.profile-detail.date {
+  margin-bottom: .5rem;
+}
+
+.headline-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.experiences-skills {
+  display: flex;
+  align-items: center;
+  font-size: 40px;
+  gap: 1rem;
+}
+
+.timeline-item:not(:last-of-type) {
+  margin-bottom: 3rem;
+}
+
+.experiences-skills img {
+  width: 35px;
+}
+
+.experiences-subtitle {
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: .5rem;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+}
+
+.experiences-subtitle svg {
+  color: var(--secondary);
+}
+
+.experience-details {
+  list-style: none;
+  padding: 0;
+  font-size: 1rem;
+}
+
+.experience-details li {
+  display: inline-flex;
+  gap: .4rem;
+}
+
+.experience-details li:not(:last-child) {
+  margin-bottom: 1rem;
+}
+
+.experience-details svg {
+  color: var(--secondary);
+  min-width: 1.5rem;
+  font-size: 1.3rem;
+  margin-top: .1rem;
+}
+
+@media screen and (max-width: 1000px) {
+  .experience-profile {
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    gap: 0;
+    border-bottom: none;
+    padding-bottom: 0;
+  }
+
+  .experience-profile img {
+    width: 50px;
+    height: 50px;
+  }
+
+  .experience-title {
+    font-size: 1.05rem;
+  }
+
+  .detail-extra {
+    display: none;
+  }
+
+  .experience-name, .experience-level {
+    font-size: .95rem;
+  }
+
+  .timeline-item span.profile-detail {
+    font-size: .7rem;
+    margin-bottom: 0;
+    justify-content: flex-start;
+  }
+
+  .profile-details {
+    display: flex;
+    justify-content: flex-start;
+    justify-self: flex-start;
+    gap: 1rem;
+  }
+
+  .experience-headline {
+    border-bottom: solid 1px var(--border-color);
+    margin-bottom: .5rem;
+    padding-bottom: .5rem;
+  }
+
+  .experience-details, .experience-summary {
+    font-size: .85rem;
+  }
+
+  .experiences-skills {
+    flex-wrap: wrap;
+  }
+
+  .experiences-skills {
+    font-size: 30px;
+  }
+
+  .experiences-skills img {
+    width: 25px;
+  }
+}

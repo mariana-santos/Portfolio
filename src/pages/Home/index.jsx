@@ -28,7 +28,7 @@ function App() {
 
       <Hero />
       <About />
-      <Experiences />
+      <Experiences setIsOpen={setIsOpen} setSelected={setSelected} />
       <Skills />
       <Projects setIsOpen={setIsOpen} setSelected={setSelected} />
     </Fragment>

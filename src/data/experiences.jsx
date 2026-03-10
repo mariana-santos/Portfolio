@@ -1,12 +1,21 @@
 import { getSkillByName } from '../utils/getSkillByName';
 import { v4 as uuid } from 'uuid';
 
+import outliant from '../assets/experiences/outliant.jpg';
+import choveu from '../assets/experiences/choveu.jpg';
+import ftd from '../assets/experiences/ftd.jpg';
+import fiap from '../assets/experiences/fiap.jpg';
+import etec from '../assets/experiences/etec.jpg';
+
 export const experiences_pt = [
   {
     id: uuid(),
-    title: "Desenvolvedora Front-end",
+    icon: <img src={outliant} alt="Outliant's logo" />,
+    title: "Desenvolvedora de Software Front-end",
     level: "Pleno",
-    location: "Outliant",
+    company: "Outliant",
+    location: "California, US",
+    workLocationType: "remoto",
     period: "12/2024 — presente",
     duration: "1 ano",
     type: "work",
@@ -29,9 +38,12 @@ export const experiences_pt = [
   },
   {
     id: uuid(),
+    icon: <img src={ftd} alt="FTD's logo" />,
     title: "Desenvolvedora Front-end",
     level: "Pleno",
-    location: "FTD Educação",
+    company: "FTD Educação",
+    location: "São Paulo, BR",
+    workLocationType: "remoto",
     period: "10/2023 — 06/2025",
     duration: "2 anos",
     type: "work",
@@ -55,9 +67,12 @@ export const experiences_pt = [
   },
   {
     id: uuid(),
+    icon: <img src={choveu} alt="Choveu's logo" />,
     title: "Desenvolvedora Front-end",
     level: "Júnior",
-    location: "Agência Choveu",
+    company: "Agência Choveu",
+    location: "São Paulo, BR",
+    workLocationType: "remoto",
     period: "03/2022 — 03/2024",
     duration: "2 anos",
     type: "work",
@@ -80,13 +95,16 @@ export const experiences_pt = [
   },
   {
     id: uuid(),
+    icon: <img src={fiap} alt="FIAP's logo" />,
     abbreviatedTitle: "ADS",
     title: "Análise e Desenvolvimento de Sistemas",
     level: "Graduação",
     type: "academic",
     period: "08/2022 — 08/2024",
     duration: "2 anos",
-    location: "FIAP",
+    school: "FIAP",
+    location: "São Paulo, BR",
+    workLocationType: "presencial",
     link: "https://www.fiap.com.br/",
     summary:
       "Durante minha graduação na FIAP, aprimorei minhas habilidades em desenvolvimento web, mobile, banco de dados e inteligência artificial. Além disso, tenho a chance de criar projetos práticos em parceria com empresas incríveis, como a B3 e a Level Group.",
@@ -107,12 +125,15 @@ export const experiences_pt = [
   },
   {
     id: uuid(),
+    icon: <img src={etec} alt="ETEC's logo" />,
     title: "Desenvolvimento de Sistemas",
     level: "Técnico",
     type: "academic",
     period: "02/2019 — 11/2021",
     duration: "3 anos",
-    location: "ETEC de Guaianazes",
+    school: "ETEC de Guaianazes",
+    location: "São Paulo, BR",
+    workLocationType: "presencial",
     link: "https://www.etecguaianazes.com.br/",
     summary:
       "Na ETEC eu descobri a programação como profissão. Durante os 3 anos que estive lá construí uma base sólida em lógica de programação e desenvolvimento. Também tive experiências incríveis como as maratonas de programação e visitas técnicas em empresas de grande porte.",
@@ -136,6 +157,8 @@ export const experiences_en = [
     ...experiences_pt[0],
     id: uuid(),
     title: "Frontend Software Engineer",
+    location: "California, US",
+    workLocationType: "remote",
     level: "Mid-level",
     period: "12/2024 — present",
     duration: "1 year",
@@ -152,6 +175,8 @@ export const experiences_en = [
     ...experiences_pt[1],
     id: uuid(),
     title: "Frontend Developer",
+    location: "São Paulo, BR",
+    workLocationType: "remote",
     level: "Mid-level",
     duration: "2 years",
     summary:
@@ -168,6 +193,8 @@ export const experiences_en = [
     ...experiences_pt[2],
     id: uuid(),
     title: "Frontend Developer",
+    location: "São Paulo, BR",
+    workLocationType: "remote",
     level: "Junior",
     duration: "2 years",
     summary:
@@ -183,6 +210,8 @@ export const experiences_en = [
     ...experiences_pt[3],
     id: uuid(),
     title: "Systems Analysis and Development",
+    location: "São Paulo, BR",
+    workLocationType: "on-site",
     level: "Bachelor's Degree",
     duration: "2 years",
     summary:
@@ -197,6 +226,8 @@ export const experiences_en = [
     ...experiences_pt[4],
     id: uuid(),
     title: "Systems Development",
+    location: "São Paulo, BR",
+    workLocationType: "on-site",
     level: "Technician",
     duration: "3 years",
     summary:
