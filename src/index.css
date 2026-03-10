@@ -49,7 +49,7 @@ body {
   font-family: 'Manrope', 'Roboto', 'Oxygen', 'Cantarell', sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
 }
 
 .container-all{

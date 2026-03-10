@@ -26,7 +26,18 @@
   font-size: 1.4rem;
 }
 
-.experience-name {
+.experience-subtitle {
+  display: flex;
+  gap: .5rem;
+}
+
+.experience-level::before {
+  content: "•";
+  color: var(--secondary);
+  margin-right: .5rem;
+}
+
+.experience-name, .experience-level {
   font-size: 1.05rem;
   font-weight: 300;
   color: var(--text-secondary);
@@ -70,16 +81,6 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-}
-
-.experiences-wrapper {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  margin: auto;
-  max-width: 100%;
-  gap: 3rem;
 }
 
 .experiences-skills {
@@ -155,7 +156,7 @@
     display: none;
   }
 
-  .experience-name {
+  .experience-name, .experience-level {
     font-size: .95rem;
   }
 
@@ -180,5 +181,17 @@
 
   .experience-details, .experience-summary {
     font-size: .85rem;
+  }
+
+  .experiences-skills {
+    flex-wrap: wrap;
+  }
+
+  .experiences-skills {
+    font-size: 30px;
+  }
+
+  .experiences-skills img {
+    width: 25px;
   }
 }

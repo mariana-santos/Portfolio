@@ -5,9 +5,6 @@ import { useEffect } from 'react';
 import { ConfigProvider } from './contexts/config';
 import { ModalProvider } from './contexts/modal';
 
-// import AOS from 'aos';
-// import 'aos/dist/aos.css';
-
 import gsap from "gsap";
 
 import { ScrollSmoother } from "gsap/ScrollSmoother";

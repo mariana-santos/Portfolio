@@ -11,7 +11,7 @@ export const experiences_pt = [
   {
     id: uuid(),
     icon: <img src={outliant} alt="Outliant's logo" />,
-    title: "Desenvolvedora Front-end",
+    title: "Desenvolvedora de Software Front-end",
     level: "Pleno",
     company: "Outliant",
     location: "California, US",

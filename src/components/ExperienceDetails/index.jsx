@@ -6,6 +6,7 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { BsBracesAsterisk, BsCalendarDate } from "react-icons/bs";
 import { GrLocationPin } from "react-icons/gr";
 import { FaCode } from "react-icons/fa6";
+import Tooltip from '../Tooltip';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,8 +24,11 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           <div className="experience-headline">
             {experience.icon}
             <div className="headline-column">
-              <h3 className="experience-title">{experience.level} {experience.title}</h3>
-              <span className="experience-name">{experience.company ?? experience.school}</span>
+              <h3 className="experience-title"> {experience.title}</h3>
+              <div className="experience-subtitle">
+                <span className="experience-name">{experience.company ?? experience.school}</span>
+                <span className="experience-level">{experience.level}</span>
+              </div>
             </div>
           </div>
 
@@ -62,7 +66,9 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
         </p>
 
         <div className='experiences-skills'>
-          {experience.skills.map(stack => stack.icon)}
+          {experience.skills.map(stack => 
+            <Tooltip trigger={stack.icon} content={stack.name} />)
+          }
         </div>
       </div>
     </li>

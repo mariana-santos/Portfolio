@@ -12,7 +12,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 export default function Experiences() {
   const { experience_title, experiences } = useStrings();
-  const [selectedOption, setSelectedOption] = useState("professional")
+  const [selectedOption, setSelectedOption] = useState("work")
 
   const timelineRef = useRef(null);
   const drawLineRef = useRef(null);
@@ -40,7 +40,7 @@ export default function Experiences() {
 
         ScrollTrigger.create({
           trigger: item,
-          start: "top center+=100",
+          start: "top center+=70",
           onEnter: () => item.classList.add("in-view"),
           onLeaveBack: () => item.classList.remove("in-view"),
         });

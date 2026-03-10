@@ -5,6 +5,8 @@
   backdrop-filter: blur(5px);
   -webkit-backdrop-filter: blur(5px);
   display: flex;
+  position: sticky;
+  top: 0;
 }
 
 .menu-item {
