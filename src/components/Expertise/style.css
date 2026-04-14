@@ -1,0 +1,65 @@
+#expertise {
+  display: flex;
+  flex-wrap: wrap;
+  column-gap: 3em;
+}
+
+#expertise h2 {
+  width: 100%;
+  margin-bottom: 1em;
+}
+
+.expertise-cards {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr 1.2fr 1fr;
+  grid-template-areas:
+    "dev-web dev-web test-quality arq-frontend"
+    "dev-mobile ux-ui ux-ui communication-collaboration";
+  grid-auto-rows: 1fr;
+  gap: 1.5rem;
+  align-content: center;
+  justify-content: center;
+}
+
+
+@media screen and (max-width: 1589px) {
+  .expertise-cards {
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+      "dev-web dev-web test-quality"
+      "arq-frontend ux-ui ux-ui"
+      "communication-collaboration communication-collaboration dev-mobile"
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .expertise-cards {
+    grid-template-columns: 1.2fr 0.8fr;
+    grid-template-areas:
+      "dev-web dev-web"
+      "test-quality arq-frontend"
+      "ux-ui ux-ui"
+      "communication-collaboration dev-mobile";
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .expertise-cards {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+      "dev-web"
+      "test-quality"
+      "arq-frontend"
+      "ux-ui"
+      "communication-collaboration"
+      "dev-mobile"
+    ;
+    align-items: start;
+    grid-auto-rows: unset;
+  }
+  
+  .skill-card {
+    align-self: start;
+    height: auto;
+  }
+}

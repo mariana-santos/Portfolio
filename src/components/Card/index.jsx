@@ -3,6 +3,7 @@ import "./style.css";
 import useStrings from "../../hooks/useStrings";
 import { useModal } from "../../contexts/modal";
 import ProjectDetails from "../ProjectDetails";
+import SkillsList from "../SkillsList";
 
 export default function Card({ project, size }) {
   
@@ -19,8 +20,6 @@ export default function Card({ project, size }) {
 
   const strings = useStrings();
 
-  const remainingSkills = project.skills.length - 3;
-
   return ( 
     <div className={`card size-${size ?? 'default'}`} onClick={handleClickCard}>
       <div className="wrap-img-card">
@@ -29,25 +28,9 @@ export default function Card({ project, size }) {
           alt={`Thumbnail do vídeo demonstrando o projeto ${project.title}`}
         />
       </div>
+
       {size !== 'small' && (
-        <div className="tags">
-          {project.skills.slice(0, 3).map((stack) => {
-            return (
-              <span className="tag" key={stack.id}>
-                {stack.icon ? (
-                  stack.icon
-                ) : (
-                  <img
-                    src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)}
-                    alt={`Logo de ${stack.name}`}
-                  />
-                )}
-                {stack.name}
-              </span>
-            );
-          })}
-          {remainingSkills > 0 && <span className="tag">+{remainingSkills}</span>}
-        </div>
+        <SkillsList skills={project.skills} style="badge" max={3} showTopBorder />
       )}
       
       <h3>{project.title}</h3>

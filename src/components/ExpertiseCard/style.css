@@ -1,0 +1,137 @@
+
+.expertise-card {
+  padding: 2rem;
+  padding-bottom: 0;
+  background: var(--bg-light-strong);
+  box-shadow: 0 10px 30px -15px rgba(0, 0, 0, 0.03);
+  border-radius: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 1.5rem;
+  transition: 0.3s;
+  overflow: hidden;
+  border: 2px solid rgba(0, 0, 0, 0.04);
+  position: relative;
+}
+
+.card-icon {
+  position: absolute;
+  right: -10px;
+  top: -10px;
+  font-size: 8rem;
+  opacity: 0.05;
+  transform: rotate(-15deg);
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.expertise-card.highlighted {
+  background: var(--subtle-gradient);
+  border: 2px solid var(--primary-transparency);
+  box-shadow: 0 20px 40px -10px rgba(168, 85, 247, 0.12);
+}
+
+.expertise-card.highlighted .card-icon {
+  visibility: visible;
+}
+
+.expertise-card.highlighted .expertise-card-title {
+  color: var(--primary-stronger);
+  font-size: 2.2rem;
+}
+
+.expertise-card.highlighted .impact-badges span {
+  color: var(--primary-stronger);
+}
+
+.expertise-card:hover {
+  background: var(--subtle-gradient);
+  border-color: var(--secondary);
+  transform: translateY(-5px);
+}
+
+.expertise-card:hover .card-icon {
+  visibility: visible;
+}
+
+
+.expertise-card-description p {
+  margin: 0 0 1rem 0;
+  font-size: 1.1rem;
+  line-height: 1.5;
+  font-weight: 400;
+  opacity: 0.8;
+  color: var(--text-secondary);
+}
+
+.expertise-card-description p:last-child {
+  margin-bottom: 0;
+}
+
+.expertise-card-title {
+  font-size: 1.6rem;
+  margin: 0;
+  font-weight: 700;
+  font-family: "Aleo", serif;
+  letter-spacing: -0.05em;
+  color: var(--text-primary);
+}
+
+.expertise-card:hover .expertise-card-title {
+  color: var(--primary-stronger);
+}
+
+.impact-badges {
+  margin-top: auto;
+  padding-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.impact-badges span {
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  display: flex;
+  align-items: center;
+  font-size: 0.75rem;
+  letter-spacing: 0.1em;
+  color: var(--text-secondary);
+  transition: color 0.3s;
+}
+
+.expertise-card:hover .impact-badges span {
+  color: var(--primary-stronger);
+}
+
+.impact-badges span::before {
+  content: "✦";
+  margin-right: 8px;
+  font-size: 0.7rem;
+}
+
+.expertise-card:hover .skills-list {
+  animation-play-state: paused;
+}
+
+
+@media screen and (max-width: 992px) {
+  .expertise-card {
+    padding: 1.2rem;
+    padding-bottom: 0;
+  }
+
+  .expertise-card-title {
+    font-size: 1.4rem;
+  }
+
+  .expertise-card.highlighted .expertise-card-title {
+    font-size: 1.8rem;
+  }
+
+  .expertise-card-description p {
+    font-size: 1rem;
+  }
+}

@@ -54,14 +54,6 @@
     font-size: .875rem;
 }
 
-.card .tags{
-    margin: 1em 0;
-}
-
-.card .tag{
-    padding: 5px 10px;
-}
-
 .card-footer{
     transition: .3s;
     overflow: hidden;
@@ -87,15 +79,7 @@
     color: var(--bg-light-strong);
 }
 
-.tag img {
-    width: 20px;
-}
-
 @media screen and (max-width: 768px) {
-    .card .tags .tag:nth-child(3){
-        display: none;
-    }
-
     .card .see-details{
         font-size: .9em;
     }
