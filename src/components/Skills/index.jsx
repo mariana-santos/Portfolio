@@ -1,9 +1,16 @@
-import { React } from "react";
-import Skill from "../Skill";
+import { 
+  HiOutlineChatBubbleLeftRight, 
+  HiOutlineDevicePhoneMobile, 
+  HiOutlineSquares2X2, 
+  HiOutlinePaintBrush, 
+  HiOutlineShieldCheck,
+  HiOutlineCodeBracket  
+} from "react-icons/hi2";
 
 import "./style.css";
 
 import useStrings from "../../hooks/useStrings";
+import SkillCard from "../SkillCard";
 
 export default function Skills() {
   const strings = useStrings();
@@ -22,6 +29,8 @@ export default function Skills() {
         "-40% no tempo de carregamento com otimizações de performance",
         "Milhares de usuários impactados",
       ],
+      Icon: HiOutlineCodeBracket,
+      highlighted: true,
     },
     {
       title: "Arquitetura",
@@ -34,6 +43,7 @@ export default function Skills() {
         "Bibliotecas UI reutilizáveis",
         "Redução de technical debt",
       ],
+      Icon: HiOutlineSquares2X2,
     },
     {
       title: "Mobile",
@@ -45,6 +55,7 @@ export default function Skills() {
         "Apps com alta performance",
         "Projetos responsivos e acessíveis",
       ],
+      Icon: HiOutlineDevicePhoneMobile,
     },
     {
       title: "Design UI/UX",
@@ -57,6 +68,7 @@ export default function Skills() {
         "Melhora na usabilidade e satisfação do usuário",
         "Projetos completos, do design à implementação",
       ],
+      Icon: HiOutlinePaintBrush,
     },
     {
       title: "Testes e Qualidade",
@@ -67,8 +79,9 @@ export default function Skills() {
       ],
       impact: [
         "Redução de bugs",
-        "Código de alta qualidade",
+        "Pixel perfect UI",
       ],
+      Icon: HiOutlineShieldCheck,
     },
     {
       title: "Comunicação",
@@ -81,6 +94,7 @@ export default function Skills() {
         "Comunicação eficaz",
         "Colaboração fluida entre equipes",
       ],
+      Icon: HiOutlineChatBubbleLeftRight,
     }
   ];
 
@@ -90,30 +104,7 @@ export default function Skills() {
 
       <div className="card-skills">
         {cards.map((card) => (
-          <div
-            className="skill-card"
-            key={card.key}
-            style={{ gridArea: card.key }}
-          >
-            <h3 className="skill-card-title">{card.title}</h3>
-            <div className="skill-card-description">
-              {card.description.map((desc, index) => (
-                <p key={index}>{desc}</p>
-              ))}
-            </div>
-            <div className="impact-badges">
-              {card.impact.map((impact, index) => (
-                <span key={index}>{impact}</span>
-              ))}
-            </div>
-            <div className="skills-icons">
-              {[...skills, ...skills].map((skill) => (
-                <span className="skill-tag" key={skill.name}>
-                  {skill.name}
-                </span>
-              ))}
-            </div>
-          </div>
+          <SkillCard key={card.key} card={card} skills={skills} />
         ))}
       </div>
 
