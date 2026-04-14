@@ -7,6 +7,7 @@ import { BsBracesAsterisk, BsCalendarDate } from "react-icons/bs";
 import { GrLocationPin } from "react-icons/gr";
 import { FaCode } from "react-icons/fa6";
 import Tooltip from '../Tooltip';
+import SkillsList from '../SkillsList';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -65,11 +66,7 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           Tecnologias
         </p>
 
-        <div className='experiences-skills'>
-          {experience.skills.map(stack => 
-            <Tooltip trigger={stack.icon} content={stack.name} />)
-          }
-        </div>
+        <SkillsList skills={experience.skills} style="icon" />
       </div>
     </li>
   )

@@ -10,9 +10,9 @@ import {
 import "./style.css";
 
 import useStrings from "../../hooks/useStrings";
-import SkillCard from "../SkillCard";
+import SkillCard from "../ExpertiseCard";
 
-export default function Skills() {
+export default function Expertise() {
   const strings = useStrings();
 
   const skills = strings.skills.filter((skill) => !skill.hide);
@@ -99,10 +99,10 @@ export default function Skills() {
   ];
 
   return (
-    <section className="container" id="skills" data-aos="fade-up">
+    <section className="container" id="expertise" data-aos="fade-up">
       <h2 className="code">{strings.skills_title}</h2>
 
-      <div className="card-skills">
+      <div className="expertise-cards">
         {cards.map((card) => (
           <SkillCard key={card.key} card={card} skills={skills} />
         ))}

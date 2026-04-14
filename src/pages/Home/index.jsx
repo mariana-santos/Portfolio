@@ -1,7 +1,7 @@
 import About from "../../components/About";
 import Hero from "../../components/Hero";
 import Experiences from "../../components/Experiences";
-import Skills from "../../components/Skills";
+import Expertise from "../../components/Expertise";
 import Modal from "../../components/Modal";
 import Projects from "../../components/Projects";
 
@@ -29,7 +29,7 @@ function App() {
       <Hero />
       <About />
       <Experiences setIsOpen={setIsOpen} setSelected={setSelected} />
-      <Skills />
+      <Expertise />
       <Projects setIsOpen={setIsOpen} setSelected={setSelected} />
     </Fragment>
   );

@@ -1,15 +1,15 @@
-#skills {
+#expertise {
   display: flex;
   flex-wrap: wrap;
   column-gap: 3em;
 }
 
-#skills h2 {
+#expertise h2 {
   width: 100%;
   margin-bottom: 1em;
 }
 
-.card-skills {
+.expertise-cards {
   display: grid;
   grid-template-columns: 1.2fr 0.8fr 1.2fr 1fr;
   grid-template-areas:
@@ -23,7 +23,7 @@
 
 
 @media screen and (max-width: 1589px) {
-  .card-skills {
+  .expertise-cards {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
       "dev-web dev-web test-quality"
@@ -33,7 +33,7 @@
 }
 
 @media screen and (max-width: 992px) {
-  .card-skills {
+  .expertise-cards {
     grid-template-columns: 1.2fr 0.8fr;
     grid-template-areas:
       "dev-web dev-web"
@@ -44,7 +44,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .card-skills {
+  .expertise-cards {
     grid-template-columns: 1fr;
     grid-template-areas:
       "dev-web"
