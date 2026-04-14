@@ -20,7 +20,7 @@ export default function ExpertiseCard({ card, skills }) {
         ))}
       </div>
 
-      <SkillsList skills={[...skills, ...skills]} style="badge" animate />
+      <SkillsList skills={[...skills, ...skills]} style="badge" animate showTopBorder />
 
       {<card.Icon className="card-icon" />}
     </div>

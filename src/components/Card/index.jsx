@@ -30,7 +30,7 @@ export default function Card({ project, size }) {
       </div>
 
       {size !== 'small' && (
-        <SkillsList skills={project.skills} style="badge" max={3} />
+        <SkillsList skills={project.skills} style="badge" max={3} showTopBorder />
       )}
       
       <h3>{project.title}</h3>
