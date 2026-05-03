@@ -1,23 +1,24 @@
 import "./style.css";
 import Card from "../Card";
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import makeAnimated from "react-select/animated";
 import ReactSelect from "react-select";
 import { useState, useEffect } from "react";
 
 import noresults from "../../assets/illustr-no-results.svg";
+import { skills } from "../../data/skills";
 
 export default function Projects({ setIsOpen, setSelected }) {
-  const strings = useStrings();
+  const { t } = useConfig();
 
-  const stacks = strings.skills.map((skill) => ({
+  const stacks = skills.map((skill) => ({
     value: skill.name,
     label: skill.name,
   }));
 
   const filterBy = [
-    { value: "relevant", label: strings.relevant },
-    { value: "all", label: strings.all },
+    { value: "relevant", label: t("relevant") },
+    { value: "all", label: t("all") },
   ];
 
   const [filterSelected, setFilterSelected] = useState([
@@ -34,11 +35,11 @@ export default function Projects({ setIsOpen, setSelected }) {
 
   function filterProjects() {
     if (filterSelected.length === 0) {
-      setFilteredProjects(strings.projects);
+      setFilteredProjects(t("projects"));
       return;
     }
 
-    let filtered = strings.projects.filter((project) => {
+    let filtered = t("projects").filter((project) => {
       const projectSkills = project.skills.map((skill) => skill.name);
       return filterSelected.some((selected) =>
         projectSkills.includes(selected.value)
@@ -54,14 +55,14 @@ export default function Projects({ setIsOpen, setSelected }) {
   }
 
   const [filteredProjects, setFilteredProjects] = useState(
-    strings.projects.slice()
+    t("projects").slice()
   );
 
   const animatedComponents = makeAnimated();
 
   const selectAllOption = {
     value: "<SELECT_ALL>",
-    label: strings.select_all,
+    label: t("select_all"),
   };
 
   const isSelectAllSelected = () => filterSelected.length === stacks.length;
@@ -103,11 +104,11 @@ export default function Projects({ setIsOpen, setSelected }) {
 
   return (
     <section className="container" id="projects">
-      <h2 className="code">{strings.projects_title}</h2>
+      <h2 className="code">{t("projects_title")}</h2>
 
       <div id="filter">
         {/* <div className="wrap-filter">
-          <label>{strings.filter_by}</label>
+          <label>{t("filter_by")}</label>
 
           <ReactSelect
             options={filterBy}
@@ -121,7 +122,7 @@ export default function Projects({ setIsOpen, setSelected }) {
         </div> */}
 
         {/* <div className="wrap-filter">
-          <label>{strings.filter_by}</label>
+          <label>{t("filter_by")}</label>
 
           <ReactSelect
             options={getOptions()}
@@ -132,14 +133,14 @@ export default function Projects({ setIsOpen, setSelected }) {
             className="select-skills"
             classNamePrefix="select"
             components={animatedComponents}
-            placeholder={strings.techs}
-            noOptionsMessage={() => strings.no_options}
+            placeholder={t("techs")}
+            noOptionsMessage={() => t("no_options")}
           />
         </div> */}
       </div>
 
       <div className="wrap-projects">
-        {strings.projects.map((project) => (
+        {t("projects").map((project) => (
           <Card
             setIsOpen={setIsOpen}
             project={project}
@@ -148,7 +149,7 @@ export default function Projects({ setIsOpen, setSelected }) {
           />))}
       </div>
 
-      <h2 className="code close">{strings.projects_title}</h2>
+      <h2 className="code close">{t("projects_title")}</h2>
     </section>
   );
 }

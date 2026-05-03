@@ -1,6 +1,6 @@
 import "./style.css";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import { useModal } from "../../contexts/modal";
 import ProjectDetails from "../ProjectDetails";
 import SkillsList from "../SkillsList";
@@ -18,7 +18,7 @@ export default function Card({ project, size }) {
     toggleModal();
   }
 
-  const strings = useStrings();
+  const { t } = useConfig();
 
   return ( 
     <div className={`card size-${size ?? 'default'}`} onClick={handleClickCard}>
@@ -37,7 +37,7 @@ export default function Card({ project, size }) {
       <p className="card-footer">
         <span className="subtitle">{project.subtitle}</span>
         <span className="see-details btn-secondary btn-line">
-          {strings.know_more}
+          {t("know_more")}
         </span>
       </p>
     </div>

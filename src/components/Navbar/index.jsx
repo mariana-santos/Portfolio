@@ -8,7 +8,6 @@ import { useConfig } from "../../contexts/config";
 import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
-import useStrings from "../../hooks/useStrings";
 import { HashLink } from "react-router-hash-link";
 
 import logo from "../../assets/logo.svg";
@@ -16,7 +15,7 @@ import logo from "../../assets/logo.svg";
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(null);
 
-  const { language, setLanguage, theme, setTheme } = useConfig();
+  const { language, setLanguage, theme, setTheme, t } = useConfig();
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -25,8 +24,6 @@ export default function Navbar() {
   useEffect(() => {
     localStorage.setItem("language", language);
   }, [language]);
-
-  const strings = useStrings();
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -111,27 +108,27 @@ export default function Navbar() {
             onClick={() => menuOpen && setMenuOpen(false)}
           >
             <li className="code autoclose">
-              <HashLink to="/#about">{strings.navbar.about}</HashLink>
+              <HashLink to="/#about">{t("navbar.about")}</HashLink>
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/#experience">{strings.navbar.experience}</HashLink>
+              <HashLink to="/#experience">{t("navbar.experience")}</HashLink>
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/#skills">{strings.navbar.skills}</HashLink>
+              <HashLink to="/#skills">{t("navbar.skills")}</HashLink>
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/#projects">{strings.navbar.projects}</HashLink>
+              <HashLink to="/#projects">{t("navbar.projects")}</HashLink>
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/contact">{strings.navbar.contact}</HashLink>
+              <HashLink to="/contact">{t("navbar.contact")}</HashLink>
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/resume">{strings.navbar.resume}</HashLink>
+              <HashLink to="/resume">{t("navbar.resume")}</HashLink>
             </li>
           </ul>
         </div>

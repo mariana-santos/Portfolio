@@ -4,12 +4,12 @@ import { AiOutlineGithub } from "react-icons/ai";
 import { BsFillPlayFill } from "react-icons/bs";
 import figmaLogo from "../../assets/skills-logos/figma.webp";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 
 import { Fragment, useState } from "react";
 
 export default function ProjectDetails({  project }) {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   return (
     <Fragment>
@@ -38,7 +38,7 @@ export default function ProjectDetails({  project }) {
 
         {project?.team && (
           <p className="involved">
-            <strong>{strings.other_involved}</strong>
+            <strong>{t("other_involved")}</strong>
             {project?.team?.map((member, index) => {
               return (
                 <span key={member.id}>
@@ -50,7 +50,7 @@ export default function ProjectDetails({  project }) {
                     <Fragment>{member.name}</Fragment>
                   )}
                   {index === project?.team.length - 2 ? (
-                    <Fragment> {strings.and} </Fragment>
+                    <Fragment> {t("and")} </Fragment>
                   ) : index !== project?.team.length - 1 ? (
                     <Fragment>, </Fragment>
                   ) : (
@@ -108,7 +108,7 @@ export default function ProjectDetails({  project }) {
               className="btn"
               rel="noreferrer"
             >
-              {strings.test}
+              {t("test")}
               <BsFillPlayFill />
             </a>
           )}

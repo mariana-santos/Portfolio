@@ -9,13 +9,15 @@ import {
 
 import "./style.css";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import SkillCard from "../ExpertiseCard";
 
-export default function Expertise() {
-  const strings = useStrings();
+import { skills } from "../../data/skills";
 
-  const skills = strings.skills.filter((skill) => !skill.hide);
+export default function Expertise() {
+  const { t } = useConfig();
+
+  const filteredSkills = skills.filter((skill) => !skill.hide);
 
   const cards = [
     {
@@ -100,15 +102,15 @@ export default function Expertise() {
 
   return (
     <section className="container" id="expertise" data-aos="fade-up">
-      <h2 className="code">{strings.skills_title}</h2>
+      <h2 className="code">{t("skills_title")}</h2>
 
       <div className="expertise-cards">
         {cards.map((card) => (
-          <SkillCard key={card.key} card={card} skills={skills} />
+          <SkillCard key={card.key} card={card} skills={filteredSkills} />
         ))}
       </div>
 
-      <h2 className="code close">{strings.skills_title}</h2>
+      <h2 className="code close">{t("skills_title")}</h2>
     </section>
   );
 }

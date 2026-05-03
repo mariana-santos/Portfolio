@@ -1,4 +1,4 @@
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import "./style.css";
 
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
@@ -14,24 +14,24 @@ import resume from "../../assets/resume-mariana.pdf";
 import { Fragment } from "react";
 
 export default function CV() {
-  const strings = useStrings();
+  const { t } = useConfig();
 
-  const experiences = strings.experiences.filter(
+  const experiences = t("experiences").filter(
     (experience) => experience.type === "work"
   );
-  const educations = strings.experiences.filter(
+  const educations = t("experiences").filter(
     (experience) => experience.type === "academic"
   );
-  const featured_project = strings.projects.find(
+  const featured_project = t("projects").find(
     (project) => project.title === "Investium"
   );
-  const languages = strings.skills.filter(
+  const languages = t("skills").filter(
     (language) => language.type === "language"
   );
-  const libs_frameworks = strings.skills.filter(
+  const libs_frameworks = t("skills").filter(
     (language) => language.type === "library" || language.type === "framework"
   );
-  const platforms_tools_others = strings.skills.filter(
+  const platforms_tools_others = t("skills").filter(
     (language) =>
       language.type === "platform" ||
       language.type === "tool" ||
@@ -43,14 +43,14 @@ export default function CV() {
       <div className="row row-btn">
         <a href={curriculo} download className="btn">
           {" "}
-          {strings.resume.download_portuguese}{" "}
+          {t("resume.download_portuguese")} 
         </a>
 
-        <span>{strings.resume.or}</span>
+        <span>{t("resume.or")}</span>
 
         <a href={resume} download className="btn">
           {" "}
-          {strings.resume.download_english}{" "}
+          {t("resume.download_english")} 
         </a>
       </div>
       <main id="page">
@@ -62,7 +62,7 @@ export default function CV() {
                 href="https://marianasantos.tech/contact"
                 target="_blank"
               >
-                {strings.resume.contact_title}
+                {t("resume.contact_title")}
               </a>
             </h3>
 
@@ -105,7 +105,7 @@ export default function CV() {
 
             <WithIcon
               icon={<FaLocationDot />}
-              label={strings.resume.location}
+              label={t("resume.location")}
             />
           </section>
 
@@ -122,15 +122,15 @@ export default function CV() {
 
             <DisplayList
               list={languages}
-              title={strings.resume.programming_languages}
+              title={t("resume.programming_languages")}
             />
             <DisplayList
               list={libs_frameworks}
-              title={strings.resume.libs_frameworks}
+              title={t("resume.libs_frameworks")}
             />
             <DisplayList
               list={platforms_tools_others}
-              title={strings.resume.tools_platf_others}
+              title={t("resume.tools_platf_others")}
             />
           </section>
           <section className="soft-skills border-bottom">
@@ -145,18 +145,18 @@ export default function CV() {
             </h3>
 
             <ul>
-              {strings.resume.soft_skills.map((item) => {
+              {t("resume.soft_skills").map((item) => {
                 return <li>{item}</li>;
               })}
             </ul>
           </section>
           <section className="languages border-bottom">
             <h3 className="btn-secondary btn-line">
-              {strings.resume.languages_title}
+              {t("resume.languages_title")}
             </h3>
 
             <ul>
-              {strings.resume.languages.map((item) => {
+              {t("resume.languages").map((item) => {
                 return (
                   <li>
                     {item.name} — {item.level}
@@ -169,8 +169,8 @@ export default function CV() {
         <div className="column main-information">
           <section className="border-bottom">
             <h1 className="gradient-text">Mariana Santos</h1>
-            <h2>{strings.title}</h2>
-            <p>{strings.subtitle} </p>
+            <h2>{t("title")}</h2>
+            <p>{t("subtitle")} </p>
           </section>
 
           <section className="border-bottom experience">
@@ -180,7 +180,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {strings.resume.experience_title}
+                {t("resume.experience_title")}
               </a>
             </h3>
 
@@ -196,7 +196,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {strings.resume.education_title}
+                {t("resume.education_title")}
               </a>
             </h3>
 
@@ -212,7 +212,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#projects"
                 target="_blank"
               >
-                {strings.resume.featured_project}
+                {t("resume.featured_project")}
               </a>
             </h3>
 
@@ -225,14 +225,14 @@ export default function CV() {
               target="_blank"
             >
               <AiOutlineGithub />
-              {strings.more_info}
+              {t("more_info")}
             </a>
             <a
               href={featured_project.deploy}
               className="btn btn-secondary"
               target="_blank"
             >
-              {strings.test}
+              {t("test")}
               <BsFillPlayFill />
             </a>
           </section>
@@ -261,7 +261,7 @@ function WithIcon({ icon, link, label }) {
 }
 
 function DisplayList({ list, title }) {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   return (
     <Fragment>
@@ -272,7 +272,7 @@ function DisplayList({ list, title }) {
             <Fragment>{item.name}</Fragment>
 
             {index === list.length - 2 ? (
-              <Fragment> {strings.and} </Fragment>
+              <Fragment> {t("and")} </Fragment>
             ) : index !== list.length - 1 ? (
               <Fragment>, </Fragment>
             ) : (

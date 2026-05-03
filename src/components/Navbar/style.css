@@ -96,7 +96,7 @@ header {
     background-color: var(--primary25);
 }
 
-h2.code {
+.code {
     font-size: 2.3em;
     margin-bottom: 1.5em;
     width: 100%;
@@ -313,7 +313,7 @@ h2.code {
         right: 5em;
     }
 
-    h2.code {
+    .code {
         font-size: 1.7em;
     }
 }
@@ -322,10 +322,9 @@ h2.code {
     .navbar ul {
         width: 100vw;
         left: 0;
-        /* gap: 15px; */
     }
 
-    h2.code {
+    .code {
         font-size: 1.4em;
         left: -1em;
     }

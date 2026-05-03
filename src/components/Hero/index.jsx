@@ -4,20 +4,20 @@ import pic from "../../assets/main-picture.jpg";
 
 import { React } from "react";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 
 export default function Hero() {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   return (
     <section className="container" id="hero">
       <div className="column text" data-aos="fade-up">
         <h1 className="gradient-text">
           <span className="light">Mariana Santos. </span> <br />
-          {strings.title}
+          {t("title")}
         </h1>
 
-        <div className="smaller">{strings.subtitle}</div>
+        <div className="smaller">{t("subtitle")}</div>
       </div>
 
       <div className="column wrapper-pic" data-aos="fade-down">
