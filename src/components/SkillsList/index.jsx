@@ -1,4 +1,5 @@
 import Tooltip from '../Tooltip';
+import SkillIcon from '../Icon';
 import './style.css';
 
 import { useConfig } from "../../contexts/config";
@@ -27,7 +28,11 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
       }
       {style === 'icon' &&
         visibleSkills.map((skill) => (
-          <Tooltip key={skill.id} trigger={skill.icon} content={t(skill.nameKey)} />
+          <Tooltip
+            key={skill.id}
+            trigger={<SkillIcon icon={skill.icon} />}
+            content={t(skill.nameKey)}
+          />
         ))
       }
       {hiddenCount > 0 && (

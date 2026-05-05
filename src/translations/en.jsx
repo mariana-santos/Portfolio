@@ -1,5 +1,5 @@
-import { experiences } from "../experiences";
-import { projects } from "../projects";
+import { experiences } from "../data/experiences";
+import { projects } from "../data/projects";
 import { Fragment } from "react";
 
 const experiencesContent = {
@@ -121,12 +121,32 @@ const projectsContent = {
       </Fragment>
     ),
     team: [
-      { id: 1, name: "David Almeida", link: "https://www.linkedin.com/in/almeida154" },
-      { id: 2, name: "Isabela Saori", link: "https://www.linkedin.com/in/isabela-saori-nakano-2137b119b" },
-      { id: 3, name: "Italo Cabral", link: "https://www.linkedin.com/in/bruno-italo-cabral" },
-      { id: 4, name: "Samuel Guerra", link: "https://www.linkedin.com/in/samuel-guerra-aquino" },
+      {
+        id: 1,
+        name: "David Almeida",
+        link: "https://www.linkedin.com/in/almeida154",
+      },
+      {
+        id: 2,
+        name: "Isabela Saori",
+        link: "https://www.linkedin.com/in/isabela-saori-nakano-2137b119b",
+      },
+      {
+        id: 3,
+        name: "Italo Cabral",
+        link: "https://www.linkedin.com/in/bruno-italo-cabral",
+      },
+      {
+        id: 4,
+        name: "Samuel Guerra",
+        link: "https://www.linkedin.com/in/samuel-guerra-aquino",
+      },
       { id: 5, name: "Phillip Anselmo" },
-      { id: 6, name: "Wallace Moura", link: "https://www.linkedin.com/in/wallace-moura-2b15811a3" },
+      {
+        id: 6,
+        name: "Wallace Moura",
+        link: "https://www.linkedin.com/in/wallace-moura-2b15811a3",
+      },
     ],
   },
   dzero: {
@@ -179,8 +199,8 @@ const projectsContent = {
         <p>
           With that in mind, <strong>Investium</strong> was created. A website
           for novice investors who don't have easy access to IPO information,
-          containing features such as IPO comparison and detailed graphics
-          about the companies financial information.
+          containing features such as IPO comparison and detailed graphics about
+          the companies financial information.
         </p>
       </Fragment>
     ),
@@ -218,8 +238,16 @@ const projectsContent = {
       </Fragment>
     ),
     team: [
-      { id: 1, name: "Kaue Caponero", link: "https://www.linkedin.com/in/kauecaponero/" },
-      { id: 2, name: "Bruna Menegatti", link: "https://www.linkedin.com/in/brunamvienna" },
+      {
+        id: 1,
+        name: "Kaue Caponero",
+        link: "https://www.linkedin.com/in/kauecaponero/",
+      },
+      {
+        id: 2,
+        name: "Bruna Menegatti",
+        link: "https://www.linkedin.com/in/brunamvienna",
+      },
     ],
   },
   "valorant-web": {
@@ -227,8 +255,8 @@ const projectsContent = {
     description: (
       <Fragment>
         <p>
-          The project was created in partnership with <strong>Alexandre</strong>,
-          who is a big fan of the game and invited me to help him utilize the{" "}
+          The project was created in partnership with <strong>Alexandre</strong>
+          , who is a big fan of the game and invited me to help him utilize the{" "}
           <a href="https://valorant-api.com/">Riot Games API</a> to create a web
           system with information about the game.
         </p>
@@ -240,7 +268,11 @@ const projectsContent = {
       </Fragment>
     ),
     team: [
-      { id: 1, name: "Alexandre Souza", link: "https://www.linkedin.com/in/alehsouza" },
+      {
+        id: 1,
+        name: "Alexandre Souza",
+        link: "https://www.linkedin.com/in/alehsouza",
+      },
     ],
   },
   "alura-studies": {
@@ -256,10 +288,11 @@ const projectsContent = {
           , a technology course platform.
         </p>
         <p>
-          Through this course, I learned more about the Typescript language,
-          CSS modules, React Hooks, and best practices such as
+          Through this course, I learned more about the Typescript language, CSS
+          modules, React Hooks, and best practices such as
           <strong>
-            {" "}DRY (Don't repeat yourself) and SRP (Single Responsibility
+            {" "}
+            DRY (Don't repeat yourself) and SRP (Single Responsibility
             Principle).
           </strong>
         </p>
@@ -279,9 +312,8 @@ const projectsContent = {
         <p>
           With that in mind, we created Solar, a website for
           <strong> renting solar-powered electric cars</strong>, aiming to
-          popularize electric vehicles, promote sustainability, optimize
-          traffic flow, preserve wildlife, and reduce the number of parked
-          cars.
+          popularize electric vehicles, promote sustainability, optimize traffic
+          flow, preserve wildlife, and reduce the number of parked cars.
         </p>
       </Fragment>
     ),
@@ -338,10 +370,26 @@ const projectsContent = {
       </Fragment>
     ),
     team: [
-      { id: 1, name: "David Almeida", link: "https://www.linkedin.com/in/almeida154" },
-      { id: 2, name: "Juliana Gonzales", link: "https://www.linkedin.com/in/julianagonzalesbispo" },
-      { id: 3, name: "Max Fernandes", link: "https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a" },
-      { id: 4, name: "Rafael Dibe", link: "https://www.linkedin.com/in/rafael-dibe-5aba5847" },
+      {
+        id: 1,
+        name: "David Almeida",
+        link: "https://www.linkedin.com/in/almeida154",
+      },
+      {
+        id: 2,
+        name: "Juliana Gonzales",
+        link: "https://www.linkedin.com/in/julianagonzalesbispo",
+      },
+      {
+        id: 3,
+        name: "Max Fernandes",
+        link: "https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a",
+      },
+      {
+        id: 4,
+        name: "Rafael Dibe",
+        link: "https://www.linkedin.com/in/rafael-dibe-5aba5847",
+      },
     ],
   },
 };
@@ -380,91 +428,113 @@ export const en = {
   skills: {
     javascript: {
       name: "Javascript",
-      summary: "Javascript is used for <strong> developing Web and Mobile applications</strong> using frameworks like React and Next JS."
+      summary:
+        "Javascript is used for <strong> developing Web and Mobile applications</strong> using frameworks like React and Next JS.",
     },
     typescript: {
       name: "Typescript",
-      summary: "Typescript is a superset of Javascript that adds static types. I use it to <strong>develop more robust and maintainable applications</strong>."
+      summary:
+        "Typescript is a superset of Javascript that adds static types. I use it to <strong>develop more robust and maintainable applications</strong>.",
     },
     react: {
       name: "React",
-      summary: "React is a Javascript library for building user interfaces. I use it to <strong>develop responsive and dynamic web applications</strong>."
+      summary:
+        "React is a Javascript library for building user interfaces. I use it to <strong>develop responsive and dynamic web applications</strong>.",
     },
     "react-native": {
       name: "React Native",
-      summary: "React Native is a framework for building native mobile applications using React. I use it to <strong>develop cross-platform mobile applications</strong>."
+      summary:
+        "React Native is a framework for building native mobile applications using React. I use it to <strong>develop cross-platform mobile applications</strong>.",
     },
     git: {
       name: "Git",
-      summary: "Git is a version control system that helps developers manage changes to their code. I use it to <strong>collaborate with other developers and keep track of my code changes</strong>."
+      summary:
+        "Git is a version control system that helps developers manage changes to their code. I use it to <strong>collaborate with other developers and keep track of my code changes</strong>.",
     },
     next: {
       name: "Next JS",
-      summary: "Next JS is a React framework that enables server-side rendering and static site generation. I use it to <strong>develop high-performance web applications with great SEO</strong>."
+      summary:
+        "Next JS is a React framework that enables server-side rendering and static site generation. I use it to <strong>develop high-performance web applications with great SEO</strong>.",
     },
     scrum: {
       name: "Scrum",
-      summary: "Scrum is an agile framework for managing projects. I use it to <strong>organize my work and collaborate effectively with my team</strong>."
+      summary:
+        "Scrum is an agile framework for managing projects. I use it to <strong>organize my work and collaborate effectively with my team</strong>.",
     },
     sql: {
       name: "SQL",
-      summary: "SQL is a language for managing and querying databases. I use it to <strong>interact with databases and manage data in my applications</strong>."
+      summary:
+        "SQL is a language for managing and querying databases. I use it to <strong>interact with databases and manage data in my applications</strong>.",
     },
     scss: {
       name: "SCSS",
-      summary: "SCSS is a CSS preprocessor that adds features like variables, nested rules, and mixins. I use it to <strong>write more maintainable and scalable stylesheets</strong>."
+      summary:
+        "SCSS is a CSS preprocessor that adds features like variables, nested rules, and mixins. I use it to <strong>write more maintainable and scalable stylesheets</strong>.",
     },
     wordpress: {
       name: "WordPress",
-      summary: "WordPress is a content management system (CMS) that allows you to create and manage websites easily. I use it to <strong>develop and maintain websites efficiently</strong>."
+      summary:
+        "WordPress is a content management system (CMS) that allows you to create and manage websites easily. I use it to <strong>develop and maintain websites efficiently</strong>.",
     },
     java: {
       name: "Java",
-      summary: "Java is a versatile programming language used for building various types of applications. I have experience using it to <strong>develop backend services and applications</strong>."
+      summary:
+        "Java is a versatile programming language used for building various types of applications. I have experience using it to <strong>develop backend services and applications</strong>.",
     },
     python: {
       name: "Python",
-      summary: "Python is a high-level programming language known for its readability and versatility. I use it to <strong>develop scripts, automate tasks, and build applications</strong>."
+      summary:
+        "Python is a high-level programming language known for its readability and versatility. I use it to <strong>develop scripts, automate tasks, and build applications</strong>.",
     },
     figma: {
       name: "Figma",
-      summary: "Figma is a collaborative design tool used for creating user interfaces and prototypes. I use it to <strong>collaborate with designers and create visually appealing interfaces</strong>."
+      summary:
+        "Figma is a collaborative design tool used for creating user interfaces and prototypes. I use it to <strong>collaborate with designers and create visually appealing interfaces</strong>.",
     },
-    'material-ui': {
+    "material-ui": {
       name: "Material UI",
-      summary: "Material UI is a popular React UI framework that implements Google's Material Design. I use it to <strong>build consistent and visually appealing user interfaces</strong>."
+      summary:
+        "Material UI is a popular React UI framework that implements Google's Material Design. I use it to <strong>build consistent and visually appealing user interfaces</strong>.",
     },
-    'radix-ui': {
+    "radix-ui": {
       name: "Radix UI",
-      summary: "Radix UI is a library of unstyled, accessible components for building high-quality design systems and web applications. I use it to <strong>create custom and accessible user interfaces</strong>."
+      summary:
+        "Radix UI is a library of unstyled, accessible components for building high-quality design systems and web applications. I use it to <strong>create custom and accessible user interfaces</strong>.",
     },
     bootstrap: {
       name: "Bootstrap",
-      summary: "Bootstrap is a popular CSS framework for building responsive and mobile-first websites. I use it to <strong>develop responsive web applications quickly and efficiently</strong>."
+      summary:
+        "Bootstrap is a popular CSS framework for building responsive and mobile-first websites. I use it to <strong>develop responsive web applications quickly and efficiently</strong>.",
     },
     tailwind: {
       name: "Tailwind CSS",
-      summary: "Tailwind CSS is a utility-first CSS framework that allows you to build custom designs without leaving your HTML. I use it to <strong>develop responsive and visually appealing web applications with ease</strong>."
+      summary:
+        "Tailwind CSS is a utility-first CSS framework that allows you to build custom designs without leaving your HTML. I use it to <strong>develop responsive and visually appealing web applications with ease</strong>.",
     },
     jquery: {
       name: "jQuery",
-      summary: "jQuery is a fast, small, and feature-rich JavaScript library. I have experience using it to <strong>simplify HTML document traversal and manipulation, event handling, and animation</strong>."
+      summary:
+        "jQuery is a fast, small, and feature-rich JavaScript library. I have experience using it to <strong>simplify HTML document traversal and manipulation, event handling, and animation</strong>.",
     },
-    'chakra-ui': {
+    "chakra-ui": {
       name: "Chakra UI",
-      summary: "Chakra UI is a simple, modular, and accessible component library for React. I use it to <strong>build accessible and responsive user interfaces quickly</strong>."
+      summary:
+        "Chakra UI is a simple, modular, and accessible component library for React. I use it to <strong>build accessible and responsive user interfaces quickly</strong>.",
     },
     node: {
       name: "Node.js",
-      summary: "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. I use it to <strong>develop server-side applications and APIs</strong>."
+      summary:
+        "Node.js is a JavaScript runtime built on Chrome's V8 JavaScript engine. I use it to <strong>develop server-side applications and APIs</strong>.",
     },
-    'styled-components': {
+    "styled-components": {
       name: "Styled Components",
-      summary: "Styled Components is a library for React and React Native that allows you to use component-level styles in your application. I use it to <strong>write CSS in JavaScript and create styled React components</strong>."
+      summary:
+        "Styled Components is a library for React and React Native that allows you to use component-level styles in your application. I use it to <strong>write CSS in JavaScript and create styled React components</strong>.",
     },
     webflow: {
       name: "Webflow",
-      summary: "Webflow is a web design tool, CMS, and hosting platform in one. I use it to <strong>design, build, and launch responsive websites visually</strong>."
+      summary:
+        "Webflow is a web design tool, CMS, and hosting platform in one. I use it to <strong>design, build, and launch responsive websites visually</strong>.",
     },
   },
 

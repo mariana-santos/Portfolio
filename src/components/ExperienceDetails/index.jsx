@@ -8,6 +8,7 @@ import { GrLocationPin } from "react-icons/gr";
 import { FaCode } from "react-icons/fa6";
 import Tooltip from '../Tooltip';
 import SkillsList from '../SkillsList';
+import Icon from '../Icon';
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -23,7 +24,7 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
       <div className="timeline-content column">
         <div className="experience-profile">
           <div className="experience-headline">
-            {experience.icon}
+            <Icon icon={experience.icon} />
             <div className="headline-column">
               <h3 className="experience-title"> {experience.title}</h3>
               <div className="experience-subtitle">
