@@ -20,6 +20,11 @@ export default function Card({ project, size }) {
 
   const { t } = useConfig();
 
+  const TRANSLATION_KEYS = {
+    title: project => `projects.${project.id}.title`,
+    subtitle: project => `projects.${project.id}.subtitle`,
+  }
+
   return ( 
     <div className={`card size-${size ?? 'default'}`} onClick={handleClickCard}>
       <div className="wrap-img-card">
@@ -35,7 +40,7 @@ export default function Card({ project, size }) {
       
       <h3>{project.title}</h3>
       <p className="card-footer">
-        <span className="subtitle">{project.subtitle}</span>
+        <span className="subtitle">{t(TRANSLATION_KEYS.subtitle(project))}</span>
         <span className="see-details btn-secondary btn-line">
           {t("know_more")}
         </span>

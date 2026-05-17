@@ -8,6 +8,8 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceDetails from "../ExperienceDetails";
 import Menu from "../Menu";
 
+import { experiences } from "../../data/experiences";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Experiences() {
@@ -50,7 +52,7 @@ export default function Experiences() {
     return () => ctx.revert();
   }, []);
 
-  const filteredExperiences = t("experiences").filter(
+  const filteredExperiences = experiences.filter(
     experience => experience.type === selectedOption
   )
 

@@ -10,7 +10,7 @@ import {
 import "./style.css";
 
 import { useConfig } from "../../contexts/config";
-import SkillCard from "../ExpertiseCard";
+import ExpertiseCard from "../ExpertiseCard";
 
 import { skills } from "../../data/skills";
 
@@ -106,7 +106,7 @@ export default function Expertise() {
 
       <div className="expertise-cards">
         {cards.map((card) => (
-          <SkillCard key={card.key} card={card} skills={filteredSkills} />
+          <ExpertiseCard key={card.key} card={card} skills={filteredSkills} />
         ))}
       </div>
 

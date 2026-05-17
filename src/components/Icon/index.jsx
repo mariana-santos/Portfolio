@@ -45,7 +45,7 @@ const iconLibraries = {
   },
 };
 
-export default function SkillIcon({ icon, size = 24 }) {
+export default function SkillIcon({ icon, size = 24, rounded = false }) {
   if (!icon) return null;
 
   if (icon.lib === "img") {
@@ -56,7 +56,7 @@ export default function SkillIcon({ icon, size = 24 }) {
         width={size}
         height={size}
         loading="lazy"
-        className="icon"
+        className={`icon ${rounded ? "rounded" : ""}`}
       />
     );
   }
@@ -67,5 +67,5 @@ export default function SkillIcon({ icon, size = 24 }) {
     return null;
   }
 
-  return <IconComponent color={icon.color} size={size} aria-hidden="true" />;
+  return <IconComponent color={icon.color} size={size} className={`icon ${rounded ? "rounded" : ""}`} aria-hidden="true" />;
 }

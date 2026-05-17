@@ -17,12 +17,17 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
     showTopBorder && 'show-top-border',   
   ].filter(Boolean).join(' ');
 
+  const TRANSLATION_KEYS = {
+    name: skill => `skills.${skill.id}.name`,
+    summary: skill => `skills.${skill.id}.summary`,
+  }
+
   return (
     <div className={className}>
       {style === 'badge' && 
         visibleSkills.map((skill) => (
           <span className="skill-badge" key={skill.id}>
-            {t(skill.nameKey)}
+            {t(TRANSLATION_KEYS.name(skill))}
           </span>
         ))
       }
@@ -31,7 +36,7 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
           <Tooltip
             key={skill.id}
             trigger={<SkillIcon icon={skill.icon} />}
-            content={t(skill.nameKey)}
+            content={t(TRANSLATION_KEYS.name(skill))}
           />
         ))
       }

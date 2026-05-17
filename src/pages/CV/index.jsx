@@ -12,26 +12,27 @@ import curriculo from "../../assets/curriculo-mariana.pdf";
 import resume from "../../assets/resume-mariana.pdf";
 
 import { Fragment } from "react";
+import { skills } from "../../data/skills";
 
 export default function CV() {
   const { t } = useConfig();
 
-  const experiences = t("experiences").filter(
+  const experiences = experiences.filter(
     (experience) => experience.type === "work"
   );
-  const educations = t("experiences").filter(
+  const educations = experiences.filter(
     (experience) => experience.type === "academic"
   );
-  const featured_project = t("projects").find(
+  const featured_project = projects.find(
     (project) => project.title === "Investium"
   );
-  const languages = t("skills").filter(
+  const languages = skills.filter(
     (language) => language.type === "language"
   );
-  const libs_frameworks = t("skills").filter(
+  const libs_frameworks = skills.filter(
     (language) => language.type === "library" || language.type === "framework"
   );
-  const platforms_tools_others = t("skills").filter(
+  const platforms_tools_others = skills.filter(
     (language) =>
       language.type === "platform" ||
       language.type === "tool" ||

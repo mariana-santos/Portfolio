@@ -29,6 +29,34 @@ export const projects = [
       getSkillById("figma"),
       getSkillById("node"),
     ],
+    team: [
+      {
+        id: 1,
+        name: "David Almeida",
+        link: "https://www.linkedin.com/in/almeida154",
+      },
+      {
+        id: 2,
+        name: "Isabela Saori",
+        link: "https://www.linkedin.com/in/isabela-saori-nakano-2137b119b",
+      },
+      {
+        id: 3,
+        name: "Italo Cabral",
+        link: "https://www.linkedin.com/in/bruno-italo-cabral",
+      },
+      {
+        id: 4,
+        name: "Samuel Guerra",
+        link: "https://www.linkedin.com/in/samuel-guerra-aquino",
+      },
+      { id: 5, name: "Phillip Anselmo" },
+      {
+        id: 6,
+        name: "Wallace Moura",
+        link: "https://www.linkedin.com/in/wallace-moura-2b15811a3",
+      },
+    ],
   },
   {
     id: "dzero",
@@ -41,10 +69,11 @@ export const projects = [
     skills: [
       getSkillById("react"),
       getSkillById("typescript"),
-      getSkillById("styled"),
+      getSkillById("styled-components"),
       getSkillById("figma"),
-      getSkillById("radix"),
+      getSkillById("radix-ui"),
     ],
+    team: [{ id: 1, name: "FTD's digital team" }],
   },
   {
     id: "investium",
@@ -64,6 +93,7 @@ export const projects = [
       getSkillById("sql"),
       getSkillById("git"),
     ],
+    team: [{ id: 1, name: "FIAP students" }],
   },
   {
     id: "raizes-solidarias",
@@ -80,6 +110,18 @@ export const projects = [
       getSkillById("javascript"),
       getSkillById("python"),
     ],
+    team: [
+      {
+        id: 1,
+        name: "Kaue Caponero",
+        link: "https://www.linkedin.com/in/kauecaponero/",
+      },
+      {
+        id: 2,
+        name: "Bruna Menegatti",
+        link: "https://www.linkedin.com/in/brunamvienna",
+      },
+    ],
   },
   {
     id: "valorant-web",
@@ -93,6 +135,13 @@ export const projects = [
       getSkillById("typescript"),
       getSkillById("chakra"),
       getSkillById("git"),
+    ],
+    team: [
+      {
+        id: 1,
+        name: "Alexandre Souza",
+        link: "https://www.linkedin.com/in/alehsouza",
+      },
     ],
   },
   {
@@ -121,6 +170,7 @@ export const projects = [
       getSkillById("figma"),
       getSkillById("git"),
     ],
+    team: [{ id: 1, name: "FIAP students" }],
   },
   {
     id: "nutri-tips",
@@ -149,6 +199,28 @@ export const projects = [
       getSkillById("figma"),
       getSkillById("react-native"),
       getSkillById("git"),
+    ],
+    team: [
+      {
+        id: 1,
+        name: "David Almeida",
+        link: "https://www.linkedin.com/in/almeida154",
+      },
+      {
+        id: 2,
+        name: "Juliana Gonzales",
+        link: "https://www.linkedin.com/in/julianagonzalesbispo",
+      },
+      {
+        id: 3,
+        name: "Max Fernandes",
+        link: "https://www.linkedin.com/in/max-fernandes-de-souza-18b12616a",
+      },
+      {
+        id: 4,
+        name: "Rafael Dibe",
+        link: "https://www.linkedin.com/in/rafael-dibe-5aba5847",
+      },
     ],
   },
 ];

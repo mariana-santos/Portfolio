@@ -7,6 +7,7 @@ import { useState, useEffect } from "react";
 
 import noresults from "../../assets/illustr-no-results.svg";
 import { skills } from "../../data/skills";
+import { projects } from "../../data/projects";
 
 export default function Projects({ setIsOpen, setSelected }) {
   const { t } = useConfig();
@@ -35,11 +36,11 @@ export default function Projects({ setIsOpen, setSelected }) {
 
   function filterProjects() {
     if (filterSelected.length === 0) {
-      setFilteredProjects(t("projects"));
+      setFilteredProjects(projects);
       return;
     }
 
-    let filtered = t("projects").filter((project) => {
+    let filtered = projects.filter((project) => {
       const projectSkills = project.skills.map((skill) => skill.name);
       return filterSelected.some((selected) =>
         projectSkills.includes(selected.value)
@@ -55,7 +56,7 @@ export default function Projects({ setIsOpen, setSelected }) {
   }
 
   const [filteredProjects, setFilteredProjects] = useState(
-    t("projects").slice()
+    projects.slice()
   );
 
   const animatedComponents = makeAnimated();
@@ -140,7 +141,7 @@ export default function Projects({ setIsOpen, setSelected }) {
       </div>
 
       <div className="wrap-projects">
-        {t("projects").map((project) => (
+        {projects.map((project) => (
           <Card
             setIsOpen={setIsOpen}
             project={project}
