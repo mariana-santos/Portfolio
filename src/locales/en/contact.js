@@ -13,5 +13,5 @@ export const contact = {
   "message-placeholder": "What do you have to say?",
   send: "Send",
 
-  "image-alt": "Mariana Santos coding during a Hackaton",
+  "image-alt": "Mariana Santos coding during a Hackathon",
 };

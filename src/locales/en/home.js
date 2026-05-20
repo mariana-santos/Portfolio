@@ -5,7 +5,7 @@ export const home = {
     "Passionate about creation and technology.<br/>Wide experience developing <strong>accessible and responsive web and mobile applications.</strong>",
 
   hero: {
-    "image-alt": "Mariana Santos coding during a Hackaton",
+    "image-alt": "Mariana Santos coding during a Hackathon",
   },
 
   about: {
