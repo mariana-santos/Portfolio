@@ -5,7 +5,7 @@ import './style.css';
 import { useConfig } from "../../contexts/config";
 import { keys } from "../../locales/keys";
 
-export default function SkillsList({ skills, style, animate, max, showTopBorder = false }) {
+export default function SkillsList({ skills, style, animate, max, keyPrefix = "default", showTopBorder = false }) {
   const { t } = useConfig();
   const showMax = typeof max === 'number' && max > 0 ? max : skills.length;
   const visibleSkills = skills.slice(0, showMax);
@@ -18,11 +18,17 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
     showTopBorder && 'show-top-border',
   ].filter(Boolean).join(' ');
 
+  const duplicatedSkills = [...visibleSkills, ...visibleSkills].map((skill, index) => (
+    { ...skill, customKey: `${keyPrefix}-${skill.id}-${index}` }
+  ));
+
+  const finalSkills = animate ? duplicatedSkills : visibleSkills;
+
   return (
     <div className={className}>
       {style === 'badge' &&
-        visibleSkills.map((skill) => (
-          <span className="skill-badge" key={skill.id}>
+        finalSkills.map((skill) => (
+          <span className="skill-badge" key={skill.customKey ?? `${keyPrefix}-${skill.id}`}>
             {t(keys.skill(skill.id).name)}
           </span>
         ))
@@ -30,7 +36,7 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
       {style === 'icon' &&
         visibleSkills.map((skill) => (
           <Tooltip
-            key={skill.id}
+            key={`${keyPrefix}-${skill.id}`}
             trigger={<SkillIcon icon={skill.icon} />}
             content={t(keys.skill(skill.id).name)}
           />

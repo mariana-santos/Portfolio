@@ -67,7 +67,7 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           <ul className="experience-details">
 
             {details.map((detail) =>
-              <li>
+              <li key={`${experience.id}-${detail}`}>
                 <BsBracesAsterisk />
                 {detail}
               </li>
@@ -80,7 +80,7 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           {t("experiences.technologies")}
         </p>
 
-        <SkillsList skills={experience.skills} style="icon" />
+        <SkillsList skills={experience.skills} style="icon" keyPrefix={experience.id} />
       </div>
     </li>
   )
