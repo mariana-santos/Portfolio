@@ -1,5 +1,5 @@
 import "./style.css";
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import { useEffect, useRef, useState } from "react";
 
 import gsap from "gsap";
@@ -8,10 +8,12 @@ import { ScrollTrigger } from "gsap/ScrollTrigger";
 import ExperienceDetails from "../ExperienceDetails";
 import Menu from "../Menu";
 
+import { experiences } from "../../data/experiences";
+
 gsap.registerPlugin(ScrollTrigger);
 
 export default function Experiences() {
-  const { experience_title, experiences } = useStrings();
+  const { t } = useConfig();
   const [selectedOption, setSelectedOption] = useState("work")
 
   const timelineRef = useRef(null);
@@ -56,11 +58,11 @@ export default function Experiences() {
 
   const MENU_OPTIONS = [
     {
-      label: "Profissional",
+      label: t("experiences.filter-work"),
       value: "work"
     },
     {
-      label: "Acadêmica",
+      label: t("experiences.filter-academic"),
       value: "academic"
     }
   ]
@@ -71,7 +73,7 @@ export default function Experiences() {
 
   return (
     <section className="container" id="experience" data-aos="fade-up">
-      <h2 className="code">{experience_title}</h2>
+      <h2 className="code">{t("experiences.title")}</h2>
 
       <div className="experiences-wrapper">
 
@@ -95,7 +97,7 @@ export default function Experiences() {
         </ul>
       </div>
 
-      <h2 className="code close">{experience_title}</h2>
+      <h2 className="code close">{t("experiences.title")}</h2>
     </section>
   );
 }

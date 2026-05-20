@@ -8,12 +8,22 @@ import { GrLocationPin } from "react-icons/gr";
 import { FaCode } from "react-icons/fa6";
 import Tooltip from '../Tooltip';
 import SkillsList from '../SkillsList';
+import Icon from '../Icon';
+import { useConfig } from '../../contexts/config';
+import { keys } from '../../locales/keys';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ExperienceDetails({ experience, itemsRef, index }) {
+  const { t } = useConfig();
+
+  const experienceKeys = keys.experience(experience.id);
+
+  const name = t(experienceKeys.company) ?? t(experienceKeys.school);
+  const details = t(experienceKeys.details);
+
   return (
-    <li 
+    <li
       className="timeline-item"
       key={experience.id}
       ref={(el) => {
@@ -23,12 +33,16 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
       <div className="timeline-content column">
         <div className="experience-profile">
           <div className="experience-headline">
-            {experience.icon}
+            <Icon
+              icon={{ ...experience.icon, alt: t(experienceKeys.logoAlt) }}
+              rounded
+              size={60}
+            />
             <div className="headline-column">
-              <h3 className="experience-title"> {experience.title}</h3>
+              <h3 className="experience-title">{t(experienceKeys.title)}</h3>
               <div className="experience-subtitle">
-                <span className="experience-name">{experience.company ?? experience.school}</span>
-                <span className="experience-level">{experience.level}</span>
+                <span className="experience-name">{name}</span>
+                <span className="experience-level">{t(experienceKeys.level)}</span>
               </div>
             </div>
           </div>
@@ -36,24 +50,24 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           <div className="profile-details">
             <span className="profile-detail date">
               <BsCalendarDate />
-              {experience.period} 
-              <span className="detail-extra">({experience.duration})</span>
+              {t(experienceKeys.period)}
+              <span className="detail-extra">({t(experienceKeys.duration)})</span>
             </span>
 
             <span className="profile-detail">
               <GrLocationPin />
-              {experience.location}
-              <span className="detail-extra">({experience.workLocationType})</span>
+              {t(experienceKeys.location)}
+              <span className="detail-extra">({t(experienceKeys.workLocationType)})</span>
             </span>
           </div>
         </div>
-        <p className="experience-summary">{experience.summary}</p>
+        <p className="experience-summary">{t(experienceKeys.summary)}</p>
 
-        {experience.details && 
+        {details &&
           <ul className="experience-details">
-            
-            {experience.details.map((detail) => 
-              <li>
+
+            {details.map((detail) =>
+              <li key={`${experience.id}-${detail}`}>
                 <BsBracesAsterisk />
                 {detail}
               </li>
@@ -63,10 +77,10 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
 
         <p className="experiences-subtitle">
           <FaCode />
-          Tecnologias
+          {t("experiences.technologies")}
         </p>
 
-        <SkillsList skills={experience.skills} style="icon" />
+        <SkillsList skills={experience.skills} style="icon" keyPrefix={experience.id} />
       </div>
     </li>
   )

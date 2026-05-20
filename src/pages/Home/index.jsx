@@ -7,15 +7,16 @@ import Projects from "../../components/Projects";
 
 import { Fragment } from "react";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 
 import { useState } from "react";
+import { projects } from "../../data/projects";
 
 function App() {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(strings.projects[0]);
+  const [selected, setSelected] = useState(projects[0]);
 
   return (
     <Fragment>

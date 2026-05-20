@@ -1,4 +1,4 @@
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 import "./style.css";
 
 import { AiOutlineGithub, AiFillLinkedin } from "react-icons/ai";
@@ -12,26 +12,27 @@ import curriculo from "../../assets/curriculo-mariana.pdf";
 import resume from "../../assets/resume-mariana.pdf";
 
 import { Fragment } from "react";
+import { skills } from "../../data/skills";
 
 export default function CV() {
-  const strings = useStrings();
+  const { t } = useConfig();
 
-  const experiences = strings.experiences.filter(
+  const experiences = experiences.filter(
     (experience) => experience.type === "work"
   );
-  const educations = strings.experiences.filter(
+  const educations = experiences.filter(
     (experience) => experience.type === "academic"
   );
-  const featured_project = strings.projects.find(
+  const featured_project = projects.find(
     (project) => project.title === "Investium"
   );
-  const languages = strings.skills.filter(
+  const languages = skills.filter(
     (language) => language.type === "language"
   );
-  const libs_frameworks = strings.skills.filter(
+  const libs_frameworks = skills.filter(
     (language) => language.type === "library" || language.type === "framework"
   );
-  const platforms_tools_others = strings.skills.filter(
+  const platforms_tools_others = skills.filter(
     (language) =>
       language.type === "platform" ||
       language.type === "tool" ||
@@ -43,14 +44,14 @@ export default function CV() {
       <div className="row row-btn">
         <a href={curriculo} download className="btn">
           {" "}
-          {strings.resume.download_portuguese}{" "}
+          {t("cv.download-portuguese")}
         </a>
 
-        <span>{strings.resume.or}</span>
+        <span>{t("cv.or")}</span>
 
         <a href={resume} download className="btn">
           {" "}
-          {strings.resume.download_english}{" "}
+          {t("cv.download-english")}
         </a>
       </div>
       <main id="page">
@@ -62,7 +63,7 @@ export default function CV() {
                 href="https://marianasantos.tech/contact"
                 target="_blank"
               >
-                {strings.resume.contact_title}
+                {t("cv.contact-title")}
               </a>
             </h3>
 
@@ -105,7 +106,7 @@ export default function CV() {
 
             <WithIcon
               icon={<FaLocationDot />}
-              label={strings.resume.location}
+              label={t("cv.location")}
             />
           </section>
 
@@ -116,21 +117,21 @@ export default function CV() {
                 href="https://marianasantos.tech/#skills"
                 target="_blank"
               >
-                Hard Skills
+                {t("cv.hard-skills-title")}
               </a>
             </h3>
 
             <DisplayList
               list={languages}
-              title={strings.resume.programming_languages}
+              title={t("cv.programming-languages")}
             />
             <DisplayList
               list={libs_frameworks}
-              title={strings.resume.libs_frameworks}
+              title={t("cv.libs-frameworks")}
             />
             <DisplayList
               list={platforms_tools_others}
-              title={strings.resume.tools_platf_others}
+              title={t("cv.tools-platf-others")}
             />
           </section>
           <section className="soft-skills border-bottom">
@@ -140,23 +141,23 @@ export default function CV() {
                 href="https://marianasantos.tech/#skills"
                 target="_blank"
               >
-                Soft Skills
+                {t("cv.soft-skills-title")}
               </a>
             </h3>
 
             <ul>
-              {strings.resume.soft_skills.map((item) => {
+              {t("cv.soft-skills").map((item) => {
                 return <li>{item}</li>;
               })}
             </ul>
           </section>
           <section className="languages border-bottom">
             <h3 className="btn-secondary btn-line">
-              {strings.resume.languages_title}
+              {t("cv.languages-title")}
             </h3>
 
             <ul>
-              {strings.resume.languages.map((item) => {
+              {t("cv.languages").map((item) => {
                 return (
                   <li>
                     {item.name} — {item.level}
@@ -168,9 +169,9 @@ export default function CV() {
         </div>
         <div className="column main-information">
           <section className="border-bottom">
-            <h1 className="gradient-text">Mariana Santos</h1>
-            <h2>{strings.title}</h2>
-            <p>{strings.subtitle} </p>
+            <h1 className="gradient-text">{t("home.name")}</h1>
+            <h2>{t("home.role-title")}</h2>
+            <p>{t("home.subtitle")} </p>
           </section>
 
           <section className="border-bottom experience">
@@ -180,7 +181,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {strings.resume.experience_title}
+                {t("cv.experience-title")}
               </a>
             </h3>
 
@@ -196,7 +197,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {strings.resume.education_title}
+                {t("cv.education-title")}
               </a>
             </h3>
 
@@ -212,7 +213,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#projects"
                 target="_blank"
               >
-                {strings.resume.featured_project}
+                {t("cv.featured-project")}
               </a>
             </h3>
 
@@ -225,14 +226,14 @@ export default function CV() {
               target="_blank"
             >
               <AiOutlineGithub />
-              {strings.more_info}
+              {t("projects.more-info")}
             </a>
             <a
               href={featured_project.deploy}
               className="btn btn-secondary"
               target="_blank"
             >
-              {strings.test}
+              {t("projects.test")}
               <BsFillPlayFill />
             </a>
           </section>
@@ -261,7 +262,7 @@ function WithIcon({ icon, link, label }) {
 }
 
 function DisplayList({ list, title }) {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   return (
     <Fragment>
@@ -272,7 +273,7 @@ function DisplayList({ list, title }) {
             <Fragment>{item.name}</Fragment>
 
             {index === list.length - 2 ? (
-              <Fragment> {strings.and} </Fragment>
+              <Fragment> {t("common.and")} </Fragment>
             ) : index !== list.length - 1 ? (
               <Fragment>, </Fragment>
             ) : (

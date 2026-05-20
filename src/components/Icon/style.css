@@ -1,0 +1,7 @@
+.icon {
+  object-fit: contain;
+}
+
+.icon.rounded {
+  border-radius: 50%;
+}

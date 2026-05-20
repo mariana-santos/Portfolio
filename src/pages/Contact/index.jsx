@@ -6,7 +6,7 @@ import { IoSend } from "react-icons/io5";
 
 import React, { useRef } from "react";
 
-import useStrings from "../../hooks/useStrings";
+import { useConfig } from "../../contexts/config";
 
 import emailjs from "@emailjs/browser";
 import { toast, ToastContainer } from "react-toastify";
@@ -17,7 +17,7 @@ import Loader from "../../components/Loader";
 import { useState } from "react";
 
 export default function Contact() {
-  const strings = useStrings();
+  const { t } = useConfig();
 
   const form = useRef();
 
@@ -38,12 +38,12 @@ export default function Contact() {
       .then(
         (result) => {
           if (result.text === "OK") setLoading(false);
-          toast.success(strings.contact_success);
+          toast.success(t("contact.success"));
           form.current.reset();
         },
         (error) => {
           setLoading(false);
-          toast.error(strings.contact_error);
+          toast.error(t("contact.error"));
         }
       );
   };
@@ -62,14 +62,14 @@ export default function Contact() {
         {loading && <Loader />}
 
         <form ref={form} onSubmit={sendEmail}>
-          <h1 className="gradient-text">{strings.contact_title}</h1>
-          <p>{strings.contact_subtitle}</p>
+          <h1 className="gradient-text">{t("contact.title")}</h1>
+          <p>{t("contact.subtitle")}</p>
 
           <label htmlFor="nome">
-            {strings.name_label} <span className="required">*</span>
+            {t("contact.name-label")} <span className="required">*</span>
             <input
               type="text"
-              placeholder={strings.name_placeholder}
+              placeholder={t("contact.name-placeholder")}
               id="nome"
               autoFocus
               name="nome"
@@ -77,11 +77,11 @@ export default function Contact() {
             />
           </label>
 
-          <label htmlFor="nome">
-            Email <span className="required">*</span>
+          <label htmlFor="email">
+            {t("contact.email-label")} <span className="required">*</span>
             <input
               type="email"
-              placeholder={strings.email_placeholder}
+              placeholder={t("contact.email-placeholder")}
               id="email"
               name="email"
               required
@@ -89,9 +89,9 @@ export default function Contact() {
           </label>
 
           <label htmlFor="mensagem">
-            {strings.message_label} <span className="required">*</span>
+            {t("contact.message-label")} <span className="required">*</span>
             <textarea
-              placeholder={strings.message_placeholder}
+              placeholder={t("contact.message-placeholder")}
               rows={3}
               id="mensagem"
               name="mensagem"
@@ -100,7 +100,7 @@ export default function Contact() {
           </label>
 
           <button className="btn">
-            {strings.send}
+            {t("contact.send")}
             <IoSend />
           </button>
         </form>
@@ -111,7 +111,7 @@ export default function Contact() {
           <div className="line-element" />
           <img
             src={pic}
-            alt="Imagem de Mariana Santos programando durante Hackaton"
+            alt={t("contact.image-alt")}
             id="main-pic"
           />
         </div>

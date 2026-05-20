@@ -1,42 +1,58 @@
-import {
-  createContext,
-  useContext,
-  useState,
-} from 'react';
+import { createContext, useContext, useState, useMemo } from "react";
+import { translations } from "../locales/index";
+import { getNestedValue } from "../utils/getNestedValue";
+import parse from "html-react-parser";
 
+const ConfigContext = createContext({
+  language: "pt",
+  setLanguage: () => {},
+  theme: "light",
+  setTheme: () => {},
+  t: (key) => key,
+});
 
-const ConfigContext = createContext({});
+export const ConfigProvider = ({ children }) => {
+  const [language, setLanguage] = useState(
+    localStorage.getItem("language") ?? "pt",
+  );
 
-const ConfigProvider = ({ children }) => {
+  const [theme, setTheme] = useState(localStorage.getItem("theme") ?? "light");
 
-  const defaultLanguage =  localStorage.getItem('language') ?? 'pt'
-  const defaultTheme =  localStorage.getItem('theme') ?? 'light'
+  const t = (key) => {
+    const value = getNestedValue(translations[language], key);
 
-  const [language, setLanguage] = useState(defaultLanguage)
-  const [theme, setTheme] = useState(defaultTheme)
+    if (value === undefined || value === null) {
+      console.warn(`Missing translation: ${key}`);
+      return;
+    }
+
+    if (typeof value === "string") {
+      return parse(value);
+    }
+
+    return value;
+  };
+
+  const value = useMemo(
+    () => ({
+      language,
+      setLanguage,
+      theme,
+      setTheme,
+      t,
+    }),
+    [language, theme],
+  );
 
   return (
-    <ConfigContext.Provider
-      value={{
-        language,
-        setLanguage,
-        theme,
-        setTheme
-      }}
-    >
-      {children}
-    </ConfigContext.Provider>
+    <ConfigContext.Provider value={value}>{children}</ConfigContext.Provider>
   );
-}
+};
 
-
-function useConfig() {
+export const useConfig = () => {
   const context = useContext(ConfigContext);
-
-  if (!context)
-    throw new Error('useConfig must be used within a ModalProvider');
-
+  if (!context || typeof context.t !== "function") {
+    throw new Error("useConfig must be used within ConfigProvider");
+  }
   return context;
-}
-
-export { ConfigProvider, useConfig };
+};
