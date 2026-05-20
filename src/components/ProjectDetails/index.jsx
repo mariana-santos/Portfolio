@@ -8,8 +8,9 @@ import { useConfig } from "../../contexts/config";
 import { keys } from "../../locales/keys";
 
 import { Fragment, useState } from "react";
+import SkillsList from "../SkillsList";
 
-export default function ProjectDetails({  project }) {
+export default function ProjectDetails({ project }) {
   const { t } = useConfig();
 
   const projectKeys = keys.project(project?.id);
@@ -18,24 +19,8 @@ export default function ProjectDetails({  project }) {
     <Fragment>
       <div className="column project-info">
         <p className="subtitle">{t(projectKeys.subtitle)}</p>
-
-        <div className="tags">
-          {project?.skills.map((stack) => {
-            return (
-              <span className="tag" key={stack.id}>
-                {stack.icon ? (
-                  stack.icon
-                ) : (
-                  <img
-                    src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)}
-                    alt={`${t("projects.tech-logo-alt")} ${stack.name}`}
-                  />
-                )}
-                {stack.name}
-              </span>
-            );
-          })}
-        </div>
+        
+        <SkillsList skills={project.skills} style="icon" keyPrefix={project.id} />
 
         <div>{t(projectKeys.description)}</div>
 
