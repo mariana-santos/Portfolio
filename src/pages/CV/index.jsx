@@ -44,14 +44,14 @@ export default function CV() {
       <div className="row row-btn">
         <a href={curriculo} download className="btn">
           {" "}
-          {t("resume.download_portuguese")} 
+          {t("cv.download-portuguese")}
         </a>
 
-        <span>{t("resume.or")}</span>
+        <span>{t("cv.or")}</span>
 
         <a href={resume} download className="btn">
           {" "}
-          {t("resume.download_english")} 
+          {t("cv.download-english")}
         </a>
       </div>
       <main id="page">
@@ -63,7 +63,7 @@ export default function CV() {
                 href="https://marianasantos.tech/contact"
                 target="_blank"
               >
-                {t("resume.contact_title")}
+                {t("cv.contact-title")}
               </a>
             </h3>
 
@@ -106,7 +106,7 @@ export default function CV() {
 
             <WithIcon
               icon={<FaLocationDot />}
-              label={t("resume.location")}
+              label={t("cv.location")}
             />
           </section>
 
@@ -117,21 +117,21 @@ export default function CV() {
                 href="https://marianasantos.tech/#skills"
                 target="_blank"
               >
-                Hard Skills
+                {t("cv.hard-skills-title")}
               </a>
             </h3>
 
             <DisplayList
               list={languages}
-              title={t("resume.programming_languages")}
+              title={t("cv.programming-languages")}
             />
             <DisplayList
               list={libs_frameworks}
-              title={t("resume.libs_frameworks")}
+              title={t("cv.libs-frameworks")}
             />
             <DisplayList
               list={platforms_tools_others}
-              title={t("resume.tools_platf_others")}
+              title={t("cv.tools-platf-others")}
             />
           </section>
           <section className="soft-skills border-bottom">
@@ -141,23 +141,23 @@ export default function CV() {
                 href="https://marianasantos.tech/#skills"
                 target="_blank"
               >
-                Soft Skills
+                {t("cv.soft-skills-title")}
               </a>
             </h3>
 
             <ul>
-              {t("resume.soft_skills").map((item) => {
+              {t("cv.soft-skills").map((item) => {
                 return <li>{item}</li>;
               })}
             </ul>
           </section>
           <section className="languages border-bottom">
             <h3 className="btn-secondary btn-line">
-              {t("resume.languages_title")}
+              {t("cv.languages-title")}
             </h3>
 
             <ul>
-              {t("resume.languages").map((item) => {
+              {t("cv.languages").map((item) => {
                 return (
                   <li>
                     {item.name} — {item.level}
@@ -169,9 +169,9 @@ export default function CV() {
         </div>
         <div className="column main-information">
           <section className="border-bottom">
-            <h1 className="gradient-text">Mariana Santos</h1>
-            <h2>{t("title")}</h2>
-            <p>{t("subtitle")} </p>
+            <h1 className="gradient-text">{t("home.name")}</h1>
+            <h2>{t("home.role-title")}</h2>
+            <p>{t("home.subtitle")} </p>
           </section>
 
           <section className="border-bottom experience">
@@ -181,7 +181,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {t("resume.experience_title")}
+                {t("cv.experience-title")}
               </a>
             </h3>
 
@@ -197,7 +197,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#experience"
                 target="_blank"
               >
-                {t("resume.education_title")}
+                {t("cv.education-title")}
               </a>
             </h3>
 
@@ -213,7 +213,7 @@ export default function CV() {
                 href="https://marianasantos.tech/#projects"
                 target="_blank"
               >
-                {t("resume.featured_project")}
+                {t("cv.featured-project")}
               </a>
             </h3>
 
@@ -226,14 +226,14 @@ export default function CV() {
               target="_blank"
             >
               <AiOutlineGithub />
-              {t("more_info")}
+              {t("projects.more-info")}
             </a>
             <a
               href={featured_project.deploy}
               className="btn btn-secondary"
               target="_blank"
             >
-              {t("test")}
+              {t("projects.test")}
               <BsFillPlayFill />
             </a>
           </section>
@@ -273,7 +273,7 @@ function DisplayList({ list, title }) {
             <Fragment>{item.name}</Fragment>
 
             {index === list.length - 2 ? (
-              <Fragment> {t("and")} </Fragment>
+              <Fragment> {t("common.and")} </Fragment>
             ) : index !== list.length - 1 ? (
               <Fragment>, </Fragment>
             ) : (

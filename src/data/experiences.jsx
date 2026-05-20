@@ -9,7 +9,7 @@ import etec from "../assets/experiences/etec.jpg";
 export const experiences = [
   {
     id: "outliant",
-    icon: { lib: "img", src: outliant, alt: "Outliant's logo" },
+    icon: { lib: "img", src: outliant },
     type: "work",
     link: "https://www.outliant.com/",
     skills: [
@@ -22,7 +22,7 @@ export const experiences = [
   },
   {
     id: "ftd",
-    icon: { lib: "img", src: ftd, alt: "FTD's logo" },
+    icon: { lib: "img", src: ftd },
     type: "work",
     link: "https://ftd.com.br/",
     skills: [
@@ -35,7 +35,7 @@ export const experiences = [
   },
   {
     id: "choveu",
-    icon: { lib: "img", src: choveu, alt: "Choveu's logo" },
+    icon: { lib: "img", src: choveu },
     type: "work",
     link: "https://choveu.com/",
     skills: [
@@ -48,7 +48,7 @@ export const experiences = [
   },
   {
     id: "fiap",
-    icon: { lib: "img", src: fiap, alt: "FIAP's logo" },
+    icon: { lib: "img", src: fiap },
     type: "academic",
     link: "https://www.fiap.com.br/",
     skills: [
@@ -62,7 +62,7 @@ export const experiences = [
   },
   {
     id: "etec",
-    icon: { lib: "img", src: etec, alt: "ETEC's logo" },
+    icon: { lib: "img", src: etec },
     type: "academic",
     link: "https://www.etecguaianazes.com.br/",
     skills: [

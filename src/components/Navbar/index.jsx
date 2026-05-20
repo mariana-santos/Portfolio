@@ -51,7 +51,7 @@ export default function Navbar() {
         <HashLink to="/#about" className="logo">
           <img
             src={logo}
-            alt="Logo do site: texto 'mari' envolvido por símbolos simulando uma tag HTML"
+            alt={t("navbar.logo-alt")}
           />
         </HashLink>
 
@@ -128,7 +128,7 @@ export default function Navbar() {
             </li>
 
             <li className="code autoclose">
-              <HashLink to="/resume">{t("navbar.resume")}</HashLink>
+              <HashLink to="/resume">{t("navbar.cv")}</HashLink>
             </li>
           </ul>
         </div>

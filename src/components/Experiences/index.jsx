@@ -58,11 +58,11 @@ export default function Experiences() {
 
   const MENU_OPTIONS = [
     {
-      label: "Profissional",
+      label: t("experiences.filter-work"),
       value: "work"
     },
     {
-      label: "Acadêmica",
+      label: t("experiences.filter-academic"),
       value: "academic"
     }
   ]
@@ -73,7 +73,7 @@ export default function Experiences() {
 
   return (
     <section className="container" id="experience" data-aos="fade-up">
-      <h2 className="code">{t("experience_title")}</h2>
+      <h2 className="code">{t("experiences.title")}</h2>
 
       <div className="experiences-wrapper">
 
@@ -97,7 +97,7 @@ export default function Experiences() {
         </ul>
       </div>
 
-      <h2 className="code close">{t("experience_title")}</h2>
+      <h2 className="code close">{t("experiences.title")}</h2>
     </section>
   );
 }

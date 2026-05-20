@@ -13,11 +13,11 @@ export default function Hero() {
     <section className="container" id="hero">
       <div className="column text" data-aos="fade-up">
         <h1 className="gradient-text">
-          <span className="light">Mariana Santos. </span> <br />
-          {t("title")}
+          <span className="light">{t("home.name")}. </span> <br />
+          {t("home.role-title")}
         </h1>
 
-        <div className="smaller">{t("subtitle")}</div>
+        <div className="smaller">{t("home.subtitle")}</div>
       </div>
 
       <div className="column wrapper-pic" data-aos="fade-down">
@@ -25,7 +25,7 @@ export default function Hero() {
           <div className="line-element" />
           <img
             src={pic}
-            alt="Imagem de Mariana Santos programando durante Hackaton"
+            alt={t("home.hero.image-alt")}
             id="main-pic"
           />
         </div>

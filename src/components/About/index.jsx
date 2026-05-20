@@ -9,19 +9,19 @@ export default function About() {
 
   return (
     <section className="container" id="about" data-aos="fade-up">
-      <h2 className="code">{t("journey_title")}</h2>
-      <div className="column text-about">{t("journey")}</div>
+      <h2 className="code">{t("home.about.title")}</h2>
+      <div className="column text-about">{t("home.about.body")}</div>
 
       <div className="column wrapper-pic" data-aos="fade-down">
         <div className="pic">
           <div className="line-element" />
           <img
             src={pic}
-            alt={t("about_image_alt")}
+            alt={t("home.about.image-alt")}
           />
         </div>
       </div>
-      <span className="code close">{t("journey_title")}</span>
+      <span className="code close">{t("home.about.title")}</span>
     </section>
   );
 }

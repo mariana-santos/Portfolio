@@ -5,16 +5,19 @@ import { BsFillPlayFill } from "react-icons/bs";
 import figmaLogo from "../../assets/skills-logos/figma.webp";
 
 import { useConfig } from "../../contexts/config";
+import { keys } from "../../locales/keys";
 
 import { Fragment, useState } from "react";
 
 export default function ProjectDetails({  project }) {
   const { t } = useConfig();
 
+  const projectKeys = keys.project(project?.id);
+
   return (
     <Fragment>
       <div className="column project-info">
-        <p className="subtitle">{project?.subtitle}</p>
+        <p className="subtitle">{t(projectKeys.subtitle)}</p>
 
         <div className="tags">
           {project?.skills.map((stack) => {
@@ -25,7 +28,7 @@ export default function ProjectDetails({  project }) {
                 ) : (
                   <img
                     src={require(`../../assets/skills-logos/${stack.name.toLowerCase()}.png`)}
-                    alt={`Logo da tecnologia ${stack.name}`}
+                    alt={`${t("projects.tech-logo-alt")} ${stack.name}`}
                   />
                 )}
                 {stack.name}
@@ -34,11 +37,11 @@ export default function ProjectDetails({  project }) {
           })}
         </div>
 
-        <div>{project?.description}</div>
+        <div>{t(projectKeys.description)}</div>
 
         {project?.team && (
           <p className="involved">
-            <strong>{t("other_involved")}</strong>
+            <strong>{t("projects.other-involved")}</strong>
             {project?.team?.map((member, index) => {
               return (
                 <span key={member.id}>
@@ -50,7 +53,7 @@ export default function ProjectDetails({  project }) {
                     <Fragment>{member.name}</Fragment>
                   )}
                   {index === project?.team.length - 2 ? (
-                    <Fragment> {t("and")} </Fragment>
+                    <Fragment> {t("common.and")} </Fragment>
                   ) : index !== project?.team.length - 1 ? (
                     <Fragment>, </Fragment>
                   ) : (
@@ -71,7 +74,7 @@ export default function ProjectDetails({  project }) {
             <img
               className="img-project"
               src={project?.image}
-              alt={`Imagem do projeto ${project.title}`}
+              alt={`${t("projects.image-alt")} ${project.title}`}
             />
           )
         )}
@@ -97,7 +100,7 @@ export default function ProjectDetails({  project }) {
               rel="noreferrer"
             >
               Figma
-              <img src={figmaLogo} alt='Figma logo' className='figma-icon' />
+              <img src={figmaLogo} alt={t("projects.figma-logo-alt")} className='figma-icon' />
             </a>
           )}
 
@@ -108,7 +111,7 @@ export default function ProjectDetails({  project }) {
               className="btn"
               rel="noreferrer"
             >
-              {t("test")}
+              {t("projects.test")}
               <BsFillPlayFill />
             </a>
           )}
@@ -119,6 +122,7 @@ export default function ProjectDetails({  project }) {
 }
 
 function Iframe({ project }) {
+  const { t } = useConfig();
   const [clicked, setClicked] = useState(false);
 
   return (
@@ -128,7 +132,7 @@ function Iframe({ project }) {
           src={`https://www.youtube.com/embed/${project?.video_id}${
             project?.params ? project?.params : "?autoplay=1"
           }`}
-          title="YouTube video player"
+          title={t("common.video-player-title")}
           autoplay
           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
           allowFullScreen
@@ -138,7 +142,7 @@ function Iframe({ project }) {
           <img
             className="img-project"
             src={project?.image}
-            alt={`Imagem do projeto ${project?.title}`}
+            alt={`${t("projects.image-alt")} ${project?.title}`}
           />
 
           <div className="wrap-play-icon">

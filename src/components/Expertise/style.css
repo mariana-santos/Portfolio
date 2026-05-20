@@ -13,7 +13,7 @@
   display: grid;
   grid-template-columns: 1.2fr 0.8fr 1.2fr 1fr;
   grid-template-areas:
-    "dev-web dev-web test-quality arq-frontend"
+    "dev-web dev-web arq-frontend test-quality"
     "dev-mobile ux-ui ux-ui communication-collaboration";
   grid-auto-rows: 1fr;
   gap: 1.5rem;
@@ -26,8 +26,8 @@
   .expertise-cards {
     grid-template-columns: 1fr 1fr 1fr;
     grid-template-areas:
-      "dev-web dev-web test-quality"
-      "arq-frontend ux-ui ux-ui"
+      "dev-web dev-web arq-frontend"
+      "test-quality ux-ui ux-ui"
       "communication-collaboration communication-collaboration dev-mobile"
   }
 }

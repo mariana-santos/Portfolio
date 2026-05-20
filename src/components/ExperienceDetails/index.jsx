@@ -10,29 +10,20 @@ import Tooltip from '../Tooltip';
 import SkillsList from '../SkillsList';
 import Icon from '../Icon';
 import { useConfig } from '../../contexts/config';
+import { keys } from '../../locales/keys';
 
 gsap.registerPlugin(ScrollTrigger);
 
 export default function ExperienceDetails({ experience, itemsRef, index }) {
   const { t } = useConfig();
 
-  const TRANSLATION_KEYS = {
-    title: experience => `experiences.${experience.id}.title`,
-    level: experience => `experiences.${experience.id}.level`,
-    summary: experience => `experiences.${experience.id}.summary`,
-    company: experience => `experiences.${experience.id}.company`,
-    school: experience => `experiences.${experience.id}.school`,
-    period: experience => `experiences.${experience.id}.period`,
-    location: experience => `experiences.${experience.id}.location`,
-    workLocationType: experience => `experiences.${experience.id}.workLocationType`,
-    duration: experience => `experiences.${experience.id}.duration`,
-    details: experience => `experiences.${experience.id}.details`,
-  }
+  const experienceKeys = keys.experience(experience.id);
 
-  const name = t(TRANSLATION_KEYS.company(experience)) ?? t(TRANSLATION_KEYS.school(experience));
+  const name = t(experienceKeys.company) ?? t(experienceKeys.school);
+  const details = t(experienceKeys.details);
 
   return (
-    <li 
+    <li
       className="timeline-item"
       key={experience.id}
       ref={(el) => {
@@ -42,12 +33,16 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
       <div className="timeline-content column">
         <div className="experience-profile">
           <div className="experience-headline">
-            <Icon icon={experience.icon} rounded size={60} />
+            <Icon
+              icon={{ ...experience.icon, alt: t(experienceKeys.logoAlt) }}
+              rounded
+              size={60}
+            />
             <div className="headline-column">
-              <h3 className="experience-title">{t(TRANSLATION_KEYS.title(experience))}</h3>
+              <h3 className="experience-title">{t(experienceKeys.title)}</h3>
               <div className="experience-subtitle">
                 <span className="experience-name">{name}</span>
-                <span className="experience-level">{t(TRANSLATION_KEYS.level(experience))}</span>
+                <span className="experience-level">{t(experienceKeys.level)}</span>
               </div>
             </div>
           </div>
@@ -55,23 +50,23 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
           <div className="profile-details">
             <span className="profile-detail date">
               <BsCalendarDate />
-              {t(TRANSLATION_KEYS.period(experience))} 
-              <span className="detail-extra">({t(TRANSLATION_KEYS.duration(experience))})</span>
+              {t(experienceKeys.period)}
+              <span className="detail-extra">({t(experienceKeys.duration)})</span>
             </span>
 
             <span className="profile-detail">
               <GrLocationPin />
-              {t(TRANSLATION_KEYS.location(experience))}
-              <span className="detail-extra">({t(TRANSLATION_KEYS.workLocationType(experience))})</span>
+              {t(experienceKeys.location)}
+              <span className="detail-extra">({t(experienceKeys.workLocationType)})</span>
             </span>
           </div>
         </div>
-        <p className="experience-summary">{t(TRANSLATION_KEYS.summary(experience))}</p>
+        <p className="experience-summary">{t(experienceKeys.summary)}</p>
 
-        {t(TRANSLATION_KEYS.details(experience)) && 
+        {details &&
           <ul className="experience-details">
-            
-            {t(TRANSLATION_KEYS.details(experience)).map((detail) => 
+
+            {details.map((detail) =>
               <li>
                 <BsBracesAsterisk />
                 {detail}
@@ -82,7 +77,7 @@ export default function ExperienceDetails({ experience, itemsRef, index }) {
 
         <p className="experiences-subtitle">
           <FaCode />
-          {t("technologies")}
+          {t("experiences.technologies")}
         </p>
 
         <SkillsList skills={experience.skills} style="icon" />

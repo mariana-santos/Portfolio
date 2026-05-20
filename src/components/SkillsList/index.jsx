@@ -3,6 +3,7 @@ import SkillIcon from '../Icon';
 import './style.css';
 
 import { useConfig } from "../../contexts/config";
+import { keys } from "../../locales/keys";
 
 export default function SkillsList({ skills, style, animate, max, showTopBorder = false }) {
   const { t } = useConfig();
@@ -14,20 +15,15 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
     'skills-list',
     style,
     animate && 'animate',
-    showTopBorder && 'show-top-border',   
+    showTopBorder && 'show-top-border',
   ].filter(Boolean).join(' ');
-
-  const TRANSLATION_KEYS = {
-    name: skill => `skills.${skill.id}.name`,
-    summary: skill => `skills.${skill.id}.summary`,
-  }
 
   return (
     <div className={className}>
-      {style === 'badge' && 
+      {style === 'badge' &&
         visibleSkills.map((skill) => (
           <span className="skill-badge" key={skill.id}>
-            {t(TRANSLATION_KEYS.name(skill))}
+            {t(keys.skill(skill.id).name)}
           </span>
         ))
       }
@@ -36,7 +32,7 @@ export default function SkillsList({ skills, style, animate, max, showTopBorder 
           <Tooltip
             key={skill.id}
             trigger={<SkillIcon icon={skill.icon} />}
-            content={t(TRANSLATION_KEYS.name(skill))}
+            content={t(keys.skill(skill.id).name)}
           />
         ))
       }

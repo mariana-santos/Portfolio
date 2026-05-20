@@ -18,8 +18,8 @@ export default function Projects({ setIsOpen, setSelected }) {
   }));
 
   const filterBy = [
-    { value: "relevant", label: t("relevant") },
-    { value: "all", label: t("all") },
+    { value: "relevant", label: t("projects.relevant") },
+    { value: "all", label: t("projects.all") },
   ];
 
   const [filterSelected, setFilterSelected] = useState([
@@ -63,7 +63,7 @@ export default function Projects({ setIsOpen, setSelected }) {
 
   const selectAllOption = {
     value: "<SELECT_ALL>",
-    label: t("select_all"),
+    label: t("projects.select-all"),
   };
 
   const isSelectAllSelected = () => filterSelected.length === stacks.length;
@@ -105,11 +105,11 @@ export default function Projects({ setIsOpen, setSelected }) {
 
   return (
     <section className="container" id="projects">
-      <h2 className="code">{t("projects_title")}</h2>
+      <h2 className="code">{t("projects.title")}</h2>
 
       <div id="filter">
         {/* <div className="wrap-filter">
-          <label>{t("filter_by")}</label>
+          <label>{t("projects.filter-by")}</label>
 
           <ReactSelect
             options={filterBy}
@@ -123,7 +123,7 @@ export default function Projects({ setIsOpen, setSelected }) {
         </div> */}
 
         {/* <div className="wrap-filter">
-          <label>{t("filter_by")}</label>
+          <label>{t("projects.filter-by")}</label>
 
           <ReactSelect
             options={getOptions()}
@@ -134,8 +134,8 @@ export default function Projects({ setIsOpen, setSelected }) {
             className="select-skills"
             classNamePrefix="select"
             components={animatedComponents}
-            placeholder={t("techs")}
-            noOptionsMessage={() => t("no_options")}
+            placeholder={t("projects.techs")}
+            noOptionsMessage={() => t("projects.no-options")}
           />
         </div> */}
       </div>
@@ -150,7 +150,7 @@ export default function Projects({ setIsOpen, setSelected }) {
           />))}
       </div>
 
-      <h2 className="code close">{t("projects_title")}</h2>
+      <h2 className="code close">{t("projects.title")}</h2>
     </section>
   );
 }

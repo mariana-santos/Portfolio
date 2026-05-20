@@ -10,12 +10,13 @@ import { Fragment } from "react";
 import { useConfig } from "../../contexts/config";
 
 import { useState } from "react";
+import { projects } from "../../data/projects";
 
 function App() {
   const { t } = useConfig();
 
   const [modalIsOpen, setIsOpen] = useState(false);
-  const [selected, setSelected] = useState(t("projects")[0]);
+  const [selected, setSelected] = useState(projects[0]);
 
   return (
     <Fragment>

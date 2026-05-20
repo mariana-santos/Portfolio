@@ -1,6 +1,6 @@
 import { createContext, useContext, useState, useMemo } from "react";
-import { translations } from "../translations";
-import { getNestedValue } from "../utils/t";
+import { translations } from "../locales/index";
+import { getNestedValue } from "../utils/getNestedValue";
 import parse from "html-react-parser";
 
 const ConfigContext = createContext({
