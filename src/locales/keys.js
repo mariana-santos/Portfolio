@@ -30,4 +30,10 @@ const expertise = (key) => ({
   impact: `expertise.list.${key}.impact`,
 });
 
-export const keys = { experience, skill, project, expertise };
+const milestone = (id) => ({
+  tag: `home.about.milestones.${id}.tag`,
+  title: `home.about.milestones.${id}.title`,
+  description: `home.about.milestones.${id}.description`,
+});
+
+export const keys = { experience, skill, project, expertise, milestone };

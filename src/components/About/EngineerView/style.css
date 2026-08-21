@@ -1,0 +1,51 @@
+.milestones-intro {
+  font-family: Aleo, serif;
+  font-size: 1.2rem;
+  max-width: 40em;
+  margin-bottom: 1rem;
+}
+
+.milestones {
+  margin: 3rem 0 0 3rem;
+}
+
+.milestones .timeline-item::before {
+  font-size: 2rem;
+}
+
+.milestones-container {
+  display: flex;
+}
+
+.milestone-content {
+  display: flex;
+  flex-direction: column;
+  gap: .4rem;
+}
+
+.milestone-tag {
+  font-size: .7rem;
+  font-weight: 600;
+  color: var(--primary);
+  text-transform: uppercase;
+  letter-spacing: .08em;
+}
+
+.milestone-title {
+  margin: 0;
+  font-size: 1.1rem;
+}
+
+.milestone-description {
+  margin: 0;
+  color: var(--text-secondary);
+  font-size: .95rem;
+}
+
+.milestones .wrapper-pic {
+  width: 100%;
+}
+
+.timeline-item::before {
+  opacity: .6;
+}
