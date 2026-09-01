@@ -5,8 +5,9 @@
   margin-bottom: 1rem;
 }
 
-.milestones {
+.timeline.milestones {
   margin: 3rem 0 0 3rem;
+  max-width: 800px;
 }
 
 .milestones .timeline-item::before {
@@ -15,12 +16,30 @@
 
 .milestones-container {
   display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
 }
 
 .milestone-content {
   display: flex;
   flex-direction: column;
   gap: .4rem;
+  cursor: pointer;
+  padding: .6rem .9rem;
+  margin: -.6rem 0 -.6rem -.9rem;
+  border-radius: .6rem;
+  outline: none;
+  transition: background-color .3s ease;
+}
+
+.milestone-content:hover,
+.milestone-content:focus-visible,
+.milestone-content.active {
+  background-color: var(--tag-color);
+}
+
+.milestone-content.active .milestone-title {
+  color: var(--primary);
 }
 
 .milestone-tag {
@@ -33,7 +52,9 @@
 
 .milestone-title {
   margin: 0;
-  font-size: 1.1rem;
+  font-size: 1.4rem;
+  font-family: Aleo, serif;
+  transition: color .3s ease;
 }
 
 .milestone-description {
@@ -46,6 +67,121 @@
   width: 100%;
 }
 
-.timeline-item::before {
+.engineer-view .timeline-item::before {
   opacity: .6;
+  transition: opacity .3s ease, color .3s ease;
+}
+
+.engineer-view .timeline-item:has(.milestone-content.active)::before {
+  opacity: 1;
+  color: var(--primary);
+}
+
+.engineer-view .timeline-item {
+  padding-left: 6rem;
+}
+
+.milestone-images {
+  flex: 1;
+  min-width: 280px;
+  margin-top: 1rem;
+  column-count: 2;
+  column-gap: 1rem;
+  animation: milestone-images-in .4s ease;
+}
+
+.milestone-image {
+  position: relative;
+  display: block;
+  border-radius: .6rem;
+  overflow: hidden;
+  box-shadow: var(--box-shadow);
+  cursor: pointer;
+  outline: none;
+  margin: 0 0 1rem;
+  break-inside: avoid;
+}
+
+.milestone-image img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform .4s ease;
+}
+
+.milestone-image:hover img,
+.milestone-image:focus-visible img {
+  transform: scale(1.05);
+}
+
+.milestone-image--highlight {
+  box-shadow: 0 0 0 3px var(--primary-transparency), var(--box-shadow);
+}
+.milestone-image figcaption {
+  position: absolute;
+  inset: auto 0 0 0;
+  margin: 0;
+  padding: 1.5rem .8rem .7rem;
+  background: linear-gradient(to top, rgba(0, 0, 0, .75), transparent);
+  color: #fff;
+  font-size: .78rem;
+  line-height: 1.35;
+  opacity: 0;
+  transform: translateY(6px);
+  transition: opacity .3s ease, transform .3s ease;
+}
+
+.milestone-image:hover figcaption,
+.milestone-image:focus-visible figcaption {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.milestone-images-empty {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 180px;
+  padding: 1rem;
+  border: 1px dashed var(--border-color);
+  border-radius: .75rem;
+  color: var(--text-secondary);
+  font-size: .85rem;
+  text-align: center;
+}
+
+@keyframes milestone-images-in {
+  from {
+    opacity: 0;
+    transform: translateY(8px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media (hover: none) {
+  .milestone-image figcaption {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 1000px) {
+  .milestones-container {
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  .milestone-images {
+    margin-top: 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .milestone-images {
+    column-count: 1;
+  }
 }

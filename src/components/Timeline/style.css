@@ -52,6 +52,7 @@
   background: var(--bg-light);
   color: var(--text-secondary);
   transition: all .4s ease-in-out;
+  font-family: Aleo, serif;
 }
 
 .timeline-item.in-view::before {

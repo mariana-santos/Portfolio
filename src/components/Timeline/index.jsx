@@ -12,12 +12,16 @@ export default function Timeline({
   getKey,
   getCounter,
   className = "",
+  showLine = true,
+  scrollIndicator = true,
 }) {
   const timelineRef = useRef(null);
   const drawLineRef = useRef(null);
   const itemsRef = useRef([]);
 
   useEffect(() => {
+    if (!scrollIndicator) return;
+    
     const ctx = gsap.context(() => {
       gsap.fromTo(
         drawLineRef.current,
@@ -51,8 +55,12 @@ export default function Timeline({
 
   return (
     <ul className={`timeline ${className}`.trim()} ref={timelineRef}>
-      <span className="default-line"></span>
-      <span className="draw-line" ref={drawLineRef}></span>
+      {showLine && (
+        <>
+          <span className="default-line"></span>
+          <span className="draw-line" ref={drawLineRef}></span>
+        </>
+      )}
 
       {items.map((item, index) => {
         const key = getKey ? getKey(item, index) : item.id ?? index;
