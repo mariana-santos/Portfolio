@@ -19,6 +19,100 @@ export const home = {
     "milestones-intro":
       "4+ years turning curiosity into code. Today building for global clients as a Frontend Engineer. Here's a summary of my journey so far:",
     "milestones-empty-gallery": "More photos coming soon.",
+    switch: {
+      intro: "I am a Software Engineer with 4 years of experience. <br/> Scroll down to see my journey so far, or switch to the personal view to see what I do off the clock.",
+      view: {
+        engineer: {
+          label: "dev mode",
+          subtitle: "building & learning",
+        },
+        person: {
+          label: "off the clock",
+          subtitle: "projects & hobbies",
+        },
+      },
+    },
+    person: {
+      music: {
+        title: "Music",
+        description: "Loving music is the most cliché sentence ever, but here we are. The ones who gets me going are <span class=\"highlight\">rock, samba and MPB</span>. Here is what I'm currently listening to and my top three picks.",
+        "now-playing": {
+          title: "Careless Whisper",
+          artist: "George Michael",
+          elapsed: "2:47",
+          duration: "4:32",
+        },
+        "top-three-label": "My favourite tracks",
+        "top-three": [
+          { title: "Disritmia", artist: "Casuarina" },
+          { title: "Bohemian Rhapsody", artist: "Queen" },
+          { title: "Dancing Queen", artist: "ABBA" },
+        ],
+        "genres-label": "My favourite genres",
+        genres: ["rock", "samba", "MPB"],
+      },
+      reading: {
+        title: "Reading",
+        description: "Reading has always been a <span class=\"highlight\">passion</span> of mine. Here are some of the books I love.",
+        books: [
+          { title: "I who have never known men", author: "Jacqueline Harpman" },
+          { title: "1984", author: "George Orwell" },
+          { title: "100 Years of Solitude", author: "Gabriel García Márquez" },
+        ],
+        "social-label": "See my library updates on:",
+        "skoob-link": "Skoob",
+        "goodreads-link": "Goodreads",
+      },
+      travel: {
+        title: "Travel",
+        description: "I love travelling. It's the moment I get to reconnect with myself, learn about new cultures, and expand my horizons. My ideal destination has two things: <span class=\"highlight\">history</span> to walk through and <span class=\"highlight\">nature</span> nearby — a beach, preferably. Here are some of my favourite trips so far and where I want to go next.",
+        "favourites-label": "Favourite trips so far",
+        favourites: [
+          { place: "Santorini, GR" },
+          { place: "Vienna, AT" },
+          { place: "Ilhabela, BR" },
+        ],
+        "next-label": "Where I'm dying to go next",
+        next: [
+          { place: "Minas Gerais, BR", note: "For the history & the food" },
+          { place: "Cusco, PE", note: "For the views & the culture" },
+          { place: "Amsterdam, NL", note: "For the bikes & tulips" },
+        ],
+      },
+      movement: {
+        title: "Movement",
+        description: "How I get away from the desk.",
+        "intro-before":
+          "Working from home, I've always felt the need to <span class=\"highlight\">move more</span>. I'm still figuring out my favourite ways to do it — so far, ",
+        "bike-label": "riding my bike in the park",
+        "bike-alt": "photo: riding in the park",
+        "bike-caption": "The day I rode 10km in Villa Lobos park.",
+        "intro-between": " and ",
+        "pilates-label": "pilates",
+        "pilates-alt": "photo: pilates",
+        "pilates-caption": "Getting used to being upside down.",
+        "intro-after": " are winning.",
+      },
+      "fun-fact": {
+        title: "Fun fact",
+        description: "The one thing everyone finds out eventually.",
+        body:
+          "I'm a bit obsessed with The Office. I've watched it more times than I can count and my very first tattoo won't let me lie. I'm a big fan of sitcoms in general, but The Office will always have a big space in my heart.",
+        "tattoo-caption": "The tattoo in question.",
+        "funko-caption": "Dwight, guarding my books.",
+      },
+      "hobbies": {
+        title: "Hobbies",
+        description: "What I do when I'm not coding, reading, or traveling.",
+        body:
+          "I love trying new things and exploring different interests. Especially when they are manual and get me off a screen for a while. Something I learned is that we don't need to be good at something to <span class=\"highlight\">enjoy it</span>. Not everything needs to be useful or productive. Here are some of the hobbies I've tried:",
+        list: [
+          "Embroidering",
+          "Painting",
+          "Cooking"
+        ]
+      },
+    },
     milestones: {
       "milestone-1": {
         tag: "Microcamp",

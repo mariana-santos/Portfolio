@@ -16,9 +16,102 @@ export const home = {
       "No entanto, a mágica começou quando fiz o curso técnico de <strong>Desenvolvimento de Sistemas na ETEC de Guaianazes</strong>. Lá, cercada de professores e alunos talentosos, me apaixonei pelo desenvolvimento frontend e percebi havia encontrado minha vocação.<br/><br/>" +
       "Decidi então cursar o ensino superior na <strong>FIAP</strong>, considerada a melhor faculdade de tecnologia do país. Com muito esforço e dedicação consegui uma bolsa de estudos 100% para cursar <strong>Análise e Desenvolvimento de Sistemas</strong>.<br/><br/>" +
       "Em paralelo, já trabalho profissionalmente como <strong>Desenvolvedora Frontend</strong> desde os meus 18 anos. (Literalmente. Minha carteira de trabalho foi assinada no exato dia em que completei 18 anos.) Desenvolvo minhas habilidades em empresas de muito prestígio, como a Agência Choveu (marketing) e a FTD educação.",
+    switch: {
+      intro: "Eu sou uma Desenvolvedora de Software com <span class=\"highlight\">4 anos</span> de experiência.  <br/> Continue para ver minha jornada até agora, ou clique no switch para descobrir o que eu faço nos momentos livres.",
+      view: {
+        engineer: {
+          label: "dev mode",
+          subtitle: "codando & estudando",
+        },
+        person: {
+          label: "off the clock",
+          subtitle: "projetos & hobbies",
+        },
+      },
+    },
     "milestones-intro":
       "Mais de 4 anos transformando curiosidade em código. Hoje, construindo soluções para clientes globais como Frontend Engineer. Segue um resumo da minha jornada até aqui:",
     "milestones-empty-gallery": "Mais fotos em breve.",
+    person: {
+      music: {
+        title: "Música",
+        description: "Dizer que ama música é o maior clichê do mundo, mas tudo bem. Meu tipo de som favorito é <span class=\"highlight\">rock, samba e MPB</span>. Abaixo estão as que eu estou ouvindo agora e minhas três favoritas.",
+        "now-playing": {
+          title: "Careless Whisper",
+          artist: "George Michael",
+          elapsed: "2:47",
+          duration: "4:32",
+        },
+        "top-three-label": "Minhas músicas favoritas",
+        "top-three": [
+          { title: "Disritmia", artist: "Casuarina" },
+          { title: "Bohemian Rhapsody", artist: "Queen" },
+          { title: "Dancing Queen", artist: "ABBA" },
+        ],
+        "genres-label": "Meus gêneros favoritos",
+        genres: ["rock", "samba", "MPB"],
+      },
+      reading: {
+        title: "Leitura",
+        description: "Ler sempre foi uma <span class=\"highlight\">paixão</span> minha. Aqui estão alguns dos livros que eu amo.",
+        books: [
+          { title: "Eu Que Nunca Conheci os Homens", author: "Jacqueline Harpman" },
+          { title: "1984", author: "George Orwell" },
+          { title: "Cem Anos de Solidão", author: "Gabriel García Márquez" },
+        ],
+        "social-label": "Minhas atualizações de leitura:",
+        "skoob-link": "Skoob",
+        "goodreads-link": "Goodreads",
+      },
+      travel: {
+        title: "Viagens",
+        description: "Eu amo viajar. É o momento em que me reconecto comigo mesma, aprendo sobre novas culturas e expando meus horizontes. Meu destino ideal tem duas coisas: <span class=\"highlight\">história</span> para caminhar por entre e <span class=\"highlight\">natureza</span> por perto — de preferência uma praia. Aqui estão algumas das minhas viagens favoritas até agora e para onde eu quero ir depois.",
+        "favourites-label": "Viagens favoritas até agora",
+        favourites: [
+          { place: "Santorini, GR" },
+          { place: "Viena, AT" },
+          { place: "Ilhabela, BR" },
+        ],
+        "next-label": "Para onde eu quero ir",
+        next: [
+          { place: "Minas Gerais, BR", note: "Pela história e pela comida." },
+          { place: "Cusco, PE", note: "Pelas paisagens e pela cultura." },
+          { place: "Amsterdã, NL", note: "Pelas bikes e pelas tulipas." },
+        ],
+      },
+      movement: {
+        title: "Em movimento",
+        description: "O que eu faço para me manter ativa.",
+        "intro-before":
+          "Trabalhando de casa, sempre senti a necessidade de <span class=\"highlight\">me movimentar mais</span>. Ainda estou descobrindo minhas formas favoritas de fazer isso — por enquanto, ",
+        "bike-label": "andar de bicicleta no parque",
+        "bike-alt": "foto: pedalando no parque",
+        "bike-caption": "O dia que pedalei 10km no parque Villa Lobos.",
+        "intro-between": " e ",
+        "pilates-label": "pilates",
+        "pilates-alt": "foto: pilates",
+        "pilates-caption": "Me acostumando a ficar de cabeça para baixo.",
+        "intro-after": " estão na frente.",
+      },
+      "fun-fact": {
+        title: "Fun Fact",
+        description: "Aquilo que todo mundo descobre, mais cedo ou mais tarde.",
+        body:
+          "Sou um pouco obcecada por <span class=\"highlight\">The Office</span>. Já assisti um bilhão de vezes e minha primeira <span class=\"highlight\">tatuagem</span> tá aí para provar. Amo sitcoms em geral, mas The Office sempre vai ter um espaço enorme no meu coração.",
+        "tattoo-caption": "A tatuagem em questão.",
+        "funko-caption": "Dwight, cuidando dos meus livros.",
+      },
+      "hobbies": {
+        title: "Hobbies",
+        description: "O que eu faço quando não estou programando, lendo ou viajando.",
+        body: "Adoro experimentar coisas novas e explorar interesses diferentes. Principalmente quando são manuais e me tiram um pouco da frente das telas. Uma coisa que aprendi é que não precisamos ser bons em algo para gostar de fazer. <span class=\"highlight\">Nem tudo precisa ser útil ou produtivo</span>. Aqui estão alguns dos hobbies que já experimentei:",
+        list: [
+          "Bordado",
+          "Pintura",
+          "Cozinha"
+        ]
+      },
+    },
     milestones: {
       "milestone-1": {
         tag: "Microcamp",
@@ -28,7 +121,7 @@ export const home = {
         images: {
           toddler: "Já curiosa sobre o mundo, bem antes da minha primeira aula de informática.",
           "spelling-bee": "Sendo reconhecida após vencer um concurso de soletração na escola.",
-          "school-graduation": "Formatura do ensino fundamental, toda sorrisos com as colegas.",
+          "school-graduation": "Me formando no ensino fundamental já com muita vontade de aprender.",
         },
       },
       "milestone-2": {

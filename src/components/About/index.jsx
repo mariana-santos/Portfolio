@@ -5,6 +5,7 @@ import pic from "../../assets/about-picture.webp";
 import { useConfig } from "../../contexts/config";
 import EngineerView from "./EngineerView";
 import PersonView from "./PersonView";
+import Switch from "../Switch";
 
 export default function About() {
   const { t } = useConfig();
@@ -24,15 +25,15 @@ export default function About() {
     <section className="container" id="about" data-aos="fade-up">
       <h2 className="code">{t("home.about.title")}</h2>
 
-      <div className="switch-view-wrapper">
-        Show me as {" "}
-        <span className={`switch-view ${view === "engineer" ? "active" : ""}`} onClick={toggleView}>
-          an engineer
-        </span>
-        <span className="switch-view-separator"> / </span>
-        <span className={`switch-view ${view === "person" ? "active" : ""}`} onClick={toggleView}>
-          a person
-        </span>
+      <div className="about-intro">
+        <p>{t(`home.about.switch.intro`)}</p>
+        <div className="switch-view-wrapper">
+          <Switch onChange={toggleView} />
+          <div className="switch-view-labels">
+            <span className="switch-view-label">{t(`home.about.switch.view.${view}.label`)}</span>
+            <span className="switch-view-subtitle">{t(`home.about.switch.view.${view}.subtitle`)}</span>
+          </div>
+        </div>
       </div>
 
       {VIEWS[view]}

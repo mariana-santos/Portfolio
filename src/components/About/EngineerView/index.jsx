@@ -40,8 +40,8 @@ const MILESTONES = [
     id: "milestone-2",
     year: "2019",
     images: [
-      { id: "exam-result", src: etec2 },
-      // { id: "classmates", src: etec3 },
+      // { id: "exam-result", src: etec2 },
+      { id: "classmates", src: etec3 },
       { id: "badge", src: etec1, featured: true },
       { id: "final-project", src: etec4 },
     ],
@@ -77,8 +77,6 @@ export default function EngineerView() {
 
   return (
     <div className="about engineer-view">
-      <p className="milestones-intro">{t("home.about.milestones-intro")}</p>
-
       <div className="milestones-container">
         <Timeline
           className="milestones"
