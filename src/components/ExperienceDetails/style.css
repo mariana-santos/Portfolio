@@ -91,10 +91,6 @@
   gap: 1rem;
 }
 
-.timeline-item:not(:last-of-type) {
-  margin-bottom: 3rem;
-}
-
 .experiences-skills img {
   width: 35px;
 }
