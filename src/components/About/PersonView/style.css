@@ -2,6 +2,7 @@
   width: 100%;
   margin-top: 2rem;
   animation: person-view-in .4s ease;
+  max-width: 1200px;
 }
 
 .person-view .highlight {
@@ -17,17 +18,16 @@
   display: grid;
   grid-template-columns: repeat(10, 1fr);
   grid-template-areas:
-    "places places places places places read read music music music "
-    "fact fact fact hobbies hobbies hobbies hobbies move move move";
+    "places places places places read read read music music music"
+    "off off off off off off fact fact fact fact";
   gap: 1.25rem;
 }
 
 .bento-music { grid-area: music; }
 .bento-reading { grid-area: read; }
 .bento-travel { grid-area: places; }
-.bento-movement { grid-area: move; }
 .bento-fun-fact { grid-area: fact; }
-.bento-hobbies { grid-area: hobbies; }
+.bento-off-screen { grid-area: off; }
 
 .bento-card {
   background: var(--bg-light-strong);
@@ -103,6 +103,21 @@
 }
 
 /* Music */
+
+.music-now-section {
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: .75rem;
+}
+
+.now-playing-section {
+  display: flex;
+  flex-direction: column;
+  gap: .6rem;
+  border-top: 1px solid var(--border-color);
+  padding-top: 1rem;
+}
 
 .now-playing {
   display: flex;
@@ -202,26 +217,6 @@
   color: var(--text-secondary);
 }
 
-.genre-chips {
-  display: flex;
-  gap: .5rem;
-  flex-wrap: wrap;
-}
-
-.genre-chip {
-  font: 600 .7rem "Source Code Pro", monospace;
-  letter-spacing: .06em;
-  color: var(--primary-stronger);
-  background: var(--tag-color);
-  padding: .3rem .6rem;
-  border-radius: .25rem;
-}
-
-.genre-chip--muted {
-  color: var(--text-secondary);
-  background: rgba(0, 0, 0, .04);
-}
-
 /* Reading */
 
 .book-list {
@@ -266,18 +261,29 @@
   color: var(--text-secondary);
 }
 
-.book-rating {
-  margin-top: .3rem;
-  display: flex;
-  gap: .15rem;
-  color: var(--primary);
-  font-size: .65rem;
+.book-mentions {
+  margin: 0;
+  font-size: .78rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+}
+
+.book-mentions-label {
+  font-size: .7rem;
+  font-weight: 600;
+  letter-spacing: .08em;
+  text-transform: uppercase;
+}
+
+.book-mentions-title {
+  font-family: Aleo, serif;
+  font-weight: 600;
+  color: var(--text-color);
 }
 
 .external-links {
   margin-top: auto;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: .5rem .8rem;
   border-top: 1px solid var(--border-color);
@@ -310,13 +316,13 @@
 
 .trip-grid {
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .9rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: .75rem;
 }
 
 .trip-card {
   position: relative;
-  aspect-ratio: 1;
+  aspect-ratio: 16 / 8;
   display: flex;
   align-items: flex-end;
   justify-content: flex-start;
@@ -346,73 +352,33 @@
 .next-trip-list {
   display: flex;
   flex-direction: row;
+  flex-wrap: wrap;
   gap: .75rem;
 }
 
 .next-trip {
   display: flex;
   align-items: center;
-  gap: .75rem;
+  gap: .45rem;
   border: 1.5px dashed var(--primary-transparency);
-  border-radius: .5rem;
-  padding: .7rem;
-  flex: 1;
+  border-radius: 999px;
+  padding: .25rem .7rem .25rem .3rem;
 }
 
 #about .next-trip-icon {
   flex: none;
-  width: 38px;
-  height: 38px;
-  border-radius: .4rem;
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
   object-fit: cover;
-}
-
-.next-trip-info {
-  min-width: 0;
-  display: flex;
-  flex-direction: column;
 }
 
 .next-trip-name {
   font-family: Aleo, serif;
-  font-size: 1.05rem;
+  font-size: .82rem;
   font-weight: 700;
-  letter-spacing: -.03em;
+  letter-spacing: -.02em;
   color: var(--text-color);
-}
-
-.next-trip-note {
-  font-size: .78rem;
-  color: var(--text-secondary);
-}
-
-/* Movement */
-
-.movement-media {
-  margin-top: auto;
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: .75rem;
-}
-
-.movement-media figure {
-  margin: 0;
-  display: flex;
-  flex-direction: column;
-  gap: .5rem;
-}
-
-#about .movement-media-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: .5rem;
-}
-
-.movement-media figcaption {
-  font-size: .74rem;
-  line-height: 1.4;
-  color: var(--text-secondary);
 }
 
 /* Fun fact */
@@ -432,7 +398,6 @@
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: .75rem;
-  align-items: end;
 }
 
 .fun-fact-media figure {
@@ -444,7 +409,7 @@
 
 #about .fun-fact-photo {
   width: 100%;
-  aspect-ratio: 1 / 1;
+  aspect-ratio: 1 / 1.5;
   object-fit: cover;
   border-radius: .5rem;
 }
@@ -455,31 +420,47 @@
   color: var(--text-secondary);
 }
 
-/* Hobbies */
+/* Off-screen */
 
-.hobby-grid {
+.offscreen-grid {
   margin-top: auto;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: .9rem;
+  grid-template-columns: 1.25fr 1fr 1fr;
+  grid-template-rows: repeat(2, minmax(110px, 1fr));
+  grid-template-areas:
+    "a b c"
+    "a d e";
+  gap: .6rem;
+  aspect-ratio: 16 / 9;
 }
 
-.hobby-item {
+.offscreen-item {
   margin: 0;
   display: flex;
   flex-direction: column;
   gap: .5rem;
+  min-width: 0;
+  min-height: 0;
 }
 
-#about .hobby-photo {
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
+.offscreen-photo-wrap {
+  position: relative;
+  flex: 1;
+  min-height: 0;
   border-radius: .5rem;
+  overflow: hidden;
   box-shadow: var(--box-shadow);
 }
 
-.hobby-grid figcaption {
+#about .offscreen-photo {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.offscreen-label {
   font-size: .74rem;
   line-height: 1.4;
   color: var(--text-secondary);
@@ -496,21 +477,63 @@
     transform: translateY(0);
   }
 }
-
-@media screen and (max-width: 1000px) {
+@media screen and (max-width: 1500px) {
   .bento-grid {
-    grid-template-columns: 1fr;
-    grid-template-areas: none;
-  }
-
-  .bento-music, .bento-reading, .bento-travel, .bento-movement, .bento-fun-fact {
-    grid-area: auto;
+    grid-template-areas:
+    "places places places places read read read music music music"
+    "fact fact fact off off off off off off off";
   }
 }
 
-@media screen and (max-width: 480px) {
-  .top-three-list,
-  .trip-grid {
+@media screen and (max-width: 1000px) {
+  .bento-grid {
     grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+    "places music"
+    "fact read"
+    "off off";
+  }
+
+  #about .next-trip-icon {
+    width: 25px;
+    height: 25px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+   .bento-grid {
+    grid-template-columns: 1fr;
+    grid-template-areas:
+    "places"
+    "music"
+    "fact"
+    "off"
+    "read";
+   }
+
+   .trip-card {
+    aspect-ratio: 1 / .75;
+    border-radius: .3rem;
+  }
+
+  .trip-place {
+    font-size: .85rem;
+  }
+
+  .about-intro {
+    margin-bottom: 0;
+  }
+}
+
+
+@media screen and (max-width: 480px) {
+  .offscreen-grid {
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, minmax(150px, 1fr));
+    grid-template-areas:
+      "a b"
+      "c d"
+      "e e";
+    aspect-ratio: auto;
   }
 }
