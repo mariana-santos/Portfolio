@@ -21,6 +21,7 @@ const PILL_LINKS = [
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(null);
   const [activeSection, setActiveSection] = useState("hero");
+  const [scrolled, setScrolled] = useState(false);
 
   const { language, setLanguage, theme, setTheme, t } = useConfig();
   const location = useLocation();
@@ -32,6 +33,17 @@ export default function Navbar() {
   useEffect(() => {
     localStorage.setItem("language", language);
   }, [language]);
+
+  useEffect(() => {
+    function handleScroll() {
+      setScrolled(window.scrollY > 10);
+    }
+
+    handleScroll();
+    window.addEventListener("scroll", handleScroll, { passive: true });
+
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
 
   useEffect(() => {
     function handleClickOutside(event) {
@@ -80,7 +92,7 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className="navbar">
+      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
         <div className="navbar-inner">
           <HashLink to="/#about" className="logo">
             <img

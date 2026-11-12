@@ -9,6 +9,16 @@ header {
     box-sizing: border-box;
     color: var(--text-color);
     position: relative;
+    background: transparent;
+    box-shadow: none;
+    transition: background-color .3s ease, box-shadow .3s ease;
+}
+
+.navbar.scrolled {
+    background: color-mix(in srgb, var(--bg-light) 80%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: rgba(0, 0, 0, 0.06) 0px 1px 8px;
 }
 
 .navbar-inner {
