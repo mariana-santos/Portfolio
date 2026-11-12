@@ -1,4 +1,4 @@
-import { useState, React, useEffect } from "react";
+import { useState, React, useEffect, useRef, useLayoutEffect } from "react";
 import "./style.css";
 
 import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
@@ -7,8 +7,33 @@ import { useConfig } from "../../contexts/config";
 
 import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 import logo from "../../assets/logo.svg";
+
+const NAVBAR_OFFSET = 24;
+// Lazy-loaded images below the fold can resize as they come into view mid-scroll,
+// shifting the target's position. Re-aim a few times while things settle.
+const SCROLL_CORRECTION_DELAYS = [150, 350, 650, 1000];
+
+function scrollToHash(el) {
+  function go() {
+    const offset = (document.querySelector("header")?.offsetHeight ?? 0) + NAVBAR_OFFSET;
+    const smoother = ScrollSmoother.get();
+    const currentScrollY = smoother ? smoother.scrollTop() : window.scrollY;
+    const targetTop = el.getBoundingClientRect().top + currentScrollY - offset;
+
+    if (smoother) {
+      smoother.scrollTo(targetTop, true);
+      return;
+    }
+
+    window.scrollTo({ top: targetTop, behavior: "smooth" });
+  }
+
+  go();
+  SCROLL_CORRECTION_DELAYS.forEach((delay) => setTimeout(go, delay));
+}
 
 const PILL_LINKS = [
   { key: "home", to: "/#hero", sectionId: "hero" },
@@ -22,6 +47,10 @@ export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(null);
   const [activeSection, setActiveSection] = useState("hero");
   const [scrolled, setScrolled] = useState(false);
+  const [hidden, setHidden] = useState(false);
+
+  const pillNavRef = useRef(null);
+  const pillIndicatorRef = useRef(null);
 
   const { language, setLanguage, theme, setTheme, t } = useConfig();
   const location = useLocation();
@@ -35,14 +64,30 @@ export default function Navbar() {
   }, [language]);
 
   useEffect(() => {
-    function handleScroll() {
-      setScrolled(window.scrollY > 10);
+    function getScrollY() {
+      return ScrollSmoother.get()?.scrollTop() ?? window.scrollY;
     }
 
-    handleScroll();
-    window.addEventListener("scroll", handleScroll, { passive: true });
+    let lastY = getScrollY();
+    let frameId;
 
-    return () => window.removeEventListener("scroll", handleScroll);
+    function tick() {
+      const y = getScrollY();
+
+      setScrolled(y > 80);
+      setHidden((prev) => {
+        if (y > lastY + 6 && y > 320) return true;
+        if (y < lastY - 6 || y <= 320) return false;
+        return prev;
+      });
+
+      lastY = y;
+      frameId = requestAnimationFrame(tick);
+    }
+
+    frameId = requestAnimationFrame(tick);
+
+    return () => cancelAnimationFrame(frameId);
   }, []);
 
   useEffect(() => {
@@ -84,6 +129,28 @@ export default function Navbar() {
     return () => observer.disconnect();
   }, [location.pathname]);
 
+  useLayoutEffect(() => {
+    function updateIndicator() {
+      const nav = pillNavRef.current;
+      const indicator = pillIndicatorRef.current;
+      if (!nav || !indicator) return;
+
+      const activeLink = nav.querySelector('.pill-link[data-active="true"]');
+      if (!activeLink) {
+        indicator.style.width = "0px";
+        return;
+      }
+
+      indicator.style.width = `${activeLink.offsetWidth}px`;
+      indicator.style.transform = `translateX(${activeLink.offsetLeft}px)`;
+    }
+
+    updateIndicator();
+    window.addEventListener("resize", updateIndicator);
+
+    return () => window.removeEventListener("resize", updateIndicator);
+  }, [activeSection, location.pathname]);
+
   function isPillActive({ sectionId, to }) {
     return sectionId
       ? location.pathname === "/" && activeSection === sectionId
@@ -92,16 +159,25 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav className={`navbar ${scrolled ? "scrolled" : ""}`}>
+      <nav
+        className={`navbar ${scrolled ? "scrolled" : ""} ${
+          hidden && !menuOpen ? "nav-hidden" : ""
+        }`}
+      >
         <div className="navbar-inner">
-          <HashLink to="/#about" className="logo">
+          <HashLink to="/#about" className="logo" scroll={scrollToHash}>
             <img
               src={logo}
               alt={t("navbar.logo-alt")}
             />
           </HashLink>
 
-          <div className="pill-nav" aria-label="Main">
+          <div className="pill-nav" aria-label="Main" ref={pillNavRef}>
+            <span
+              className="pill-nav-indicator"
+              aria-hidden="true"
+              ref={pillIndicatorRef}
+            />
             {PILL_LINKS.map((link) => (
               <HashLink
                 key={link.key}
@@ -109,6 +185,7 @@ export default function Navbar() {
                 className="pill-link"
                 aria-current={isPillActive(link) ? "page" : undefined}
                 data-active={isPillActive(link)}
+                scroll={scrollToHash}
               >
                 {t(`navbar.${link.key}`)}
               </HashLink>
@@ -178,6 +255,7 @@ export default function Navbar() {
                     className="pill-link"
                     aria-current={isPillActive(link) ? "page" : undefined}
                     data-active={isPillActive(link)}
+                    scroll={scrollToHash}
                   >
                     {t(`navbar.${link.key}`)}
                   </HashLink>

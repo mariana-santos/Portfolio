@@ -16,10 +16,12 @@ import AppLayout from './layout/index';
 export default function App() {
 
   useEffect(() => {
-    ScrollSmoother.create({
+    const smoother = ScrollSmoother.create({
       smooth: 1,
       effects: true,
     });
+
+    return () => smoother.kill();
   }, [])
   
   return (
