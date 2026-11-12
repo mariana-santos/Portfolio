@@ -6,6 +6,11 @@ export const home = {
 
   hero: {
     "image-alt": "Mariana Santos coding during a Hackathon",
+    heading: {
+      lead: "Turning curiosity into",
+      words: ["code", "interfaces", "products", "experiences"],
+      "aria-label": "Turning curiosity into code, interfaces, products and experiences.",
+    },
   },
 
   about: {
