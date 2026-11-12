@@ -159,13 +159,22 @@ export default function Navbar() {
               onClick={() => menuOpen && setMenuOpen(false)}
             >
               {PILL_LINKS.map((link) => (
-                <li key={link.key} className="code autoclose">
-                  <HashLink to={link.to}>{t(`navbar.${link.key}`)}</HashLink>
+                <li key={link.key}>
+                  <HashLink
+                    to={link.to}
+                    className="pill-link"
+                    aria-current={isPillActive(link) ? "page" : undefined}
+                    data-active={isPillActive(link)}
+                  >
+                    {t(`navbar.${link.key}`)}
+                  </HashLink>
                 </li>
               ))}
 
-              <li className="code autoclose">
-                <HashLink to="/resume">{t("navbar.cv")}</HashLink>
+              <li>
+                <HashLink to="/resume" className="resume-pill">
+                  {t("navbar.cv")} ↓
+                </HashLink>
               </li>
             </ul>
           </div>

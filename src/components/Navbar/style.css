@@ -183,13 +183,13 @@ header {
 .navbar ul {
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    gap: 10px;
     margin: 0;
     box-sizing: border-box;
     position: absolute;
     top: 100%;
-    background-color: var(--bg-light-strong);
-    box-shadow: var(--box-shadow);
-    padding: 0;
+    padding: 20px;
     opacity: 0;
     z-index: 2;
     right: 10em;
@@ -207,16 +207,36 @@ header {
 }
 
 .navbar ul li {
-    padding: 1em 2.5em;
+    padding: 0;
     transition: .3s;
 }
 
-.navbar ul a:not(:last-of-type) {
-    border-bottom: solid 1px var(--bg-light);
+.navbar ul .pill-link {
+    display: inline-flex;
+    background: var(--bg-light-strong);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 0px;
+}
+
+.navbar ul .pill-link[data-active="true"] {
+    background: var(--tag-color-solid);
 }
 
 .navbar ul.opened {
     animation: fade-up .5s forwards ease;
+}
+
+@keyframes fade-up {
+    from {
+        opacity: 0;
+        transform: translateY(30%);
+        visibility: hidden;
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0%);
+        visibility: visible;
+    }
 }
 
 .theme-toggle {
@@ -359,7 +379,7 @@ header {
 }
 
 @media screen and (max-width: 1024px) {
-    .resume-pill {
+    .menu-wrapper > .resume-pill {
         display: none;
     }
 }
