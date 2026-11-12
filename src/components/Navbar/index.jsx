@@ -16,7 +16,6 @@ const PILL_LINKS = [
   { key: "experience", to: "/#experience", sectionId: "experience" },
   { key: "skills", to: "/#expertise", sectionId: "expertise" },
   { key: "projects", to: "/#projects", sectionId: "projects" },
-  { key: "contact", to: "/contact", sectionId: null },
 ];
 
 export default function Navbar() {
@@ -81,100 +80,95 @@ export default function Navbar() {
 
   return (
     <header>
-      <nav
-        className="navbar"
-        style={{
-          backgroundColor: menuOpen
-            ? "var(--bg-light-strong)"
-            : "var(--header-transparent)",
-        }}
-      >
-        <HashLink to="/#about" className="logo">
-          <img
-            src={logo}
-            alt={t("navbar.logo-alt")}
-          />
-        </HashLink>
-
-        <div className="pill-nav" aria-label="Main">
-          {PILL_LINKS.map((link) => (
-            <HashLink
-              key={link.key}
-              to={link.to}
-              className="pill-link"
-              aria-current={isPillActive(link) ? "page" : undefined}
-              data-active={isPillActive(link)}
-            >
-              {t(`navbar.${link.key}`)}
-            </HashLink>
-          ))}
-        </div>
-
-        <div className="menu-wrapper">
-          <HashLink to="/resume" className="resume-pill">
-            {t("navbar.cv")} ↓
+      <nav className="navbar">
+        <div className="navbar-inner">
+          <HashLink to="/#about" className="logo">
+            <img
+              src={logo}
+              alt={t("navbar.logo-alt")}
+            />
           </HashLink>
 
-          <div className="language-switcher" role="group" aria-label="Language">
-            <button
-              type="button"
-              className="lang-btn"
-              data-active={language === "en"}
-              onClick={() => setLanguage("en")}
-            >
-              EN
-            </button>
-            <button
-              type="button"
-              className="lang-btn"
-              data-active={language === "pt"}
-              onClick={() => setLanguage("pt")}
-            >
-              PT
-            </button>
-          </div>
-
-          <div
-            className="theme-toggle"
-            role="button"
-            aria-label={
-              theme === "light" ? "Switch to dark mode" : "Switch to light mode"
-            }
-            onClick={() => setTheme(theme === "light" ? "dark" : "light")}
-          >
-            <div className={`theme-switcher ${theme}`}>
-              <FiMoon className="moon" />
-              <FiSun className="sun" />
-            </div>
-          </div>
-
-          <div
-            className={`hamburguer ${
-              menuOpen !== null && (menuOpen ? "close" : "open")
-            }`}
-            role="button"
-            onClick={() => setMenuOpen(!menuOpen)}
-          >
-            <span />
-            <span />
-          </div>
-
-          <ul
-            className={
-              menuOpen !== null ? (menuOpen ? "opened" : "closed") : undefined
-            }
-            onClick={() => menuOpen && setMenuOpen(false)}
-          >
+          <div className="pill-nav" aria-label="Main">
             {PILL_LINKS.map((link) => (
-              <li key={link.key} className="code autoclose">
-                <HashLink to={link.to}>{t(`navbar.${link.key}`)}</HashLink>
-              </li>
+              <HashLink
+                key={link.key}
+                to={link.to}
+                className="pill-link"
+                aria-current={isPillActive(link) ? "page" : undefined}
+                data-active={isPillActive(link)}
+              >
+                {t(`navbar.${link.key}`)}
+              </HashLink>
             ))}
+          </div>
+        
+          <div className="menu-wrapper">
+            <div className="language-switcher" role="group" aria-label="Language">
+              <button
+                type="button"
+                className="lang-btn"
+                data-active={language === "en"}
+                onClick={() => setLanguage("en")}
+              >
+                EN
+              </button>
+              <button
+                type="button"
+                className="lang-btn"
+                data-active={language === "pt"}
+                onClick={() => setLanguage("pt")}
+              >
+                PT
+              </button>
+            </div>
 
-            <li className="code autoclose">
-              <HashLink to="/resume">{t("navbar.cv")}</HashLink>
-            </li>
-          </ul>
+            <div
+              className="theme-toggle"
+              role="button"
+              aria-label={
+                theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+              }
+              onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+            >
+              <div className={`theme-switcher ${theme}`}>
+                <FiMoon className="moon" />
+                <FiSun className="sun" />
+              </div>
+            </div>
+            
+            <HashLink to="/resume" className="resume-pill">
+              {t("navbar.cv")} ↓
+            </HashLink>
+
+            <div
+              className={`hamburguer ${
+                menuOpen !== null && (menuOpen ? "close" : "open")
+              }`}
+              role="button"
+              onClick={() => setMenuOpen(!menuOpen)}
+            >
+              <span />
+              <span />
+            </div>
+
+            <ul
+              className={
+                menuOpen !== null ? (menuOpen ? "opened" : "closed") : undefined
+              }
+              onClick={() => menuOpen && setMenuOpen(false)}
+            >
+              {PILL_LINKS.map((link) => (
+                <li key={link.key} className="code autoclose">
+                  <HashLink to={link.to}>{t(`navbar.${link.key}`)}</HashLink>
+                </li>
+              ))}
+
+              <li className="code autoclose">
+                <HashLink to="/resume">{t("navbar.cv")}</HashLink>
+              </li>
+            </ul>
+          </div>
         </div>
       </nav>
 
