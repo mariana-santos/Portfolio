@@ -10,6 +10,11 @@ export const home = {
       lead: "Transformando curiosidade em",
       words: ["código", "interfaces", "produtos", "experiências"],
       "aria-label": "Transformando curiosidade em código, interfaces, produtos e experiências.",
+      role: "Engenheira de Software Frontend",
+    },
+    actions: {
+      primary: "Conheça meu trabalho",
+      secondary: "Fale comigo",
     },
   },
 

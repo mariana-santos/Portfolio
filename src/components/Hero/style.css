@@ -142,25 +142,96 @@
     transition: .3s;
 }
 
-.smaller {
-    font-size: .6em;
+.hero-signature-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin-top: 50px;
 }
 
-#hero .btn {
-    margin-top: 1.5em;
-    font-size: .7em;
-    font-weight: bolder;
-    width: fit-content;
+.hero-signature {
+    display: block;
+    height: 42px;
+    width: auto;
+    overflow: visible;
+    color: var(--primary-stronger);
 }
 
-#hero .light{
-    font-size: .7em;
+.hero-role {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-family: 'Manrope', sans-serif;
+    font-size: .78rem;
+    font-weight: 600;
+    letter-spacing: .08em;
+    text-transform: uppercase;
+    color: var(--text-secondary);
 }
 
-@media screen and (min-width: 1200px) {
-    #hero .smaller {
-        width: 75%;
-    }
+.hero-role-divider {
+    width: 2px;
+    height: 14px;
+    background: var(--secondary);
+}
+
+.hero-actions {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 12px 22px;
+    margin-top: 32px;
+}
+
+.hero-cta {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    border-radius: 12px;
+    padding: 14px 20px;
+    font-family: 'Manrope', sans-serif;
+    font-size: .95rem;
+    font-weight: 700;
+    color: #fff;
+    background: var(--primary);
+    box-shadow: 0 1px 0 rgba(255, 255, 255, .25) inset, 0 10px 22px -14px var(--primary-stronger);
+    transition: background-color .25s;
+}
+
+.hero-cta:hover {
+    background: var(--primary-stronger);
+}
+
+.hero-text-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    padding: 14px 4px;
+    font-family: 'Manrope', sans-serif;
+    font-size: .95rem;
+    font-weight: 700;
+    color: var(--text-color);
+    background-image:
+        linear-gradient(var(--primary), var(--primary)),
+        linear-gradient(var(--primary-transparency), var(--primary-transparency));
+    background-repeat: no-repeat;
+    background-position: 4px calc(100% - 6px), 4px calc(100% - 6px);
+    background-size: 0 1.5px, calc(100% - 8px) 1.5px;
+    transition: background-size .35s cubic-bezier(.2, .7, .3, 1), color .25s;
+}
+
+.hero-text-link:hover {
+    color: var(--primary-stronger);
+    background-size: calc(100% - 8px) 1.5px, calc(100% - 8px) 1.5px;
+}
+
+.hero-text-link-icon {
+    transition: transform .3s cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-text-link:hover .hero-text-link-icon {
+    transform: translate(2px, -2px);
 }
 
 @media screen and (max-width: 768px){

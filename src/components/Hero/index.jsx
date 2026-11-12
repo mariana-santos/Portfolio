@@ -4,9 +4,16 @@ import pic from "../../assets/main-picture.jpg";
 
 import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
 
-import { useConfig } from "../../contexts/config";
+import { FiArrowUpRight } from "react-icons/fi";
+import { HashLink } from "react-router-hash-link";
+import { Link } from "react-router-dom";
 
-const WORD_ROTATE_INTERVAL = 2800;
+import { useConfig } from "../../contexts/config";
+import { scrollToHash } from "../../utils/scrollToHash";
+
+import Signature from "./Signature";
+
+const WORD_ROTATE_INTERVAL = 2000;
 
 export default function Hero() {
   const { t } = useConfig();
@@ -17,7 +24,6 @@ export default function Hero() {
   const [prevWordIndex, setPrevWordIndex] = useState(null);
 
   const wordIndexRef = useRef(0);
-  const pausedRef = useRef(false);
   const pillRef = useRef(null);
 
   useEffect(() => {
@@ -28,8 +34,6 @@ export default function Hero() {
     if (prefersReducedMotion || words.length < 2) return;
 
     const id = setInterval(() => {
-      if (pausedRef.current) return;
-
       const current = wordIndexRef.current;
       const next = (current + 1) % words.length;
 
@@ -49,22 +53,12 @@ export default function Hero() {
     pill.style.width = `${activeWord.getBoundingClientRect().width}px`;
   }, [wordIndex]);
 
-  function pauseRotation() {
-    pausedRef.current = true;
-  }
-
-  function resumeRotation() {
-    pausedRef.current = false;
-  }
-
   return (
     <section className="container" id="hero">
       <div className="column text" data-aos="fade-up">
         <h1
           className="hero-heading"
           aria-label={t("home.hero.heading.aria-label")}
-          onMouseEnter={pauseRotation}
-          onMouseLeave={resumeRotation}
         >
           <span className="hero-heading-line" aria-hidden="true">
             {t("home.hero.heading.lead")}
@@ -87,7 +81,23 @@ export default function Hero() {
           </span>
         </h1>
 
-        <div className="smaller">{t("home.subtitle")}</div>
+        <div className="hero-signature-wrap" data-aos="fade-up">
+          <Signature className="hero-signature" />
+          <span className="hero-role">
+            <span className="hero-role-divider" aria-hidden="true" />
+            {t("home.hero.heading.role")}
+          </span>
+        </div>
+
+        <div className="hero-actions" data-aos="fade-up">
+          <HashLink to="/#projects" className="hero-cta" scroll={scrollToHash}>
+            {t("home.hero.actions.primary")}
+          </HashLink>
+          <Link to="/contact" className="hero-text-link">
+            {t("home.hero.actions.secondary")}
+            <FiArrowUpRight className="hero-text-link-icon" />
+          </Link>
+        </div>
       </div>
 
       <div className="column wrapper-pic" data-aos="fade-down">

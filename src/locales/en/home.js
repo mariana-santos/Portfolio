@@ -10,6 +10,11 @@ export const home = {
       lead: "Turning curiosity into",
       words: ["code", "interfaces", "products", "experiences"],
       "aria-label": "Turning curiosity into code, interfaces, products and experiences.",
+      role: "Frontend Engineer",
+    },
+    actions: {
+      primary: "View my work",
+      secondary: "Let's talk",
     },
   },
 
