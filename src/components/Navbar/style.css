@@ -279,6 +279,75 @@ header {
 .menu-wrapper {
     display: flex;
     gap: 2em;
+    align-items: center;
+}
+
+.pill-nav {
+    display: none;
+    align-items: center;
+    gap: 4px;
+    padding: 5px;
+    border-radius: 999px;
+    background: var(--bg-light-strong);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 0px;
+}
+
+.pill-link {
+    padding: 8px 16px;
+    border-radius: 999px;
+    font-family: 'Manrope', sans-serif;
+    font-weight: 600;
+    font-size: .88rem;
+    color: var(--text-secondary);
+    transition: background-color .25s, color .25s;
+    white-space: nowrap;
+}
+
+.pill-link:hover {
+    color: var(--primary-stronger);
+}
+
+.pill-link[data-active="true"] {
+    background: var(--tag-color);
+    color: var(--primary-stronger);
+}
+
+.resume-pill {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    border-radius: 999px;
+    border: 1.5px solid var(--border-color);
+    color: var(--text-color);
+    background: var(--bg-light-strong);
+    font-family: 'Manrope', sans-serif;
+    font-weight: 700;
+    font-size: .85rem;
+    padding: 9px 18px;
+    transition: border-color .25s, color .25s;
+    white-space: nowrap;
+}
+
+.resume-pill:hover {
+    border-color: var(--primary-transparency);
+    color: var(--primary-stronger);
+}
+
+@media screen and (min-width: 1025px) {
+    .pill-nav {
+        display: flex;
+    }
+
+    .hamburguer,
+    .navbar ul {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .resume-pill {
+        display: none;
+    }
 }
 
 [role="button"] {

@@ -9,13 +9,25 @@ import Select from "@mui/material/Select";
 import MenuItem from "@mui/material/MenuItem";
 
 import { HashLink } from "react-router-hash-link";
+import { useLocation } from "react-router-dom";
 
 import logo from "../../assets/logo.svg";
 
+const PILL_LINKS = [
+  { key: "home", to: "/#hero", sectionId: "hero" },
+  { key: "about", to: "/#about", sectionId: "about" },
+  { key: "experience", to: "/#experience", sectionId: "experience" },
+  { key: "skills", to: "/#expertise", sectionId: "expertise" },
+  { key: "projects", to: "/#projects", sectionId: "projects" },
+  { key: "contact", to: "/contact", sectionId: null },
+];
+
 export default function Navbar() {
   const [menuOpen, setMenuOpen] = useState(null);
+  const [activeSection, setActiveSection] = useState("hero");
 
   const { language, setLanguage, theme, setTheme, t } = useConfig();
+  const location = useLocation();
 
   useEffect(() => {
     localStorage.setItem("theme", theme);
@@ -38,6 +50,38 @@ export default function Navbar() {
     };
   }, [menuOpen]);
 
+  useEffect(() => {
+    if (location.pathname !== "/") return;
+
+    const sections = PILL_LINKS
+      .filter((link) => link.sectionId)
+      .map((link) => document.getElementById(link.sectionId))
+      .filter(Boolean);
+
+    if (!sections.length) return;
+
+    const observer = new IntersectionObserver(
+      (entries) => {
+        const visible = entries
+          .filter((entry) => entry.isIntersecting)
+          .sort((a, b) => b.intersectionRatio - a.intersectionRatio)[0];
+
+        if (visible) setActiveSection(visible.target.id);
+      },
+      { rootMargin: "-45% 0px -45% 0px" }
+    );
+
+    sections.forEach((section) => observer.observe(section));
+
+    return () => observer.disconnect();
+  }, [location.pathname]);
+
+  function isPillActive({ sectionId, to }) {
+    return sectionId
+      ? location.pathname === "/" && activeSection === sectionId
+      : location.pathname === to;
+  }
+
   return (
     <header>
       <nav
@@ -55,7 +99,25 @@ export default function Navbar() {
           />
         </HashLink>
 
+        <div className="pill-nav" aria-label="Main">
+          {PILL_LINKS.map((link) => (
+            <HashLink
+              key={link.key}
+              to={link.to}
+              className="pill-link"
+              aria-current={isPillActive(link) ? "page" : undefined}
+              data-active={isPillActive(link)}
+            >
+              {t(`navbar.${link.key}`)}
+            </HashLink>
+          ))}
+        </div>
+
         <div className="menu-wrapper">
+          <HashLink to="/resume" className="resume-pill">
+            {t("navbar.cv")} ↓
+          </HashLink>
+
           <div className="language-switcher">
             <Select
               labelId="language"
@@ -107,25 +169,11 @@ export default function Navbar() {
             }
             onClick={() => menuOpen && setMenuOpen(false)}
           >
-            <li className="code autoclose">
-              <HashLink to="/#about">{t("navbar.about")}</HashLink>
-            </li>
-
-            <li className="code autoclose">
-              <HashLink to="/#experience">{t("navbar.experience")}</HashLink>
-            </li>
-
-            <li className="code autoclose">
-              <HashLink to="/#skills">{t("navbar.skills")}</HashLink>
-            </li>
-
-            <li className="code autoclose">
-              <HashLink to="/#projects">{t("navbar.projects")}</HashLink>
-            </li>
-
-            <li className="code autoclose">
-              <HashLink to="/contact">{t("navbar.contact")}</HashLink>
-            </li>
+            {PILL_LINKS.map((link) => (
+              <li key={link.key} className="code autoclose">
+                <HashLink to={link.to}>{t(`navbar.${link.key}`)}</HashLink>
+              </li>
+            ))}
 
             <li className="code autoclose">
               <HashLink to="/resume">{t("navbar.cv")}</HashLink>

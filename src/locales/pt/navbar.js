@@ -1,4 +1,5 @@
 export const navbar = {
+  home: "Início",
   about: "Sobre mim",
   experience: "Experiência",
   skills: "Habilidades",
