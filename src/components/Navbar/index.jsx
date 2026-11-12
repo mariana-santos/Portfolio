@@ -1,7 +1,7 @@
 import { useState, React, useEffect } from "react";
 import "./style.css";
 
-import { FiSun, FiMoon } from "react-icons/fi";
+import { FiSun, FiMoon, FiMenu, FiX } from "react-icons/fi";
 
 import { useConfig } from "../../contexts/config";
 
@@ -142,14 +142,15 @@ export default function Navbar() {
             </HashLink>
 
             <div
-              className={`hamburguer ${
-                menuOpen !== null && (menuOpen ? "close" : "open")
-              }`}
+              className="hamburguer-toggle"
               role="button"
+              aria-label={menuOpen ? "Close menu" : "Open menu"}
               onClick={() => setMenuOpen(!menuOpen)}
             >
-              <span />
-              <span />
+              <div className={`hamburguer-switcher ${menuOpen ? "open" : "closed"}`}>
+                <FiMenu className="menu-icon" />
+                <FiX className="close-icon" />
+              </div>
             </div>
 
             <ul
