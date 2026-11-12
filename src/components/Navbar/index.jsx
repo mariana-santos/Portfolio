@@ -1,12 +1,9 @@
 import { useState, React, useEffect } from "react";
 import "./style.css";
 
-import { BsFillMoonFill, BsFillSunFill } from "react-icons/bs";
+import { FiSun, FiMoon } from "react-icons/fi";
 
 import { useConfig } from "../../contexts/config";
-
-import Select from "@mui/material/Select";
-import MenuItem from "@mui/material/MenuItem";
 
 import { HashLink } from "react-router-hash-link";
 import { useLocation } from "react-router-dom";
@@ -118,38 +115,37 @@ export default function Navbar() {
             {t("navbar.cv")} ↓
           </HashLink>
 
-          <div className="language-switcher">
-            <Select
-              labelId="language"
-              id="language"
-              value={language}
-              onChange={(e) => setLanguage(e.target.value)}
-              autoWidth
-              label="Lang"
-              sx={{
-                boxShadow: "none",
-                ".MuiOutlinedInput-notchedOutline": { border: 0 },
-              }}
-              disableUnderline
-              variant="standard"
-              inputProps={{
-                classes: {
-                  icon: "icon-select",
-                },
-              }}
+          <div className="language-switcher" role="group" aria-label="Language">
+            <button
+              type="button"
+              className="lang-btn"
+              data-active={language === "en"}
+              onClick={() => setLanguage("en")}
             >
-              <MenuItem value={"pt"}>PT</MenuItem>
-              <MenuItem value={"en"}>EN</MenuItem>
-            </Select>
+              EN
+            </button>
+            <button
+              type="button"
+              className="lang-btn"
+              data-active={language === "pt"}
+              onClick={() => setLanguage("pt")}
+            >
+              PT
+            </button>
           </div>
 
           <div
-            className={`theme-switcher ${theme}`}
+            className="theme-toggle"
             role="button"
+            aria-label={
+              theme === "light" ? "Switch to dark mode" : "Switch to light mode"
+            }
             onClick={() => setTheme(theme === "light" ? "dark" : "light")}
           >
-            <BsFillMoonFill className="moon" />
-            <BsFillSunFill className="sun" />
+            <div className={`theme-switcher ${theme}`}>
+              <FiMoon className="moon" />
+              <FiSun className="sun" />
+            </div>
           </div>
 
           <div

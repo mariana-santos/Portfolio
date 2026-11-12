@@ -214,14 +214,27 @@ header {
     animation: fade-up .5s forwards ease;
 }
 
+.theme-toggle {
+    width: 38px;
+    height: 38px;
+    border-radius: 50%;
+    flex: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--bg-light-strong);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 0px;
+}
+
 .theme-switcher {
-    height: 20px;
+    height: 18px;
+    width: 18px;
     overflow: hidden;
 }
 
 .theme-switcher svg {
-    width: 20px;
-    height: 20px;
+    width: 18px;
+    height: 18px;
     object-fit: contain;
     display: block;
     transition: .5s;
@@ -235,17 +248,13 @@ header {
     animation: light .4s forwards ease;
 }
 
-.theme-switcher:hover svg {
+.theme-toggle:hover .theme-switcher svg {
     opacity: .8;
-}
-
-.sun {
-    color: rgb(244 198 49);
 }
 
 @keyframes dark {
     from {
-        transform: translateY(-20px);
+        transform: translateY(-18px);
     }
 
     to {
@@ -255,7 +264,7 @@ header {
 
 @keyframes light {
     to {
-        transform: translateY(-20px);
+        transform: translateY(-18px);
     }
 }
 
@@ -321,7 +330,7 @@ header {
     color: var(--text-color);
     background: var(--bg-light-strong);
     font-family: 'Manrope', sans-serif;
-    font-weight: 700;
+    font-weight: 600;
     font-size: .85rem;
     padding: 9px 18px;
     transition: border-color .25s, color .25s;
@@ -354,19 +363,32 @@ header {
     cursor: pointer;
 }
 
-#language {
+.language-switcher {
+    display: flex;
+    gap: 2px;
+    padding: 4px;
+    border-radius: 999px;
+    background: var(--bg-light-strong);
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 1px 0px;
+}
+
+.lang-btn {
+    appearance: none;
     border: none;
-    padding: 0;
-    padding-right: 15px;
-    color: var(--text-color);
+    cursor: pointer;
+    background: transparent;
+    font-family: 'Source Code Pro', monospace;
+    font-weight: 600;
+    font-size: .74rem;
+    padding: 6px 10px;
+    border-radius: 999px;
+    color: var(--text-secondary);
+    transition: background-color .25s, color .25s;
 }
 
-.icon-select {
-    right: -.5em !important;
-}
-
-.language-switcher * {
-    color: var(--text-color);
+.lang-btn[data-active="true"] {
+    background: var(--tag-color);
+    color: var(--primary-stronger);
 }
 
 .fade-menu{
