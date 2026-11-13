@@ -5,8 +5,9 @@ import pic from "../../assets/main-picture.jpg";
 import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
 
 import { FiArrowUpRight, FiCheck } from "react-icons/fi";
-import { LuMonitorSmartphone, LuGlobe } from "react-icons/lu";
+import { LuMonitorSmartphone, LuGlobe, LuLanguages } from "react-icons/lu";
 import { IoAccessibility } from "react-icons/io5";
+import { SiTypescript, SiReact, SiNextdotjs, SiWebflow } from "react-icons/si";
 
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
@@ -15,10 +16,20 @@ import { useConfig } from "../../contexts/config";
 import { scrollToHash } from "../../utils/scrollToHash";
 
 import Signature from "./Signature";
+import FigmaIcon from "./FigmaIcon";
 
 const CHECKLIST_ICONS = [IoAccessibility, LuMonitorSmartphone, LuGlobe];
 const CHECKLIST_DELAYS = [0.5, 0.75, 1];
 const CHECKLIST_OFFSETS = [0, 22, 8];
+
+const ORBIT_STACK = [
+  { name: "TypeScript", Icon: SiTypescript, color: "#3178C6", angle: 10, size: 36, duration: 7.5, delay: -2 },
+  { name: "React", Icon: SiReact, color: "#61DAFB", angle: 31, size: 60, duration: 6, delay: 0 },
+  { name: "Figma", Icon: FigmaIcon, angle: 76, size: 32, duration: 8, delay: -4 },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#000000", angle: 101, size: 46, duration: 6.8, delay: -3 },
+  { name: "Localization", Icon: LuLanguages, color: "#9531F4", angle: 124, size: 38, duration: 7.2, delay: -2.5 },
+  { name: "Webflow", Icon: SiWebflow, color: "#4353FF", angle: 147, size: 42, duration: 7, delay: -1 },
+];
 
 const WORD_ROTATE_INTERVAL = 2000;
 const CLOCK_REFRESH_INTERVAL = 30000;
@@ -165,6 +176,40 @@ export default function Hero() {
 
             <span className="hero-photo-notch hero-photo-notch--top" aria-hidden="true" />
             <span className="hero-photo-notch hero-photo-notch--side" aria-hidden="true" />
+          </div>
+
+          <div
+            className="hero-orbit"
+            role="list"
+            aria-label={`Daily stack: ${ORBIT_STACK.map((item) => item.name).join(", ")}`}
+          >
+            {ORBIT_STACK.map((item) => (
+              <span
+                key={item.name}
+                className="hero-orbit-spoke"
+                style={{ transform: `rotate(-${item.angle}deg)` }}
+              >
+                <span
+                  className="hero-orbit-point"
+                  style={{ transform: `translate(-50%, -50%) rotate(${item.angle}deg)` }}
+                >
+                  <span className="hero-orbit-mag" role="listitem">
+                    <span
+                      className="hero-orbit-badge"
+                      style={{
+                        width: item.size,
+                        height: item.size,
+                        animationDuration: `${item.duration}s`,
+                        animationDelay: `${item.delay}s`,
+                      }}
+                    >
+                      <item.Icon size="55%" color={item.color} />
+                    </span>
+                    <span className="hero-orbit-tip">{item.name}</span>
+                  </span>
+                </span>
+              </span>
+            ))}
           </div>
 
           <div className="hero-checklist">
