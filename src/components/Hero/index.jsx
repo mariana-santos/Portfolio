@@ -91,9 +91,27 @@ export default function Hero() {
     return () => clearInterval(id);
   }, []);
 
+  function handleHeroMouseMove(e) {
+    const rect = e.currentTarget.getBoundingClientRect();
+    e.currentTarget.style.setProperty("--mx", `${e.clientX - rect.left}px`);
+    e.currentTarget.style.setProperty("--my", `${e.clientY - rect.top}px`);
+    e.currentTarget.style.setProperty("--so", "1");
+  }
+
+  function handleHeroMouseLeave(e) {
+    e.currentTarget.style.setProperty("--so", "0");
+  }
+
   return (
-    <section className="container" id="hero">
-      <div className="column text" data-aos="fade-up">
+    <section
+      id="hero"
+      onMouseMove={handleHeroMouseMove}
+      onMouseLeave={handleHeroMouseLeave}
+    >
+      <span className="hero-spotlight" aria-hidden="true" />
+
+      <div className="hero-inner">
+        <div className="column text" data-aos="fade-up">
         <h1
           className="hero-heading"
           aria-label={t("home.hero.heading.aria-label")}
@@ -187,7 +205,7 @@ export default function Hero() {
               <span
                 key={item.name}
                 className="hero-orbit-spoke"
-                style={{ transform: `rotate(-${item.angle}deg)` }}
+                style={{ transform: `rotate(${-item.angle}deg)` }}
               >
                 <span
                   className="hero-orbit-point"
@@ -243,6 +261,7 @@ export default function Hero() {
             })}
           </div>
         </div>
+      </div>
       </div>
     </section>
   );
