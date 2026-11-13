@@ -16,6 +16,11 @@ export const home = {
       primary: "View my work",
       secondary: "Let's talk",
     },
+    stats: {
+      experience: { value: "5+ yrs", label: "in frontend" },
+      location: { value: "São Paulo, BR", label: "GMT-3" },
+      languages: { value: "EN · PT", label: "languages" },
+    },
   },
 
   about: {

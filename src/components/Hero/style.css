@@ -16,14 +16,7 @@
 }
 
 #hero .wrapper-pic {
-    width: 25%;
-}
-
-.pic {
-    width: 100%;
-    aspect-ratio: 1 / 1.2;
-    position: relative;
-    transition: .3s;
+    width: 32%;
 }
 
 #hero .text {
@@ -113,33 +106,100 @@
     }
 }
 
-#main-pic {
+.hero-photo-card {
+    position: relative;
     width: 100%;
-    height: 100%;
-    object-fit: contain;
-    object-position: top;
-    border-radius: 5px;
+    aspect-ratio: 47 / 55;
+    border-radius: 28px;
+    overflow: hidden;
+    background: var(--tertiary);
 }
 
-.pic:hover{
-    transform: translate(5px, 5px);
-}
-
-.pic:hover .line-element{
-    transform: translate(-7px, -7px);
-}
-
-.line-element {
-    width: 100%;
-    height: 100%;
+.hero-photo {
     position: absolute;
-    z-index: -1;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center 22%;
+    transition: transform .8s cubic-bezier(.2, .7, .3, 1);
+}
+
+.hero-photo-card:hover .hero-photo {
+    transform: scale(1.04);
+}
+
+.hero-photo-stats {
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 74%;
+    height: 88px;
     box-sizing: border-box;
-    top: 10px;
-    left: 18px;
-    background: var(--primary-transparency);
-    border-radius: 3px;
-    transition: .3s;
+    display: flex;
+    align-items: flex-end;
+    padding: 0 0 2px 14px;
+    background: var(--bg-light);
+    border-top-left-radius: 26px;
+}
+
+.hero-photo-stat {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 0;
+    padding: 0 8px 10px 0;
+    margin-right: 8px;
+    border-right: 1px solid color-mix(in srgb, var(--text-color) 12%, transparent);
+}
+
+.hero-photo-stat:last-child {
+    margin-right: 0;
+    border-right: none;
+}
+
+.hero-photo-stat:nth-child(1) {
+    flex: .8;
+}
+
+.hero-photo-stat:nth-child(2) {
+    flex: 1.35;
+}
+
+.hero-photo-stat:nth-child(3) {
+    flex: .75;
+}
+
+.hero-photo-stat-value {
+    font: 800 1.08rem/1.1 'Aleo', serif;
+    letter-spacing: -.03em;
+    color: var(--text-color);
+    white-space: nowrap;
+}
+
+.hero-photo-stat-label {
+    font: 500 .64rem 'Manrope', sans-serif;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.hero-photo-notch {
+    position: absolute;
+    width: 26px;
+    height: 26px;
+    background: radial-gradient(circle at 0 0, transparent 25.5px, var(--bg-light) 26px);
+}
+
+.hero-photo-notch--top {
+    right: 0;
+    bottom: 88px;
+}
+
+.hero-photo-notch--side {
+    right: 74%;
+    bottom: 0;
 }
 
 .hero-signature-wrap {
@@ -245,7 +305,7 @@
         font-size: 1.4em;
     }
 
-    .pic{
+    #hero .wrapper-pic {
         width: 70%;
         margin: auto;
     }

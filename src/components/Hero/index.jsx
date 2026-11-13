@@ -14,6 +14,19 @@ import { scrollToHash } from "../../utils/scrollToHash";
 import Signature from "./Signature";
 
 const WORD_ROTATE_INTERVAL = 2000;
+const CLOCK_REFRESH_INTERVAL = 30000;
+
+function getSaoPauloTime() {
+  try {
+    return new Date().toLocaleTimeString("en-GB", {
+      timeZone: "America/Sao_Paulo",
+      hour: "2-digit",
+      minute: "2-digit",
+    });
+  } catch {
+    return "--:--";
+  }
+}
 
 export default function Hero() {
   const { t } = useConfig();
@@ -22,6 +35,7 @@ export default function Hero() {
 
   const [wordIndex, setWordIndex] = useState(0);
   const [prevWordIndex, setPrevWordIndex] = useState(null);
+  const [spTime, setSpTime] = useState(getSaoPauloTime);
 
   const wordIndexRef = useRef(0);
   const pillRef = useRef(null);
@@ -52,6 +66,11 @@ export default function Hero() {
 
     pill.style.width = `${activeWord.getBoundingClientRect().width}px`;
   }, [wordIndex]);
+
+  useEffect(() => {
+    const id = setInterval(() => setSpTime(getSaoPauloTime()), CLOCK_REFRESH_INTERVAL);
+    return () => clearInterval(id);
+  }, []);
 
   return (
     <section className="container" id="hero">
@@ -101,13 +120,42 @@ export default function Hero() {
       </div>
 
       <div className="column wrapper-pic" data-aos="fade-down">
-        <div className="pic">
-          <div className="line-element" />
+        <div className="hero-photo-card">
           <img
+            className="hero-photo"
             src={pic}
             alt={t("home.hero.image-alt")}
-            id="main-pic"
           />
+
+          <div className="hero-photo-stats">
+            <div className="hero-photo-stat">
+              <span className="hero-photo-stat-value">
+                {t("home.hero.stats.experience.value")}
+              </span>
+              <span className="hero-photo-stat-label">
+                {t("home.hero.stats.experience.label")}
+              </span>
+            </div>
+            <div className="hero-photo-stat">
+              <span className="hero-photo-stat-value">
+                {t("home.hero.stats.location.value")}
+              </span>
+              <span className="hero-photo-stat-label">
+                {spTime} · {t("home.hero.stats.location.label")}
+              </span>
+            </div>
+            <div className="hero-photo-stat">
+              <span className="hero-photo-stat-value">
+                {t("home.hero.stats.languages.value")}
+              </span>
+              <span className="hero-photo-stat-label">
+                {t("home.hero.stats.languages.label")}
+              </span>
+            </div>
+          </div>
+
+          <span className="hero-photo-notch hero-photo-notch--top" aria-hidden="true" />
+          <span className="hero-photo-notch hero-photo-notch--side" aria-hidden="true" />
         </div>
       </div>
     </section>

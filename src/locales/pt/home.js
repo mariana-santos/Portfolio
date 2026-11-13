@@ -16,6 +16,11 @@ export const home = {
       primary: "Conheça meu trabalho",
       secondary: "Fale comigo",
     },
+    stats: {
+      experience: { value: "5+ anos", label: "no frontend" },
+      location: { value: "São Paulo, BR", label: "GMT-3" },
+      languages: { value: "EN · PT", label: "idiomas" },
+    },
   },
 
   about: {
