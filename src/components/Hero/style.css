@@ -106,6 +106,10 @@
     }
 }
 
+.hero-photo-wrap {
+    position: relative;
+}
+
 .hero-photo-card {
     position: relative;
     width: 100%;
@@ -202,12 +206,141 @@
     bottom: 0;
 }
 
+.hero-checklist {
+    position: absolute;
+    left: -32px;
+    top: 47%;
+    z-index: 3;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.hero-checklist-label {
+    font-family: 'Source Code Pro', monospace;
+    font-size: .72rem;
+    font-weight: 500;
+    color: var(--primary-stronger);
+    background: var(--bg-light-strong);
+    padding: 5px 10px;
+    border-radius: 8px;
+    box-shadow: 0 8px 20px -14px rgba(0, 0, 0, .5);
+    animation: heroChecklistIn .5s cubic-bezier(.2, .7, .3, 1) .3s backwards;
+}
+
+.hero-checklist-item {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 8px 6px 6px;
+    border-radius: 14px;
+    background: color-mix(in srgb, var(--bg-light-strong) 86%, transparent);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid var(--border-color);
+    box-shadow: 0 16px 32px -18px rgba(0, 0, 0, .5);
+    font-family: 'Manrope', sans-serif;
+    font-size: .84rem;
+    font-weight: 600;
+    color: var(--text-color);
+    white-space: nowrap;
+    animation: heroChecklistIn .5s cubic-bezier(.2, .7, .3, 1) backwards;
+    transition: transform .3s;
+}
+
+.hero-checklist-item:hover {
+    transform: translateX(4px);
+}
+
+.hero-checklist-icon {
+    width: 30px;
+    height: 30px;
+    border-radius: 9px;
+    background: color-mix(in srgb, var(--primary) 12%, transparent);
+    color: var(--primary-stronger);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+}
+
+.hero-checklist-box {
+    width: 20px;
+    height: 20px;
+    margin-left: 6px;
+    border-radius: 6px;
+    box-sizing: border-box;
+    border: 1.5px solid var(--primary);
+    background: var(--primary);
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex: none;
+    animation: heroChecklistBoxIn .45s ease backwards;
+}
+
+.hero-checklist-tick {
+    animation: heroChecklistTickIn .2s ease backwards;
+    animation-delay: inherit;
+}
+
+@keyframes heroChecklistIn {
+    from {
+        opacity: 0;
+        transform: translateX(-14px);
+    }
+
+    to {
+        opacity: 1;
+        transform: none;
+    }
+}
+
+@keyframes heroChecklistBoxIn {
+    0% {
+        background: var(--bg-light-strong);
+        border-color: var(--tertiary);
+    }
+
+    60% {
+        transform: scale(1.25);
+    }
+
+    100% {
+        background: var(--primary);
+        border-color: var(--primary);
+        transform: scale(1);
+    }
+}
+
+@keyframes heroChecklistTickIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-checklist-label,
+    .hero-checklist-item,
+    .hero-checklist-box,
+    .hero-checklist-tick {
+        animation: none;
+    }
+}
+
 .hero-signature-wrap {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     gap: 10px;
-    margin-top: 50px;
+    margin-top: 30px;
 }
 
 .hero-signature {
@@ -241,7 +374,7 @@
     flex-wrap: wrap;
     align-items: center;
     gap: 12px 22px;
-    margin-top: 32px;
+    margin-top: 60px;
 }
 
 .hero-cta {

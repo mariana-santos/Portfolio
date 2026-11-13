@@ -4,7 +4,10 @@ import pic from "../../assets/main-picture.jpg";
 
 import { React, useEffect, useLayoutEffect, useRef, useState } from "react";
 
-import { FiArrowUpRight } from "react-icons/fi";
+import { FiArrowUpRight, FiCheck } from "react-icons/fi";
+import { LuMonitorSmartphone, LuGlobe } from "react-icons/lu";
+import { IoAccessibility } from "react-icons/io5";
+
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
 
@@ -12,6 +15,10 @@ import { useConfig } from "../../contexts/config";
 import { scrollToHash } from "../../utils/scrollToHash";
 
 import Signature from "./Signature";
+
+const CHECKLIST_ICONS = [IoAccessibility, LuMonitorSmartphone, LuGlobe];
+const CHECKLIST_DELAYS = [0.5, 0.75, 1];
+const CHECKLIST_OFFSETS = [0, 22, 8];
 
 const WORD_ROTATE_INTERVAL = 2000;
 const CLOCK_REFRESH_INTERVAL = 30000;
@@ -32,6 +39,7 @@ export default function Hero() {
   const { t } = useConfig();
 
   const words = t("home.hero.heading.words");
+  const checklistItems = t("home.hero.checklist.items");
 
   const [wordIndex, setWordIndex] = useState(0);
   const [prevWordIndex, setPrevWordIndex] = useState(null);
@@ -120,42 +128,75 @@ export default function Hero() {
       </div>
 
       <div className="column wrapper-pic" data-aos="fade-down">
-        <div className="hero-photo-card">
-          <img
-            className="hero-photo"
-            src={pic}
-            alt={t("home.hero.image-alt")}
-          />
+        <div className="hero-photo-wrap">
+          <div className="hero-photo-card">
+            <img
+              className="hero-photo"
+              src={pic}
+              alt={t("home.hero.image-alt")}
+            />
 
-          <div className="hero-photo-stats">
-            <div className="hero-photo-stat">
-              <span className="hero-photo-stat-value">
-                {t("home.hero.stats.experience.value")}
-              </span>
-              <span className="hero-photo-stat-label">
-                {t("home.hero.stats.experience.label")}
-              </span>
+            <div className="hero-photo-stats">
+              <div className="hero-photo-stat">
+                <span className="hero-photo-stat-value">
+                  {t("home.hero.stats.experience.value")}
+                </span>
+                <span className="hero-photo-stat-label">
+                  {t("home.hero.stats.experience.label")}
+                </span>
+              </div>
+              <div className="hero-photo-stat">
+                <span className="hero-photo-stat-value">
+                  {t("home.hero.stats.location.value")}
+                </span>
+                <span className="hero-photo-stat-label">
+                  {spTime} · {t("home.hero.stats.location.label")}
+                </span>
+              </div>
+              <div className="hero-photo-stat">
+                <span className="hero-photo-stat-value">
+                  {t("home.hero.stats.languages.value")}
+                </span>
+                <span className="hero-photo-stat-label">
+                  {t("home.hero.stats.languages.label")}
+                </span>
+              </div>
             </div>
-            <div className="hero-photo-stat">
-              <span className="hero-photo-stat-value">
-                {t("home.hero.stats.location.value")}
-              </span>
-              <span className="hero-photo-stat-label">
-                {spTime} · {t("home.hero.stats.location.label")}
-              </span>
-            </div>
-            <div className="hero-photo-stat">
-              <span className="hero-photo-stat-value">
-                {t("home.hero.stats.languages.value")}
-              </span>
-              <span className="hero-photo-stat-label">
-                {t("home.hero.stats.languages.label")}
-              </span>
-            </div>
+
+            <span className="hero-photo-notch hero-photo-notch--top" aria-hidden="true" />
+            <span className="hero-photo-notch hero-photo-notch--side" aria-hidden="true" />
           </div>
 
-          <span className="hero-photo-notch hero-photo-notch--top" aria-hidden="true" />
-          <span className="hero-photo-notch hero-photo-notch--side" aria-hidden="true" />
+          <div className="hero-checklist">
+            <span className="hero-checklist-label">
+              {t("home.hero.checklist.label")}
+            </span>
+            {checklistItems.map((item, index) => {
+              const Icon = CHECKLIST_ICONS[index];
+
+              return (
+                <span
+                  key={item}
+                  className="hero-checklist-item"
+                  style={{
+                    marginLeft: CHECKLIST_OFFSETS[index],
+                    animationDelay: `${CHECKLIST_DELAYS[index]}s`,
+                  }}
+                >
+                  <span className="hero-checklist-icon">
+                    <Icon size={15} />
+                  </span>
+                  {item}
+                  <span
+                    className="hero-checklist-box"
+                    style={{ animationDelay: `${CHECKLIST_DELAYS[index] + 0.4}s` }}
+                  >
+                    <FiCheck className="hero-checklist-tick" size={13} strokeWidth={3} />
+                  </span>
+                </span>
+              );
+            })}
+          </div>
         </div>
       </div>
     </section>

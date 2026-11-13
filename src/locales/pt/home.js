@@ -21,6 +21,14 @@ export const home = {
       location: { value: "São Paulo, BR", label: "GMT-3" },
       languages: { value: "EN · PT", label: "idiomas" },
     },
+    checklist: {
+      label: "// pra mim, só está pronto quando",
+      items: [
+        "É acessível por padrão",
+        "É responsivo em qualquer tela",
+        "Está pronto para qualquer idioma",
+      ],
+    },
   },
 
   about: {
