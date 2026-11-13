@@ -1,26 +1,26 @@
 #hero {
     height: 100vh;
     align-items: center;
-    gap: 2em;
-    justify-content: space-between;
-    min-height: 500px;
-    padding-top: 40px;
+    gap: 48px;
+    min-height: 600px;
+    padding: 150px clamp(20px, 4vw, 32px) 40px;
+    box-sizing: border-box;
     color: var(--text-color);
+    width: 100%;
     max-width: 1240px;
     margin: 0 auto;
 }
 
 #hero .column {
-    width: 50%;
     font-size: 2.3em;
 }
 
 #hero .wrapper-pic {
-    width: 32%;
+    flex: 1 1 460px;
 }
 
 #hero .text {
-    width: 65%;
+    flex: 1 1 480px;
 }
 
 #hero .hero-heading {
@@ -32,6 +32,7 @@
 
 .hero-heading-line {
     display: block;
+    text-wrap: balance;
 }
 
 .hero-heading-line--word {
@@ -108,6 +109,8 @@
 
 .hero-photo-wrap {
     position: relative;
+    max-width: 420px;
+    margin: 0 auto;
 }
 
 .hero-photo-card {
@@ -521,7 +524,12 @@
         font-size: 1.4em;
     }
 
+    #hero .text {
+        flex: 0 1 auto;
+    }
+
     #hero .wrapper-pic {
+        flex: 0 1 auto;
         width: 70%;
         margin: auto;
     }
