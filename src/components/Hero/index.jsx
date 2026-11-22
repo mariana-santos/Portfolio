@@ -19,7 +19,7 @@ import Signature from "./Signature";
 import FigmaIcon from "./FigmaIcon";
 
 const CHECKLIST_ICONS = [IoAccessibility, LuMonitorSmartphone, LuGlobe];
-const CHECKLIST_DELAYS = [0.5, 0.75, 1];
+const CHECKLIST_DELAYS = [2, 2.3, 2.6];
 const CHECKLIST_OFFSETS = [0, 22, 8];
 
 const ORBIT_STACK = [
@@ -201,7 +201,7 @@ export default function Hero() {
             role="list"
             aria-label={`Daily stack: ${ORBIT_STACK.map((item) => item.name).join(", ")}`}
           >
-            {ORBIT_STACK.map((item) => (
+            {ORBIT_STACK.map((item, index) => (
               <span
                 key={item.name}
                 className="hero-orbit-spoke"
@@ -211,7 +211,11 @@ export default function Hero() {
                   className="hero-orbit-point"
                   style={{ transform: `translate(-50%, -50%) rotate(${item.angle}deg)` }}
                 >
-                  <span className="hero-orbit-mag" role="listitem">
+                  <span
+                    className="hero-orbit-mag"
+                    role="listitem"
+                    style={{ "--enter-delay": `${0.9 + index * 0.15}s` }}
+                  >
                     <span
                       className="hero-orbit-badge"
                       style={{
