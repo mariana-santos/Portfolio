@@ -42,8 +42,6 @@ export const home = {
     switch: {
       intro: {
         note: "// Eu tenho dois lados, escolha um",
-        "lede-engineer": "Sou <span class=\"intro-highlight\">Engenheira de Software Frontend</span> apaxonada por tecnologia. Siga para entender minha jornada.",
-        "lede-person": "Tenho muitos interesses <span class=\"intro-highlight\">fora do trabalho</span>. Aqui estão minhas escolhas de música, livros, viagens e alguns hobbies que eu não sou muito boa, mas amo de qualquer forma.",
       },
       engineer: {
         title: "Trajetória profissional",
@@ -98,7 +96,7 @@ export const home = {
           { place: "Ilhabela, BR" },
           { place: "Veneza, IT" },
         ],
-        "next-label": "Para onde eu quero ir",
+        "next-label": "Para onde ainda quero ir",
         next: [
           { place: "Minas Gerais" },
           { place: "Cusco" },

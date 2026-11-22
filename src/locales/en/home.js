@@ -44,8 +44,6 @@ export const home = {
     switch: {
       intro: {
         note: "// I have two sides, pick one",
-        "lede-engineer": "I have a lot of experience turning <span class=\"intro-highlight\">curiosity into code</span>. Today building for global clients as a Frontend Engineer. Here's my journey so far.",
-        "lede-person": "I have a lot of interests <span class=\"intro-highlight\">outside work</span>. Here are my choices for music, books, trips and a few hobbies I'm not very good at, and love anyway.",
       },
       engineer: {
         title: "The engineer",
