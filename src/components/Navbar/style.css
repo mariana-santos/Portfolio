@@ -253,7 +253,7 @@ header {
     opacity: .8;
 }
 
-@keyframes dark {
+@keyframes light {
     from {
         transform: translateY(-18px);
     }
@@ -263,7 +263,7 @@ header {
     }
 }
 
-@keyframes light {
+@keyframes dark {
     to {
         transform: translateY(-18px);
     }
