@@ -24,9 +24,9 @@ const CHECKLIST_OFFSETS = [0, 22, 8];
 
 const ORBIT_STACK = [
   { name: "TypeScript", Icon: SiTypescript, color: "#3178C6", angle: 10, size: 36, duration: 7.5, delay: -2 },
-  { name: "React", Icon: SiReact, color: "#61DAFB", angle: 31, size: 60, duration: 6, delay: 0 },
+  { name: "React", Icon: SiReact, color: "#61DAFB", angle: 31, size: 55, duration: 6, delay: 0 },
   { name: "Figma", Icon: FigmaIcon, angle: 76, size: 32, duration: 8, delay: -4 },
-  { name: "Next.js", Icon: SiNextdotjs, color: "#000000", angle: 101, size: 46, duration: 6.8, delay: -3 },
+  { name: "Next.js", Icon: SiNextdotjs, color: "#000000", angle: 101, size: 50, duration: 6.8, delay: -3 },
   { name: "Localization", Icon: LuLanguages, color: "#9531F4", angle: 124, size: 38, duration: 7.2, delay: -2.5 },
   { name: "Webflow", Icon: SiWebflow, color: "#4353FF", angle: 147, size: 42, duration: 7, delay: -1 },
 ];
@@ -105,6 +105,7 @@ export default function Hero() {
   return (
     <section
       id="hero"
+      className="container hero"
       onMouseMove={handleHeroMouseMove}
       onMouseLeave={handleHeroMouseLeave}
     >
@@ -194,6 +195,23 @@ export default function Hero() {
 
             <span className="hero-photo-notch hero-photo-notch--top" aria-hidden="true" />
             <span className="hero-photo-notch hero-photo-notch--side" aria-hidden="true" />
+          </div>
+
+          <div className="hero-photo-stat-pill hero-photo-stat-pill--left">
+            <span className="hero-photo-stat-value">
+              {t("home.hero.stats.experience.value")}
+            </span>
+            <span className="hero-photo-stat-label">
+              {t("home.hero.stats.experience.label")}
+            </span>
+          </div>
+          <div className="hero-photo-stat-pill hero-photo-stat-pill--right">
+            <span className="hero-photo-stat-value">
+              {t("home.hero.stats.location.value")}
+            </span>
+            <span className="hero-photo-stat-label">
+              {spTime} · {t("home.hero.stats.location.label")}
+            </span>
           </div>
 
           <div
