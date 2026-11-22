@@ -243,7 +243,7 @@ export default function Hero() {
 
               return (
                 <span
-                  key={item}
+                  key={index}
                   className="hero-checklist-item"
                   style={{
                     marginLeft: CHECKLIST_OFFSETS[index],
