@@ -29,6 +29,7 @@ export const home = {
         "Ready for any language",
       ],
     },
+    "scroll-hint": "// scroll to meet me",
   },
 
   about: {

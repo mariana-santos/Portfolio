@@ -556,7 +556,7 @@
 
 .hero-signature {
     display: block;
-    height: 42px;
+    max-height: 42px;
     width: auto;
     overflow: visible;
     color: var(--primary-stronger);
@@ -689,6 +689,58 @@
     transform: translate(2px, -2px);
 }
 
+.hero-scroll-hint {
+    position: absolute;
+    left: 50%;
+    bottom: 40px;
+    z-index: 1;
+    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    font-family: 'Source Code Pro', monospace;
+    font-size: .8rem;
+    color: var(--text-secondary);
+    white-space: nowrap;
+    transition: color .25s, opacity .3s ease;
+    animation: heroFadeInUp .6s ease 1.8s backwards;
+}
+
+.hero-scroll-hint:hover {
+    color: var(--text-color);
+}
+
+.hero-scroll-hint--hidden {
+    opacity: 0;
+    pointer-events: none;
+}
+
+@keyframes heroScrollHintNudge {
+    0%, 100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(4px);
+    }
+}
+
+.hero-scroll-hint-arrow {
+    display: inline-block;
+    color: var(--primary);
+    animation: heroScrollHintNudge 1.6s ease-in-out infinite;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-scroll-hint {
+        animation: none;
+    }
+
+    .hero-scroll-hint-arrow {
+        animation: none;
+    }
+}
+
 @media screen and (max-width: 1200px){
     #hero .wrapper-pic {
         max-width: 40%;
@@ -788,5 +840,13 @@
 
     .hero-photo-stat-pill {
         display: flex;
+    }
+
+    .hero-scroll-hint {
+        display: none;
+    }
+
+    .hero-signature {
+        max-height: 32px;
     }
 }

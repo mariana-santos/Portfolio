@@ -11,6 +11,7 @@ import { SiTypescript, SiReact, SiNextdotjs, SiWebflow } from "react-icons/si";
 
 import { HashLink } from "react-router-hash-link";
 import { Link } from "react-router-dom";
+import { ScrollSmoother } from "gsap/ScrollSmoother";
 
 import { useConfig } from "../../contexts/config";
 import { scrollToHash } from "../../utils/scrollToHash";
@@ -33,6 +34,7 @@ const ORBIT_STACK = [
 
 const WORD_ROTATE_INTERVAL = 2000;
 const CLOCK_REFRESH_INTERVAL = 30000;
+const SCROLL_HINT_THRESHOLD = 40;
 
 function getSaoPauloTime() {
   try {
@@ -55,6 +57,7 @@ export default function Hero() {
   const [wordIndex, setWordIndex] = useState(0);
   const [prevWordIndex, setPrevWordIndex] = useState(null);
   const [spTime, setSpTime] = useState(getSaoPauloTime);
+  const [hasScrolled, setHasScrolled] = useState(false);
 
   const wordIndexRef = useRef(0);
   const pillRef = useRef(null);
@@ -89,6 +92,23 @@ export default function Hero() {
   useEffect(() => {
     const id = setInterval(() => setSpTime(getSaoPauloTime()), CLOCK_REFRESH_INTERVAL);
     return () => clearInterval(id);
+  }, []);
+
+  useEffect(() => {
+    function getScrollY() {
+      return ScrollSmoother.get()?.scrollTop() ?? window.scrollY;
+    }
+
+    let frameId;
+
+    function tick() {
+      setHasScrolled(getScrollY() > SCROLL_HINT_THRESHOLD);
+      frameId = requestAnimationFrame(tick);
+    }
+
+    frameId = requestAnimationFrame(tick);
+
+    return () => cancelAnimationFrame(frameId);
   }, []);
 
   function handleHeroMouseMove(e) {
@@ -285,6 +305,15 @@ export default function Hero() {
         </div>
       </div>
       </div>
+
+      <HashLink
+        to="/#about"
+        className={`hero-scroll-hint ${hasScrolled ? "hero-scroll-hint--hidden" : ""}`}
+        scroll={scrollToHash}
+      >
+        {t("home.hero.scroll-hint")}
+        <span className="hero-scroll-hint-arrow" aria-hidden="true">↓</span>
+      </HashLink>
     </section>
   );
 }

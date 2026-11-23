@@ -29,6 +29,7 @@ export const home = {
         "Está pronto para qualquer idioma",
       ],
     },
+    "scroll-hint": "// continue para saber mais",
   },
 
   about: {
