@@ -6,6 +6,30 @@ export const home = {
 
   hero: {
     "image-alt": "Imagem de Mariana Santos programando durante Hackathon",
+    heading: {
+      lead: "Transformando curiosidade em",
+      words: ["código", "interfaces", "produtos", "experiências"],
+      "aria-label": "Transformando curiosidade em código, interfaces, produtos e experiências.",
+      role: "Engenheira de Software Frontend",
+    },
+    actions: {
+      primary: "Conheça meu trabalho",
+      secondary: "Fale comigo",
+    },
+    stats: {
+      experience: { value: "5+ anos", label: "no frontend" },
+      location: { value: "São Paulo, BR", label: "GMT-3" },
+      languages: { value: "EN · PT", label: "idiomas" },
+    },
+    checklist: {
+      label: "// pra mim, só está pronto quando",
+      items: [
+        "É acessível por padrão",
+        "É responsivo em qualquer tela",
+        "Está pronto para qualquer idioma",
+      ],
+    },
+    "scroll-hint": "// continue para saber mais",
   },
 
   about: {
@@ -19,8 +43,6 @@ export const home = {
     switch: {
       intro: {
         note: "// Eu tenho dois lados, escolha um",
-        "lede-engineer": "Sou <span class=\"intro-highlight\">Engenheira de Software Frontend</span> apaxonada por tecnologia. Siga para entender minha jornada.",
-        "lede-person": "Tenho muitos interesses <span class=\"intro-highlight\">fora do trabalho</span>. Aqui estão minhas escolhas de música, livros, viagens e alguns hobbies que eu não sou muito boa, mas amo de qualquer forma.",
       },
       engineer: {
         title: "Trajetória profissional",
@@ -75,7 +97,7 @@ export const home = {
           { place: "Ilhabela, BR" },
           { place: "Veneza, IT" },
         ],
-        "next-label": "Para onde eu quero ir",
+        "next-label": "Para onde ainda quero ir",
         next: [
           { place: "Minas Gerais" },
           { place: "Cusco" },

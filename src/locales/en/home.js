@@ -6,6 +6,30 @@ export const home = {
 
   hero: {
     "image-alt": "Mariana Santos coding during a Hackathon",
+    heading: {
+      lead: "Turning curiosity into",
+      words: ["code", "interfaces", "products", "experiences"],
+      "aria-label": "Turning curiosity into code, interfaces, products and experiences.",
+      role: "Frontend Engineer",
+    },
+    actions: {
+      primary: "View my work",
+      secondary: "Let's talk",
+    },
+    stats: {
+      experience: { value: "5+ yrs", label: "in frontend" },
+      location: { value: "São Paulo, BR", label: "GMT-3" },
+      languages: { value: "EN · PT", label: "languages" },
+    },
+    checklist: {
+      label: "// my definition of done",
+      items: [
+        "Accessible by default",
+        "Responsive on any screen",
+        "Ready for any language",
+      ],
+    },
+    "scroll-hint": "// scroll to meet me",
   },
 
   about: {
@@ -21,8 +45,6 @@ export const home = {
     switch: {
       intro: {
         note: "// I have two sides, pick one",
-        "lede-engineer": "I have a lot of experience turning <span class=\"intro-highlight\">curiosity into code</span>. Today building for global clients as a Frontend Engineer. Here's my journey so far.",
-        "lede-person": "I have a lot of interests <span class=\"intro-highlight\">outside work</span>. Here are my choices for music, books, trips and a few hobbies I'm not very good at, and love anyway.",
       },
       engineer: {
         title: "The engineer",
